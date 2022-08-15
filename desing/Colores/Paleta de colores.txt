@@ -1,0 +1,7 @@
+- Negro: 000000;
+- Cian: 00D4BB;
+- Gris oscuro: 171717;
+- Gris: 212121;
+- Gris claro: D9D9D9;
+- Mostaza: FFC700;
+- Blanco: FFFFFF;

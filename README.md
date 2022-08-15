@@ -14,6 +14,3 @@
 4. [Google Play](https://play.google.com/store/movies): formato de compra por película y diseño de características
 5. [Cuevana](https://ww3.cuevana.pro/): filtro por año y animaciones de header
 6. [Mercado Libre](https://mercadolibre.com/): formato de carrito de compras
-
-*Integrantes*
-======
