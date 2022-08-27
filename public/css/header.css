@@ -1,0 +1,217 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: Roboto;
+  font-size: 12px;
+  background-color: white;
+  line-height: 0px;
+  text-decoration: none;
+  color: black;
+}
+
+.header {
+  display: flex;
+  background-color: black;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 0px 5%;
+}
+
+.header__dropMenu-logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 45%;
+}
+
+.header__burger-menu {
+  color: white;
+  background-color: black;
+  border: none;
+  font-size: 20px;
+  margin-right: 20px;
+}
+
+.header__logo img {
+  height: auto;
+  width: auto;
+  max-width: 110px;
+}
+
+.header__search-container {
+  width: 50%;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__search-bar {
+  flex-grow: 7;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: white;
+}
+
+.header__search-bar input {
+  flex: 1;
+  border: 0;
+  font-size: 15px;
+  color: #666666;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: black;
+}
+
+.header__search-bar button {
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  font-size: 15px;
+  color: #666666;
+  transition: all 200ms;
+}
+
+.header__nav {
+  width: 30%;
+}
+
+.header__buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__dropdown-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 75%;
+}
+
+.header__dropdown-buttons button {
+  width: 100px;
+  font-size: 15px;
+  padding: 4px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background-color: orange;
+}
+
+.header__nav-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__nav-buttons button {
+  color: white;
+  background-color: black;
+  border: none;
+  font-size: 20px;
+}
+
+/*MEDIA QUERIES*/
+
+/*MOBILE*/
+
+@media (max-width: 599px) {
+  .header {
+    width: 100%;
+  }
+
+  .header__search-container {
+    display: none;
+  }
+
+  .header__dropdown-buttons {
+    display: none;
+  }
+}
+
+/*TABLET*/
+
+@media (min-width: 600px) {
+  .header__dropMenu-logo {
+    width: auto;
+  }
+
+  .header__logo img {
+    width: 110px;
+  }
+
+  .header__search-container {
+    width: 45%;
+  }
+
+  .header__nav {
+    width: 15%;
+  }
+
+  .header__dropdown-buttons {
+    display: none;
+  }
+
+  .header__profile {
+    margin-left: 15%;
+  }
+
+  .header__nav-submit {
+    display: none;
+  }
+}
+
+/*DESKTOP*/
+
+@media (min-width: 992px) {
+}
+
+/*LARGE-DESKTOP*/
+
+@media (min-width: 1200px) {
+  .header {
+    padding: 0px 30px;
+  }
+
+  .header__dropMenu-logo {
+    width: 20%;
+    justify-content: center;
+  }
+
+  .header__burger-menu {
+    display: none;
+  }
+
+  .header__search-container {
+    display: none;
+  }
+
+  .header__nav {
+    width: 75%;
+  }
+
+  .header__dropdown-buttons {
+    display: flex;
+  }
+
+  .header__nav-buttons {
+    width: 20%;
+  }
+
+  .header__profile {
+    margin-left: 0px;
+  }
+
+  .header__nav-submit {
+    display: block;
+  }
+}

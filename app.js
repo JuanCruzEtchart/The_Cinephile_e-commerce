@@ -3,10 +3,10 @@ const app = express();
 const path = require("path");
 app.use(express.static(path.join(__dirname, "public")));
 
-app.listen(3000, () => console.log("Servidor corriendo en puerto 3000"));
+app.listen(3030, () => console.log("Servidor corriendo en puerto 3030"));
 
-app.get("/inicio", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "./views/inicio.html"));
+app.get("/", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "./views/home.html"));
 });
 
 app.get("/detalle", (req, res) => {
@@ -27,4 +27,12 @@ app.get("/registro", (req, res) => {
 
 app.get("/perfil", (req, res) => {
   res.sendFile(path.resolve(__dirname, "./views/perfil.html"));
+});
+
+app.get("/header", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "./views/header.html"));
+});
+
+app.get("/footer", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "./views/footer.html"));
 });
