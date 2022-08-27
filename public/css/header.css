@@ -23,10 +23,14 @@ body {
 }
 
 .header__dropMenu-logo {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 45%;
+}
+
+.header__drop-logo-form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
 }
 
 .header__burger-menu {
@@ -35,12 +39,24 @@ body {
   border: none;
   font-size: 20px;
   margin-right: 20px;
+  cursor: pointer;
+  transition: all 120ms;
+}
+
+.header__burger-menu:hover {
+  color: #ffc700;
+}
+
+.header__logo {
+  background-color: black;
+  border: none;
 }
 
 .header__logo img {
   height: auto;
   width: auto;
   max-width: 110px;
+  cursor: pointer;
 }
 
 .header__search-container {
@@ -79,7 +95,12 @@ body {
   margin-left: 10px;
   font-size: 15px;
   color: #666666;
-  transition: all 200ms;
+  transition: all 120ms;
+}
+
+.header__search-bar button:hover {
+  color: #ffc700;
+  cursor: pointer;
 }
 
 .header__nav {
@@ -104,7 +125,15 @@ body {
   border-radius: 5px;
   border: none;
   color: white;
-  background-color: orange;
+  background-color: #1b1b1b;
+  transition: all 120ms;
+}
+
+.header__dropdown-buttons button:hover {
+  background-color: #ffc700;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .header__nav-buttons {
@@ -118,6 +147,13 @@ body {
   background-color: black;
   border: none;
   font-size: 20px;
+  cursor: pointer;
+  transition: all 120ms;
+}
+
+.header__nav-buttons button:hover {
+  color: #ffc700;
+  font-weight: bold;
 }
 
 /*MEDIA QUERIES*/
@@ -143,6 +179,10 @@ body {
 @media (min-width: 600px) {
   .header__dropMenu-logo {
     width: auto;
+  }
+
+  .header__burger-menu {
+    margin-right: 40px;
   }
 
   .header__logo img {
@@ -172,11 +212,6 @@ body {
 
 /*DESKTOP*/
 
-@media (min-width: 992px) {
-}
-
-/*LARGE-DESKTOP*/
-
 @media (min-width: 1200px) {
   .header {
     padding: 0px 30px;
@@ -184,6 +219,10 @@ body {
 
   .header__dropMenu-logo {
     width: 20%;
+    justify-content: center;
+  }
+
+  .header__drop-logo-form {
     justify-content: center;
   }
 
@@ -213,5 +252,31 @@ body {
 
   .header__nav-submit {
     display: block;
+  }
+}
+
+/*LARGE-DESKTOP*/
+
+@media (min-width: 1440px) {
+  .header__search-container {
+    display: block;
+    width: 30%;
+  }
+
+  .header__search-bar {
+    width: 90%;
+  }
+
+  .header__dropdown-buttons {
+    width: 80%;
+  }
+
+  .header__nav-buttons {
+    width: 12%;
+    margin-right: 20px;
+  }
+
+  .header__nav-submit {
+    display: none;
   }
 }
