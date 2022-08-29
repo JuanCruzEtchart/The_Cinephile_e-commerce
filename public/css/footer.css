@@ -1,0 +1,207 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: Roboto;
+  font-size: 12px;
+  background-color: white;
+  line-height: 0px;
+  text-decoration: none;
+  color: black;
+}
+
+.footer__container {
+  background-color: black;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+.footer__logo {
+  background-color: black;
+  border: none;
+}
+
+.footer__logo img {
+  width: 110px;
+  cursor: pointer;
+}
+
+.footer__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: 400px;
+  width: 50%;
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
+
+.footer__buttons a {
+  font-size: 16px;
+  text-decoration: none;
+  color: white;
+  height: 16px;
+  line-height: 22px;
+  transition: all 120ms;
+  text-align: center;
+  padding: 0px 15px;
+}
+
+.footer__buttons a:hover {
+  color: #ffc700;
+}
+
+.footer__buttons #lenguage {
+  background-color: transparent;
+  font-size: 16px;
+  height: 21px;
+  width: auto;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.footer__buttons #lenguage option {
+  background-color: black;
+  transition: all 120ms;
+}
+
+.footer__buttons #lenguage option:hover {
+  background-color: #ffc700;
+}
+
+.footer__media {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  width: 80%;
+  height: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  justify-content: space-around;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  order: -1;
+  max-width: 288px;
+}
+
+.footer__media a {
+  font-size: 25px;
+  color: white;
+  transition: all 120ms;
+}
+
+.footer__media a:hover {
+  color: #ffc700;
+}
+
+.copy {
+  color: white;
+  height: 5%;
+  position: absolute;
+  bottom: 5px;
+  left: 20px;
+  font-size: 12;
+}
+
+/*MEDIA QUERIES*/
+
+/*MOBILE*/
+
+@media (max-width: 599px) {
+  .footer__logo img {
+    display: none;
+  }
+}
+
+/*TABLET*/
+
+@media (min-width: 600px) {
+  .footer {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+  }
+
+  .footer__container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 230px;
+    width: 600px;
+    padding-top: 20px;
+  }
+
+  .footer__logo img {
+    width: 200px;
+  }
+  .footer__buttons {
+    width: 90%;
+    height: 30%;
+    order: 3;
+  }
+  .footer__media {
+    order: 2;
+    width: 230px;
+  }
+}
+
+/*DESKTOP*/
+
+@media (min-width: 1200px) {
+  .footer {
+    display: flex;
+    justify-content: center;
+    height: 150px;
+    background-color: black;
+  }
+
+  .footer__container {
+    width: 1200px;
+    height: 150px;
+    flex-direction: row;
+    padding-top: 0px;
+  }
+
+  .footer__logo {
+    display: flex;
+  }
+
+  .footer__logo img {
+    width: 200px;
+  }
+
+  .footer__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 15px;
+    height: 75px;
+    width: 500px;
+    margin-bottom: 0px;
+    order: 1;
+  }
+  .footer__buttons a {
+    padding: 0px;
+  }
+
+  .footer__media {
+    order: 1;
+    width: 230px;
+  }
+}
+
+/*LARGE-DESKTOP*/
+
+@media (min-width: 1440px) {
+}

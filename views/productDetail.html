@@ -15,9 +15,55 @@
     />
     <link rel="stylesheet" href="/css/normalize.css" />
     <link rel="stylesheet" href="/css/styles.css" />
-    <link rel="stylesheet" href="/css/footer.css" />
+    <link rel="stylesheet" href="/css/productDetail.css" />
   </head>
   <body>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__dropMenu-logo">
+          <form action="#" method="get" class="header__drop-logo-form">
+            <button type="submit" class="header__burger-menu">
+              <i class="fas fa-bars"></i>
+            </button>
+            <a href="/" class="header__logo">
+              <img src="/images/logo.png" alt="The Cinephile logo" />
+            </a>
+          </form>
+        </div>
+        <div class="header__search-container">
+          <form action="#" method="get" class="header__search-bar">
+            <input type="text" id="search-box" />
+            <button type="submit" class="header__submit">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+        </div>
+        <div class="header__nav">
+          <form action="#" method="get" class="header__buttons">
+            <div class="header__dropdown-buttons">
+              <button type="submit" class="header__home">Inicio</button>
+              <button type="submit" class="header__movies">Películas</button>
+              <button type="submit" class="header__series">Series</button>
+              <button type="submit" class="header__categories">
+                Categorías
+              </button>
+              <button type="submit" class="header__list">Mi lista</button>
+            </div>
+            <div class="header__nav-buttons">
+              <button type="submit" class="header__nav-submit">
+                <i class="fas fa-search"></i>
+              </button>
+              <button type="submit" class="header__profile">
+                <i class="fas fa-user-circle"></i>
+              </button>
+              <button type="submit" class="header__cart">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </header>
     <footer class="footer">
       <div class="footer__container">
         <div class="footer__logo">

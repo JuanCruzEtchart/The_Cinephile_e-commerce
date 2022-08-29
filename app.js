@@ -6,15 +6,15 @@ app.use(express.static(path.join(__dirname, "public")));
 app.listen(3030, () => console.log("Servidor corriendo en puerto 3030"));
 
 app.get("/", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "./views/home.html"));
+  res.sendFile(path.resolve(__dirname, "./views/index.html"));
 });
 
 app.get("/detalle", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "./views/detalle.html"));
+  res.sendFile(path.resolve(__dirname, "./views/productDetail.html"));
 });
 
 app.get("/carrito", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "./views/carrito.html"));
+  res.sendFile(path.resolve(__dirname, "./views/productCart.html"));
 });
 
 app.get("/login", (req, res) => {
@@ -22,7 +22,7 @@ app.get("/login", (req, res) => {
 });
 
 app.get("/registro", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "./views/registro.html"));
+  res.sendFile(path.resolve(__dirname, "./views/register.html"));
 });
 
 app.get("/perfil", (req, res) => {
