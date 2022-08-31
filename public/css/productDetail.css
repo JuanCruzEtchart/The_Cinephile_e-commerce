@@ -162,6 +162,141 @@ body {
 
 /*MAIN*/
 
+.main {
+  background-color: #212121;
+}
+
+.main__container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  /*background-image: url('../images/productDetail/godfatherBackground.jpg');
+  background-size: cover;*/
+}
+
+.main__container::before {
+  content: "";
+  background-image: url("../images/productDetail/godfatherBackground.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.3;
+}
+
+.main__movie-description {
+  z-index: 1;
+  margin: 15px;
+  border: pink 1px solid;
+}
+
+.main__movie-header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  border: yellow 1px solid;
+}
+
+.main__movie-logo {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: red solid 1px;
+  width: 40%;
+}
+
+.main__movie-logo h1 {
+  padding-bottom: 15px;
+  margin-left: 10px;
+}
+
+.main__movie-logo h4 {
+  font-weight: 100;
+  margin-left: 10px;
+}
+
+.main__movie-logo img {
+  border-radius: 10px;
+  width: 106px;
+  margin: 20px 10px;
+}
+
+.main__boockmark {
+  display: flex;
+  color: #ffc700;
+}
+
+.main__boockmark-icon {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.main__boockmark-button {
+  color: #ffc700;
+  background-color: transparent;
+  border: none;
+}
+
+.perro {
+  display: flex;
+  justify-content: center;
+}
+
+.main__score-trailer-genre {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 30%;
+  border: blue solid 1px;
+}
+
+.main__score {
+  display: flex;
+
+}
+
+.main__score-imdb {
+
+}
+
+.main__score-rottenTomatoes {
+
+}
+
+.main__buy-rent-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 210px;
+  font-size: 14px;
+}
+
+.main__buy-button {
+  background-color: #ffc700;
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  height: 41px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+
+.main__rent-button {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+  height: 41px;
+  font-weight: bold;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
 /*FOOTER*/
 
 .footer__container {
