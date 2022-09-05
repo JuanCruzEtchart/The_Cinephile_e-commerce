@@ -5,9 +5,9 @@
 }
 
 body {
-  font-family: Roboto;
+  font-family: 'Roboto', sans-serif;
   font-size: 12px;
-  background-color: white;
+  background-color: black;
   line-height: 0px;
   text-decoration: none;
   color: black;
@@ -162,6 +162,129 @@ body {
 
 /*MAIN*/
 
+.img_main img{
+  width: 100%;
+  background-size: cover;
+  object-fit: cover;
+  display: flex;
+}
+
+.top1 img {
+  left: 0;
+  top: 10;
+  width: 70px;
+  height: 70px;
+  margin: 0;
+  z-index: 50;
+}
+
+main {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+main section.ultimos_lanzamientos h3 {
+    font-size: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+}
+
+main section h3{
+  margin: 20px 20px;
+}
+
+main section div.movies img.movies_img {
+  position: relative;
+  flex-direction: row;
+  object-fit: cover;
+  width: 100%;
+  padding: 0px 0px 0px 20px;  
+}
+
+main section div.movies {
+  display: flex;
+  overflow-y: auto;
+}
+
+main section div.movies img.movies_img:hover{
+  box-shadow: 5px 5px 5px rgb(100, 100, 100);
+}
+
+main section.mas_alquilado h3 {
+  font-size: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+}
+
+main section div.movies_alq img.movies_img {
+  position: relative;
+  flex-direction: row;
+  object-fit: cover;
+  width: 100%;
+  padding: 0px 0px 0px 20px;
+}
+
+main section div.movies_alq {
+  display: flex;
+  overflow-y: auto;
+}
+
+main section div.movies_alq img.movies_img:hover{
+  box-shadow: 5px 5px 5px rgb(100, 100, 100);
+}
+
+main section.ultimas_series h3 {
+  font-size: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+}
+
+main section div.series img.movies_img {
+  position: relative;
+  flex-direction: row;
+  object-fit: cover;
+  width: 100%;
+  padding: 0px 0px 0px 20px;
+}
+
+main section div.series {
+  display: flex;
+  overflow-y: auto;
+}
+
+main section div.series img.movies_img:hover{
+  box-shadow: 5px 5px 5px rgb(100, 100, 100);
+}
+
+main section.peliculas_infantiles h3 {
+  font-size: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+}
+
+main section div.pelis_infantil img.movies_img {
+  position: relative;
+  flex-direction: row;
+  object-fit: cover;
+  width: 100%;
+  padding: 0px 0px 0px 20px;
+}
+
+main section div.pelis_infantil {
+  display: flex;
+  overflow-y: auto;
+}
+
+main section div.pelis_infantil img.movies_img:hover{
+  box-shadow: 5px 5px 5px rgb(100, 100, 100);
+}
+
 /*FOOTER*/
 
 .footer__container {
@@ -289,6 +412,21 @@ body {
 
   .footer__logo img {
     display: none;
+
+  }
+  .footer__container {
+    background-color: black;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    height: 100vw;
+    background-position: bottom;
+    background-attachment: scroll;
+    align-self: flex-end;
   }
 }
 
@@ -413,6 +551,15 @@ body {
   }
 
   /*MAIN*/
+  
+  .top1 img {
+    left: 0;
+    top: 10;
+    width: 100px;
+    height: 100px;
+    margin: 0;
+    z-index: 50;
+  }
 
   /*FOOTER*/
 
@@ -485,4 +632,13 @@ body {
   }
 
   /*MAIN*/
+
+  .top1 img {
+    left: 0;
+    top: 10;
+    width: 100px;
+    height: 100px;
+    margin: 0;
+    z-index: 50;
+  }
 }
