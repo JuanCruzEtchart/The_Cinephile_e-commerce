@@ -162,6 +162,80 @@
   
   /*MAIN*/
   
+.main{
+  background-color: #212121;
+  position: relative;
+}
+
+.main__container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  max-width: 1350px;
+}
+
+.main__carrito{
+  margin: 15px;
+}
+
+/* main__carrito-header*/
+
+h1{
+  color: white;
+}
+
+/* main__carrito-movies */
+
+.main__carrito-movies{
+  margin-top: white;
+}
+
+.main__carrito-movies p{
+  margin: 10px;
+}
+
+.main__movie-poster img{
+  width: 50%;
+  margin: 10px;
+  border-radius: 5%;
+}
+
+/* main__carrito-checkout */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   /*FOOTER*/
   
   .footer__container {
