@@ -8,9 +8,11 @@
     font-family: Roboto;
     font-size: 12px;
     background-color: white;
-    line-height: 0px;
     text-decoration: none;
-    color: black;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   
   /*HEADER*/
@@ -161,6 +163,118 @@
   }
   
   /*MAIN*/
+
+  #main {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    height: 100%;
+    width: 100%;
+    padding: 20px 0px;
+    background-color: rgba(27, 27, 27, 0.92);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.formulario {
+  height: 80%;
+  width: 40%;
+  background-color: rgba(27, 27, 27, 0.50);
+  border-radius: 10px 10px 10px 10px;
+}
+
+.formulario p, h1, input, button {
+  font-size: 100%;
+}
+
+
+.cruzA{
+  display: flex;
+  justify-content: flex-end;
+  width: 86%;
+  height: 100%;
+  padding-top: 2%;
+}
+.fa-window-close:before {
+  color: #ffc700;
+  font-size: 16px;
+}
+  #form1 {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+#titulo-formulario{
+    display: flex;
+    height: 15%;
+    width: 100%;
+    justify-content: center;
+    padding-right: 11%;
+    font-size: 90%;
+}
+h1.Crear.Cuenta{
+  width:43%;
+}
+.fa-address-book{
+  display: flex;
+  justify-content: flex-end;
+  width: 30%;
+  font-size: 12px;
+  color:rgba(246,233,233,0.78);
+  padding-top: 3%;
+  padding-right: 4%;
+}
+
+#usuario, #email-div, #password-div{
+  width: 100%;
+  padding-left: 25%;
+  font-size: 90%;
+}
+#registrar{
+  background-color: #ffc700;
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30%;
+  margin-top: 5%;
+  border-radius: 5px 5px 5px 5px;
+  text-decoration: none;
+}
+.send-button{
+  background-color: #ffc700;
+  font-weight: bold;
+  border: none;
+
+}
+
+#usuariobloque, #emailbloque, #passwordbloque{
+  background-color: #1b1b1b;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 2px solid #f8efefd0;
+  border-style: solid;
+  font-size: 80%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+} 
+
+#form1 p{
+  font-size: 88%;
+}
+
+#user, #email, #password{
+  background-color: #1b1b1b;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: none;
+  margin-left: 1%;
+  margin-top: 2%;
+}
   
   /*FOOTER*/
   
@@ -330,7 +444,55 @@
     }
   
     /*MAIN*/
-  
+    .cruzA {
+      display: flex;
+      justify-content: flex-end;
+      width: 86%;
+      height: 20%;
+      padding-top: 2%;
+  }
+  .fa-window-close:before {
+    font-size: 20px;
+}
+  #titulo-formulario {
+    display: flex;
+    height: 18%;
+    width: 73%;
+    justify-content: center;
+    padding-right: 15%;
+    font-size: 19px;
+    margin-top: 5%;
+}
+
+h1.Crear.Cuenta {
+  width: 70%;
+  font-size: 78%;
+}
+.fa-address-book {  
+  width: 41%;
+  font-size: 20px;
+  padding-top: 6%;
+  padding-right: 7%;
+}
+#form1 p {
+  font-size: 122%;
+}
+.formulario p, h1, input, button {
+  font-size: 127%;
+}
+.formulario{
+  height: 70%;
+}
+#registrar {
+  width: 71%;
+  margin-bottom: 30%;
+  margin-top: 8%;
+}
+#usuario, #email-div, #password-div {
+  width: 85%;
+  padding-left: 25%;
+  font-size: 90%;
+}
     /*FOOTER*/
   
     .footer {
@@ -413,7 +575,21 @@
     }
   
     /*MAIN*/
-  
+    .formulario p, h1, input, button {
+      font-size: 175%;
+    }
+
+    h1.Crear.Cuenta {
+      width: 70%;
+      font-size: 116%;
+    }
+    h1.Crear.Cuenta {
+      width: 59%;
+  }
+
+  .fa-window-close:before {
+    font-size: 25px;
+}
     /*FOOTER*/
   
     .footer {
@@ -457,6 +633,19 @@
       width: 230px;
     }
   }
+  @media (min-width: 950px) {
+    /*Main*/
+    .fa-address-book {
+      width: 41%;
+      font-size: 20px;
+      padding-top: 5%;
+      padding-right: 5%;
+  }
+  h1.Crear.Cuenta {
+    width: 50%;
+    font-size: 94%;
+}
+  }
   
   /*LARGE-DESKTOP*/
   
@@ -485,5 +674,16 @@
     }
   
     /*MAIN*/
+    h1.Crear.Cuenta {
+      width: 50%;
+      font-size: 94%;
+  }
+
+  .fa-address-book {
+    width: 50%;
+    font-size: 20px;
+    padding-top: 3%;
+    padding-right: 5%;
+}
   }
   

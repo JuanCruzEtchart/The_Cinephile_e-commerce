@@ -3,14 +3,21 @@
     margin: 0px;
     padding: 0px;
   }
+
+  #noneall a{
+    text-decoration:none;
+}
   
   body {
     font-family: Roboto;
     font-size: 12px;
     background-color: white;
-    line-height: 0px;
     text-decoration: none;
-    color: black;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
   }
   
   /*HEADER*/
@@ -162,6 +169,150 @@
   
   /*MAIN*/
   
+  #main{ 
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    padding: 20px 0px;  
+    background-color: rgba(27, 27, 27, 0.92);
+    color: #00D4BB;
+  }
+  
+  .formulario{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  form.form-login {
+    height: 70%;
+    width: 40%;
+    border-width: 1px;
+    background-color: rgba(27, 27, 27, 0.50);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px 10px 10px 10px;
+  }
+  form.form-login i {
+    color: white;
+    font-size: 66%;
+    width: 23%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .cruzA{
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 3px;
+    height: 8%;
+    width: 100%;
+    
+  }
+  .fa-window-close:before {
+    background-color: rgba(27, 27, 27, 0.50);
+    color:#ffc700;
+    padding: 2%;
+    padding-right: 13%;
+    border-radius: 1px 1px 1px 1px;
+    font-size: 170%;
+    
+  }
+  h1.conectate{
+    padding-top: 2%;
+    font-size: 100%;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 4px;
+    height: 1%;
+  }
+  div.email-contraseña{
+    height: 10%;
+    display: flex;
+    justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      padding-left: 4%;
+      margin-bottom: 2%;
+  
+    }
+  
+    #email{
+     background-color: #1b1b1b;
+    }
+  
+    #password{
+      display: flex;
+      margin-bottom: 12%;
+    }
+    #email, #password {
+      display: flex;
+      font-size: 13px;
+      background-color: #1b1b1b;
+      border-top: none;
+      border-right: none;
+      border-left: none;
+      border-bottom: 2px solid #f8efefd0;
+      width: 103%;
+      padding-bottom: 3%;
+      padding-left: 4%;
+      border-style:solid;
+      padding-top:5%;
+  }
+    form.form-login p{
+      font-size: 13px;
+      
+    }
+    
+  .fa-envelope:before {
+    padding-right: 10%;
+  }
+  .fa-lock:before {
+    padding-right: 10%;
+  }
+  
+  button.send-button {
+    background-color: #ffc700;
+    font-size: 13px;
+    margin-bottom: 5%;
+    font-weight: bold;
+    border: none;
+    text-decoration: none;
+    padding-top: 14%;
+}
+  
+  .div-edit{
+      background-color: #ffc700;
+      width: 70%;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 5%;
+      border-radius: 5px 5px 5px 5px;
+      text-decoration: none;
+      
+  }
+  #checkboxBox {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    height: 14%;
+}
+  #checkbox{
+    border-width: 5px;
+    border-style: dotted;
+    width: 30%;
+    font-size: 80%;
+  }
+  #quedarseConectado{
+    margin-bottom: 15%;
+    font-size: 10px;
+  }
+  #contraseña{
+    color: #00D4BB;
+  }
+  
+
   /*FOOTER*/
   
   .footer__container {
@@ -284,6 +435,9 @@
     }
   
     /*MAIN*/
+  #main{
+    font-size: 14px;
+  }
   
     /*FOOTER*/
   
@@ -329,8 +483,43 @@
       display: none;
     }
   
+  }
     /*MAIN*/
-  
+  #contraseña{
+    padding-bottom: 40px ;
+  }
+  #quedarseConectado{
+    margin-bottom: 15%;
+    font-size: 13px;
+  }
+  #checkboxBox{
+    height: 11%;
+  } 
+ main{
+  font-size: 150%;
+ }
+ #email, #password {
+  width: 99%;
+  height: 44%;
+  padding-top: 5%;
+  margin-top: 3%;
+}
+
+#emailbloque, #passwordbloque {
+  width: 68%;
+  height: 15%;
+}
+
+ .fa-window-close:before{
+  font-size: 141%;
+ }
+ div.email-contraseña {
+  padding-top: 2%;
+ }
+ button.send-button {
+  padding-top: 3%;
+ }
+
     /*FOOTER*/
   
     .footer {
@@ -360,7 +549,6 @@
       order: 2;
       width: 230px;
     }
-  }
   
   /*DESKTOP*/
   
@@ -413,7 +601,12 @@
     }
   
     /*MAIN*/
-  
+    #main{
+      font-size: 30px;
+      font-size: 200%;
+       
+    }
+
     /*FOOTER*/
   
     .footer {
@@ -484,6 +677,29 @@
       display: none;
     }
   
-    /*MAIN*/
   }
+  /*MAIN*/
+  
+      #checkboxBox {
+     padding-left: 15%;
+  }
+  #main{
+    font-size: 30px;
+    font-size: 150%;
+  }
+  
+  button.send-button {
+    font-size: large;
+    margin-top: 10%;
+  }
+
+  .div-edit {
+    background-color: #ffc700;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4%;
+    margin-top: 3%;
+}
+
   
