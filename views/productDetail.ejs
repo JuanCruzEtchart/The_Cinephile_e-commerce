@@ -1,534 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <%- include("./partials/head") %>
-    <link rel="stylesheet" href="/css/productDetail.css" />
-  </head>
-  <body>
-    <%- include("./partials/header") %>
-    <main class="main">
-      <div class="main__container">
-        <section class="main__movie-description">
-          <div class="main__movie-header">
-            <div class="main__movie-logo">
-              <h1>El Padrino</h1>
-              <h4>1972 - R - 2h 55m</h4>
-              <img
-                src="/images/productDetail/godfather.png"
-                alt="godfather movie logo"
-              />
-              <form action="#" method="get" class="main__boockmark">
-                <div class="main__boockmark-icon">
-                  <i class="far fa-bookmark"></i>
-                </div>
-                <button type="button" class="main__boockmark-button">
-                  Añadir a Mi lista
-                </button>
-              </form>
-            </div>
-            <section class="main__score-trailer-genre">
-              <section class="main__movie-score">
-                <article class="main__score-imdb">
-                  <div class="main__star-score">
-                    <div class="main__star-icon">
-                      <i class="fas fa-star"></i>
-                    </div>
-                    <div class="main__complete-score">
-                      <div class="main__score">
-                        <span id="score">9,2</span>
-                        <span id="ten">/10</span>
-                      </div>
-                      <div>1,8 M</div>
-                    </div>
-                  </div>
-                  <div>Puntuación en IMDb</div>
-                </article>
-                <article class="main__score-rottenTomatoes">
-                  <div class="main__tomato-score">
-                    <span id="main__tomato-icon">
-                      <img
-                        src="/images/productDetail/Rotten_Tomatoes.png"
-                        alt="Rooten Tomatoes icon"
-                      />
-                    </span>
-                    <span id="main__porcentage">97%</span>
-                  </div>
-                  <p>Tomatometer</p>
-                </article>
-              </section>
-              <div class="main__trailer">
-                <a
-                  href="https://www.youtube.com/watch?v=UaVTIH8mujA"
-                  target="”_blank”"
-                  ><i class="fas fa-play"></i>Trailer</a
-                >
+
+<head>
+  <%- include("./partials/head") %>
+  <link rel="stylesheet" href="/css/productDetail.css" />
+</head>
+
+<body>
+  <%- include("./partials/header") %>
+  <main class="main">
+    <div class="main__container">
+      <section class="main__movie-description">
+        <div class="main__movie-header">
+          <div class="main__movie-logo">
+            <h1><%= movie.name %></h1>
+            <h4><%= movie.description %></h4>
+            <img src=<%= movie.image %> alt="godfather movie logo" />
+            <form action="#" method="get" class="main__boockmark">
+              <div class="main__boockmark-icon">
+                <i class="far fa-bookmark"></i>
               </div>
-              <article class="main__genre">
-                <div class="main__genre-1">Crimen</div>
-                <div class="main__genre-2">Drama</div>
-              </article>
-            </section>
-          </div>
-          <div class="main__buy-rent-buttons">
-            <form action="#" method="get" class="main__buttons">
-              <button type="button" class="main__buy-button">
-                Comprar por $ 1559,90
-              </button>
-              <button type="button" class="main__rent-button">
-                Alquilar por $ 499,90
+              <button type="button" class="main__boockmark-button">
+                Añadir a Mi lista
               </button>
             </form>
           </div>
-          <div class="main__synopsis">
-            Don Vito Corleone es el jefe de una de las cinco familias que
-            ejercen el mando de la Cosa Nostra en Nueva York en los años 40. Don
-            Corleone tiene cuatro hijos; una chica, Connie, y tres varones,
-            Santino, o Sonny, como le gusta que le llamen, Michael y Freddie, al
-            que envían exiliado a Las Vegas, dada su incapacidad para asumir
-            puestos de mando en la ”Familia”. Cuando otro capo, Sollozzo, al
-            rechazar el Padrino intervenir en el negocio de estupefacientes,
-            intenta asesinar a éste, empieza una cruenta lucha de violentos
-            episodios entre los distintos grupos.
-          </div>
-          <article class="main__movie-crew">
-            <div class="main__movie-director">
-              <span class="main__director">Dirección</span>
-              <span class="movie-director">
-                <ul>
-                  <li>
-                    <a
-                      href="https://en.wikipedia.org/wiki/Francis_Ford_Coppola"
-                      target="_blank"
-                      class="main__director-biography"
-                      >Francis Ford Coppola</a
-                    >
-                  </li>
-                </ul>
-              </span>
-            </div>
-            <div class="main__movie-script">
-              <div class="main__script">Guión</div>
-              <span class="movie-script">
-                <ul>
-                  <li>
-                    <a
-                      href="https://en.wikipedia.org/wiki/Francis_Ford_Coppola"
-                      target="_blank"
-                      class="main__writer-biography"
-                      >Francis Ford Coppola</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="https://en.wikipedia.org/wiki/Mario_Puzo"
-                      target="_blank"
-                      class="main__writer-biography"
-                      >Mario Puzo</a
-                    >
-                  </li>
-                </ul>
-              </span>
-            </div>
-          </article>
-        </section>
-        <section class="main__sliders">
-          <article class="article__slider-1">
-            <div class="main__slider-title">
-              <h2>Reparto principal</h2>
-              <div><i class="fas fa-chevron-right"></i></div>
-            </div>
-            <div class="main__slider-wrap-principal-cast">
-              <div class="main__slider">
-                <div class="main__slider-inner" id="main__slider-1-inner">
-                  <div class="main__item-actor">
-                    <a
-                      href="https://en.wikipedia.org/wiki/Marlon_Brando"
-                      target="_blank"
-                    >
-                      <img
-                        src="/images/productDetail/marlonBrando.jpg"
-                        alt="Marlon Brando"
-                      />
-                      <div class="main__actor-name">Marlon Brando</div>
-                      <div class="main__character-name">Vito Corleone</div>
-                    </a>
+          <section class="main__score-trailer-genre">
+            <section class="main__movie-score">
+              <article class="main__score-imdb">
+                <div class="main__star-score">
+                  <div class="main__star-icon">
+                    <i class="fas fa-star"></i>
                   </div>
-                  <div class="main__item-actor">
-                    <a
-                      href="https://en.wikipedia.org/wiki/Al_Pacino"
-                      target="_blank"
-                    >
-                      <img
-                        src="/images/productDetail/alPacino.jpg"
-                        alt="Al Pacino"
-                      />
-                      <div class="main__actor-name">Al Pacino</div>
-                      <div class="main__character-name">Mickael Corleone</div>
-                    </a>
-                  </div>
-                  <div class="main__item-actor">
-                    <a
-                      href="https://en.wikipedia.org/wiki/Diane_Keaton"
-                      target="_blank"
-                    >
-                      <img
-                        src="/images/productDetail/dianeKeaton.jpg"
-                        alt="Diane Keaton"
-                      />
-                      <div class="main__actor-name">Diane Keaton</div>
-                      <div class="main__character-name">Key Adams</div>
-                    </a>
-                  </div>
-                  <div class="main__item-actor">
-                    <a
-                      href="https://en.wikipedia.org/wiki/James_Caan"
-                      target="_blank"
-                    >
-                      <img
-                        src="/images/productDetail/jamesCaan.jpg"
-                        alt="James Caan"
-                      />
-                      <div class="main__actor-name">James Caan</div>
-                      <div class="main__character-name">Sonny Corleone</div>
-                    </a>
-                  </div>
-                  <div class="main__item-actor">
-                    <a
-                      href="https://en.wikipedia.org/wiki/John_Cazale"
-                      target="_blank"
-                    >
-                      <img
-                        src="/images/productDetail/johnCazale.jpg"
-                        alt="John Cazale"
-                      />
-                      <div class="main__actor-name">John Cazale</div>
-                      <div class="main__character-name">Fredo Corleone</div>
-                    </a>
-                  </div>
-                  <div class="main__item-actor">
-                    <a
-                      href="https://en.wikipedia.org/wiki/Robert_Duvall"
-                      target="_blank"
-                    >
-                      <img
-                        src="/images/productDetail/robertDuvall.png"
-                        alt="Robert Duvall"
-                      />
-                      <div class="main__actor-name">Robert Duvall</div>
-                      <div class="main__character-name">Tom Hagen</div>
-                    </a>
-                  </div>
-                  <div class="main__item-actor">
-                    <a
-                      href="https://en.wikipedia.org/wiki/Richard_S._Castellano"
-                      target="_blank"
-                    >
-                      <img
-                        src="/images/productDetail/richardSCa.jpg"
-                        alt="Richard S. Castellano"
-                      />
-                      <div class="main__actor-name">Richard S. Castellano</div>
-                      <div class="main__character-name">Clemenza</div>
-                    </a>
+                  <div class="main__complete-score">
+                    <div class="main__score">
+                      <span id="score"><%= movie.imdbScore %></span>
+                      <span id="ten">/10</span>
+                    </div>
+                    <div><%= movie.imdbTotalReviews %></div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </article>
-          <section class="main__movie_sliders">
-            <article class="article__slider-2">
-              <div class="main__slider-title">
-                <h2>Dirigidas por Francis Ford Coppola</h2>
-                <div><i class="fas fa-chevron-right"></i></div>
-              </div>
-              <div class="main__slider-wrap-directedBy">
-                <div class="main__slider">
-                  <div class="main__slider-inner">
-                    <div class="main__item-movie">
-                      <img
-                        src="/images/productDetail/godfather2.png"
-                        alt="Godfather 2"
-                      />
-                      <div class="main__movie-name">El Padrino II</div>
-                      <form
-                        action="#"
-                        method="get"
-                        class="main__slider-boockmark"
-                      >
-                        <div class="main__boockmark-icon">
-                          <i class="far fa-bookmark"></i>
-                        </div>
-                        <button type="button" class="main__boockmark-button">
-                          Añadir a Mi lista
-                        </button>
-                      </form>
-                    </div>
-                    <div class="main__item-movie">
-                      <img
-                        src="/images/productDetail/apocalypse.png"
-                        alt="Apocalypse Now"
-                      />
-                      <div class="main__movie-name">Apocalypse Now</div>
-                      <form
-                        action="#"
-                        method="get"
-                        class="main__slider-boockmark"
-                      >
-                        <div class="main__boockmark-icon">
-                          <i class="far fa-bookmark"></i>
-                        </div>
-                        <button type="button" class="main__boockmark-button">
-                          Añadir a Mi lista
-                        </button>
-                      </form>
-                    </div>
-                    <div class="main__item-movie">
-                      <img
-                        src="/images/productDetail/dracula.jpg"
-                        alt="Dracula"
-                      />
-                      <div class="main__movie-name">Dracula</div>
-                      <form
-                        action="#"
-                        method="get"
-                        class="main__slider-boockmark"
-                      >
-                        <div class="main__boockmark-icon">
-                          <i class="far fa-bookmark"></i>
-                        </div>
-                        <button type="button" class="main__boockmark-button">
-                          Añadir a Mi lista
-                        </button>
-                      </form>
-                    </div>
-                    <div class="main__item-movie">
-                      <img
-                        src="/images/productDetail/godfather3.png"
-                        alt="Godfather 3"
-                      />
-                      <div class="main__movie-name">El Padrino III</div>
-                      <form
-                        action="#"
-                        method="get"
-                        class="main__slider-boockmark"
-                      >
-                        <div class="main__boockmark-icon">
-                          <i class="far fa-bookmark"></i>
-                        </div>
-                        <button type="button" class="main__boockmark-button">
-                          Añadir a Mi lista
-                        </button>
-                      </form>
-                    </div>
-                    <div class="main__item-movie">
-                      <img
-                        src="/images/productDetail/patton.png"
-                        alt="Patton"
-                      />
-                      <div class="main__movie-name">Patton</div>
-                      <form
-                        action="#"
-                        method="get"
-                        class="main__slider-boockmark"
-                      >
-                        <div class="main__boockmark-icon">
-                          <i class="far fa-bookmark"></i>
-                        </div>
-                        <button type="button" class="main__boockmark-button">
-                          Añadir a Mi lista
-                        </button>
-                      </form>
-                    </div>
-                    <div class="main__item-movie">
-                      <img
-                        src="/images/productDetail/theOutsiders.png"
-                        alt="Robert Duvall"
-                      />
-                      <div class="main__movie-name">The Outsiders</div>
-                      <form
-                        action="#"
-                        method="get"
-                        class="main__slider-boockmark"
-                      >
-                        <div class="main__boockmark-icon">
-                          <i class="far fa-bookmark"></i>
-                        </div>
-                        <button type="button" class="main__boockmark-button">
-                          Añadir a Mi lista
-                        </button>
-                      </form>
-                    </div>
-                    <div class="main__item-movie">
-                      <img
-                        src="/images/productDetail/sleepyHollow.png"
-                        alt="Sleepy Hollow"
-                      />
-                      <div class="main__movie-name">Sleepy Hollow</div>
-                      <form
-                        action="#"
-                        method="get"
-                        class="main__slider-boockmark"
-                      >
-                        <div class="main__boockmark-icon">
-                          <i class="far fa-bookmark"></i>
-                        </div>
-                        <button type="button" class="main__boockmark-button">
-                          Añadir a Mi lista
-                        </button>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </article>
-            <article class="article__slider-3">
-              <div class="main__slider-title">
-                <h2>Películas similares</h2>
-                <div><i class="fas fa-chevron-right"></i></div>
-              </div>
-              <article class="main__slider-wrap-directedBy">
-                <div class="main__slider">
-                  <div class="main__slider-inner">
-                    <div class="main__item-movie">
-                      <img
-                        src="/images/productDetail/shawshank.png"
-                        alt="Shawshank"
-                      />
-                      <div class="main__movie-name">
-                        The Shawshank Redemption
-                      </div>
-                      <form
-                        action="#"
-                        method="get"
-                        class="main__slider-boockmark"
-                      >
-                        <div class="main__boockmark-icon">
-                          <i class="far fa-bookmark"></i>
-                        </div>
-                        <button type="button" class="main__boockmark-button">
-                          Añadir a Mi lista
-                        </button>
-                      </form>
-                    </div>
-                    <div class="main__item-movie">
-                      <img
-                        src="/images/productDetail/goodFellas.png"
-                        alt="Goodfellas"
-                      />
-                      <div class="main__movie-name">Goodfellas</div>
-                      <form
-                        action="#"
-                        method="get"
-                        class="main__slider-boockmark"
-                      >
-                        <div class="main__boockmark-icon">
-                          <i class="far fa-bookmark"></i>
-                        </div>
-                        <button type="button" class="main__boockmark-button">
-                          Añadir a Mi lista
-                        </button>
-                      </form>
-                    </div>
-                    <div class="main__item-movie">
-                      <img
-                        src="/images/productDetail/batman.png"
-                        alt="Batman"
-                      />
-                      <div class="main__movie-name">The Dark Knight</div>
-                      <form
-                        action="#"
-                        method="get"
-                        class="main__slider-boockmark"
-                      >
-                        <div class="main__boockmark-icon">
-                          <i class="far fa-bookmark"></i>
-                        </div>
-                        <button type="button" class="main__boockmark-button">
-                          Añadir a Mi lista
-                        </button>
-                      </form>
-                    </div>
-                    <div class="main__item-movie">
-                      <img
-                        src="/images/productDetail/peakyBlinders.jpg"
-                        alt="Peaky Blinders"
-                      />
-                      <div class="main__movie-name">Peaky Blinders</div>
-                      <form
-                        action="#"
-                        method="get"
-                        class="main__slider-boockmark"
-                      >
-                        <div class="main__boockmark-icon">
-                          <i class="far fa-bookmark"></i>
-                        </div>
-                        <button type="button" class="main__boockmark-button">
-                          Añadir a Mi lista
-                        </button>
-                      </form>
-                    </div>
-                    <div class="main__item-movie">
-                      <img
-                        src="/images/productDetail/taxiDriver.jpg"
-                        alt="Taxi Driver"
-                      />
-                      <div class="main__movie-name">Taxi Driver</div>
-                      <form
-                        action="#"
-                        method="get"
-                        class="main__slider-boockmark"
-                      >
-                        <div class="main__boockmark-icon">
-                          <i class="far fa-bookmark"></i>
-                        </div>
-                        <button type="button" class="main__boockmark-button">
-                          Añadir a Mi lista
-                        </button>
-                      </form>
-                    </div>
-                    <div class="main__item-movie">
-                      <img
-                        src="/images/productDetail/roadToPerdition.jpg"
-                        alt="Road to Perdition"
-                      />
-                      <div class="main__movie-name">Road To Perdition</div>
-                      <form
-                        action="#"
-                        method="get"
-                        class="main__slider-boockmark"
-                      >
-                        <div class="main__boockmark-icon">
-                          <i class="far fa-bookmark"></i>
-                        </div>
-                        <button type="button" class="main__boockmark-button">
-                          Añadir a Mi lista
-                        </button>
-                      </form>
-                    </div>
-                    <div class="main__item-movie">
-                      <img src="/images/productDetail/gotti.jpg" alt="Gotti" />
-                      <div class="main__movie-name">Gotti</div>
-                      <form
-                        action="#"
-                        method="get"
-                        class="main__slider-boockmark"
-                      >
-                        <div class="main__boockmark-icon">
-                          <i class="far fa-bookmark"></i>
-                        </div>
-                        <button type="button" class="main__boockmark-button">
-                          Añadir a Mi lista
-                        </button>
-                      </form>
-                    </div>
-                  </div>
-                </div>
+                <div>Puntuación en IMDb</div>
               </article>
+              <article class="main__score-rottenTomatoes">
+                <div class="main__tomato-score">
+                  <span id="main__tomato-icon">
+                    <img src="/images/productDetail/Rotten_Tomatoes.png" alt="Rooten Tomatoes icon" />
+                  </span>
+                  <span id="main__porcentage"><%= movie.tomatoScore %></span>
+                </div>
+                <p>Tomatometer</p>
+              </article>
+            </section>
+            <div class="main__trailer">
+              <a href=<%= movie.trailerLink %> target="”_blank”"><i class="fas fa-play"></i>Trailer</a>
+            </div>
+            <article class="main__genre">
+              <div class="main__genre-1">Crimen</div>
+              <div class="main__genre-2">Drama</div>
             </article>
           </section>
+        </div>
+        <div class="main__buy-rent-buttons">
+          <form action="#" method="get" class="main__buttons">
+            <button type="button" class="main__buy-button">
+              Comprar por $ 1559,90
+            </button>
+            <button type="button" class="main__rent-button">
+              Alquilar por $ 499,90
+            </button>
+          </form>
+        </div>
+        <div class="main__synopsis">
+          <%= movie.synopsis %>
+        </div>
+        <article class="main__movie-crew">
+          <div class="main__movie-director">
+            <div class="main__director">Dirección</div>
+            <span class="movie-director">
+              <ul>
+                <ul>
+                  <% movie.director.forEach(element => { %>
+                  <li>
+                    <a href="<%= element.link%>" target="_blank" class="main__writer-biography"><%= element.name %></a>
+                  </li>
+                  <% }) %>
+                </ul>
+            </span>
+          </div>
+          <div class="main__movie-script">
+            <div class="main__script">Guión</div>
+            <span class="movie-script">
+              <ul>
+                <% movie.script.forEach(element => { %>
+                <li>
+                  <a href="<%= element.link%>" target="_blank" class="main__writer-biography"><%= element.name %></a>
+                </li>
+                <% }) %>
+              </ul>
+            </span>
+          </div>
+        </article>
+      </section>
+      <section class="main__sliders">
+        <article class="article__slider-1">
+          <div class="main__slider-title">
+            <h2>Reparto principal</h2>
+            <div><i class="fas fa-chevron-right"></i></div>
+          </div>
+          <div class="main__slider-wrap-principal-cast">
+            <div class="main__slider">
+              <div class="main__slider-inner" id="main__slider-1-inner">
+                <% movie.cast.forEach(element => { %>
+
+                <div class="main__item-actor">
+                  <a href="<%= element.link%>" target="_blank">
+                    <img src="<%= element.image%>" alt="<%= element.actor%>" />
+                    <div class="main__actor-name"><%= element.actor%></div>
+                    <div class="main__character-name"><%= element.image%></div>
+                  </a>
+                </div>
+                <% }) %>
+              </div>
+            </div>
+          </div>
+        </article>
+        <section class="main__movie_sliders">
+          <article class="article__slider-2">
+            <div class="main__slider-title">
+              <h2>Dirigidas por <%= movie.director %></h2>
+              <div><i class="fas fa-chevron-right"></i></div>
+            </div>
+            <div class="main__slider-wrap-directedBy">
+              <div class="main__slider">
+                <div class="main__slider-inner">
+                  <% movie.directedBy.forEach(element => { %>
+                  <div class="main__item-movie">
+                    <img src=<%= element.image %> alt="<%= element.name%>" />
+                    <div class="main__movie-name"><%= element.name%></div>
+                    <form action="#" method="get" class="main__slider-boockmark">
+                      <div class="main__boockmark-icon">
+                        <i class="far fa-bookmark"></i>
+                      </div>
+                      <button type="button" class="main__boockmark-button">
+                        Añadir a Mi lista
+                      </button>
+                    </form>
+                  </div>
+                  <% }) %>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="article__slider-3">
+            <div class="main__slider-title">
+              <h2>Películas similares</h2>
+              <div><i class="fas fa-chevron-right"></i></div>
+            </div>
+            <article class="main__slider-wrap-directedBy">
+              <div class="main__slider">
+                <div class="main__slider-inner">
+                  <% movie.similar.forEach(element => { %>
+                  <div class="main__item-movie">
+                    <img src="<%= element.image%>" alt="<%= element.name%>" />
+                    <div class="main__movie-name">
+                      <%= element.name%>
+                    </div>
+                    <form action="#" method="get" class="main__slider-boockmark">
+                      <div class="main__boockmark-icon">
+                        <i class="far fa-bookmark"></i>
+                      </div>
+                      <button type="button" class="main__boockmark-button">
+                        Añadir a Mi lista
+                      </button>
+                    </form>
+                  </div>
+                  <% }) %>
+                </div>
+              </div>
+            </article>
+          </article>
         </section>
-      </div>
-    </main>
-    <%- include("./partials/footer") %>
-  </body>
+      </section>
+    </div>
+  </main>
+  <%- include("./partials/footer") %>
+</body>
+
 </html>

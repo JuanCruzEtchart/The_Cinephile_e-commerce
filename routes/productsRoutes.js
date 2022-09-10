@@ -4,7 +4,7 @@ const productController = require("../controllers/productController.js");
 
 /*Render del detalle de productos*/
 
-router.get("/detail", productController.detail);
+router.get("/detail/:id", productController.detail);
 
 /*Render carrito de productos*/
 

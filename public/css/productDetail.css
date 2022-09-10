@@ -494,12 +494,17 @@ body {
   padding-right: 15px;
   height: 40px;
 }
+
 .movie-director li:first-child {
   list-style: none;
 }
 
 .movie-script li:first-child {
   list-style: none;
+}
+
+ul{
+  list-style-type: disc;
 }
 
 li {
@@ -509,7 +514,6 @@ li {
 
 li a {
   display: block;
-  color: white;
   text-align: center;
   padding: 16px;
   padding-left: 0px;
@@ -666,8 +670,6 @@ li a {
 .main__boockmark-icon:hover .main__slider-boockmark {
   color: #fce89f;
 }
-
-
 
 /*FOOTER*/
 
