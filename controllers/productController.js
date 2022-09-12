@@ -167,6 +167,9 @@ const productController = {
     });
     res.render("productDetail", { movie: movieFound });
   },
+  management: (req, res) => {
+    res.render("productManagement");
+  },
   cart: (req, res) => {
     res.render("productCart");
   },

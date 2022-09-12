@@ -56,18 +56,18 @@
               <a href=<%= movie.trailerLink %> target="”_blank”"><i class="fas fa-play"></i>Trailer</a>
             </div>
             <article class="main__genre">
-              <div class="main__genre-1">Crimen</div>
-              <div class="main__genre-2">Drama</div>
+              <div class="main__genre-1"><%= movie.genre[0] %></div>
+              <div class="main__genre-2"><%= movie.genre[1] %></div>
             </article>
           </section>
         </div>
         <div class="main__buy-rent-buttons">
           <form action="#" method="get" class="main__buttons">
             <button type="button" class="main__buy-button">
-              Comprar por $ 1559,90
+              Comprar por <%= movie.purchasePrice %>
             </button>
             <button type="button" class="main__rent-button">
-              Alquilar por $ 499,90
+              Alquilar por <%= movie.rentalPrice %>
             </button>
           </form>
         </div>
@@ -112,12 +112,11 @@
             <div class="main__slider">
               <div class="main__slider-inner" id="main__slider-1-inner">
                 <% movie.cast.forEach(element => { %>
-
                 <div class="main__item-actor">
                   <a href="<%= element.link%>" target="_blank">
                     <img src="<%= element.image%>" alt="<%= element.actor%>" />
                     <div class="main__actor-name"><%= element.actor%></div>
-                    <div class="main__character-name"><%= element.image%></div>
+                    <div class="main__character-name"><%= element.character%></div>
                   </a>
                 </div>
                 <% }) %>
@@ -128,7 +127,7 @@
         <section class="main__movie_sliders">
           <article class="article__slider-2">
             <div class="main__slider-title">
-              <h2>Dirigidas por <%= movie.director %></h2>
+              <h2>Dirigidas por <%= movie.director[0].name %> </h2>
               <div><i class="fas fa-chevron-right"></i></div>
             </div>
             <div class="main__slider-wrap-directedBy">

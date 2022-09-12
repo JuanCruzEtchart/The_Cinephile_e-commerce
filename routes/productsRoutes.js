@@ -6,6 +6,10 @@ const productController = require("../controllers/productController.js");
 
 router.get("/detail/:id", productController.detail);
 
+/*Render de la vista de edición de productos*/
+
+router.get("/management", productController.management);
+
 /*Render carrito de productos*/
 
 router.get("/cart", productController.cart);
