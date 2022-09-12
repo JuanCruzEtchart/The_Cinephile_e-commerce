@@ -14,3 +14,9 @@
 4. [Google Play](https://play.google.com/store/movies): formato de compra por película y diseño de características
 5. [Cuevana](https://ww3.cuevana.pro/): filtro por año y animaciones de header
 6. [Mercado Libre](https://mercadolibre.com/): formato de carrito de compras
+
+*Links de interes*
+======
+
+- [Repositorio de GitHub](https://github.com/JuanCruzEtchart/grupo_1_e-commerce_de_peliculas_y_series.git)
+- [Tablero de Trello](https://trello.com/invite/b/bhRyOQQI/7667fce7e85d88dd6577f1064ae5f651/planilla-scrum)
