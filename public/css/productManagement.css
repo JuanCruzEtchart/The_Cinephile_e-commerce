@@ -21,7 +21,7 @@
   width: 100%;
   padding: 10px;
   border-radius: 10px;
-  border: 1px rgba(255, 255, 255, 0.5);
+  border: solid 1px rgba(255, 255, 255, 0.3);
   background-color: #1b1b1b;
   color: white;
   overflow: hidden;
@@ -38,7 +38,7 @@
   width: 100%;
   padding: 10px;
   border-radius: 10px;
-  border: 1px rgba(255, 255, 255, 0.5);
+  border: solid 1px rgba(255, 255, 255, 0.3);
   background-color: #1b1b1b;
   color: white;
 }
