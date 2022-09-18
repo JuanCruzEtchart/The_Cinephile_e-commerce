@@ -5,6 +5,10 @@
   position: relative;
 }
 
+.main__form {
+  background-color: #212121;
+}
+
 .main::before {
   content: "";
   background-image: url("../images/productDetail/godfatherBackground.jpg");
@@ -27,19 +31,19 @@
   max-width: 1350px;
 }
 
-.main__movie-description {
+.main__product-description {
   z-index: 1;
   margin: 15px;
 }
 
-.main__movie-header {
+.main__product-header {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   margin-bottom: 20px;
 }
 
-.main__movie-logo {
+.main__product-logo {
   color: white;
   display: flex;
   flex-direction: column;
@@ -47,18 +51,18 @@
   width: 40%;
 }
 
-.main__movie-logo h1 {
+.main__product-logo h1 {
   padding-bottom: 15px;
   margin-left: 10px;
   width: 200%;
 }
 
-.main__movie-logo h4 {
+.main__product-logo h4 {
   font-weight: 100;
   margin-left: 10px;
 }
 
-.main__movie-logo img {
+.main__product-logo img {
   border-radius: 10px;
   width: 106px;
   margin: 20px 10px;
@@ -99,7 +103,7 @@
   width: 60%;
 }
 
-.main__movie-score {
+.main__product-score {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -293,12 +297,12 @@
   max-width: 730px;
 }
 
-.main__movie-crew {
+.main__product-crew {
   color: white;
   font-size: 15px;
 }
 
-.main__movie-director {
+.main__product-director {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -314,7 +318,7 @@
   height: 40px;
 }
 
-.main__movie-script {
+.main__product-script {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -333,11 +337,11 @@
   height: 40px;
 }
 
-.movie-director li:first-child {
+.product-director li:first-child {
   list-style: none;
 }
 
-.movie-script li:first-child {
+.product-script li:first-child {
   list-style: none;
 }
 
@@ -457,7 +461,7 @@ li a {
   margin-bottom: 30px;
 }
 
-.main__item-movie {
+.main__item-product {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -470,18 +474,18 @@ li a {
   border-radius: 10px;
 }
 
-.main__item-movie:last-child {
+.main__item-product:last-child {
   margin-right: 0px;
 }
 
-.main__item-movie img {
+.main__item-product img {
   border-radius: 10px;
   margin-bottom: 20px;
   width: 130px;
   height: 191px;
 }
 
-.main__movie-name {
+.main__product-name {
   line-height: 22px;
   font-size: 14px;
   font-weight: bold;
@@ -527,19 +531,19 @@ li a {
     max-height: 583px;
   }
 
-  .main__movie-logo {
+  .main__product-logo {
     width: auto;
   }
 
-  .main__movie-logo h1 {
+  .main__product-logo h1 {
     font-size: 32px;
   }
 
-  .main__movie-logo h4 {
+  .main__product-logo h4 {
     font-size: 14px;
   }
 
-  .main__movie-logo img {
+  .main__product-logo img {
     width: 171px;
   }
 
@@ -547,7 +551,7 @@ li a {
     margin-left: 40px;
   }
 
-  .main__movie-score {
+  .main__product-score {
     margin-right: 70px;
   }
 
@@ -585,19 +589,19 @@ li a {
     margin: auto;
   }
 
-  .main__movie-logo {
+  .main__product-logo {
     width: auto;
   }
 
-  .main__movie-logo h1 {
+  .main__product-logo h1 {
     font-size: 52px;
   }
 
-  .main__movie-logo h4 {
+  .main__product-logo h4 {
     font-size: 16px;
   }
 
-  .main__movie-logo img {
+  .main__product-logo img {
     width: 240px;
   }
 
@@ -606,7 +610,7 @@ li a {
     font-size: 16px;
   }
 
-  .main__movie-score {
+  .main__product-score {
     margin-right: 70px;
     flex-direction: row;
     margin-bottom: 250px;
@@ -724,12 +728,12 @@ li a {
     height: 180px;
   }
 
-  .main__item-movie img {
+  .main__item-product img {
     width: 161px;
     height: 239px;
   }
 
-  .main__movie_sliders {
+  .main__product_sliders {
     width: 550px;
   }
 
@@ -785,12 +789,12 @@ li a {
     height: 180px;
   }
 
-  .main__item-movie img {
+  .main__item-product img {
     width: 161px;
     height: 239px;
   }
 
-  .main__movie_sliders {
+  .main__product_sliders {
     width: 735px;
   }
 

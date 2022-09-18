@@ -1,5 +1,71 @@
 /*MAIN*/
 
+.main {
+  background-color: #212121;
+}
+
+.main__container {
+  width: 90%;
+  margin: auto;
+  max-width: 1200px;
+}
+
+.main__form {
+  padding: 20px 0px;
+  text-align: center;
+}
+
+.text-box {
+  font-size: 14px;
+  margin-bottom: 15px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px rgba(255, 255, 255, 0.5);
+  background-color: #1b1b1b;
+  color: white;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#product-synopsis {
+  resize: none;
+  word-wrap: break-word;
+  width: 100%;
+  font-size: 14px;
+  margin-bottom: 15px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px rgba(255, 255, 255, 0.5);
+  background-color: #1b1b1b;
+  color: white;
+}
+
+.main__button {
+  font-size: 14px;
+}
+
+.send-button {
+  background-color: #ffc700;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  width: 70%;
+  cursor: pointer;
+}
+
+.delete-button {
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  width: 70%;
+  cursor: pointer;
+}
+
 /*MEDIA QUERIES*/
 
 /*MOBILE*/
@@ -12,6 +78,9 @@
 
 @media (min-width: 600px) {
   /*MAIN*/
+  .main__container {
+    width: 50%;
+  }
 }
 
 /*DESKTOP*/
