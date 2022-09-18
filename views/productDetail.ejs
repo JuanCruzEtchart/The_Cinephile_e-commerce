@@ -10,13 +10,13 @@
   <%- include("./partials/header") %>
   <main class="main">
     <div class="main__container">
-      <section class="main__movie-description">
-        <div class="main__movie-header">
-          <div class="main__movie-logo">
-            <h1><%= movie.name %></h1>
-            <h4><%= movie.description %></h4>
-            <img src=<%= movie.image %> alt="godfather movie logo" />
-            <form action="#" method="get" class="main__boockmark">
+      <section class="main__product-description">
+        <div class="main__product-header">
+          <div class="main__product-logo">
+            <h1><%= product.name %></h1>
+            <h4><%= product.description %></h4>
+            <img src=<%= product.image %> alt="godfather product logo" />
+            <form action="#" method="post" class="main__boockmark">
               <div class="main__boockmark-icon">
                 <i class="far fa-bookmark"></i>
               </div>
@@ -26,7 +26,7 @@
             </form>
           </div>
           <section class="main__score-trailer-genre">
-            <section class="main__movie-score">
+            <section class="main__product-score">
               <article class="main__score-imdb">
                 <div class="main__star-score">
                   <div class="main__star-icon">
@@ -34,10 +34,10 @@
                   </div>
                   <div class="main__complete-score">
                     <div class="main__score">
-                      <span id="score"><%= movie.imdbScore %></span>
+                      <span id="score"><%= product.imdbScore %></span>
                       <span id="ten">/10</span>
                     </div>
-                    <div><%= movie.imdbTotalReviews %></div>
+                    <div><%= product.imdbTotalReviews %></div>
                   </div>
                 </div>
                 <div>Puntuación en IMDb</div>
@@ -47,40 +47,40 @@
                   <span id="main__tomato-icon">
                     <img src="/images/productDetail/Rotten_Tomatoes.png" alt="Rooten Tomatoes icon" />
                   </span>
-                  <span id="main__porcentage"><%= movie.tomatoScore %></span>
+                  <span id="main__porcentage"><%= product.tomatoScore %></span>
                 </div>
                 <p>Tomatometer</p>
               </article>
             </section>
             <div class="main__trailer">
-              <a href=<%= movie.trailerLink %> target="”_blank”"><i class="fas fa-play"></i>Trailer</a>
+              <a href=<%= product.trailerLink %> target="”_blank”"><i class="fas fa-play"></i>Trailer</a>
             </div>
             <article class="main__genre">
-              <div class="main__genre-1">Crimen</div>
-              <div class="main__genre-2">Drama</div>
+              <div class="main__genre-1"><%= product.genre[0] %></div>
+              <div class="main__genre-2"><%= product.genre[1] %></div>
             </article>
           </section>
         </div>
         <div class="main__buy-rent-buttons">
           <form action="#" method="get" class="main__buttons">
             <button type="button" class="main__buy-button">
-              Comprar por $ 1559,90
+              Comprar por <%= product.purchasePrice %>
             </button>
             <button type="button" class="main__rent-button">
-              Alquilar por $ 499,90
+              Alquilar por <%= product.rentalPrice %>
             </button>
           </form>
         </div>
         <div class="main__synopsis">
-          <%= movie.synopsis %>
+          <%= product.synopsis %>
         </div>
-        <article class="main__movie-crew">
-          <div class="main__movie-director">
+        <article class="main__product-crew">
+          <div class="main__product-director">
             <div class="main__director">Dirección</div>
-            <span class="movie-director">
+            <span class="product-director">
               <ul>
                 <ul>
-                  <% movie.director.forEach(element => { %>
+                  <% product.director.forEach(element => { %>
                   <li>
                     <a href="<%= element.link%>" target="_blank" class="main__writer-biography"><%= element.name %></a>
                   </li>
@@ -88,11 +88,11 @@
                 </ul>
             </span>
           </div>
-          <div class="main__movie-script">
+          <div class="main__product-script">
             <div class="main__script">Guión</div>
-            <span class="movie-script">
+            <span class="product-script">
               <ul>
-                <% movie.script.forEach(element => { %>
+                <% product.script.forEach(element => { %>
                 <li>
                   <a href="<%= element.link%>" target="_blank" class="main__writer-biography"><%= element.name %></a>
                 </li>
@@ -111,13 +111,12 @@
           <div class="main__slider-wrap-principal-cast">
             <div class="main__slider">
               <div class="main__slider-inner" id="main__slider-1-inner">
-                <% movie.cast.forEach(element => { %>
-
+                <% product.cast.forEach(element => { %>
                 <div class="main__item-actor">
                   <a href="<%= element.link%>" target="_blank">
                     <img src="<%= element.image%>" alt="<%= element.actor%>" />
                     <div class="main__actor-name"><%= element.actor%></div>
-                    <div class="main__character-name"><%= element.image%></div>
+                    <div class="main__character-name"><%= element.character%></div>
                   </a>
                 </div>
                 <% }) %>
@@ -125,20 +124,20 @@
             </div>
           </div>
         </article>
-        <section class="main__movie_sliders">
+        <section class="main__product_sliders">
           <article class="article__slider-2">
             <div class="main__slider-title">
-              <h2>Dirigidas por <%= movie.director %></h2>
+              <h2>Dirigidas por <%= product.director[0].name %> </h2>
               <div><i class="fas fa-chevron-right"></i></div>
             </div>
             <div class="main__slider-wrap-directedBy">
               <div class="main__slider">
                 <div class="main__slider-inner">
-                  <% movie.directedBy.forEach(element => { %>
-                  <div class="main__item-movie">
+                  <% product.directedBy.forEach(element => { %>
+                  <div class="main__item-product">
                     <img src=<%= element.image %> alt="<%= element.name%>" />
-                    <div class="main__movie-name"><%= element.name%></div>
-                    <form action="#" method="get" class="main__slider-boockmark">
+                    <div class="main__product-name"><%= element.name%></div>
+                    <form action="#" method="post" class="main__slider-boockmark">
                       <div class="main__boockmark-icon">
                         <i class="far fa-bookmark"></i>
                       </div>
@@ -160,13 +159,13 @@
             <article class="main__slider-wrap-directedBy">
               <div class="main__slider">
                 <div class="main__slider-inner">
-                  <% movie.similar.forEach(element => { %>
-                  <div class="main__item-movie">
+                  <% product.similar.forEach(element => { %>
+                  <div class="main__item-product">
                     <img src="<%= element.image%>" alt="<%= element.name%>" />
-                    <div class="main__movie-name">
+                    <div class="main__product-name">
                       <%= element.name%>
                     </div>
-                    <form action="#" method="get" class="main__slider-boockmark">
+                    <form action="#" method="post" class="main__slider-boockmark">
                       <div class="main__boockmark-icon">
                         <i class="far fa-bookmark"></i>
                       </div>

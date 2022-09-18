@@ -1,6 +1,6 @@
 const path = require("path");
 
-let moviesDetail = [
+let productsDetail = [
   {
     id: "1",
     name: "El Padrino",
@@ -162,10 +162,13 @@ let moviesDetail = [
 
 const productController = {
   detail: (req, res) => {
-    let movieFound = moviesDetail.find((movie) => {
-      return movie.id == req.params.id;
+    let productFound = productsDetail.find((product) => {
+      return product.id == req.params.id;
     });
-    res.render("productDetail", { movie: movieFound });
+    res.render("productDetail", { product: productFound });
+  },
+  management: (req, res) => {
+    res.render("productManagement");
   },
   cart: (req, res) => {
     res.render("productCart");
