@@ -188,6 +188,7 @@
   justify-content: space-between;
   flex-direction: row;
   margin-top: 20px;
+  padding: 6px
 }
 
 .main__carrito-header h1{
@@ -319,6 +320,7 @@ h2{
   border-radius: 10px;
   background-color: #ffc700;
   color: #1b1b1b;
+  margin-right: 11px;
 }
 
 .precio-articulo-alquiler{
@@ -402,37 +404,22 @@ h2{
 }
 
 .main__carrito-checkout-button{
-  margin-top: 127px;
+  margin-top: 44px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 30px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.main__carrito-checkout-button form button{
+    background: transparent;
+    border: black solid 1px;
+    width: 222px;
+    background-color: #ffc700;
+    border-radius: 10px;
+    font-size: 12px;
+}
 
 
   /*FOOTER*/
@@ -603,7 +590,15 @@ h2{
     }
   
     /*MAIN*/
-  
+    h2{
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+
+    .main__movie-subtotal{
+      margin: 25px;
+      padding: 20px;
+    }
     /*FOOTER*/
   
     .footer {
