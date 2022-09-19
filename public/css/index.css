@@ -75,6 +75,16 @@ main section div.movies_alq img.movies_img:hover {
   box-shadow: 5px 0px 0px 0px grey;
 }
 
+.movies_img_b{
+  width: 100%;
+  height: 100%;
+  padding: 0px 0px 0px 20px;
+}
+
+.movies_img_b:hover {
+  box-shadow: 5px 0px 0px 0px grey;
+}
+
 main section.ultimas_series h3 {
   font-size: 24px;
   display: flex;
