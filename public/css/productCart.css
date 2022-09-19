@@ -1,276 +1,124 @@
-* {
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-  }
-  
-  body {
-    font-family: Roboto;
-    font-size: 12px;
-    background-color: white;
-    line-height: 0px;
-    text-decoration: none;
-    color: black;
-  }
-  
-  /*HEADER*/
-  
-  .header__container {
-    display: flex;
-    background-color: black;
-    justify-content: space-between;
-    align-items: center;
-    height: 50px;
-    padding: 0px 5%;
-  }
-  
-  .header__dropMenu-logo {
-    width: 45%;
-  }
-  
-  .header__drop-logo-form {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .header__burger-menu {
-    color: white;
-    background-color: black;
-    border: none;
-    font-size: 20px;
-    margin-right: 20px;
-    cursor: pointer;
-    transition: all 120ms;
-  }
-  
-  .header__burger-menu:hover {
-    color: #ffc700;
-  }
-  
-  .header__logo {
-    background-color: black;
-    border: none;
-  }
-  
-  .header__logo img {
-    height: auto;
-    width: auto;
-    max-width: 110px;
-    cursor: pointer;
-  }
-  
-  .header__search-container {
-    width: 50%;
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .header__search-bar {
-    flex-grow: 7;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    border-radius: 5px;
-    padding: 5px 10px;
-    background-color: white;
-  }
-  
-  .header__search-bar input {
-    flex: 1;
-    border: 0;
-    font-size: 15px;
-    color: #666666;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    color: black;
-  }
-  
-  .header__search-bar button {
-    background-color: white;
-    border: none;
-    border-radius: 5px;
-    margin-left: 10px;
-    font-size: 15px;
-    color: #666666;
-    transition: all 120ms;
-  }
-  
-  .header__search-bar button:hover {
-    color: #ffc700;
-    cursor: pointer;
-  }
-  
-  .header__nav {
-    width: 30%;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .header__dropdown-buttons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 75%;
-    padding-right: 60px;
-  }
-  
-  .header__dropdown-buttons a {
-    width: 100px;
-    font-size: 15px;
-    text-align: center;
-    padding: 13px;
-    border-radius: 5px;
-    border: none;
-    color: white;
-    background-color: #1b1b1b;
-    text-decoration: none;
-    transition: all 120ms;
-  }
-  
-  .header__dropdown-buttons a:hover {
-    background-color: #ffc700;
-    color: black;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  .header__nav-buttons {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .header__nav-buttons a {
-    color: white;
-    background-color: black;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-    transition: all 120ms;
-  }
-  
-  .header__nav-buttons a:hover {
-    color: #ffc700;
-    font-weight: bold;
-  }
-  
-  /*MAIN*/
-  
-.main{
+/*MAIN*/
+
+.main {
   background-color: #212121;
   position: relative;
 }
 
-.main__container{
+.main__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
   max-width: 1350px;
+  margin: auto;
+  width: 90%;
 }
 
-.main__carrito{
-  margin: 15px;
+.main__carrito {
   color: white;
   opacity: 0.8;
 }
 
 /* main__carrito-header*/
 
-.main__carrito-header{
+.main__carrito-header {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   margin-top: 20px;
+  padding: 6px
 }
 
-.main__carrito-header h1{
+.main__carrito-header h1 {
   color: white;
 }
 
-.main__carrito-header form{
-  margin-top: -33px;
+.main__carrito-header form {
+  margin-top: -20px;
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 49px;
 }
 
-.main__continuar-comprando-button{
+.main__continuar-comprando-button {
   width: 112px;
   height: 15px;
   font-size: 9px;
   border: transparent;
   background: transparent;
   color: white;
+  transition: all 120ms;
 }
 
+.main__continuar-comprando-button:hover{
+  color: #ffc700;
+}
 
-.main__continuar-comprando-icono i{
-  color: #FFC700;
+.main__continuar-comprando-icono i {
+  color: #ffc700;
   margin-left: -9px;
   margin-top: 2px;
 }
 
 /* main__carrito-movies */
 
-h2{
+h2 {
   margin-top: 23px;
   margin-left: 15px;
 }
 
-.subtotal{
+.subtotal {
   margin-left: 292px;
   margin-bottom: 14px;
 }
 
-.main__carrito-movies{
+.main__carrito-movies {
   display: flex;
   flex-wrap: wrap;
   border-bottom: black solid 1px;
 }
 
-.main__carrito-movies h3{
+.main__carrito-movies h3 {
   margin-top: 13px;
   margin-bottom: 13px;
-
 }
 
-.main__carrito-movie{
+.main__carrito-movie {
   display: flex;
   justify-content: space-between;
   border-top: black solid 1px;
 }
 
-.main__movie-poster{
+.main__movie-poster {
   width: 30%;
   display: flex;
   justify-content: center;
   margin: 10px;
 }
 
-.main__movie-poster img{
+.main__movie-poster img {
   width: 100%;
   margin: 10px;
   border-radius: 4%;
   justify-content: center;
+  opacity: 5px;
+  transition: all 120ms;
 }
 
-.main__movie-description{
+.main__movie-poster img:hover{
+  opacity: 70%;
+}
+
+.main__movie-description {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
   max-width: 144px;
-
 }
 
-.main__movie-description-header{
+.main__movie-description-header {
   margin: 20px;
   color: white;
   opacity: 0.8;
@@ -278,39 +126,44 @@ h2{
   flex-direction: column;
 }
 
-.genero{
+.genero {
   font-size: 9px;
   display: flex;
   width: 100%;
   max-width: 165px;
-
 }
 
-.genero p{
+
+.genero p {
   text-align: center;
   padding: 5px;
   border: rgba(255, 255, 255, 0.5) solid 1px;
   border-radius: 10px;
   margin-right: 4px;
+  transition: all 120ms;
 }
 
-.main__movie-description-content{
+.genero p:hover{
+  background-color: #ffc8007e;
+  color: #1b1b1b;
+}
+
+.main__movie-description-content {
   margin-bottom: 27px;
   display: flex;
   flex-direction: column;
 }
 
-.main__movie-description-content p{
+.main__movie-description-content p {
   margin-left: 22px;
- 
 }
 
-.subtitulo{
+.subtitulo {
   margin-bottom: 23px;
   font-size: 10px;
 }
 
-.precio-articulo-compra{
+.precio-articulo-compra {
   margin-bottom: 31px;
   font-size: 10px;
   text-align: center;
@@ -319,36 +172,47 @@ h2{
   border-radius: 10px;
   background-color: #ffc700;
   color: #1b1b1b;
+  margin-right: 11px;
+  transition: all 120ms;
 }
 
-.precio-articulo-alquiler{
+.precio-articulo-compra:hover{
+  background-color: #ffc8007b;
+}
+
+.precio-articulo-alquiler {
   margin-bottom: 31px;
   font-size: 10px;
   text-align: center;
-  border:rgba(255, 255, 255, 0.5) solid 1px;
+  border: rgba(255, 255, 255, 0.5) solid 1px;
   padding: 8px;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.1);;
-  color: #ffc700
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffc700;
+  transition: all 120ms;
 }
 
-.main__movie-description-content form{
+.precio-articulo-alquiler:hover{
+  background-color: rgba(255, 255, 255, 0.028);
+}
+
+
+.main__movie-description-content form {
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
   align-items: center;
 }
 
-.main__movie-description-content form label{
- 
+.main__movie-description-content form label {
 }
 
-.main__movie-description-content form input{
+.main__movie-description-content form input {
   width: 25px;
   margin-left: 5px;
 }
 
-.main__movie-subtotal{
+.main__movie-subtotal {
   display: flex;
   border-left: black solid 1px;
   align-content: stretch;
@@ -357,82 +221,69 @@ h2{
   justify-content: center;
 }
 
-.main__movie-subtotal p{
+.main__movie-subtotal p {
   font-size: 10px;
   margin-left: 10px;
 }
 
-
-.main__movie-subtotal i{
+.main__movie-subtotal i {
   margin-left: 60px;
   margin-top: -6px;
 }
 
-
 /* main__carrito-checkout */
 
-.main__carrito-checkout{
+.main__carrito-checkout {
   display: flex;
   flex-wrap: wrap;
   margin: -6px 25px;
   flex-direction: column;
 }
 
-.main__carrito-checkout-content{
+.main__carrito-checkout-content {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  ;
 }
 
-.main__carrito-checkout-content div{
+.main__carrito-checkout-content div {
   display: flex;
   flex-wrap: wrap;
   margin-top: 35px;
 }
 
-.etiquetas{
+.etiquetas {
   margin-right: 8px;
   opacity: 0.8;
 }
 
-.total-a-pagar{
+.total-a-pagar {
   margin-right: 8px;
-  font-weight: bold ;
+  font-weight: bold;
 }
 
 .main__carrito-checkout-button{
-  margin-top: 127px;
+  margin-top: 44px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 30px;
 }
 
+.main__carrito-checkout-button form button{
+    background: transparent;
+    border: black solid 1px;
+    width: 222px;
+    background-color: #ffc700;
+    border-radius: 10px;
+    font-size: 12px;
+    transition: all 120ms;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.main__carrito-checkout-button form button:hover{
+  background-color: #fce89f;
+}
 
 
   /*FOOTER*/
@@ -541,6 +392,11 @@ h2{
   /*MEDIA QUERIES*/
   
   /*MOBILE*/
+  @media (max-width: 366px) {
+      .main__carrito-movies h3{
+        font-size: 10px;
+      }
+  }
   
   @media (max-width: 599px) {
     /*HEADER*/
@@ -603,7 +459,253 @@ h2{
     }
   
     /*MAIN*/
+
+    .main__continuar-comprando-button {
+      width: 174px;
+      font-size: 14px;
+    }
+
+
+    .main__continuar-comprando-icono i{
+      margin-left: -12px;
+    }
+
+    h2{
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+
+    .main__movie-subtotal{
+      margin: 25px;
+      padding: 20px;
+      width: 111px;
+    }
+
+    .main__movie-subtotal p{
+      font-size: 13px;
+    }
+
+    .main__movie-subtotal i{
+      margin-left: 79px;
+      transition: all 120ms;
+    }
+
+    .main__movie-subtotal i:hover{
+      color: #ffc700;
+    }
+    
+
+    .main__movie-description {
+      max-width: none;
+    }
+
+    .main__carrito-movies h3 {
+      margin-top: 23px;
+      margin-bottom: 24px;
+      font-size: 22px;
+    }
+
+    .main__movie-description-content {
+      margin-bottom: 60px;
+    }
+
+    .main__movie-description-content form {
+      margin: 0px 58px;
+    }
+
+    .precio-articulo-compra {
+      padding: 15px;
+      font-size: 11px;
+    }
+
+    .precio-articulo-alquiler {
+      padding: 15px;
+      font-size: 11px;
+    }
+
+    .subtitulo{
+      font-size: 14px;
+    }
+
+    .genero p{
+      padding: 10px;
+    }
+
+    .genero{
+      font-size: 12px;
+    }
+
+    .main__carrito-checkout-content div {
+      margin-top: 50px;
+    }
+
+    .etiquetas{
+      font-size: 18px;
+    }
+
+    .total-a-pagar{
+      font-size: 18px;
+    }
+
+    .precios{
+      font-size: 18px;
+    }
+
+    .main__carrito-checkout-button form button {
+      font-size: 16px;
+      padding: 3px;
+    }
+
+
+
+    /*FOOTER*/
   
+    .footer {
+      display: flex;
+      justify-content: center;
+      background-color: black;
+    }
+  
+    .footer__container {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      height: 230px;
+      width: 600px;
+      padding-top: 20px;
+    }
+  
+    .footer__logo img {
+      width: 200px;
+    }
+    .footer__buttons {
+      width: 90%;
+      height: 30%;
+      order: 3;
+    }
+    .footer__media {
+      order: 2;
+      width: 230px;
+    }
+  }
+
+  @media (min-width: 800px) {
+    /*HEADER*/
+  
+    .header__dropMenu-logo {
+      width: auto;
+    }
+  
+    .header__burger-menu {
+      margin-right: 40px;
+    }
+  
+    .header__logo img {
+      width: 110px;
+    }
+  
+    .header__search-container {
+      width: 45%;
+    }
+  
+    .header__nav {
+      width: 15%;
+    }
+  
+    .header__dropdown-buttons {
+      display: none;
+    }
+  
+    .header__profile {
+      margin-left: 15%;
+    }
+  
+    .header__nav-search {
+      display: none;
+    }
+  
+    /*MAIN*/
+    
+    .main__carrito-header{
+      margin-bottom: 7px;
+    }
+
+    .main__continuar-comprando-button{
+      width: 185px;
+      font-size: 15px;
+    }
+
+    .main__continuar-comprando-icono i{
+      margin-left: -12px;
+      font-size: 15px;
+    }
+
+    h2{
+      font-size: 28px;
+    }
+
+    .main__movie-description-header{
+      margin: 20px;
+    }
+
+    .main__carrito-movies h3 {
+      font-size: 30px;
+    }
+
+    .main__carrito-header form{
+      margin-top: -17px;
+    }
+
+    .genero{
+      font-size: 14px;
+    }
+
+    .genero p{
+      padding: 11px;
+    }
+
+    .main__movie-description-content{
+      margin-bottom: 120px;
+    }
+
+    .subtitulo{
+      font-size: 18px;
+    }
+
+    .precio-articulo-compra{
+      font-size: 14px;
+    }
+
+    .main__movie-description-content form label{
+      font-size: 18px;
+    }
+
+    .main__movie-subtotal p{
+      font-size: 15px;
+      margin-left: 6px;
+    }
+
+    .etiquetas{
+      font-size: 20px;
+    }
+
+    .precios{
+      font-size: 20px;
+    }
+
+    .total-a-pagar{
+      font-size: 20px;
+    }
+  
+    .main__carrito-checkout-button form button{
+      font-size: 18px;
+      padding: 6px;
+    }
+
+    .precio-articulo-alquiler{
+      font-size: 14px;
+    }
+
     /*FOOTER*/
   
     .footer {
@@ -636,7 +738,7 @@ h2{
   }
   
   /*DESKTOP*/
-  
+
   @media (min-width: 1200px) {
     /*HEADER*/
     .header__container {
@@ -687,6 +789,133 @@ h2{
   
     /*MAIN*/
   
+    .main__carrito-header{
+      margin-bottom: 11px;
+      margin-top: 50px;
+    }
+
+    h2{
+      font-size: 38px;
+      margin-top: 21px;
+    }
+
+    .main__carrito-header form{
+      margin-top: -54px;
+    }
+
+    .main__carrito-header form{
+      margin-top: -46px;
+    }
+
+    .main__continuar-comprando-button{
+      width: 239px;
+      font-size: 18px;
+    }
+
+    .main__continuar-comprando-icono i{
+      margin-left: -24px;
+      font-size: 18px;
+    }
+
+    .main__movie-poster{
+      width: 35%;
+      margin: 20px;
+    }
+
+    .main__carrito-movies h3{
+      font-size: 35px;
+      margin-top: 75px;
+      margin-bottom: 40px;
+    }
+
+    .genero{
+      font-size: 17px;
+    }
+
+    .genero p{
+      padding: 20px;
+      margin-right: 10px;
+    }
+
+    .main__movie-description-content{
+      margin-bottom: 235px;
+    }
+
+    .subtitulo{
+      font-size: 25px;
+      margin-bottom: 48px;
+    }
+
+    .precio-articulo-compra{
+      font-size: 18px;
+      padding: 35px;
+    }
+
+    .main__movie-description-content form{
+      margin: 0px 29px;
+      margin-bottom: -25px;
+    }
+
+    .main__movie-description-content form label{
+      font-size: 23px;
+    }
+
+    .main__movie-description-content form input{
+      width: 27px;
+      height: 23px;
+    }
+
+    .precio-articulo-alquiler{
+      padding: 35px;
+      font-size: 18px;
+    }
+
+    .main__movie-subtotal{
+      margin: 80px;
+      padding: 50px;
+    }
+
+    .main__movie-subtotal p{
+      font-size: 20px;
+      margin-left: 3px;
+    }
+
+    .main__movie-subtotal i{
+      margin-left: 103px;
+      font-size: 18px;
+      margin-top: -10px;
+    }
+
+    .main__carrito-checkout-content{
+      margin: 0px 40px;
+    }
+
+    .main__carrito-checkout-content div{
+      margin-top: 80px;
+    }
+
+    .etiquetas{
+      font-size: 25px;
+    }
+
+    .precios{
+      font-size: 25px;
+    }
+
+    .total-a-pagar{
+      font-size: 25px;
+    }
+
+    .main__carrito-checkout-button{
+      margin-top: 90px;
+      margin-bottom: 50px;
+    }
+
+    .main__carrito-checkout-button form button{
+      font-size: 22px;
+      padding: 15px;
+      width: 550px;
+    }
     /*FOOTER*/
   
     .footer {
@@ -731,6 +960,7 @@ h2{
     }
   }
   
+  
   /*LARGE-DESKTOP*/
   
   @media (min-width: 1440px) {
@@ -758,5 +988,25 @@ h2{
     }
   
     /*MAIN*/
+
+    .main__carrito-header{
+      margin-bottom: 20px;
+      margin-top: 70px;
+    }
+
+    .main__movie-description-content{
+      margin-bottom: 250px;
+    }
+
+    .main__carrito-header form{
+      margin-top: -64px;
+    }
+
+
+
+
+
+
+
   }
   
