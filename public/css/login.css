@@ -83,8 +83,7 @@ div.email-contraseña {
   margin-bottom: 12%;
 }
 
-#email,
-#password {
+#email, #password {
   display: flex;
   background-color: #1b1b1b;
   border-top: none;
@@ -92,9 +91,9 @@ div.email-contraseña {
   border-left: none;
   border-bottom: 2px solid #f8efefd0;
   width: 100%;
-  padding-left: 4%;
+  padding-left: 1%;
   border-style: solid;
-  padding-top: 5%;
+  padding-top: 4%;
   border-radius: 10px 10px 0px 0px;
 }
 #emailbloque{
