@@ -6,9 +6,12 @@
   width: 100%;
   padding: 20px 0px;
   background-color: rgba(27, 27, 27, 0.92);
-  font-size: 14px;
+  font-size: 10px;
 }
 
+input:focus { 
+  color: white; 
+} 
 .formulario {
   width: 100%;
   height: 100%;
@@ -18,9 +21,8 @@
 }
 
 form.form-login {
-  height: 70%;
+  height: 95%;
   width: 80%;
-  border-width: 1px;
   background-color: rgba(27, 27, 27, 0.5);
   display: flex;
   flex-direction: column;
@@ -42,6 +44,7 @@ form.form-login i {
   padding: 15px;
   height: 8%;
   width: 100%;
+  max-height: 32px;
 }
 
 .fa-window-close:before {
@@ -50,7 +53,7 @@ form.form-login i {
   padding: 2%;
   padding-right: 13%;
   border-radius: 1px 1px 1px 1px;
-  font-size: 170%;
+  font-size: 200%;
 }
 
 h1.conectate {
@@ -58,6 +61,7 @@ h1.conectate {
   display: flex;
   justify-content: center;
   letter-spacing: 4px;
+  padding-bottom: 5%;
 }
 
 div.email-contraseña {
@@ -67,7 +71,7 @@ div.email-contraseña {
   align-items: center;
   width: 100%;
   padding-left: 4%;
-  margin-bottom: 1%;
+  padding-bottom: 3%;
 }
 
 #email {
@@ -94,6 +98,13 @@ div.email-contraseña {
   padding-top: 5%;
   border-radius: 10px 10px 0px 0px;
 }
+#emailbloque{
+  padding-bottom: 5%;
+  width: 65%;
+}
+#passwordbloque{
+  width: 65%;
+}
 
 .fa-envelope:before {
   padding-right: 10%;
@@ -114,38 +125,40 @@ button.send-button {
 
 .div-edit {
   background-color: #ffc700;
-  width: 70%;
+  width: 45%;
   display: flex;
   justify-content: center;
-  margin-bottom: 5%;
   border-radius: 10px 10px 10px 10px;
   text-decoration: none;
-  margin-top: 2%;
+
 }
 
 #checkboxBox {
-  padding: 10px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  /* height: 17%; */
-  margin-top: 0.7%;
+    padding: 10px 0;
+    display: flex;
+    width: 100%;
+    padding-top: 3%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 #checkbox {
-  border-width: 5px;
-  border-style: dotted;
-  width: 25%;
   font-size: 80%;
+  margin-right: 3%;
 }
 
 #contraseña {
   color: #00d4bb;
+  padding-top: 5%;
 }
 
 #olvidaste {
-  margin-bottom: 4%;
+  padding-bottom: 10%;
+  display: flex;
+  width: 75%;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 /*MEDIA QUERIES*/
@@ -163,21 +176,6 @@ button.send-button {
   #main {
     font-size: 15px;
   }
-
-  #checkbox {
-    margin-top: 0.7%;
-  }
-
-  #checkboxBox {
-    padding-top: 2%;
-    padding-right: 20%;
-    height: 12%;
-  }
-
-  #email,
-  #password {
-    width: 116%;
-  }
 }
 
 /*DESKTOP*/
@@ -188,16 +186,10 @@ button.send-button {
     font-size: 18px;
   }
 
-  #checkboxBox {
-    padding-right: 20%;
-    height: 15%;
-    padding-bottom: 4%;
-  }
 
   #emailbloque,
   #passwordbloque {
     width: 60%;
-    height: 20%;
     border-radius: 10px 10px 10px 10px;
   }
 
@@ -206,15 +198,18 @@ button.send-button {
     width: 100%;
   }
 
-  form.form-login {
-    height: 75%;
-    width: 45%;
-  }
-
   .div-edit {
-    margin-bottom: 5%;
-    margin-top: 0%;
-  }
+    height: 50px;   
+}
+#checkboxBox {
+
+  padding-top: 5%;
+  
+}
+
+#olvidaste {
+  padding-bottom: 5%;
+}
 }
 
 /*LARGE-DESKTOP*/
@@ -222,38 +217,7 @@ button.send-button {
 @media (min-width: 1440px) {
 /*MAIN*/
   #main {
-    font-size: 19px;
+    font-size: 22px;
   }
 
-  #checkboxBox {
-    padding-right: 20%;
-    height: 15%;
-    padding-bottom: 4%;
-  }
-
-  #emailbloque,
-  #passwordbloque {
-    width: 60%;
-    height: 15%;
-  }
-
-  #email {
-    width: 100%;
-    height: 70%;
-  }
-
-  #password {
-    width: 100%;
-    height: 60%;
-  }
-
-  form.form-login {
-    height: 80%;
-    width: 45%;
-  }
-
-  .div-edit {
-    margin-bottom: 5%;
-    margin-top: 0%;
-  }
 }
