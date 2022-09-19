@@ -92,7 +92,6 @@ div.email-contraseña {
   border-left: none;
   border-bottom: 2px solid #f8efefd0;
   width: 100%;
-  padding-bottom: 3%;
   padding-left: 4%;
   border-style: solid;
   padding-top: 5%;
@@ -144,7 +143,6 @@ button.send-button {
 }
 
 #checkbox {
-  font-size: 80%;
   margin-right: 3%;
 }
 
@@ -174,6 +172,17 @@ button.send-button {
 @media (min-width: 600px) {
   /*MAIN*/
   #main {
+    font-size: 15px;
+  }
+
+  #checkbox {
+    height: 20px;
+    width: 16px;
+  }
+  .fa-envelope:before {
+    font-size: 15px;
+  }
+  .fa-lock:before {
     font-size: 15px;
   }
 }
@@ -206,9 +215,20 @@ button.send-button {
   padding-top: 5%;
   
 }
+#checkbox {
+  height: 30px;
+  width: 24px;
+}
 
 #olvidaste {
   padding-bottom: 5%;
+}
+
+.fa-envelope:before {
+  font-size: 20px;
+}
+.fa-lock:before {
+  font-size: 20px;
 }
 }
 
@@ -218,6 +238,12 @@ button.send-button {
 /*MAIN*/
   #main {
     font-size: 22px;
+  }
+  .fa-envelope:before {
+    font-size: 23px;
+  }
+  .fa-lock:before {
+    font-size: 23px;
   }
 
 }
