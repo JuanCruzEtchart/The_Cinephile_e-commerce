@@ -197,16 +197,23 @@ main section h3{
 }
 
 main section div.movies img.movies_img {
+  
+  width: 20%;
+  padding: 0px 0px 0px 20px;
+  /*
+  height: 50%;
   position: relative;
   flex-direction: row;
   object-fit: cover;
-  width: 100%;
-  padding: 0px 0px 0px 20px;  
+  justify-content: space-around;
+  padding: 0px 0px 0px 20px;
+  */  
 }
 
 main section div.movies {
   display: flex;
   overflow-y: auto;
+  padding: 5px 20px 5px 5px;
 }
 
 main section div.movies img.movies_img:hover{
@@ -221,16 +228,22 @@ main section.mas_alquilado h3 {
 }
 
 main section div.movies_alq img.movies_img {
+  
+  width: 20%;
+  padding: 0px 0px 0px 20px;
+  /*
+  height: 50%;
   position: relative;
   flex-direction: row;
   object-fit: cover;
   width: 100%;
-  padding: 0px 0px 0px 20px;
+  padding: 0px 0px 0px 20px;*/
 }
 
 main section div.movies_alq {
   display: flex;
   overflow-y: auto;
+  padding: 5px 20px 5px 5px;
 }
 
 main section div.movies_alq img.movies_img:hover{
@@ -245,16 +258,21 @@ main section.ultimas_series h3 {
 }
 
 main section div.series img.movies_img {
+  width: 20%;
+  padding: 0px 0px 0px 20px;
+  /*
+  height: 50%;
   position: relative;
   flex-direction: row;
   object-fit: cover;
   width: 100%;
-  padding: 0px 0px 0px 20px;
+  padding: 0px 0px 0px 20px;*/
 }
 
 main section div.series {
   display: flex;
   overflow-y: auto;
+  padding: 5px 20px 5px 5px;
 }
 
 main section div.series img.movies_img:hover{
@@ -269,16 +287,21 @@ main section.peliculas_infantiles h3 {
 }
 
 main section div.pelis_infantil img.movies_img {
+  width: 20%;
+  padding: 0px 0px 0px 20px;
+  /*
+  height: 50%;
   position: relative;
   flex-direction: row;
   object-fit: cover;
   width: 100%;
-  padding: 0px 0px 0px 20px;
+  padding: 0px 0px 0px 20px;*/
 }
 
 main section div.pelis_infantil {
   display: flex;
   overflow-y: auto;
+  padding: 5px 20px 5px 5px;
 }
 
 main section div.pelis_infantil img.movies_img:hover{
