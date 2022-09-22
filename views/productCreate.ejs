@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include("./partials/head") %>
+  <link rel="stylesheet" href="/css/productCreate.css" />
+</head>
+
+<body>
+  <%- include("./partials/header") %>
+  <main class="main">
+    <div class="main__container">
+      <h1 class="main__title">Creación de productos</h1>
+      <form class="main__form" action="/product/create" enctype="multipart/form-data" method="POST">
+        <div>
+          <input type="text" class="text-box" id="name" name="name" placeholder="Nombre">
+        </div>
+        <div class="main__radioForm">
+          <div class="main__radioForm-container">
+            <div>
+              <input type="radio" name="type" id="movie" value="Película" checked />
+              <label for="movie">Película</label>
+            </div>
+            <div>
+              <input type="radio" name="type" id="tvSeries" value="Serie de TV" />
+              <label for="tvSeries">Serie de TV</label>
+            </div>
+            <div>
+              <input type="radio" name="type" id="documentary" value="Documental" />
+              <label for="documentary">Documental</label>
+            </div>
+          </div>
+        </div>
+        <div>
+          <input type="text" class="text-box" id="year" name="year" placeholder="Año de salida">
+        </div>
+        <div>
+          <input type="text" class="text-box" id="rated" name="rated" placeholder="Clasificación">
+        </div>
+        <div>
+          <input type="text" class="text-box" id="length" name="length" placeholder="Duración">
+        </div>
+        <div>
+          <input type="text" class="text-box" id="imdbScore" name="imdbScore" placeholder="Puntaje de IMDb">
+        </div>
+        <div>
+          <input type="text" class="text-box" id="imdbTotalReviews" name="imdbTotalReviews" placeholder="Reseñas totales de IMDb">
+        </div>
+        <div>
+          <input type="number" class="text-box" id="tomatoScore" name="tomatoScore" placeholder="Puntaje de Rotten Tomatoes">
+        </div>
+        <!-- ARGEGAR CAMPO PARA FONDO -->
+        <div>
+          <input type="text" class="text-box" id="trailerLink" name="trailerLink" placeholder="Link del trailer">
+        </div>
+        <div>
+          <input type="text" class="text-box" id="genre1" name="genre1" placeholder="Género 1">
+          <input type="text" class="text-box" id="genre2" name="genre2" placeholder="Género 2">
+        </div>
+        <div>
+          <input type="text" class="text-box" id="purchasePrice" name="purchasePrice" placeholder="Precio de venta">
+          <input type="text" class="text-box" id="rentalPrice" name="rentalPrice" placeholder="Precio de alquiler">
+        </div>
+        <div>
+          <textarea class="textarea" id="synopsis" name="synopsis" cols="30" rows="10" wrap="hard" placeholder="Sinopsis"></textarea>
+        </div>
+        <div>
+          <input type="text" class="text-box" id="director" name="director" placeholder="Director">
+        </div>
+        <div>
+          <input type="text" class="text-box" id="script" name="script" placeholder="Guionistas">
+        </div>
+        <div>
+          <input type="text" class="text-box" id="cast" name="cast" placeholder="Reparto principal">
+        </div>
+        <div>
+          <input type="text" class="text-box" id="directedBy" name="directedBy" placeholder="Dirigidas por el director">
+        </div>
+        <div>
+          <input type="text" class="text-box" id="similar" name="similar" placeholder="Similares">
+        </div>
+        <div class="main__file-wrap">
+          <div class="main__fieldDescription">Imagen del producto</div>
+          <label for="productImage"></label>
+          <input type="file" id="productImage" name="productImage">
+        </div>
+        <div class="main__file-wrap">
+          <div class="main__fieldDescription">Imagen del fondo</div>
+          <label for="backgroundImage"></label>
+          <input type="file" id="backgroundImage" name="backgroundImage">
+        </div>
+        <div class="main__button">
+          <button type="submit" class="send-button">Crear</button>
+        </div>
+        <div class="main__button">
+          <button type="reset" class="reset-button">Reiniciar campos</button>
+        </div>
+      </form>
+    </div>
+  </main>
+  <%- include("./partials/footer") %>
+</body>
+
+</html>

@@ -65,6 +65,7 @@
 .main__product-logo img {
   border-radius: 10px;
   width: 106px;
+  height: 152.375px;
   margin: 20px 10px;
 }
 
@@ -545,6 +546,7 @@ li a {
 
   .main__product-logo img {
     width: 171px;
+    height: 245.812px;
   }
 
   .main__boockmark {
@@ -603,6 +605,7 @@ li a {
 
   .main__product-logo img {
     width: 240px;
+    height: 345px;
   }
 
   .main__boockmark {

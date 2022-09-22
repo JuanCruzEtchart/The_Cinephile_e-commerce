@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include("./partials/head") %>
+  <link rel="stylesheet" href="/css/productUpdate.css" />
+</head>
+
+<body>
+  <%- include("./partials/header") %>
+  <main class="main">
+    <div class="main__container">
+      <h1 class="main__title">Actualizar el producto: <%= product.name %> </h1>
+      <form class="main__form-put" action="/product/edit/<%= product.id  %>?_method=PUT" method="POST">
+        <div>
+          <input type="text" class="text-box" id="name" name="name" value="<%= product.name %>" placeholder="Nombre del producto">
+        </div>
+        <div class="main__radioForm">
+          <div class="main__radioForm-container">
+            <div>
+              <input type="radio" name="type" id="movie" value="Película" checked />
+              <label for="movie">Película</label>
+            </div>
+            <div>
+              <input type="radio" name="type" id="tvSeries" value="Serie de TV" />
+              <label for="tvSeries">Serie de TV</label>
+            </div>
+            <div>
+              <input type="radio" name="type" id="documentary" value="Documental" />
+              <label for="documentary">Documental</label>
+            </div>
+          </div>
+        </div>
+        <div>
+          <input type="text" class="text-box" id="imdbScore" name="imdbScore" value="<%= product.imdbScore %>" placeholder="Puntaje de IMDb">
+        </div>
+        <div>
+          <input type="text" class="text-box" id="imdbTotalReviews" name="imdbTotalReviews" value="<%= product.imdbTotalReviews %>" placeholder="Reseñas totales de IMDb">
+        </div>
+        <div>
+          <input type="text" class="text-box" id="tomatoScore" name="tomatoScore" value="<%= product.tomatoScore %>" placeholder="Puntaje de Rotten Tomatoes">
+        </div>
+        <!-- ARGEGAR CAMPO PARA FONDO -->
+        <div>
+          <input type="text" class="text-box" id="trailerLink" name="trailerLink" value="<%= product.trailerLink %>" placeholder="Link del trailer">
+        </div>
+        <div>
+          <input type="text" class="text-box" id="genre1" name="genre1" value="<%= product.genre1 %>" placeholder="Género 1">
+          <input type="text" class="text-box" id="genre2" name="genre2" value="<%= product.genre2 %>" placeholder="Género 2">
+        </div>
+        <div>
+          <input type="text" class="text-box" id="purchasePrice" name="purchasePrice" value="<%= product.purchasePrice %>" placeholder="Precio de venta">
+          <input type="text" class="text-box" id="rentalPrice" name="rentalPrice" value="<%= product.rentalPrice %>" placeholder="Precio de alquiler">
+        </div>
+        <div>
+          <textarea class="textarea" id="synopsis" name="synopsis" cols="30" rows="10" wrap="hard" placeholder="Sinopsis del producto"><%= product.synopsis %></textarea>
+        </div>
+        <div>
+          <input type="text" class="text-box" id="director" name="director" value="<%= product.director %>" placeholder="Director">
+        </div>
+        <div>
+          <input type="text" class="text-box" id="script" name="script" value="<%= product.script %>" placeholder="Guionistas">
+        </div>
+        <div>
+          <input type="text" class="text-box" id="cast" name="cast" value="<%= product.cast %>" placeholder="Reparto principal">
+        </div>
+        <div>
+          <input type="text" class="text-box" id="directedBy" name="directedBy" value="<%= product.directedBy %>" placeholder="Dirigidas por el director">
+        </div>
+        <div>
+          <input type="text" class="text-box" id="similar" name="similar" value="<%= product.similar %>" placeholder="Similares">
+        </div>
+        <div class="main__file-wrap">
+          <div class="main__fieldDescription">Imagen del producto</div>
+          <label for="productImage"></label>
+          <input type="file" id="productImage" name="productImage">
+        </div>
+        <div class="main__file-wrap">
+          <div class="main__fieldDescription">Imagen del fondo</div>
+          <label for="backgroundImage"></label>
+          <input type="file" id="backgroundImage" name="backgroundImage" value="<%= product.backgroundImage %>">
+        </div>
+        <div class="main__button">
+          <button type="submit" class="send-button">Actualizar</button>
+        </div>
+        <div class="main__button">
+          <button type="reset" class="reset-button">Reiniciar campos</button>
+        </div>
+      </form>
+      <form class="main__form-delete" action="/product/delete/<%= product.id  %>?_method=DELETE" method="POST">
+        <div class="main__button">
+          <button type="sumbit" class="delete-button">Eliminar producto</button>
+        </div>
+      </form>
+    </div>
+  </main>
+  <%- include("./partials/footer") %>
+</body>
+
+</html>
