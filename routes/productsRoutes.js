@@ -43,6 +43,10 @@ router.get("/edit/:id", productController.edit);
 router.put("/edit/:id", productController.update);
 router.delete("/delete/:id", productController.destroy);
 
+/*Render de la vista de lista de productos*/
+
+router.get("/list", productController.list);
+
 /*Render carrito de productos*/
 
 router.get("/cart", productController.cart);

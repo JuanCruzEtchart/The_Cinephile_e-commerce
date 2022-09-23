@@ -111,6 +111,12 @@ const productController = {
     writeFile(data);
     res.redirect("/product/create");
   },
+
+  list: (req, res) => {
+    const data = findAll();
+    res.render("productList", { product: data });
+  },
+
   cart: (req, res) => {
     res.render("productCart");
   },
