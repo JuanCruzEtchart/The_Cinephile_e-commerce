@@ -3,6 +3,7 @@
     "id": "1",
     "name": "El Padrino",
     "productImage": "godfather.png",
+    "backgroundImage": "godfatherBackground.jpg",
     "type": "Película",
     "year": "1972",
     "rated": "R",
@@ -250,7 +251,7 @@
   },
   {
     "id": 6,
-    "name": "",
+    "name": "a",
     "type": "Película",
     "year": "",
     "rated": "",

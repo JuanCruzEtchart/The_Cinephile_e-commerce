@@ -29,7 +29,7 @@ const productController = {
     const productImage = req.files.productImage.map(function (image) {
       return image.filename;
     });
-    const backgroundImages = req.files.backgroundImage.map(function (image) {
+    const backgroundImage = req.files.backgroundImage.map(function (image) {
       return image.filename;
     });
 
@@ -53,7 +53,7 @@ const productController = {
       director: req.body.director,
       script: req.body.script,
       productImage: productImage,
-      backgroundImage: backgroundImages,
+      backgroundImage: backgroundImage,
       cast: req.body.cast,
       directedBy: req.body.directedBy,
       similar: req.body.similar,
@@ -115,6 +115,28 @@ const productController = {
   list: (req, res) => {
     const data = findAll();
     res.render("productList", { product: data });
+  },
+
+  movies: (req, res) => {
+    const data = findAll();
+    let movies = [];
+    data.forEach((product) => {
+      if (product.type == "Película") {
+        movies.push(product);
+      }
+    });
+    res.render("moviesList", { product: movies });
+  },
+
+  series: (req, res) => {
+    const data = findAll();
+    let series = [];
+    data.forEach((product) => {
+      if (product.type == "Serie de TV") {
+        series.push(product);
+      }
+    });
+    res.render("seriesList", { product: series });
   },
 
   cart: (req, res) => {

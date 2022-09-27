@@ -3,17 +3,16 @@
 
 <head>
   <%- include("./partials/head") %>
-  <link rel="stylesheet" href="/css/products/productList.css" />
   <link rel="stylesheet" href="/css/products/generalListFormat.css" />
+  <link rel="stylesheet" href="/css/products/moviesSeriesList.css" />
 </head>
 
 <body>
   <%- include("./partials/header") %>
   <main class="main">
     <div class="main__container">
-      <h1>Listado de productos:</h1>
+      <h1>Series:</h1>
       <section class="main__product-list">
-
         <% product.forEach(element => { %>
         <a href="/product/detail/<%= element.id %>">
 
@@ -21,20 +20,17 @@
             <div class="main__img-container">
               <img src="/images/productDetail/<%= element.productImage ? element.productImage : "Logo.png"%>" alt="Imágen de producto">
             </div>
-            <div class="main__product-information">
-              <p>Información del producto:</p>
-              <ul>
-                <li>Nombre: <%= element.name %> </li>
-                <li>Tipo: <%= element.type %></li>
-                <li>Duración: <%= element.length %></li>
-                <li>Clasificación: <%= element.rated %> </li>
-                <li>Venta: $<%= element.purchasePrice %> </li>
-                <li>Alquiler: $<%= element.rentalPrice %> </li>
-              </ul>
-            </div>
-
-            <a href="/product/edit/<%= element.id %>"><button class="main_edit-button">Editar datos</button></a>
+            <div class="main__product-name"><%= element.name %> </div>
+            <form action="#" method="post" class="main__boockmark">
+              <div class="main__boockmark-icon">
+                <i class="far fa-bookmark"></i>
+              </div>
+              <button type="button" class="main__boockmark-button">
+                Añadir a Mi lista
+              </button>
+            </form>
           </article>
+
         </a>
         <% }) %>
       </section>

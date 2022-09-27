@@ -46,6 +46,8 @@ router.delete("/delete/:id", productController.destroy);
 /*Render de la vista de lista de productos*/
 
 router.get("/list", productController.list);
+router.get("/movies", productController.movies);
+router.get("/series", productController.series);
 
 /*Render carrito de productos*/
 

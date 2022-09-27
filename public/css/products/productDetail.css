@@ -9,7 +9,7 @@
   background-color: #212121;
 }
 
-.main::before {
+/* .main::before {
   content: "";
   background-image: url("../images/productDetail/godfatherBackground.jpg");
   background-size: contain;
@@ -21,7 +21,7 @@
   bottom: 0px;
   left: 0px;
   opacity: 0.3;
-}
+} */
 
 .main__container {
   display: flex;
@@ -31,8 +31,23 @@
   max-width: 1350px;
 }
 
-.main__product-description {
+.main__background img {
   z-index: 1;
+  opacity: 0.3;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.3;
+}
+
+.main__product-description {
+  z-index: 3;
   margin: 15px;
 }
 
@@ -49,6 +64,7 @@
   flex-direction: column;
   justify-content: space-between;
   width: 40%;
+  z-index: 10;
 }
 
 .main__product-logo h1 {
@@ -527,9 +543,13 @@ li a {
 @media (min-width: 600px) {
   /*MAIN*/
 
-  .main::before {
+/*   .main::before {
     background-size: cover;
     max-height: 583px;
+  } */
+
+  .main__background img {
+    height: 461.25px;
   }
 
   .main__product-logo {
@@ -589,6 +609,10 @@ li a {
   .main__container {
     width: 90%;
     margin: auto;
+  }
+
+  .main__background img {
+    height: 583px;
   }
 
   .main__product-logo {

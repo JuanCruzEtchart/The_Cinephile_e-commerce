@@ -3,12 +3,13 @@
 
 <head>
   <%- include("./partials/head") %>
-  <link rel="stylesheet" href="/css/productDetail.css" />
+  <link rel="stylesheet" href="/css/products/productDetail.css" />
 </head>
 
 <body>
   <%- include("./partials/header") %>
   <main class="main">
+    <div class="main__background"><img src=" /images/productDetail/<%= product.backgroundImage %> " alt="Background image"></div>
     <div class="main__container">
       <section class="main__product-description">
         <div class="main__product-header">

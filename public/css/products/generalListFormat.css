@@ -1,6 +1,15 @@
 /*MAIN*/
 
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #212121;
+}
+
 .main {
+  margin: auto;
+  width: 100%;
   background-color: #212121;
 }
 
@@ -21,6 +30,8 @@ h1 {
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
+  width: 70%;
+  margin: auto;
 }
 
 .main__product-list a {
@@ -34,10 +45,15 @@ h1 {
   text-align: center;
   color: white;
   width: 200px;
-  height: 457.5px;
+  height: auto;
   background-color: #171717;
   border-radius: 10px;
   margin: 15px 0px;
+  transition: all 120ms;
+}
+
+.main__product-article:hover {
+  box-shadow: 0px 0px 10px rgba(60, 64, 67, 0.9);
 }
 
 .main__img-container {
@@ -45,35 +61,15 @@ h1 {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
   margin-bottom: 10px;
 }
 
 .main__img-container img {
   border-radius: 10px;
-  width: 90%;
-  height: 90%;
-}
-
-.main__product-information {
-  width: 90%;
-  margin: auto;
-}
-
-.main__product-information p {
-  font-weight: bold;
-  margin-bottom: 30px;
-  text-align: left;
-}
-
-.main__product-information ul {
-  margin: auto;
-}
-
-.main__product-information li {
-  text-align: left;
-  list-style-type: none;
-  margin-bottom: 20px;
+  width: 180px;
+  height: 267.75px;
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
 
 /*MEDIA QUERIES*/
@@ -88,6 +84,19 @@ h1 {
 
 @media (min-width: 600px) {
   /*MAIN*/
+
+  html {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .main__product-list {
+    width: 100%;
+  }
+
+  .main__product-article {
+    margin: 15px 15px;
+  }
 }
 
 /*DESKTOP*/
