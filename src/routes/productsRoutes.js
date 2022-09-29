@@ -7,7 +7,7 @@ const data = require("express-validator");
 
 let storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, path.join(__dirname, "../public/images/productDetail"));
+    cb(null, path.join(__dirname, "../../public/images/productDetail"));
   },
 
   filename: (req, file, cb) => {
