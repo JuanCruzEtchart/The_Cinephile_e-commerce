@@ -1,5 +1,6 @@
 const path = require("path");
 const fs = require("fs");
+const { resolveNaptr } = require("dns");
 
 function findAll() {
   const jsonData = fs.readFileSync(
@@ -14,6 +15,17 @@ function writeFile(data) {
   fs.writeFileSync(path.join(__dirname, "../data/products.json"), dataString);
 }
 
+function findCast() {
+  const jsonData = fs.readFileSync(path.join(__dirname, "../data/cast.json"));
+  const data = JSON.parse(jsonData);
+  return data;
+}
+
+function writeFileCast(data) {
+  const dataString = JSON.stringify(data, null, 1);
+  fs.writeFileSync(path.join(__dirname, "../data/cast.json"), dataString);
+}
+
 const productController = {
   detail: (req, res) => {
     const data = findAll();
@@ -26,6 +38,7 @@ const productController = {
     res.render("productCreate");
   },
   store: (req, res) => {
+    /* console.log(req.productImage); */
     const productImage = req.files.productImage.map(function (image) {
       return image.filename;
     });
@@ -33,7 +46,24 @@ const productController = {
       return image.filename;
     });
 
+    /*     function productImage() {
+      if (!req.files.productImage.isEmpty()) {
+        req.files.productImage.map(function (image) {
+          return image.filename;
+        });
+      }
+    }; */
+    /*
+    const backgroundImage = function (req.files.backgroundImage) {
+      if (req.files.productImage.isEmpty()) {
+        req.files.backgroundImage.map(function (image) {
+          return image.filename;
+        });
+      }
+    };  */
+
     const data = findAll();
+    /* console.log(data); */
     const newProduct = {
       id: data.length + 1,
       name: req.body.name,
@@ -58,7 +88,7 @@ const productController = {
       directedBy: req.body.directedBy,
       similar: req.body.similar,
     };
-    console.log(req.files);
+    /*  console.log(req.files); */
     data.push(newProduct);
 
     writeFile(data);
@@ -93,7 +123,7 @@ const productController = {
     productFound.director = req.body.director;
     productFound.script = req.body.script;
     productFound.productImage = productImage;
-    productFound.backgroundImage = backgroundImages;
+    productFound.backgroundImage = backgroundImage;
     productFound.cast = req.body.cast;
     productFound.directedBy = req.body.directedBy;
     productFound.similar = req.body.similar;
@@ -111,6 +141,36 @@ const productController = {
     writeFile(data);
     res.redirect("/product/create");
   },
+
+  castLength: (req, res) => {
+    const data = findAll();
+    res.render("productCastLength", { product: data });
+  },
+
+  castLengthUpload: (req, res) => {
+    /* const data = findAll() */
+    const dataCast = findCast();
+    console.log(req.body);
+    const newCast = {
+      id: dataCast.length + 1,
+      product: req.body.product,
+      castLength: req.body.castLength,
+    };
+    dataCast.push(newCast);
+
+    writeFileCast(dataCast);
+
+    res.redirect("/product/cast/create/:id");
+  },
+
+  castCreate: (req, res) => {
+    const dataCast = findCast();
+    let castFound = dataCast.find((cast) => {
+      return cast.id == req.params.id;
+    });
+    res.render("productCastCreate", { cast: castFound });
+  },
+  castCreateUpload: (req, res) => {},
 
   list: (req, res) => {
     const data = findAll();

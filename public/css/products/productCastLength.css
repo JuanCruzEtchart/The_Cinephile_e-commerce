@@ -1,6 +1,15 @@
 /*MAIN*/
 
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #212121;
+}
+
 .main {
+  margin: auto;
+  width: 100%;
   background-color: #212121;
 }
 
@@ -18,8 +27,8 @@
   overflow-wrap: break-word;
 }
 
-.main__form-put {
-  padding: 20px 0px 0px 0px;
+.main__form {
+  padding: 20px 0px;
   text-align: center;
 }
 
@@ -38,64 +47,10 @@
   color: rgba(255, 255, 255, 0.75);
 }
 
-.main__radioForm {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 0.875rem;
-  margin-bottom: 15px;
-  width: 100%;
-  color: white;
-}
-
-.main__radioForm-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.main__radioForm div {
-  padding: 10px;
-}
-
-.main__radioForm label {
-  padding-left: 10px;
-}
-
-#synopsis {
-  resize: none;
-  word-wrap: break-word;
-  width: 100%;
-  font-size: 0.875rem;
-  margin-bottom: 15px;
-  width: 100%;
-  padding: 10px;
-  border-radius: 10px;
-  border: solid 1px rgba(255, 255, 255, 0.3);
-  background-color: #1b1b1b;
-  color: white;
-}
-
-.textarea::placeholder {
-  color: rgba(255, 255, 255, 0.75);
-}
-
 .main__file-wrap {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-}
-
-.main__file-wrap img {
-  border-radius: 10px;
-  width: 180px;
-  height: 267.75px;
-  margin-top: 10px;
-  margin-bottom: 15px;
-}
-
-#background-image {
-  width: 100%;
 }
 
 .main__fieldDescription {
@@ -105,14 +60,28 @@
   text-align: left;
 }
 
-#productImage {
+.main__select {
+  display: flex;
+  font-size: 16px;
+  padding: 5px;
+  width: auto;
+  max-width: 50%;
+  border: none;
+  color: white;
+  background-color: #1b1b1b;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.main__select option {
+  background-color: #1b1b1b;
+  transition: all 120ms;
+}
+
+#actors-photo {
   color: rgba(255, 255, 255, 0.75);
   margin-bottom: 15px;
   text-align: left;
-}
-
-#backgroundImage {
-  color: rgba(255, 255, 255, 0.75);
 }
 
 .main__button {
@@ -140,7 +109,7 @@
   border: none;
   padding: 10px;
   border-radius: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   width: 70%;
   max-width: 250px;
   cursor: pointer;
@@ -149,11 +118,6 @@
 
 .reset-button:hover {
   background-color: #b4b4b4;
-}
-
-.main__form-delete {
-  padding-bottom: 20px;
-  text-align: center;
 }
 
 .delete-button {
@@ -168,7 +132,7 @@
 }
 
 .delete-button:hover {
-  background-color: rgb(253 57 57);
+  background-color: rgb(255, 0, 0);
 }
 /*MEDIA QUERIES*/
 

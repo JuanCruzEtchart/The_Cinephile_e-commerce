@@ -72,13 +72,15 @@
         </div>
         <div class="main__file-wrap">
           <div class="main__fieldDescription">Imagen del producto</div>
+          <img src="/images/productDetail/<%= product.productImage %> " alt="Product image">
           <label for="productImage"></label>
           <input type="file" id="productImage" name="productImage">
         </div>
         <div class="main__file-wrap">
           <div class="main__fieldDescription">Imagen del fondo</div>
+          <img id="background-image" src="/images/productDetail/<%= product.backgroundImage %> " alt="Background image">
           <label for="backgroundImage"></label>
-          <input type="file" id="backgroundImage" name="backgroundImage" value="<%= product.backgroundImage %>">
+          <input type="file" id="backgroundImage" name="backgroundImage">
         </div>
         <div class="main__button">
           <button type="submit" class="send-button">Actualizar</button>

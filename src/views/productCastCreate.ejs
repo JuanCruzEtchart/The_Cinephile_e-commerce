@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include("./partials/head") %>
+  <link rel="stylesheet" href="/css/products/productCastCreate.css" />
+</head>
+
+<body>
+  <%- include("./partials/header") %>
+  <main class="main">
+    <div class="main__container">
+      <h1 class="main__title">Reparto de: <%= cast.product %> </h1>
+      <form class="main__form" action="/product/cast" method="POST">
+        <% for( let i = 1; i <= cast.castLength; i++ ) { %>
+        <div class="main__fieldDescription">Actor n°<%= i %> </div>
+        <div>
+          <input type="text" class="text-box" id="name" name="name" placeholder="Nombre del actor">
+        </div>
+        <div>
+          <input type="text" class="text-box" id="year" name="year" placeholder="Nombre del personaje">
+        </div>
+        <div class="main__file-wrap">
+          <div class="main__fieldDescription">Fotografía del actor</div>
+          <label for="actors-photo"></label>
+          <input type="file" id="actors-photo" name="actors-photo">
+        </div>
+        <% } %>
+        <div class="main__button">
+          <button type="submit" class="send-button">Siguiente</button>
+        </div>
+        <div class="main__button">
+          <button type="reset" class="reset-button">Reiniciar campos</button>
+        </div>
+      </form>
+    </div>
+  </main>
+  <%- include("./partials/footer") %>
+</body>
+
+</html>

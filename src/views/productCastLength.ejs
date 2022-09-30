@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include("./partials/head") %>
+  <link rel="stylesheet" href="/css/products/productCastLength.css" />
+</head>
+
+<body>
+  <%- include("./partials/header") %>
+  <main class="main">
+    <div class="main__container">
+      <h1 class="main__title">Reparto de producto</h1>
+      <form class="main__form" action="/product/cast" method="POST">
+        <div class="main__fieldDescription">Elegir producto</div>
+        <select name="product" class="main__select">
+          <% product.forEach(element => { %>
+          <option value="<%= element.name %>"><%= element.id %>-<%= element.name %></option>
+          <% }) %>
+        </select>
+        <div class="main__fieldDescription">Elegir cantidad de actores</div>
+        <select name="castLength" class="main__select">
+          <% for(let i = 1; i<=20; i++) {%>
+          <option value="<%= [i] %>"><%= [i] %></option>
+          <% }%>
+        </select>
+        <div class="main__button">
+          <button type="submit" class="send-button">Siguiente</button>
+        </div>
+        <div class="main__button">
+          <button type="reset" class="reset-button">Reiniciar campos</button>
+        </div>
+      </form>
+    </div>
+  </main>
+  <%- include("./partials/footer") %>
+</body>
+
+</html>
