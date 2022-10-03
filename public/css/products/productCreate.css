@@ -103,6 +103,24 @@
   color: rgba(255, 255, 255, 0.75);
 }
 
+.main__select {
+  display: flex;
+  font-size: 16px;
+  padding: 5px;
+  width: auto;
+  max-width: 50%;
+  border: none;
+  color: white;
+  background-color: #1b1b1b;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.main__select option {
+  background-color: #1b1b1b;
+  transition: all 120ms;
+}
+
 .main__button {
   font-size: 0.875rem;
 }

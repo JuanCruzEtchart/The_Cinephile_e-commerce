@@ -40,13 +40,22 @@ router.post("/create", uploadDetailImages, productController.store);
 
 /*Render de la vista de creación de repartos*/
 
-router.get("/cast", productController.castLength);
-router.post("/cast", productController.castLengthUpload);
+router.get("/create/cast", productController.castCreate);
+router.post("/create/cast", productController.castUpolad);
+
+/* router.get("/cast", productController.castLength);
+router.post("/cast", productController.castLengthUpload); */
 
 /*Render de la vista de carga de actores*/
 
-router.get("/cast/create/:id", productController.castCreate);
-router.post("/cast/create/:id", productController.castCreateUpload);
+
+
+
+/* router.get("/cast/create/:id", productController.castCreate);
+router.post("/cast/create/:id", productController.castCreateUpload); */
+
+
+
 
 /*Render de la vista de edición de productos*/
 

@@ -15,7 +15,23 @@ function writeFile(data) {
   fs.writeFileSync(path.join(__dirname, "../data/products.json"), dataString);
 }
 
-function findCast() {
+function findAllTemp() {
+  const jsonData = fs.readFileSync(
+    path.join(__dirname, "../data/productTemp.json")
+  );
+  const data = JSON.parse(jsonData);
+  return data;
+}
+
+function writeFileTemp(data) {
+  const dataString = JSON.stringify(data, null, 1);
+  fs.writeFileSync(
+    path.join(__dirname, "../data/productTemp.json"),
+    dataString
+  );
+}
+
+/* function findCast() {
   const jsonData = fs.readFileSync(path.join(__dirname, "../data/cast.json"));
   const data = JSON.parse(jsonData);
   return data;
@@ -24,9 +40,10 @@ function findCast() {
 function writeFileCast(data) {
   const dataString = JSON.stringify(data, null, 1);
   fs.writeFileSync(path.join(__dirname, "../data/cast.json"), dataString);
-}
+} */
 
 const productController = {
+  //Render de vista de detalle de productos
   detail: (req, res) => {
     const data = findAll();
     let productFound = data.find((product) => {
@@ -34,17 +51,20 @@ const productController = {
     });
     res.render("productDetail", { product: productFound });
   },
+
+  //Render de vista de creación de productos
   create: (req, res) => {
     res.render("productCreate");
   },
+
+  //Guardado de producto creado
   store: (req, res) => {
-    /* console.log(req.productImage); */
-    const productImage = req.files.productImage.map(function (image) {
+    /*     const productImage = req.files.productImage.map(function (image) {
       return image.filename;
     });
     const backgroundImage = req.files.backgroundImage.map(function (image) {
       return image.filename;
-    });
+    }); */
 
     /*     function productImage() {
       if (!req.files.productImage.isEmpty()) {
@@ -61,9 +81,7 @@ const productController = {
         });
       }
     };  */
-
-    const data = findAll();
-    /* console.log(data); */
+    const data = findAllTemp();
     const newProduct = {
       id: data.length + 1,
       name: req.body.name,
@@ -82,35 +100,47 @@ const productController = {
       synopsis: req.body.synopsis,
       director: req.body.director,
       script: req.body.script,
-      productImage: productImage,
-      backgroundImage: backgroundImage,
+      /*      productImage: productImage,
+      backgroundImage: backgroundImage, */
+      castLength: req.body.castLength,
       cast: req.body.cast,
       directedBy: req.body.directedBy,
       similar: req.body.similar,
     };
     /*  console.log(req.files); */
-    data.push(newProduct);
-
-    writeFile(data);
-
-    res.redirect("/product/create");
+    /*  data.push(newProduct); */
+    writeFileTemp(newProduct);
+    /* res.render("productCastlength", { product: newProduct }); */
+    res.redirect("/product/create/cast");
+    console.log(newProduct);
   },
+
+  //Render de vista de edición de productos
   edit: (req, res) => {
     const data = findAll();
-
     let productFound = data.find((product) => {
       return product.id == req.params.id;
     });
     res.render("productUpdate", { product: productFound });
   },
+
+  //Guardado de edición de productos
   update: (req, res) => {
     const data = findAll();
     let productFound = data.find((product) => {
       return product.id == req.params.id;
     });
-
+    const productImage = req.files.productImage.map(function (image) {
+      return image.filename;
+    });
+    const backgroundImage = req.files.backgroundImage.map(function (image) {
+      return image.filename;
+    });
     productFound.name = req.body.name;
-    productFound.description = req.body.description;
+    productFound.type = req.body.type;
+    productFound.year = req.body.year;
+    productFound.rated = req.body.rated;
+    productFound.length = req.body.length;
     productFound.imdbScore = req.body.imdbScore;
     productFound.imdbTotalReviews = req.body.imdbTotalReviews;
     productFound.tomatoScore = req.body.tomatoScore;
@@ -124,6 +154,7 @@ const productController = {
     productFound.script = req.body.script;
     productFound.productImage = productImage;
     productFound.backgroundImage = backgroundImage;
+    productFound.castLength = req.body.castLength;
     productFound.cast = req.body.cast;
     productFound.directedBy = req.body.directedBy;
     productFound.similar = req.body.similar;
@@ -132,6 +163,8 @@ const productController = {
 
     res.redirect("/product/create");
   },
+
+  //Eliminación de productos
   destroy: (req, res) => {
     const data = findAll();
     let productFound = data.findIndex((product) => {
@@ -142,41 +175,71 @@ const productController = {
     res.redirect("/product/create");
   },
 
-  castLength: (req, res) => {
-    const data = findAll();
-    res.render("productCastLength", { product: data });
+  //Render de vista de creación de repartos
+  castCreate: (req, res) => {
+    const data = findAllTemp();
+
+    res.render("productCast", { product: data });
   },
 
-  castLengthUpload: (req, res) => {
+  //Guardado de repartos
+  castUpolad: (req, res) => {
+    /*     const productImage = req.files.productImage.map(function (image) {
+      return image.filename;
+    });
+    const backgroundImage = req.files.backgroundImage.map(function (image) {
+      return image.filename;
+    }); */
+
     /* const data = findAll() */
-    const dataCast = findCast();
+    const data = findAll();
     console.log(req.body);
     const newCast = {
-      id: dataCast.length + 1,
-      product: req.body.product,
+      /*       id: dataCast.length + 1,
+      product: req.body.product, */
+      id: data.length + 1,
+      name: req.body.name,
+      type: req.body.type,
+      year: req.body.year,
+      rated: req.body.rated,
+      length: req.body.length,
+      imdbScore: req.body.imdbScore,
+      imdbTotalReviews: req.body.imdbTotalReviews,
+      tomatoScore: req.body.tomatoScore,
+      trailerLink: req.body.trailerLink,
+      genre1: req.body.genre1,
+      genre2: req.body.genre2,
+      purchasePrice: req.body.purchasePrice,
+      rentalPrice: req.body.rentalPrice,
+      synopsis: req.body.synopsis,
+      director: req.body.director,
+      script: req.body.script,
+      /*      productImage: productImage,
+      backgroundImage: backgroundImage, */
       castLength: req.body.castLength,
+      cast: req.body.cast,
+      directedBy: req.body.directedBy,
+      similar: req.body.similar,
+      actorsName: req.body.actorsName,
+      character: req.body.character,
+      actorsBiography: req.body.actorsBiography,
+      /* actorsPhoto: req.body.actorsPhoto, */
     };
-    dataCast.push(newCast);
+    data.push(newCast);
 
-    writeFileCast(dataCast);
+    writeFile(data);
+    console.log(data);
 
-    res.redirect("/product/cast/create/:id");
+    res.redirect("/product/list");
   },
 
-  castCreate: (req, res) => {
-    const dataCast = findCast();
-    let castFound = dataCast.find((cast) => {
-      return cast.id == req.params.id;
-    });
-    res.render("productCastCreate", { cast: castFound });
-  },
-  castCreateUpload: (req, res) => {},
-
+  //Render de vista de lista general de productos
   list: (req, res) => {
     const data = findAll();
     res.render("productList", { product: data });
   },
 
+  //Render de vista de lista de películas
   movies: (req, res) => {
     const data = findAll();
     let movies = [];
@@ -188,6 +251,7 @@ const productController = {
     res.render("moviesList", { product: movies });
   },
 
+  //Render de vista de lista de series
   series: (req, res) => {
     const data = findAll();
     let series = [];
@@ -199,6 +263,7 @@ const productController = {
     res.render("seriesList", { product: series });
   },
 
+  //Render de vista de carrito
   cart: (req, res) => {
     res.render("productCart");
   },

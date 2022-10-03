@@ -32,6 +32,10 @@ body {
   text-align: center;
 }
 
+.main__create-form {
+  display: none;
+}
+
 .text-box {
   font-size: 0.875rem;
   margin-bottom: 15px;
@@ -60,7 +64,11 @@ body {
   text-align: left;
 }
 
-select {
+h2.main__fieldDescription {
+  color: white;
+}
+
+.main__select {
   display: flex;
   font-size: 16px;
   padding: 5px;
@@ -73,12 +81,12 @@ select {
   cursor: pointer;
 }
 
-select option {
+.main__select option {
   background-color: #1b1b1b;
   transition: all 120ms;
 }
 
-#actors-photo {
+#actorsPhoto {
   color: rgba(255, 255, 255, 0.75);
   margin-bottom: 15px;
   text-align: left;
@@ -109,7 +117,7 @@ select option {
   border: none;
   padding: 10px;
   border-radius: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   width: 70%;
   max-width: 250px;
   cursor: pointer;
@@ -120,7 +128,7 @@ select option {
   background-color: #b4b4b4;
 }
 
-.delete-button {
+/* .delete-button {
   background-color: rgb(255, 0, 0);
   border: none;
   padding: 10px;
@@ -133,6 +141,28 @@ select option {
 
 .delete-button:hover {
   background-color: rgb(255, 0, 0);
+} */
+
+div.main__button {
+  text-align: center;
+}
+
+.back-button {
+  color: #ffc700;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  width: 70%;
+  max-width: 250px;
+  cursor: pointer;
+  transition: all 120ms;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.back-button:hover {
+  background-color: rgba(126, 126, 126, 0.1);
 }
 /*MEDIA QUERIES*/
 
