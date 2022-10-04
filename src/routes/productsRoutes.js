@@ -19,7 +19,7 @@ let storage = multer.diskStorage({
 
 let upload = multer({ storage: storage });
 
-//Carga de imágenes de producto
+//Carga de imágenes de detalle producto
 let uploadDetailImages = upload.fields([
   {
     name: "productImage",
@@ -27,6 +27,9 @@ let uploadDetailImages = upload.fields([
   },
   { name: "backgroundImage", maxCount: 1 },
 ]);
+
+//Carga de imágenes de reparto de actores
+let uploadActorsPhoto = upload.any();
 
 /*Render del detalle de productos*/
 
@@ -41,26 +44,20 @@ router.post("/create", uploadDetailImages, productController.store);
 /*Render de la vista de creación de repartos*/
 
 router.get("/create/cast", productController.castCreate);
-router.post("/create/cast", productController.castUpolad);
+router.post("/create/cast", uploadActorsPhoto, productController.castUpolad);
 
 /* router.get("/cast", productController.castLength);
 router.post("/cast", productController.castLengthUpload); */
 
 /*Render de la vista de carga de actores*/
 
-
-
-
 /* router.get("/cast/create/:id", productController.castCreate);
 router.post("/cast/create/:id", productController.castCreateUpload); */
-
-
-
 
 /*Render de la vista de edición de productos*/
 
 router.get("/edit/:id", productController.edit);
-router.put("/edit/:id", productController.update);
+router.put("/edit/:id", uploadDetailImages, productController.update);
 router.delete("/delete/:id", productController.destroy);
 
 /*Render de la vista de lista de productos*/

@@ -1,5 +1,35 @@
 /*MAIN*/
 
+h1 {
+margin-bottom: 35px;
+}
+
+.main__button {
+  font-size: 0.875rem;
+}
+
+/* div.main__button {
+  text-align: center;
+} */
+
+.back-button {
+  color: #ffc700;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  width: 70%;
+  max-width: 250px;
+  cursor: pointer;
+  transition: all 120ms;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.back-button:hover {
+  background-color: rgba(126, 126, 126, 0.1);
+}
+
 .main__product-information {
   width: 90%;
   margin: auto;

@@ -174,7 +174,7 @@
   "genre2": "Crimen",
   "purchasePrice": "1999.90",
   "rentalPrice": "599.90",
-  "synopsis": "Peaky Blinders es un drama de BBC que narra la historia de la familia gitana \r\nShelby y su banda de gángsters, un grupo de personas características por \r\nsus boinas con cuchillas y dueñas de los asuntos ilegales, que dominan las \r\napuestas clandestinas y se rigen mediante extorsiones.",
+  "synopsis": "Peaky Blinders es un drama de BBC que narra la historia de la familia gitana Shelby y su banda de gángsters, un grupo de personas características por sus boinas con cuchillas y dueñas de los asuntos ilegales, que dominan las apuestas clandestinas y se rigen mediante extorsiones.",
   "director": "Otto Bathurst",
   "script": "Steven Knight",
   "productImage": [
@@ -189,351 +189,86 @@
  },
  {
   "id": 3,
-  "name": "a",
-  "type": "Película",
-  "year": "a",
-  "rated": "a",
-  "length": "a",
-  "imdbScore": "a",
-  "imdbTotalReviews": "a",
-  "tomatoScore": "3",
-  "trailerLink": "a",
-  "genre1": "a",
-  "genre2": "a",
-  "purchasePrice": "a",
-  "rentalPrice": "a",
-  "synopsis": "a",
-  "director": "a",
-  "script": "a",
-  "productImage": [
-   "productImage1664517724525-.jpg"
-  ],
-  "backgroundImage": [],
-  "cast": "a",
-  "directedBy": "a",
-  "similar": "a"
- },
- {
-  "id": 4,
-  "name": "a",
-  "type": "Película",
-  "year": "a",
-  "rated": "a",
-  "length": "a",
-  "imdbScore": "a",
-  "imdbTotalReviews": "a",
-  "tomatoScore": "3",
-  "trailerLink": "a",
-  "genre1": "a",
-  "genre2": "a",
-  "purchasePrice": "a",
-  "rentalPrice": "a",
-  "synopsis": "a",
-  "director": "a",
-  "script": "a",
-  "productImage": [
-   "productImage1664517724525-.jpg"
-  ],
-  "backgroundImage": [
-   "backgroundImage1664517724528-.jpg"
-  ],
-  "cast": "a",
-  "directedBy": "a",
-  "similar": "a"
- },
- {
-  "id": 5,
-  "name": "a",
-  "type": "Película",
-  "year": "a",
-  "rated": "a",
-  "length": "a",
-  "imdbScore": "a",
-  "imdbTotalReviews": "a",
-  "tomatoScore": "3",
-  "trailerLink": "a",
-  "genre1": "a",
-  "genre2": "a",
-  "purchasePrice": "a",
-  "rentalPrice": "a",
-  "synopsis": "a",
-  "director": "a",
-  "script": "a",
-  "productImage": [
-   "productImage1664517724525-.jpg"
-  ],
-  "backgroundImage": [
-   "backgroundImage1664517724528-.jpg"
-  ],
-  "cast": "a",
-  "directedBy": "a",
-  "similar": "a"
- },
- {
-  "id": 6,
-  "name": "a",
-  "type": "Película",
-  "year": "a",
-  "rated": "a",
-  "length": "a",
-  "imdbScore": "a",
-  "imdbTotalReviews": "a",
-  "tomatoScore": "3",
-  "trailerLink": "a",
-  "genre1": "a",
-  "genre2": "a",
-  "purchasePrice": "a",
-  "rentalPrice": "a",
-  "synopsis": "a",
-  "director": "a",
-  "script": "a",
-  "productImage": [
-   "productImage1664517724525-.jpg"
-  ],
-  "backgroundImage": [
-   "backgroundImage1664517724528-.jpg"
-  ],
-  "cast": "a",
-  "directedBy": "a",
-  "similar": "a"
- },
- {
-  "id": 7,
-  "name": "a",
-  "type": "Película",
-  "year": "a",
-  "rated": "a",
-  "length": "a",
-  "imdbScore": "a",
-  "imdbTotalReviews": "a",
-  "tomatoScore": "3",
-  "trailerLink": "a",
-  "genre1": "a",
-  "genre2": "a",
-  "purchasePrice": "a",
-  "rentalPrice": "a",
-  "synopsis": "a",
-  "director": "a",
-  "script": "a",
-  "productImage": [
-   "productImage1664517724525-.jpg"
-  ],
-  "backgroundImage": [
-   "backgroundImage1664517724528-.jpg"
-  ],
-  "cast": "a",
-  "directedBy": "a",
-  "similar": "a"
- },
- {
-  "id": 8,
-  "name": "a",
-  "type": "Película",
-  "year": "a",
-  "rated": "a",
-  "length": "a",
-  "imdbScore": "a",
-  "imdbTotalReviews": "a",
-  "tomatoScore": "3",
-  "trailerLink": "a",
-  "genre1": "a",
-  "genre2": "a",
-  "purchasePrice": "a",
-  "rentalPrice": "a",
-  "synopsis": "a",
-  "director": "a",
-  "script": "a",
-  "productImage": [
-   "productImage1664517724525-.jpg"
-  ],
-  "backgroundImage": [
-   "backgroundImage1664517724528-.jpg"
-  ],
-  "cast": "a",
-  "directedBy": "a",
-  "similar": "a"
- },
- {
-  "id": 9,
-  "name": "a",
-  "type": "Película",
-  "year": "a",
-  "rated": "a",
-  "length": "a",
-  "imdbScore": "a",
-  "imdbTotalReviews": "a",
-  "tomatoScore": "3",
-  "trailerLink": "a",
-  "genre1": "a",
-  "genre2": "a",
-  "purchasePrice": "a",
-  "rentalPrice": "a",
-  "synopsis": "a",
-  "director": "a",
-  "script": "a",
-  "productImage": [
-   "productImage1664517724525-.jpg"
-  ],
-  "backgroundImage": [
-   "backgroundImage1664517724528-.jpg"
-  ],
-  "cast": "a",
-  "directedBy": "a",
-  "similar": "a"
- },
- {
-  "id": 10,
-  "name": "a",
-  "type": "Película",
-  "year": "a",
-  "rated": "a",
-  "length": "a",
-  "imdbScore": "a",
-  "imdbTotalReviews": "a",
-  "tomatoScore": "3",
-  "trailerLink": "a",
-  "genre1": "a",
-  "genre2": "a",
-  "purchasePrice": "a",
-  "rentalPrice": "a",
-  "synopsis": "a",
-  "director": "a",
-  "script": "a",
-  "productImage": [
-   "productImage1664517724525-.jpg"
-  ],
-  "backgroundImage": [
-   "backgroundImage1664517724528-.jpg"
-  ],
-  "cast": "a",
-  "directedBy": "a",
-  "similar": "a"
- },
- {
-  "id": 11,
-  "name": "a",
-  "type": "Película",
-  "year": "a",
-  "rated": "a",
-  "length": "a",
-  "imdbScore": "a",
-  "imdbTotalReviews": "a",
-  "tomatoScore": "3",
-  "trailerLink": "a",
-  "genre1": "a",
-  "genre2": "a",
-  "purchasePrice": "a",
-  "rentalPrice": "a",
-  "synopsis": "a",
-  "director": "a",
-  "script": "a",
-  "productImage": [
-   "productImage1664517724525-.jpg"
-  ],
-  "backgroundImage": [
-   "backgroundImage1664517724528-.jpg"
-  ],
-  "cast": "a",
-  "directedBy": "a",
-  "similar": "a"
- },
- {
-  "id": 12,
-  "name": "",
-  "type": "Película",
-  "year": "",
-  "rated": "",
-  "length": "",
-  "imdbScore": "",
-  "imdbTotalReviews": "",
-  "tomatoScore": "",
-  "trailerLink": "",
-  "genre1": "",
-  "genre2": "",
-  "purchasePrice": "",
-  "rentalPrice": "",
-  "synopsis": "",
-  "director": "",
-  "script": "",
-  "productImage": [
-   "productImage1664572900191-.png"
-  ],
-  "backgroundImage": [
-   "backgroundImage1664572900222-.jpg"
-  ],
-  "castLength": "18",
-  "cast": "",
-  "directedBy": "",
-  "similar": ""
- },
- {
-  "id": 13,
-  "name": "",
-  "type": "Película",
-  "year": "",
-  "rated": "",
-  "length": "",
-  "imdbScore": "",
-  "imdbTotalReviews": "",
-  "tomatoScore": "",
-  "trailerLink": "",
-  "genre1": "",
-  "genre2": "",
-  "purchasePrice": "",
-  "rentalPrice": "",
-  "synopsis": "",
-  "director": "",
-  "script": "",
-  "productImage": [
-   "productImage1664575890173-.pdf"
-  ],
-  "backgroundImage": [
-   "backgroundImage1664575890174-.pdf"
-  ],
-  "castLength": "1",
-  "cast": "",
-  "directedBy": "",
-  "similar": ""
- },
- {
-  "id": 14,
-  "name": "Prueba",
+  "name": "Peaky Blinders",
   "type": "Serie de TV",
-  "year": "Prueba",
-  "rated": "Prueba",
-  "length": "Prueba",
-  "imdbScore": "Prueba",
-  "imdbTotalReviews": "Prueba",
-  "tomatoScore": "2",
-  "trailerLink": "Prueba",
-  "genre1": "Prueba",
-  "genre2": "Prueba",
-  "purchasePrice": "Prueba",
-  "rentalPrice": "Prueba",
-  "synopsis": "Prueba",
-  "director": "Prueba",
-  "script": "Prueba",
-  "castLength": "4",
-  "cast": "Prueba",
-  "directedBy": "Prueba",
-  "similar": "Prueba",
-  "actorsName": [
-   "Prueba4",
-   "Prueba2",
-   "Prueba3",
-   "Prueba4"
+  "year": "2013/2016",
+  "rated": "R",
+  "length": "1h",
+  "imdbScore": "8,8",
+  "imdbTotalReviews": "530 mil",
+  "tomatoScore": "94",
+  "trailerLink": "https://www.youtube.com/watch?v=oVzVdvGIC7U",
+  "genre1": "Drama",
+  "genre2": "Crimen",
+  "purchasePrice": "1999.90",
+  "rentalPrice": "599.90",
+  "synopsis": "Peaky Blinders es un drama de BBC que narra la historia de la familia gitana \r\nShelby y su banda de gángsters, un grupo de personas características por \r\nsus boinas con cuchillas y dueñas de los asuntos ilegales, que dominan las \r\napuestas clandestinas y se rigen mediante extorsiones.",
+  "director": "Otto Bathurst",
+  "script": "Steven Knight",
+  "productImage": [
+   "productImage1664864258135-.jpg"
   ],
-  "character": [
-   "Prueba4",
-   "Prueba2",
-   "Prueba3",
-   "Prueba4"
+  "backgroundImage": [
+   "backgroundImage1664864258162-.jpg"
   ],
-  "actorsBiography": [
-   "https://en.wikipedia.org/wiki/Al_Pacino",
-   "https://en.wikipedia.org/wiki/Al_Pacino",
-   "https://en.wikipedia.org/wiki/Al_Pacino",
-   "https://en.wikipedia.org/wiki/Al_Pacino"
-  ]
+  "castLength": "9",
+  "cast": [
+   {
+    "id": 1,
+    "actorsName": "Cillian Murphy",
+    "character": "Tommy Shelby",
+    "actorsBiography": "https://en.wikipedia.org/wiki/Cillian_Murphy"
+   },
+   {
+    "id": 2,
+    "actorsName": "Paul Anderson",
+    "character": "Arthur Shelby",
+    "actorsBiography": "https://en.wikipedia.org/wiki/Paul_Anderson_(actor)"
+   },
+   {
+    "id": 3,
+    "actorsName": "Tom Hardy",
+    "character": "Alfie Solomons",
+    "actorsBiography": "https://en.wikipedia.org/wiki/Tom_Hardy"
+   },
+   {
+    "id": 4,
+    "actorsName": "Helen McCrory",
+    "character": "Polly Gray",
+    "actorsBiography": "https://en.wikipedia.org/wiki/Helen_McCrory"
+   },
+   {
+    "id": 5,
+    "actorsName": "Sophie Rundle",
+    "character": "Ada Shelby",
+    "actorsBiography": "https://en.wikipedia.org/wiki/Sophie_Rundle"
+   },
+   {
+    "id": 6,
+    "actorsName": "Finn Cole",
+    "character": "Michael Gray",
+    "actorsBiography": "https://en.wikipedia.org/wiki/Finn_Cole"
+   },
+   {
+    "id": 7,
+    "actorsName": "Joe Cole",
+    "character": "John Shelby",
+    "actorsBiography": "https://en.wikipedia.org/wiki/Joe_Cole_(actor)"
+   },
+   {
+    "id": 8,
+    "actorsName": "Anya Taylor-Joy",
+    "character": "Gina Gray",
+    "actorsBiography": "https://en.wikipedia.org/wiki/Anya_Taylor-Joy"
+   },
+   {
+    "id": 9,
+    "actorsName": "Natasha O'Keeffe",
+    "character": "Lizzie Shelby",
+    "actorsBiography": "https://en.wikipedia.org/wiki/Natasha_O%27Keeffe"
+   }
+  ],
+  "directedBy": "Revisar",
+  "similar": "Revisar"
  }
 ]

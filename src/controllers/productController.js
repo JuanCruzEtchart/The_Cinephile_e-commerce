@@ -54,17 +54,19 @@ const productController = {
 
   //Render de vista de creación de productos
   create: (req, res) => {
-    res.render("productCreate");
+    const dataTemp = findAllTemp();
+    res.render("productCreate", { old: dataTemp });
   },
 
   //Guardado de producto creado
   store: (req, res) => {
-    /*     const productImage = req.files.productImage.map(function (image) {
+    const productImage = req.files.productImage.map(function (image) {
       return image.filename;
     });
     const backgroundImage = req.files.backgroundImage.map(function (image) {
       return image.filename;
-    }); */
+    });
+    console.log(req.files);
 
     /*     function productImage() {
       if (!req.files.productImage.isEmpty()) {
@@ -100,10 +102,9 @@ const productController = {
       synopsis: req.body.synopsis,
       director: req.body.director,
       script: req.body.script,
-      /*      productImage: productImage,
-      backgroundImage: backgroundImage, */
+      productImage: productImage,
+      backgroundImage: backgroundImage,
       castLength: req.body.castLength,
-      cast: req.body.cast,
       directedBy: req.body.directedBy,
       similar: req.body.similar,
     };
@@ -130,12 +131,14 @@ const productController = {
     let productFound = data.find((product) => {
       return product.id == req.params.id;
     });
+
     const productImage = req.files.productImage.map(function (image) {
       return image.filename;
     });
     const backgroundImage = req.files.backgroundImage.map(function (image) {
       return image.filename;
     });
+
     productFound.name = req.body.name;
     productFound.type = req.body.type;
     productFound.year = req.body.year;
@@ -155,13 +158,12 @@ const productController = {
     productFound.productImage = productImage;
     productFound.backgroundImage = backgroundImage;
     productFound.castLength = req.body.castLength;
-    productFound.cast = req.body.cast;
     productFound.directedBy = req.body.directedBy;
     productFound.similar = req.body.similar;
 
     writeFile(data);
 
-    res.redirect("/product/create");
+    res.redirect("/product/list");
   },
 
   //Eliminación de productos
@@ -172,28 +174,48 @@ const productController = {
     });
     data.splice(productFound, 1);
     writeFile(data);
-    res.redirect("/product/create");
+    res.redirect("/product/list");
   },
 
   //Render de vista de creación de repartos
   castCreate: (req, res) => {
-    const data = findAllTemp();
+    const dataTemp = findAllTemp();
 
-    res.render("productCast", { product: data });
+    res.render("productCast", { product: dataTemp });
   },
 
   //Guardado de repartos
   castUpolad: (req, res) => {
-    /*     const productImage = req.files.productImage.map(function (image) {
-      return image.filename;
+    const data = findAll();
+    const dataTemp = findAllTemp();
+    const productImage = dataTemp.productImage.map(function (image) {
+      return image;
     });
-    const backgroundImage = req.files.backgroundImage.map(function (image) {
+    const backgroundImage = dataTemp.backgroundImage.map(function (image) {
+      return image;
+    });
+    /*     const actorsPhoto = req.files.actorsPhoto.map(function (image) {
       return image.filename;
     }); */
 
-    /* const data = findAll() */
-    const data = findAll();
-    console.log(req.body);
+    let actors = [];
+
+    for (let i = 1; i <= req.body.castLength; i++) {
+      actors.push({
+        id: i,
+        actorsName: req.body["actorsName" + i],
+        character: req.body["character" + i],
+        actorsBiography: req.body["actorsBiography" + i],
+        actorsPhoto: req.files["actorsPhoto" + i],
+      });
+      console.log(req.files["actorsPhoto" + i]);
+    }
+    /*     const productIage = req.files.actorsPhoto.map(function (image) {
+      return image.filename;
+    }); */
+
+    /* console.log(req.body); */
+
     const newCast = {
       /*       id: dataCast.length + 1,
       product: req.body.product, */
@@ -214,21 +236,19 @@ const productController = {
       synopsis: req.body.synopsis,
       director: req.body.director,
       script: req.body.script,
-      /*      productImage: productImage,
-      backgroundImage: backgroundImage, */
+      productImage: productImage,
+      backgroundImage: backgroundImage,
       castLength: req.body.castLength,
       cast: req.body.cast,
       directedBy: req.body.directedBy,
       similar: req.body.similar,
-      actorsName: req.body.actorsName,
-      character: req.body.character,
-      actorsBiography: req.body.actorsBiography,
-      /* actorsPhoto: req.body.actorsPhoto, */
+      cast: actors,
     };
+    console.log(req.files);
     data.push(newCast);
 
     writeFile(data);
-    console.log(data);
+    writeFileTemp({});
 
     res.redirect("/product/list");
   },

@@ -16,6 +16,25 @@
   margin-top: 0px;
   padding-top: 35px;
   overflow-wrap: break-word;
+  margin-bottom: 35px;
+}
+
+.back-button {
+  color: #ffc700;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  width: 70%;
+  max-width: 250px;
+  cursor: pointer;
+  transition: all 120ms;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.back-button:hover {
+  background-color: rgba(126, 126, 126, 0.1);
 }
 
 .main__form {
@@ -146,7 +165,7 @@
   border: none;
   padding: 10px;
   border-radius: 10px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   width: 70%;
   max-width: 250px;
   cursor: pointer;
@@ -157,7 +176,7 @@
   background-color: #b4b4b4;
 }
 
-.delete-button {
+/* .delete-button {
   background-color: rgb(255, 0, 0);
   border: none;
   padding: 10px;
@@ -170,7 +189,8 @@
 
 .delete-button:hover {
   background-color: rgb(255, 0, 0);
-}
+} */
+
 /*MEDIA QUERIES*/
 
 /*MOBILE*/

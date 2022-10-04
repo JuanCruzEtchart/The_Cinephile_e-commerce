@@ -10,8 +10,13 @@
   <%- include("./partials/header") %>
   <main class="main">
     <div class="main__container">
-      <h1 class="main__title">Actualizar el producto: <%= product.name %> </h1>
-      <form class="main__form-put" action="/product/edit/<%= product.id  %>?_method=PUT" method="POST">
+      <h1 class="main__title">Actualizar el producto: <%= product.name%> </h1>
+      <div class="main__button">
+        <a href="/product/list">
+          <button class="back-button">Volver a lista de productos</button>
+        </a>
+      </div>
+      <form class="main__form-put" action="/product/edit/<%= product.id %>?_method=PUT" enctype="multipart/form-data" method="POST">
         <div>
           <input type="text" class="text-box" id="name" name="name" value="<%= product.name %>" placeholder="Nombre del producto">
         </div>

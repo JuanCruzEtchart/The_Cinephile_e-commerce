@@ -98,6 +98,15 @@
             <div class="main__slider">
               <div class="main__slider-inner" id="main__slider-1-inner">
                 <!-- AGREGAR CÓDIGO QUE FALTA -->
+                <% product.cast.forEach(element => { %>
+                <div class="main__item-actor">
+                  <a href="<%= element.actorsBiography%>" target="_blank">
+                    <img src="/images/productDetail/<%=product.actorsPhoto ? product.actorsPhoto : "Logo.png"%>" alt="<%= product.actor%>" />
+                    <div class="main__actor-name"><%= element.actorsName%></div>
+                    <div class="main__character-name"><%= element.character%></div>
+                  </a>
+                </div>
+                <% }) %>
               </div>
             </div>
           </div>

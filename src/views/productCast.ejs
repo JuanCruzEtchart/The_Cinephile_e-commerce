@@ -11,7 +11,7 @@
   <main class="main">
     <div class="main__container">
       <h1 class="main__title">Reparto de <%= product.name %></h1>
-      <form class="main__form" action="/product/create/cast" method="POST">
+      <form class="main__form" action="/product/create/cast" enctype="multipart/form-data" method="POST">
         <!--    a -->
         <div class="main__create-form">
           <input type="hidden" class="text-box" id="name" name="name" value="<%= product.name %>">
@@ -76,18 +76,18 @@
           <% for( let i = 1; i <= product.castLength; i++ ) { %>
           <h2 class="main__fieldDescription">Actor n°<%= i %> </h2>
           <div>
-            <input type="text" class="text-box" id="actorsName" name="actorsName" placeholder="Nombre del actor">
+            <input type="text" class="text-box" id="actorsName" name="actorsName<%= i %>" placeholder="Nombre del actor">
           </div>
           <div>
-            <input type="text" class="text-box" id="character" name="character" placeholder="Nombre del personaje">
+            <input type="text" class="text-box" id="character" name="character<%= i %>" placeholder="Nombre del personaje">
           </div>
           <div>
-            <input type="text" class="text-box" id="actorsBiography" name="actorsBiography" placeholder="Link de biografía del actor">
+            <input type="text" class="text-box" id="actorsBiography" name="actorsBiography<%= i %>" placeholder="Link de biografía del actor">
           </div>
           <div class="main__file-wrap">
             <div class="main__fieldDescription">Fotografía del actor</div>
             <label for="actorsPhoto"></label>
-            <input type="file" id="actorsPhoto" name="actorsPhoto">
+            <input type="file" id="actorsPhoto" name="actorsPhoto<%= i %>">
           </div>
           <% } %>
         </div>

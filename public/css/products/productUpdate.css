@@ -14,8 +14,27 @@
   color: white;
   background-color: #212121;
   margin-top: 0px;
+  margin-bottom: 35px;
   padding-top: 35px;
   overflow-wrap: break-word;
+}
+
+.back-button {
+  color: #ffc700;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  width: 70%;
+  max-width: 250px;
+  cursor: pointer;
+  transition: all 120ms;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.back-button:hover {
+  background-color: rgba(126, 126, 126, 0.1);
 }
 
 .main__form-put {
