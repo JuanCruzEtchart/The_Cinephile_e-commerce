@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "name": "Nombre",
+        "email": "Email",
+        "password": "Password",
+        "security": 1
+    },
+    
+    {
+        "id": 8,
+        "name": "Alberto asdasd",
+        "email": "albertorosspervilar@gmail.com",
+        "password": "456",
+        "security": 1
+    }
+]
