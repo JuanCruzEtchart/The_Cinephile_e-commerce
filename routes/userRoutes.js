@@ -16,4 +16,8 @@ router.post("/register", validation.registerValidation, userController.store);
 /*Render del login*/
 router.get("/thankyou", userController.thankyou);
 
+/*Render del profile/*/
+
+router.get("/profile", userController.profile)
+
 module.exports = router;
