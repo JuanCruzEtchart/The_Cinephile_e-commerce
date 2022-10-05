@@ -14,7 +14,7 @@
       <h1>Listado de productos:</h1>
       <div class="main__button">
         <a href="/product/create">
-          <button class="back-button">Crear producto</button>
+          <button class="back-button">Crear nuevo producto</button>
         </a>
       </div>
       <div class="prueba">
@@ -24,7 +24,7 @@
           <a href="/product/detail/<%= element.id %>">
             <article class="main__product-article">
               <div class="main__img-container">
-                <img src="/images/productDetail/<%= element.productImage ? element.productImage : "Logo.png"%>" alt="Imágen de producto">
+                <img src="/images/products/productsCreated/<%= element.productImage ? element.productImage : "Logo.png"%>" alt="Imágen de producto">
               </div>
               <div class="main__product-information">
                 <p>Información del producto:</p>

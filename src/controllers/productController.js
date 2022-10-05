@@ -1,6 +1,5 @@
 const path = require("path");
 const fs = require("fs");
-const { resolveNaptr } = require("dns");
 
 function findAll() {
   const jsonData = fs.readFileSync(
@@ -31,25 +30,35 @@ function writeFileTemp(data) {
   );
 }
 
-/* function findCast() {
-  const jsonData = fs.readFileSync(path.join(__dirname, "../data/cast.json"));
-  const data = JSON.parse(jsonData);
-  return data;
-}
-
-function writeFileCast(data) {
-  const dataString = JSON.stringify(data, null, 1);
-  fs.writeFileSync(path.join(__dirname, "../data/cast.json"), dataString);
-} */
-
 const productController = {
   //Render de vista de detalle de productos
   detail: (req, res) => {
     const data = findAll();
+    const directorsFilter = [];
+    const similarFilter = [];
+
     let productFound = data.find((product) => {
       return product.id == req.params.id;
     });
-    res.render("productDetail", { product: productFound });
+
+    data.forEach((filtered) => {
+      if (filtered.director == productFound.director) {
+        directorsFilter.push(filtered);
+      }
+    });
+
+    data.forEach((filtered) => {
+      if (filtered.genre1 == productFound.genre1) {
+        similarFilter.push(filtered);
+      }
+    });
+
+    res.render("productDetail", {
+      product: productFound,
+      list: data,
+      director: directorsFilter,
+      similar: similarFilter,
+    });
   },
 
   //Render de vista de creación de productos
@@ -68,24 +77,7 @@ const productController = {
     });
     console.log(req.files);
 
-    /*     function productImage() {
-      if (!req.files.productImage.isEmpty()) {
-        req.files.productImage.map(function (image) {
-          return image.filename;
-        });
-      }
-    }; */
-    /*
-    const backgroundImage = function (req.files.backgroundImage) {
-      if (req.files.productImage.isEmpty()) {
-        req.files.backgroundImage.map(function (image) {
-          return image.filename;
-        });
-      }
-    };  */
-    const data = findAllTemp();
     const newProduct = {
-      id: data.length + 1,
       name: req.body.name,
       type: req.body.type,
       year: req.body.year,
@@ -101,17 +93,15 @@ const productController = {
       rentalPrice: req.body.rentalPrice,
       synopsis: req.body.synopsis,
       director: req.body.director,
-      script: req.body.script,
+      directorBiography: req.body.directorBiography,
+      screenwriter: req.body.screenwriter,
+      screenwriterBiography: req.body.screenwriterBiography,
       productImage: productImage,
       backgroundImage: backgroundImage,
       castLength: req.body.castLength,
-      directedBy: req.body.directedBy,
-      similar: req.body.similar,
     };
-    /*  console.log(req.files); */
-    /*  data.push(newProduct); */
+
     writeFileTemp(newProduct);
-    /* res.render("productCastlength", { product: newProduct }); */
     res.redirect("/product/create/cast");
     console.log(newProduct);
   },
@@ -154,15 +144,14 @@ const productController = {
     productFound.rentalPrice = req.body.rentalPrice;
     productFound.synopsis = req.body.synopsis;
     productFound.director = req.body.director;
-    productFound.script = req.body.script;
+    productFound.directorBiography = req.body.directorBiography;
+    productFound.screenwriter = req.body.screenwriter;
+    productFound.screenwriterBiography = req.body.screenwriterBiography;
     productFound.productImage = productImage;
     productFound.backgroundImage = backgroundImage;
     productFound.castLength = req.body.castLength;
-    productFound.directedBy = req.body.directedBy;
-    productFound.similar = req.body.similar;
 
     writeFile(data);
-
     res.redirect("/product/list");
   },
 
@@ -172,6 +161,7 @@ const productController = {
     let productFound = data.findIndex((product) => {
       return product.id == req.params.id;
     });
+
     data.splice(productFound, 1);
     writeFile(data);
     res.redirect("/product/list");
@@ -194,31 +184,27 @@ const productController = {
     const backgroundImage = dataTemp.backgroundImage.map(function (image) {
       return image;
     });
-    /*     const actorsPhoto = req.files.actorsPhoto.map(function (image) {
-      return image.filename;
-    }); */
 
-    let actors = [];
+    const actors = [];
 
     for (let i = 1; i <= req.body.castLength; i++) {
+      const actorsPhoto = req.files.filter(function (file) {
+        return file.fieldname == "actorsPhoto" + i;
+      });
+      const actorsPhotoFile = actorsPhoto.map(function (file) {
+        return file.filename;
+      });
+
       actors.push({
         id: i,
         actorsName: req.body["actorsName" + i],
         character: req.body["character" + i],
         actorsBiography: req.body["actorsBiography" + i],
-        actorsPhoto: req.files["actorsPhoto" + i],
+        actorsPhoto: actorsPhotoFile,
       });
-      console.log(req.files["actorsPhoto" + i]);
     }
-    /*     const productIage = req.files.actorsPhoto.map(function (image) {
-      return image.filename;
-    }); */
-
-    /* console.log(req.body); */
 
     const newCast = {
-      /*       id: dataCast.length + 1,
-      product: req.body.product, */
       id: data.length + 1,
       name: req.body.name,
       type: req.body.type,
@@ -235,21 +221,18 @@ const productController = {
       rentalPrice: req.body.rentalPrice,
       synopsis: req.body.synopsis,
       director: req.body.director,
-      script: req.body.script,
+      directorBiography: req.body.directorBiography,
+      screenwriter: req.body.screenwriter,
+      screenwriterBiography: req.body.screenwriterBiography,
       productImage: productImage,
       backgroundImage: backgroundImage,
       castLength: req.body.castLength,
-      cast: req.body.cast,
-      directedBy: req.body.directedBy,
-      similar: req.body.similar,
       cast: actors,
     };
-    console.log(req.files);
+
     data.push(newCast);
-
-    writeFile(data);
     writeFileTemp({});
-
+    writeFile(data);
     res.redirect("/product/list");
   },
 

@@ -12,7 +12,6 @@
     <div class="main__container">
       <h1 class="main__title">Reparto de <%= product.name %></h1>
       <form class="main__form" action="/product/create/cast" enctype="multipart/form-data" method="POST">
-        <!--    a -->
         <div class="main__create-form">
           <input type="hidden" class="text-box" id="name" name="name" value="<%= product.name %>">
         </div>
@@ -57,21 +56,18 @@
           <input type="hidden" class="text-box" id="director" name="director" value="<%= product.director %>">
         </div>
         <div class="main__create-form">
-          <input type="hidden" class="text-box" id="script" name="script" value="<%= product.script %>">
+          <input type="hidden" class="text-box" id="directorBiography" name="directorBiography" value="<%= product.directorBiography %>">
         </div>
         <div class="main__create-form">
-          <input type="hidden" class="text-box" id="cast" name="cast" value="<%= product.cast %>">
+          <input type="hidden" class="text-box" id="screenwriter" name="screenwriter" value="<%= product.screenwriter %>">
         </div>
         <div class="main__create-form">
-          <input type="hidden" class="text-box" id="directedBy" name="directedBy" value="<%= product.directedBy %>">
+          <input type="hidden" class="text-box" id="screenwriterBiography" name="screenwriterBiography" value="<%= product.screenwriterBiography%>">
         </div>
-        <div class="main__create-form">
-          <input type="hidden" class="text-box" id="similar" name="similar" value="<%= product.similar %>">
-        </div>
+
         <div class="main__create-form">
           <input type="hidden" name="castLength" id="movie" value="<%= product.castLength %>" />
         </div>
-        <!--  a -->
         <div>
           <% for( let i = 1; i <= product.castLength; i++ ) { %>
           <h2 class="main__fieldDescription">Actor n°<%= i %> </h2>

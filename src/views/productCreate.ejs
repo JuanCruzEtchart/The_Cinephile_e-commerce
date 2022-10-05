@@ -54,7 +54,6 @@
         <div>
           <input type="number" class="text-box" id="tomatoScore" name="tomatoScore" value="<%= locals.old ? old.tomatoScore : '' %>" placeholder="Puntaje de Rotten Tomatoes">
         </div>
-        <!-- ARGEGAR CAMPO PARA FONDO -->
         <div>
           <input type="text" class="text-box" id="trailerLink" name="trailerLink" value="<%= locals.old ? old.trailerLink: '' %>" placeholder="Link del trailer">
         </div>
@@ -73,18 +72,14 @@
           <input type="text" class="text-box" id="director" name="director" value="<%= locals.old ? old.director : '' %>" placeholder="Director">
         </div>
         <div>
-          <input type="text" class="text-box" id="script" name="script" value="<%= locals.old ? old.script : '' %>"  placeholder="Guionistas">
-        </div>
-        <!--         <div>
-          <input type="text" class="text-box" id="cast" name="cast" placeholder="Reparto principal">
-        </div> -->
-        <div>
-          <input type="text" class="text-box" id="directedBy" name="directedBy" value="<%= locals.old ? old.directedBy : '' %>" placeholder="Dirigidas por el director">
+          <input type="text" class="text-box" id="directorBiography" name="directorBiography" value="<%= locals.old ? old.directorBiography : '' %>" placeholder="Link de biografía del director">
         </div>
         <div>
-          <input type="text" class="text-box" id="similar" name="similar" value="<%= locals.old ? old.similar : '' %>" placeholder="Similares">
+          <input type="text" class="text-box" id="screenwriter" name="screenwriter" value="<%= locals.old ? old.screenwriter : '' %>"  placeholder="Guionista">
         </div>
-
+        <div>
+          <input type="text" class="text-box" id="screenwriterBiography" name="screenwriterBiography" value="<%= locals.old ? old.screenwriterBiography : '' %>" placeholder="Link de biografía del guionista">
+        </div>
         <div class="main__fieldDescription">Elegir cantidad de actores</div>
         <select name="castLength" class="main__select">
           <% for(let i = 1; i<=20; i++) {%>

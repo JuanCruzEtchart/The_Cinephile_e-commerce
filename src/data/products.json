@@ -190,7 +190,7 @@
  {
   "id": 3,
   "name": "Peaky Blinders",
-  "type": "Serie de TV",
+  "type": "Película",
   "year": "2013/2016",
   "rated": "R",
   "length": "1h",
@@ -206,12 +206,11 @@
   "director": "Otto Bathurst",
   "script": "Steven Knight",
   "productImage": [
-   "productImage1664864258135-.jpg"
+   "productImage1664953486442-.jpg"
   ],
   "backgroundImage": [
-   "backgroundImage1664864258162-.jpg"
+   "backgroundImage1664953486456-.png"
   ],
-  "castLength": "9",
   "cast": [
    {
     "id": 1,
@@ -270,5 +269,459 @@
   ],
   "directedBy": "Revisar",
   "similar": "Revisar"
+ },
+ {
+  "id": 4,
+  "name": "a",
+  "type": "Película",
+  "year": "a",
+  "rated": "a",
+  "length": "a",
+  "imdbScore": "a",
+  "imdbTotalReviews": "a",
+  "tomatoScore": "-1",
+  "trailerLink": "a",
+  "genre1": "a",
+  "genre2": "a",
+  "purchasePrice": "a",
+  "rentalPrice": "a",
+  "synopsis": "a",
+  "director": "a",
+  "script": "a",
+  "productImage": [
+   "productImage1664866480765-.jpg"
+  ],
+  "backgroundImage": [
+   "backgroundImage1664866480765-.jpg"
+  ],
+  "castLength": "1",
+  "cast": [
+   {
+    "id": 1,
+    "actorsName": "a",
+    "character": "a",
+    "actorsBiography": "a"
+   }
+  ],
+  "directedBy": "a",
+  "similar": "a"
+ },
+ {
+  "id": 5,
+  "name": "b",
+  "type": "Película",
+  "year": "ab",
+  "rated": "ab",
+  "length": "b",
+  "imdbScore": "b",
+  "imdbTotalReviews": "b",
+  "tomatoScore": "-2",
+  "trailerLink": "b",
+  "genre1": "b",
+  "genre2": "b",
+  "purchasePrice": "b",
+  "rentalPrice": "b",
+  "synopsis": "b",
+  "director": "b",
+  "script": "b",
+  "productImage": [
+   "productImage1664919093418-.jpg"
+  ],
+  "backgroundImage": [
+   "backgroundImage1664919093419-.jpg"
+  ],
+  "castLength": "1",
+  "cast": [
+   {
+    "id": 1,
+    "actorsName": "a",
+    "character": "a",
+    "actorsBiography": "a"
+   }
+  ],
+  "directedBy": "b",
+  "similar": "b"
+ },
+ {
+  "id": 6,
+  "name": "Alfredo",
+  "type": "Película",
+  "year": "a",
+  "rated": "a",
+  "length": "a",
+  "imdbScore": "a",
+  "imdbTotalReviews": "a",
+  "tomatoScore": "2",
+  "trailerLink": "a",
+  "genre1": "a",
+  "genre2": "a",
+  "purchasePrice": "a",
+  "rentalPrice": "a",
+  "synopsis": "a",
+  "director": "Alfredo",
+  "script": "a",
+  "productImage": [
+   "productImage1664931582671-.jpg"
+  ],
+  "backgroundImage": [
+   "backgroundImage1664931582679-.jpg"
+  ],
+  "castLength": "2",
+  "cast": [
+   {
+    "id": 1,
+    "actorsName": "a",
+    "character": "a",
+    "actorsBiography": "a",
+    "actorsPhoto": [
+     {
+      "fieldname": "actorsPhoto1",
+      "originalname": "actorsPhoto1664857215270-.jpg",
+      "encoding": "7bit",
+      "mimetype": "image/jpeg",
+      "destination": "D:\\Documentos\\Curso Digital House\\Curso\\Proyecto grupal\\Proyecto\\public\\images\\productDetail",
+      "filename": "actorsPhoto11664931601057-.jpg",
+      "path": "D:\\Documentos\\Curso Digital House\\Curso\\Proyecto grupal\\Proyecto\\public\\images\\productDetail\\actorsPhoto11664931601057-.jpg",
+      "size": 630050
+     }
+    ]
+   },
+   {
+    "id": 2,
+    "actorsName": "b",
+    "character": "b",
+    "actorsBiography": "b",
+    "actorsPhoto": [
+     {
+      "fieldname": "actorsPhoto2",
+      "originalname": "actorsPhoto1664846341607-.jpg",
+      "encoding": "7bit",
+      "mimetype": "image/jpeg",
+      "destination": "D:\\Documentos\\Curso Digital House\\Curso\\Proyecto grupal\\Proyecto\\public\\images\\productDetail",
+      "filename": "actorsPhoto21664931601069-.jpg",
+      "path": "D:\\Documentos\\Curso Digital House\\Curso\\Proyecto grupal\\Proyecto\\public\\images\\productDetail\\actorsPhoto21664931601069-.jpg",
+      "size": 48685
+     }
+    ]
+   }
+  ],
+  "directedBy": "a",
+  "similar": "a"
+ },
+ {
+  "id": 7,
+  "name": "a",
+  "type": "Película",
+  "year": "a",
+  "rated": "a",
+  "length": "a",
+  "imdbScore": "a",
+  "imdbTotalReviews": "a",
+  "tomatoScore": "2",
+  "trailerLink": "a",
+  "genre1": "a",
+  "genre2": "a",
+  "purchasePrice": "a",
+  "rentalPrice": "a",
+  "synopsis": "a",
+  "director": "a",
+  "script": "a",
+  "productImage": [
+   "productImage1664931759463-.png"
+  ],
+  "backgroundImage": [
+   "backgroundImage1664931759466-.jpg"
+  ],
+  "castLength": "2",
+  "cast": [
+   {
+    "id": 1,
+    "actorsName": "a",
+    "character": "a",
+    "actorsBiography": "a",
+    "actorsPhoto": [
+     "actorsPhoto11664931767595-.png"
+    ]
+   },
+   {
+    "id": 2,
+    "actorsName": "b",
+    "character": "b",
+    "actorsBiography": "b",
+    "actorsPhoto": [
+     "actorsPhoto21664931767598-.png"
+    ]
+   }
+  ],
+  "directedBy": "a",
+  "similar": "a"
+ },
+ {
+  "id": 8,
+  "name": "Alfredo",
+  "type": "Película",
+  "year": "a",
+  "rated": "",
+  "length": "",
+  "imdbScore": "",
+  "imdbTotalReviews": "",
+  "tomatoScore": "",
+  "trailerLink": "",
+  "genre1": "",
+  "genre2": "",
+  "purchasePrice": "",
+  "rentalPrice": "",
+  "synopsis": "",
+  "director": "Alfredo",
+  "script": "",
+  "castLength": "1",
+  "cast": [
+   {
+    "id": 1,
+    "actorsName": "",
+    "character": "",
+    "actorsBiography": "",
+    "actorsPhoto": []
+   }
+  ],
+  "directedBy": "",
+  "similar": ""
+ },
+ {
+  "id": 9,
+  "name": "a",
+  "type": "Película",
+  "year": "a",
+  "rated": "a",
+  "length": "a",
+  "imdbScore": "a",
+  "imdbTotalReviews": "",
+  "tomatoScore": "",
+  "trailerLink": "",
+  "genre1": "",
+  "genre2": "",
+  "purchasePrice": "",
+  "rentalPrice": "",
+  "synopsis": "",
+  "director": "",
+  "script": "",
+  "castLength": "1",
+  "cast": [
+   {
+    "id": 1,
+    "actorsName": "",
+    "character": "",
+    "actorsBiography": "",
+    "actorsPhoto": []
+   }
+  ],
+  "directedBy": "",
+  "similar": ""
+ },
+ {
+  "id": 11,
+  "name": "Alfredo",
+  "type": "Película",
+  "year": "",
+  "rated": "",
+  "length": "",
+  "imdbScore": "",
+  "imdbTotalReviews": "",
+  "tomatoScore": "",
+  "trailerLink": "",
+  "genre1": "",
+  "genre2": "",
+  "purchasePrice": "",
+  "rentalPrice": "",
+  "synopsis": "",
+  "director": "Alfredo",
+  "script": "",
+  "productImage": [
+   "productImage1664943321102-.jpg"
+  ],
+  "backgroundImage": [
+   "backgroundImage1664943321104-.jpg"
+  ],
+  "castLength": "2",
+  "cast": [
+   {
+    "id": 1,
+    "actorsName": "a",
+    "character": "a",
+    "actorsBiography": "a",
+    "actorsPhoto": [
+     "actorsPhoto11664943511422-.jpg"
+    ]
+   },
+   {
+    "id": 2,
+    "actorsName": "a",
+    "character": "a",
+    "actorsBiography": "a",
+    "actorsPhoto": [
+     "actorsPhoto21664943511423-.jpg"
+    ]
+   }
+  ],
+  "directedBy": "",
+  "similar": ""
+ },
+ {
+  "id": 12,
+  "name": "Milanesa",
+  "type": "Serie de TV",
+  "year": "Milanesa",
+  "rated": "Milanesa",
+  "length": "Milanesa",
+  "imdbScore": "Milanesa",
+  "imdbTotalReviews": "Milanesa",
+  "tomatoScore": "-5",
+  "trailerLink": "Milanesa",
+  "genre1": "Milanesa",
+  "genre2": "Milanesa",
+  "purchasePrice": "Milanesa",
+  "rentalPrice": "Milanesa",
+  "synopsis": "Milanesa",
+  "director": "Milanesa",
+  "script": "Milanesa",
+  "productImage": [
+   "productImage1664949195459-.jpg"
+  ],
+  "backgroundImage": [
+   "backgroundImage1664949195460-.png"
+  ],
+  "castLength": "4",
+  "cast": [
+   {
+    "id": 1,
+    "actorsName": "Milanesa",
+    "character": "Milanesa",
+    "actorsBiography": "Milanesa",
+    "actorsPhoto": [
+     "actorsPhoto11664949219097-.jpg"
+    ]
+   },
+   {
+    "id": 2,
+    "actorsName": "Milanesa",
+    "character": "Milanesa",
+    "actorsBiography": "Milanesa",
+    "actorsPhoto": [
+     "actorsPhoto21664949219099-.jpg"
+    ]
+   },
+   {
+    "id": 3,
+    "actorsName": "Milanesa",
+    "character": "Milanesa",
+    "actorsBiography": "Milanesa",
+    "actorsPhoto": [
+     "actorsPhoto31664949219100-.jpg"
+    ]
+   },
+   {
+    "id": 4,
+    "actorsName": "Milanesa",
+    "character": "Milanesa",
+    "actorsBiography": "Milanesa",
+    "actorsPhoto": [
+     "actorsPhoto41664949219102-.png"
+    ]
+   }
+  ],
+  "directedBy": "Milanesa",
+  "similar": "Milanesa"
+ },
+ {
+  "id": 13,
+  "name": "Milanesa",
+  "type": "Película",
+  "year": "Milanesa",
+  "rated": "Milanesa",
+  "length": "Milanesa",
+  "imdbScore": "Milanesa",
+  "imdbTotalReviews": "Milanesa",
+  "tomatoScore": "-1",
+  "trailerLink": "Milanesa",
+  "genre1": "Milanesa",
+  "genre2": "Milanesa",
+  "purchasePrice": "Milanesa",
+  "rentalPrice": "Milanesa",
+  "synopsis": "Milanesa",
+  "director": "Milanesa",
+  "directorBiography": "https://stackoverflow.com/questions/67506923/filtering-in-ejs-templates",
+  "screenwriter": "Milanesa",
+  "screenwriterBiography": "Milanesa",
+  "productImage": [
+   "productImage1664955300669-.jpg"
+  ],
+  "backgroundImage": [
+   "backgroundImage1664955300670-.jpg"
+  ],
+  "castLength": "2",
+  "cast": [
+   {
+    "id": 1,
+    "actorsName": "Milanesa",
+    "character": "Milanesa",
+    "actorsBiography": "Milanesa",
+    "actorsPhoto": [
+     "actorsPhoto11664955327470-.jpg"
+    ]
+   },
+   {
+    "id": 2,
+    "actorsName": "Milanesa",
+    "character": "Milanesa",
+    "actorsBiography": "Milanesa",
+    "actorsPhoto": [
+     "actorsPhoto21664955327471-.jpg"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 14,
+  "name": "FideosMilanesa",
+  "type": "Serie de TV",
+  "year": "Fideos",
+  "rated": "Fideos",
+  "length": "Fideos",
+  "imdbScore": "Fideos",
+  "imdbTotalReviews": "Fideos",
+  "tomatoScore": "-1",
+  "trailerLink": "Fideos",
+  "genre1": "Fideos",
+  "genre2": "Fideos",
+  "purchasePrice": "Fideos",
+  "rentalPrice": "Fideos",
+  "synopsis": "Fideos",
+  "director": "Fideos",
+  "productImage": [
+   "productImage1664956596354-.png"
+  ],
+  "backgroundImage": [
+   "backgroundImage1664956596355-.jpg"
+  ],
+  "cast": [
+   {
+    "id": 1,
+    "actorsName": "Milanesa",
+    "character": "Fideos",
+    "actorsBiography": "Milanesa",
+    "actorsPhoto": [
+     "actorsPhoto11664956542109-.jpg"
+    ]
+   },
+   {
+    "id": 2,
+    "actorsName": "Milanesa",
+    "character": "Milanesa",
+    "actorsBiography": "Milanesa",
+    "actorsPhoto": [
+     "actorsPhoto21664956542112-.jpg"
+    ]
+   }
+  ]
  }
 ]

@@ -7,7 +7,7 @@ const data = require("express-validator");
 
 let storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, path.join(__dirname, "../../public/images/productDetail"));
+    cb(null, path.join(__dirname, "../../public/images/products/productsCreated"));
   },
 
   filename: (req, file, cb) => {
@@ -39,20 +39,11 @@ router.get("/detail/:id", productController.detail);
 
 router.get("/create", productController.create);
 router.post("/create", uploadDetailImages, productController.store);
-/* router.post("/create", upload.single('productImage') , productController.store); */
 
 /*Render de la vista de creación de repartos*/
 
 router.get("/create/cast", productController.castCreate);
 router.post("/create/cast", uploadActorsPhoto, productController.castUpolad);
-
-/* router.get("/cast", productController.castLength);
-router.post("/cast", productController.castLengthUpload); */
-
-/*Render de la vista de carga de actores*/
-
-/* router.get("/cast/create/:id", productController.castCreate);
-router.post("/cast/create/:id", productController.castCreateUpload); */
 
 /*Render de la vista de edición de productos*/
 

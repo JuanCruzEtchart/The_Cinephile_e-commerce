@@ -53,7 +53,6 @@
           <div>
             <input type="text" class="text-box" id="tomatoScore" name="tomatoScore" value="<%= product.tomatoScore %>" placeholder="Puntaje de Rotten Tomatoes">
           </div>
-          <!-- ARGEGAR CAMPO PARA FONDO -->
           <div>
             <input type="text" class="text-box" id="trailerLink" name="trailerLink" value="<%= product.trailerLink %>" placeholder="Link del trailer">
           </div>
@@ -72,26 +71,17 @@
             <input type="text" class="text-box" id="director" name="director" value="<%= product.director %>" placeholder="Director">
           </div>
           <div>
-            <input type="text" class="text-box" id="script" name="script" value="<%= product.script %>" placeholder="Guionistas">
-          </div>
-          <div>
-            <input type="text" class="text-box" id="cast" name="cast" value="<%= product.cast %>" placeholder="Reparto principal">
-          </div>
-          <div>
-            <input type="text" class="text-box" id="directedBy" name="directedBy" value="<%= product.directedBy %>" placeholder="Dirigidas por el director">
-          </div>
-          <div>
-            <input type="text" class="text-box" id="similar" name="similar" value="<%= product.similar %>" placeholder="Similares">
+            <input type="text" class="text-box" id="script" name="script" value="<%= product.script %>" placeholder="Guionista">
           </div>
           <div class="main__file-wrap">
             <div class="main__fieldDescription">Imagen del producto</div>
-            <img src="/images/productDetail/<%= product.productImage %> " alt="Product image">
+            <img src="/images/products/productsCreated/<%= product.productImage %> " alt="Product image">
             <label for="productImage"></label>
             <input type="file" id="productImage" name="productImage">
           </div>
           <div class="main__file-wrap">
             <div class="main__fieldDescription">Imagen del fondo</div>
-            <img id="background-image" src="/images/productDetail/<%= product.backgroundImage %> " alt="Background image">
+            <img id="background-image" src="/images/products/productsCreated/<%= product.backgroundImage %> " alt="Background image">
             <label for="backgroundImage"></label>
             <input type="file" id="backgroundImage" name="backgroundImage">
           </div>
