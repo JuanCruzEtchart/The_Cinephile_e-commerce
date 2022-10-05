@@ -25,9 +25,10 @@
                 id="user"
                 name="user"
                 placeholder="Usuario_Pelis"
-                class="text"
-                required
-              />
+                class="text">
+                <% if (locals.errors && locals.errors.user) { %>
+                  <p class="msg-error"> <%= errors.user.msg %> </p>
+                <% } %>
             </div>
         <div id="email-div"><p style=color:white>Email</p></div>
         <div id="emailbloque" >
@@ -36,8 +37,12 @@
             id="email"
             name="email"
             placeholder="TuEmail@Cinephile.com"
-            class="mail"
-            required
+            class="mail">
+
+            <% if (locals.errors && locals.errors.email) { %>
+              <p class="msg-error"> <%= errors.email.msg %> </p>
+            <% } %>
+           
           />
         </div>
         <div id="password-div"><p style=color:white>Contraseña</p></div>
@@ -47,10 +52,12 @@
             id="password"
             name="password"
             placeholder="Contraseña"
-            class="text-box"
-            required
+            class="text-box">
+          </div>
+            <% if (locals.errors && locals.errors.password) { %>
+            <p class="msg-error"> <%= errors.password.msg %> </p>
+            <% } %>
           />
-        </div>
         <div id="registrar">
           <input type="submit" value="Registrarme" style="background-color: #ffc700; border: none;">
         </div>

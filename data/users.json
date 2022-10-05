@@ -6,12 +6,32 @@
         "password": "Password",
         "security": 1
     },
-    
     {
         "id": 8,
         "name": "Alberto asdasd",
         "email": "albertorosspervilar@gmail.com",
         "password": "456",
         "security": 1
+    },
+    {
+        "id": 3,
+        "name": "Soloyo",
+        "email": "MiEmail@flaco",
+        "password": "password234",
+        "security": 1
+    },
+    {
+        "id": 4,
+        "name": "Beto",
+        "email": "albertoropervilar@gmail.com",
+        "password": "123",
+        "security": "user"
+    },
+    {
+        "id": 5,
+        "name": "MiNuevoUsuariopelis",
+        "email": "MiNuevoMail@gmail.com",
+        "password": "$2a$10$6cvnksmhmbfbRJmZuD0vZOs/J8/6fAYpCzAEEzOyVCixnzj7dsKtu",
+        "security": "user"
     }
 ]

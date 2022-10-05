@@ -19,8 +19,10 @@
   },
   "homepage": "https://github.com/JuanCruzEtchart/grupo_1_e-commerce_de_peliculas_y_series#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "ejs": "^3.1.8",
     "express": "^4.18.1",
+    "express-validator": "^6.14.2",
     "generator": "^1.0.1",
     "method-override": "^3.0.0",
     "nodemon": "^2.0.19"
