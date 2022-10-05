@@ -33,11 +33,11 @@ const userController = {
 
     //Validations
   },
-<<<<<<< HEAD
+  
   profile: (req, res) => {
     res.render("profile");
   },
-=======
+
     
     thankyou: (req, res) => {
 
@@ -89,7 +89,6 @@ const userController = {
      
     }
 
->>>>>>> 2f0e863f4903d5173201710e419a774fe01f6d35
 };
 
 module.exports = userController;
