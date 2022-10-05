@@ -10,4 +10,8 @@ router.get("/login", userController.login);
 
 router.get("/register", userController.register);
 
+/*Render del profile/*/
+
+router.get("/profile", userController.profile)
+
 module.exports = router;
