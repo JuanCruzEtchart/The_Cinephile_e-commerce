@@ -5,19 +5,21 @@
   background-size: cover;
   object-fit: cover;
   display: flex;
+  position: relative;
 }
 
 .top1 img {
   left: 0;
-  top: 10;
-  width: 70px;
-  height: 70px;
+  top: 0;
+  width: 10%;
+  height: 10%;
   margin: 0;
   z-index: 50;
+  position: absolute;
 }
 
 main {
-  background-color: black;
+  background-color: #212121;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -35,20 +37,19 @@ main section h3 {
 }
 
 main section div.movies img.movies_img {
-  position: relative;
-  flex-direction: row;
-  object-fit: cover;
-  width: 100%;
+  
+  width: 20%;
   padding: 0px 0px 0px 20px;
 }
 
 main section div.movies {
   display: flex;
   overflow-y: auto;
+  padding: 5px 20px 5px 5px;
 }
 
 main section div.movies img.movies_img:hover {
-  box-shadow: 5px 5px 5px rgb(100, 100, 100);
+  box-shadow: 5px 0px 0px 0px grey;
 }
 
 main section.mas_alquilado h3 {
@@ -59,20 +60,29 @@ main section.mas_alquilado h3 {
 }
 
 main section div.movies_alq img.movies_img {
-  position: relative;
-  flex-direction: row;
-  object-fit: cover;
-  width: 100%;
+  
+  width: 20%;
   padding: 0px 0px 0px 20px;
 }
 
 main section div.movies_alq {
   display: flex;
   overflow-y: auto;
+  padding: 5px 20px 5px 5px;
 }
 
 main section div.movies_alq img.movies_img:hover {
-  box-shadow: 5px 5px 5px rgb(100, 100, 100);
+  box-shadow: 5px 0px 0px 0px grey;
+}
+
+.movies_img_b{
+  width: 100%;
+  height: 100%;
+  padding: 0px 0px 0px 20px;
+}
+
+.movies_img_b:hover {
+  box-shadow: 5px 0px 0px 0px grey;
 }
 
 main section.ultimas_series h3 {
@@ -83,20 +93,18 @@ main section.ultimas_series h3 {
 }
 
 main section div.series img.movies_img {
-  position: relative;
-  flex-direction: row;
-  object-fit: cover;
-  width: 100%;
+  width: 20%;
   padding: 0px 0px 0px 20px;
 }
 
 main section div.series {
   display: flex;
   overflow-y: auto;
+  padding: 5px 20px 5px 5px;
 }
 
 main section div.series img.movies_img:hover {
-  box-shadow: 5px 5px 5px rgb(100, 100, 100);
+  box-shadow: 5px 0px 0px 0px grey;
 }
 
 main section.peliculas_infantiles h3 {
@@ -107,20 +115,18 @@ main section.peliculas_infantiles h3 {
 }
 
 main section div.pelis_infantil img.movies_img {
-  position: relative;
-  flex-direction: row;
-  object-fit: cover;
-  width: 100%;
+  width: 20%;
   padding: 0px 0px 0px 20px;
 }
 
 main section div.pelis_infantil {
   display: flex;
   overflow-y: auto;
+  padding: 5px 20px 5px 5px;
 }
 
 main section div.pelis_infantil img.movies_img:hover {
-  box-shadow: 5px 5px 5px rgb(100, 100, 100);
+  box-shadow: 5px 0px 0px 0px grey;
 }
 
 /*MEDIA QUERIES*/
