@@ -237,8 +237,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  max-width: 165px;
+  width: auto;
+ /*  max-width: 165px; */
   height: 28px;
   color: white;
   margin-right: 16.5px;
@@ -255,6 +255,7 @@
 .main__genre-2 {
   text-align: center;
   padding: 15px;
+  margin-left: 30px;
   border: rgba(255, 255, 255, 0.5) solid 1px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 10px;

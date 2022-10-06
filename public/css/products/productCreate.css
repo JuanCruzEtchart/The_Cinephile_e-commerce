@@ -81,6 +81,14 @@
   padding-left: 10px;
 }
 
+#trailerLink {
+  margin-bottom: 5px;
+}
+
+.main__genreSelect {
+  margin-bottom: 15px;
+}
+
 #synopsis {
   resize: none;
   word-wrap: break-word;

@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  
-  <head>
-    <%- include("./partials/head") %>
-    <link rel="stylesheet" href="/css/products/productCreate.css" />
-  </head>
-  
-  <body>
-    <%- include("./partials/header") %>
-    <main class="main">
-      <div class="main__container">
-        <h1 class="main__title">Creación de productos:</h1>
-        <div class="main__button">
-          <a href="/product/list">
-            <button class="back-button">Ir a lista de productos</button>
-          </a>
+
+<head>
+  <%- include("./partials/head") %>
+  <link rel="stylesheet" href="/css/products/productCreate.css" />
+</head>
+
+<body>
+  <%- include("./partials/header") %>
+  <main class="main">
+    <div class="main__container">
+      <h1 class="main__title">Creación de productos:</h1>
+      <div class="main__button">
+        <a href="/product/list">
+          <button class="back-button">Ir a lista de productos</button>
+        </a>
+      </div>
+      <form class="main__form" action="/product/create" enctype="multipart/form-data" method="POST">
+        <div>
+          <input type="text" class="text-box" id="name" name="name" value="<%= locals.old ? old.name : '' %>" placeholder="Nombre">
         </div>
-        <form class="main__form" action="/product/create" enctype="multipart/form-data" method="POST">
-          <div>
-            <input type="text" class="text-box" id="name" name="name" value="<%= locals.old ? old.name : '' %>" placeholder="Nombre">
-          </div>
-          <div class="main__radioForm">
-            <div class="main__radioForm-container">
+        <div class="main__radioForm">
+          <div class="main__radioForm-container">
             <div>
               <input type="radio" name="type" id="movie" value="Película" checked />
               <label for="movie">Película</label>
@@ -57,9 +57,31 @@
         <div>
           <input type="text" class="text-box" id="trailerLink" name="trailerLink" value="<%= locals.old ? old.trailerLink: '' %>" placeholder="Link del trailer">
         </div>
-        <div>
-          <input type="text" class="text-box" id="genre1" name="genre1" value="<%= locals.old ? old.genre1 : '' %>" placeholder="Género 1">
-          <input type="text" class="text-box" id="genre2" name="genre2" value="<%= locals.old ? old.genre2 : '' %>" placeholder="Género 2">
+        <div class="main__genreSelect">
+          <div class="main__fieldDescription">Elegir género 1</div>
+          <select name="genre1" class="main__select">
+            <option value="Acción">Acción</option>
+            <option value="Crimen">Crimen</option>
+            <option value="Drama">Drama</option>
+            <option value="Infantil">Infantil</option>
+            <option value="Terror">Terror</option>
+            <option value="Aventura">Aventura</option>
+            <option value="Ciencia Ficcón">Ciencia Ficcón</option>
+            <option value="Fantasía">Fantasía</option>
+            <option value="Musical">Musical</option>
+          </select>
+          <div class="main__fieldDescription">Elegir género 2</div>
+          <select name="genre2" class="main__select">
+            <option value="Acción">Acción</option>
+            <option value="Crimen">Crimen</option>
+            <option value="Drama">Drama</option>
+            <option value="Infantil">Infantil</option>
+            <option value="Terror">Terror</option>
+            <option value="Aventura">Aventura</option>
+            <option value="Ciencia Ficcón">Ciencia Ficcón</option>
+            <option value="Fantasía">Fantasía</option>
+            <option value="Musical">Musical</option>
+          </select>
         </div>
         <div>
           <input type="text" class="text-box" id="purchasePrice" name="purchasePrice" value="<%= locals.old ? old.purchasePrice : '' %>" placeholder="Precio de venta">
@@ -75,7 +97,7 @@
           <input type="text" class="text-box" id="directorBiography" name="directorBiography" value="<%= locals.old ? old.directorBiography : '' %>" placeholder="Link de biografía del director">
         </div>
         <div>
-          <input type="text" class="text-box" id="screenwriter" name="screenwriter" value="<%= locals.old ? old.screenwriter : '' %>"  placeholder="Guionista">
+          <input type="text" class="text-box" id="screenwriter" name="screenwriter" value="<%= locals.old ? old.screenwriter : '' %>" placeholder="Guionista">
         </div>
         <div>
           <input type="text" class="text-box" id="screenwriterBiography" name="screenwriterBiography" value="<%= locals.old ? old.screenwriterBiography : '' %>" placeholder="Link de biografía del guionista">

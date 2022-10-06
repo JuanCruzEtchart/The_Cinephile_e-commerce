@@ -189,7 +189,7 @@
  },
  {
   "id": 3,
-  "name": "Peaky Blinders",
+  "name": "Peakyyyyyy Blinders",
   "type": "Película",
   "year": "2013/2016",
   "rated": "R",
@@ -206,10 +206,10 @@
   "director": "Otto Bathurst",
   "script": "Steven Knight",
   "productImage": [
-   "productImage1664953486442-.jpg"
+   "productImage1665006273995-.jpg"
   ],
   "backgroundImage": [
-   "backgroundImage1664953486456-.png"
+   "backgroundImage1665006274010-.png"
   ],
   "cast": [
    {
@@ -720,6 +720,45 @@
     "actorsBiography": "Milanesa",
     "actorsPhoto": [
      "actorsPhoto21664956542112-.jpg"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 15,
+  "name": "a",
+  "type": "Película",
+  "year": "a",
+  "rated": "a",
+  "length": "a",
+  "imdbScore": "aa",
+  "imdbTotalReviews": "a",
+  "tomatoScore": "",
+  "trailerLink": "a",
+  "genre1": "Crimen",
+  "genre2": "Ciencia Ficcón",
+  "purchasePrice": "a",
+  "rentalPrice": "a",
+  "synopsis": "",
+  "director": "",
+  "directorBiography": "",
+  "screenwriter": "",
+  "screenwriterBiography": "",
+  "productImage": [
+   "productImage1665025731145-.jpg"
+  ],
+  "backgroundImage": [
+   "backgroundImage1665025731146-.png"
+  ],
+  "castLength": "1",
+  "cast": [
+   {
+    "id": 1,
+    "actorsName": "a",
+    "character": "a",
+    "actorsBiography": "a",
+    "actorsPhoto": [
+     "actorsPhoto11665025737890-.png"
     ]
    }
   ]

@@ -56,9 +56,31 @@
           <div>
             <input type="text" class="text-box" id="trailerLink" name="trailerLink" value="<%= product.trailerLink %>" placeholder="Link del trailer">
           </div>
-          <div>
-            <input type="text" class="text-box" id="genre1" name="genre1" value="<%= product.genre1 %>" placeholder="Género 1">
-            <input type="text" class="text-box" id="genre2" name="genre2" value="<%= product.genre2 %>" placeholder="Género 2">
+          <div class="main__genreSelect">
+            <div class="main__fieldDescription">Elegir género 1</div>
+            <select name="genre1" class="main__select">
+              <option value="Acción">Acción</option>
+              <option value="Crimen">Crimen</option>
+              <option value="Drama">Drama</option>
+              <option value="Infantil">Infantil</option>
+              <option value="Terror">Terror</option>
+              <option value="Aventura">Aventura</option>
+              <option value="Ciencia Ficcón">Ciencia Ficcón</option>
+              <option value="Fantasía">Fantasía</option>
+              <option value="Musical">Musical</option>
+            </select>
+            <div class="main__fieldDescription">Elegir género 2</div>
+            <select name="genre2" class="main__select">
+              <option value="Acción">Acción</option>
+              <option value="Crimen">Crimen</option>
+              <option value="Drama">Drama</option>
+              <option value="Infantil">Infantil</option>
+              <option value="Terror">Terror</option>
+              <option value="Aventura">Aventura</option>
+              <option value="Ciencia Ficcón">Ciencia Ficcón</option>
+              <option value="Fantasía">Fantasía</option>
+              <option value="Musical">Musical</option>
+            </select>
           </div>
           <div>
             <input type="text" class="text-box" id="purchasePrice" name="purchasePrice" value="<%= product.purchasePrice %>" placeholder="Precio de venta">

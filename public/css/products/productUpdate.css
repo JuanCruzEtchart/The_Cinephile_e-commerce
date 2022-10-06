@@ -81,6 +81,32 @@
   padding-left: 10px;
 }
 
+#trailerLink {
+  margin-bottom: 5px;
+}
+
+.main__genreSelect {
+  margin-bottom: 15px;
+}
+
+.main__select {
+  display: flex;
+  font-size: 16px;
+  padding: 5px;
+  width: auto;
+  max-width: 50%;
+  border: none;
+  color: white;
+  background-color: #1b1b1b;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.main__select option {
+  background-color: #1b1b1b;
+  transition: all 120ms;
+}
+
 #synopsis {
   resize: none;
   word-wrap: break-word;
