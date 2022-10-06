@@ -8,6 +8,7 @@ const mainRoutes = require("./routes/mainRoutes");
 const productsRoutes = require("./routes/productsRoutes");
 const userRoutes = require("./routes/userRoutes");
 
+
 //CONFIG
 app.use(express.static(path.join(__dirname, "../public")));
 app.set("view engine", "ejs");
@@ -23,5 +24,5 @@ app.use("/user", userRoutes);
 
 app.listen(3030, () => {
   console.log("Servidor corriendo en el puerto 3030");
-  console.log("http://localhost:3030");
+  console.log("http://localhost:3030")
 });

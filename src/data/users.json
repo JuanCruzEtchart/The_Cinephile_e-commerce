@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "name": "Nombre",
+        "email": "Email",
+        "password": "Password",
+        "security": 1
+    },
+    {
+        "id": 8,
+        "name": "Alberto asdasd",
+        "email": "albertorosspervilar@gmail.com",
+        "password": "456",
+        "security": 1
+    },
+    {
+        "id": 3,
+        "name": "Soloyo",
+        "email": "MiEmail@flaco",
+        "password": "password234",
+        "security": 1
+    },
+    {
+        "id": 4,
+        "name": "Beto",
+        "email": "albertoropervilar@gmail.com",
+        "password": "123",
+        "security": "user"
+    },
+    {
+        "id": 5,
+        "name": "MiNuevoUsuariopelis",
+        "email": "MiNuevoMail@gmail.com",
+        "password": "$2a$10$6cvnksmhmbfbRJmZuD0vZOs/J8/6fAYpCzAEEzOyVCixnzj7dsKtu",
+        "security": "user"
+    },
+    {
+        "id": 6,
+        "name": "asdasda",
+        "email": "albertoropervilar@gmail.com",
+        "password": "$2a$10$ily/aAkz.8gttKAjRwVgn.C1shluWHMuPmbWr6CcP.cJHpqd1kml2",
+        "security": "user"
+    },
+    {
+        "id": 7,
+        "name": "a",
+        "email": "sdasda@ff.com",
+        "password": "$2a$10$78qNZXyx1xW56yqFTXdt7OftVDKPkSfSAjw1so7miuokENfY1/lFi",
+        "security": "user"
+    }
+]

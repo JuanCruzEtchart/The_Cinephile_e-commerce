@@ -27,6 +27,7 @@
     "generator": "^1.0.1",
     "method-override": "^3.0.0",
     "multer": "^1.4.5-lts.1",
+    "bcryptjs": "^2.4.3",
     "nodemon": "^2.0.19"
   }
 }
