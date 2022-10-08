@@ -123,8 +123,10 @@
                 <div class="main__slider-inner">
                   <% director.forEach(element => { %>
                   <div class="main__item-product">
-                    <img src="/images/products/productsCreated/<%= element.productImage ? element.productImage : "Logo.png"%>" alt="Imágen de producto" />
-                    <div class="main__product-name"><%= element.name%></div>
+                    <a href="/product/detail/<%= element.id %>">
+                      <img src="/images/products/productsCreated/<%= element.productImage ? element.productImage : "Logo.png"%>" alt="Imágen de producto" />
+                      <div class="main__product-name"><%= element.name%></div>
+                    </a>
                     <form action="#" method="post" class="main__slider-boockmark">
                       <div class="main__boockmark-icon">
                         <i class="far fa-bookmark"></i>
@@ -149,8 +151,10 @@
                 <div class="main__slider-inner">
                   <% similar.forEach(element => { %>
                   <div class="main__item-product">
-                    <img src="/images/products/productsCreated/<%= element.productImage ? element.productImage : "Logo.png"%>" alt="Imágen de producto" />
-                    <div class="main__product-name"><%= element.name%></div>
+                    <a href="/product/detail/<%= element.id %>">
+                      <img src="/images/products/productsCreated/<%= element.productImage ? element.productImage : "Logo.png"%>" alt="Imágen de producto" />
+                      <div class="main__product-name"><%= element.name%></div>
+                    </a>
                     <form action="#" method="post" class="main__slider-boockmark">
                       <div class="main__boockmark-icon">
                         <i class="far fa-bookmark"></i>
