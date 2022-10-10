@@ -1,0 +1,317 @@
+[
+ {
+  "id": 1,
+  "name": "El Padrino",
+  "type": "Película",
+  "year": "1972",
+  "rated": "R",
+  "length": "2h 55m",
+  "imdbScore": "9,2",
+  "imdbTotalReviews": "1,8 M",
+  "tomatoScore": "97",
+  "trailerLink": "https://www.youtube.com/watch?v=UaVTIH8mujA",
+  "genre1": "Crimen",
+  "genre2": "Drama",
+  "purchasePrice": "1559,90",
+  "rentalPrice": "499,90",
+  "synopsis": "Don Vito Corleone es el jefe de una de las cinco familias que ejercen el mando de la \r\nCosa Nostra en Nueva York en los años 40. Don Corleone tiene cuatro hijos; una \r\nchica, Connie, y tres varones, Santino, o Sonny, como le gusta que le llamen, Michael \r\ny Freddie, al que envían exiliado a Las Vegas, dada su incapacidad para asumir \r\npuestos de mando en la ”Familia”. Cuando otro capo, Sollozzo, al rechazar el \r\nPadrino intervenir en el negocio de estupefacientes, intenta asesinar a éste, \r\nempieza una cruenta lucha de violentos episodios entre los distintos grupos.",
+  "director": "Francis Ford Coppola",
+  "directorBiography": "https://en.wikipedia.org/wiki/Francis_Ford_Coppola",
+  "screenwriter": "Mario Puzo",
+  "screenwriterBiography": "https://en.wikipedia.org/wiki/Mario_Puzo",
+  "productImage": [
+   "productImage1665200636735-.png"
+  ],
+  "backgroundImage": [
+   "backgroundImage1665200636738-.jpg"
+  ],
+  "castLength": "7",
+  "cast": [
+   {
+    "id": 1,
+    "actorsName": "Marlon Brando",
+    "character": "Vito Corleone",
+    "actorsBiography": "https://en.wikipedia.org/wiki/Marlon_Brando",
+    "actorsPhoto": [
+     "actorsPhoto11665200827472-.jpg"
+    ]
+   },
+   {
+    "id": 2,
+    "actorsName": "Al Pacino",
+    "character": "Mickael Corleone",
+    "actorsBiography": "https://en.wikipedia.org/wiki/Al_Pacino",
+    "actorsPhoto": [
+     "actorsPhoto21665200827473-.jpg"
+    ]
+   },
+   {
+    "id": 3,
+    "actorsName": "Diane Keaton",
+    "character": "Key Adams",
+    "actorsBiography": "https://en.wikipedia.org/wiki/Diane_Keaton",
+    "actorsPhoto": [
+     "actorsPhoto31665200827474-.jpg"
+    ]
+   },
+   {
+    "id": 4,
+    "actorsName": "James Caan",
+    "character": "Sony Corleone",
+    "actorsBiography": "https://en.wikipedia.org/wiki/James_Caan",
+    "actorsPhoto": [
+     "actorsPhoto41665200827481-.jpg"
+    ]
+   },
+   {
+    "id": 5,
+    "actorsName": "John Cazale",
+    "character": "Fredo Corleone",
+    "actorsBiography": "https://en.wikipedia.org/wiki/John_Cazale",
+    "actorsPhoto": [
+     "actorsPhoto51665200827499-.jpg"
+    ]
+   },
+   {
+    "id": 6,
+    "actorsName": "Robert Duvall",
+    "character": "Tom Hagen",
+    "actorsBiography": "https://en.wikipedia.org/wiki/Robert_Duvall",
+    "actorsPhoto": [
+     "actorsPhoto61665200827499-.png"
+    ]
+   },
+   {
+    "id": 7,
+    "actorsName": "Richard S. Castellano",
+    "character": "Clemenza",
+    "actorsBiography": "https://en.wikipedia.org/wiki/Richard_S._Castellano",
+    "actorsPhoto": [
+     "actorsPhoto71665200827499-.jpg"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 2,
+  "name": "Peaky Blinders",
+  "type": "Serie de TV",
+  "year": "2013/2016",
+  "rated": "R",
+  "length": "1h",
+  "imdbScore": "8,8",
+  "imdbTotalReviews": "530 mil",
+  "tomatoScore": "94",
+  "trailerLink": "https://www.youtube.com/watch?v=oVzVdvGIC7U",
+  "genre1": "Crimen",
+  "genre2": "Drama",
+  "purchasePrice": "1999,90",
+  "rentalPrice": "599,90",
+  "synopsis": "Peaky Blinders es un drama de BBC que narra la historia de la familia gitana Shelby y su banda de gángsters, un grupo \r\nde personas características por sus boinas con cuchillas y dueñas de los asuntos ilegales, que dominan las apuestas \r\nclandestinas y se rigen mediante extorsiones.",
+  "director": "Otto Bathurst",
+  "directorBiography": "https://en.wikipedia.org/wiki/Otto_Bathurst",
+  "screenwriter": "Steven Knight",
+  "screenwriterBiography": "https://en.wikipedia.org/wiki/Steven_Knight",
+  "productImage": [
+   "productImage1665201556571-.jpg"
+  ],
+  "backgroundImage": [
+   "backgroundImage1665201556581-.jpg"
+  ],
+  "castLength": "9",
+  "cast": [
+   {
+    "id": 1,
+    "actorsName": "Cillian Murphy",
+    "character": "Tommy Shelby",
+    "actorsBiography": "https://en.wikipedia.org/wiki/Cillian_Murphy",
+    "actorsPhoto": [
+     "actorsPhoto91665212057685-.jpg"
+    ]
+   },
+   {
+    "id": 2,
+    "actorsName": "Paul Anderson",
+    "character": "Arthur Shelby",
+    "actorsBiography": "https://en.wikipedia.org/wiki/Paul_Anderson_(actor)",
+    "actorsPhoto": [
+     "actorsPhoto21665202057651-.jpg"
+    ]
+   },
+   {
+    "id": 3,
+    "actorsName": "Tom Hardy",
+    "character": "Alfie Solomons",
+    "actorsBiography": "https://en.wikipedia.org/wiki/Tom_Hardy",
+    "actorsPhoto": [
+     "actorsPhoto31665202057652-.jpg"
+    ]
+   },
+   {
+    "id": 4,
+    "actorsName": "Helen McCrory",
+    "character": "Polly Gray",
+    "actorsBiography": "https://en.wikipedia.org/wiki/Helen_McCrory",
+    "actorsPhoto": [
+     "actorsPhoto41665202057670-.jpg"
+    ]
+   },
+   {
+    "id": 5,
+    "actorsName": "Sophie Rundle",
+    "character": "Ada Shelby",
+    "actorsBiography": "https://en.wikipedia.org/wiki/Sophie_Rundle",
+    "actorsPhoto": [
+     "actorsPhoto51665202057671-.jpg"
+    ]
+   },
+   {
+    "id": 6,
+    "actorsName": "Joe Cole",
+    "character": "John Shelby",
+    "actorsBiography": "https://en.wikipedia.org/wiki/Joe_Cole_(actor)",
+    "actorsPhoto": [
+     "actorsPhoto91664202057685-.jpg"
+    ]
+   },
+   {
+    "id": 7,
+    "actorsName": "Finn Cole",
+    "character": "Michael Gray",
+    "actorsBiography": "https://en.wikipedia.org/wiki/Finn_Cole",
+    "actorsPhoto": [
+     "actorsPhoto91664201057685-.jpg"
+    ]
+   },
+   {
+    "id": 8,
+    "actorsName": "Anya Taylor-Joy",
+    "character": "Gina Gray",
+    "actorsBiography": "https://en.wikipedia.org/wiki/Anya_Taylor-Joy",
+    "actorsPhoto": [
+     "actorsPhoto81665202057671-.jpg"
+    ]
+   },
+   {
+    "id": 9,
+    "actorsName": "Natasha O'Keeffe",
+    "character": "Lizzie Shelby",
+    "actorsBiography": "https://en.wikipedia.org/wiki/Natasha_O%27Keeffe",
+    "actorsPhoto": [
+     "actorsPhoto91665202057685-.jpg"
+    ]
+   }
+  ]
+ },
+ {
+  "id": 3,
+  "name": "Apocalypse Now",
+  "type": "Película",
+  "year": "1979",
+  "rated": "R",
+  "length": "2h 27min",
+  "imdbScore": "8,5",
+  "imdbTotalReviews": "663 mil",
+  "tomatoScore": "93",
+  "trailerLink": "https://www.youtube.com/watch?v=9l-ViOOFH-s",
+  "genre1": "Bélico",
+  "genre2": "Drama",
+  "purchasePrice": "1559,90",
+  "rentalPrice": "499,90",
+  "synopsis": "Un oficial del ejército estadounidense que sirve en Vietnam recibe el encargo de \r\nasesinar a un coronel renegado de las fuerzas especiales que se ve a sí mismo \r\ncomo un dios.",
+  "director": "Francis Ford Coppola",
+  "directorBiography": "https://en.wikipedia.org/wiki/Francis_Ford_Coppola",
+  "screenwriter": "John Milius",
+  "screenwriterBiography": "https://en.wikipedia.org/wiki/John_Milius",
+  "productImage": [
+   "productImage1665203541977-.png"
+  ],
+  "backgroundImage": [
+   "backgroundImage1665203541978-.jpg"
+  ],
+  "castLength": "9",
+  "cast": [
+   {
+    "id": 1,
+    "actorsName": "Marlon Brando",
+    "character": "Colonel Walter E. Kurtz",
+    "actorsBiography": "https://en.wikipedia.org/wiki/Marlon_Brando",
+    "actorsPhoto": [
+     "actorsPhoto11665204173305-.jpg"
+    ]
+   },
+   {
+    "id": 2,
+    "actorsName": "Martin Sheen",
+    "character": "Captain Benjamin L. Willard",
+    "actorsBiography": "https://en.wikipedia.org/wiki/Martin_Sheen",
+    "actorsPhoto": [
+     "actorsPhoto21665204173306-.jpg"
+    ]
+   },
+   {
+    "id": 3,
+    "actorsName": "Robert Duvall",
+    "character": "Lieutenant Colonel Bill Kilgore",
+    "actorsBiography": "https://en.wikipedia.org/wiki/Robert_Duvall",
+    "actorsPhoto": [
+     "actorsPhoto31665204173306-.png"
+    ]
+   },
+   {
+    "id": 4,
+    "actorsName": "Dennis Hopper",
+    "character": "Photojournalist",
+    "actorsBiography": "https://en.wikipedia.org/wiki/Dennis_Hopper",
+    "actorsPhoto": [
+     "actorsPhoto41665204173309-.jpg"
+    ]
+   },
+   {
+    "id": 5,
+    "actorsName": "Laurence Fishburne",
+    "character": "Tyrone 'Clean' Miller",
+    "actorsBiography": "https://en.wikipedia.org/wiki/Laurence_Fishburne",
+    "actorsPhoto": [
+     "actorsPhoto51665204173310-.jpg"
+    ]
+   },
+   {
+    "id": 6,
+    "actorsName": "Harrison Ford",
+    "character": "Colonel Lucas",
+    "actorsBiography": "https://en.wikipedia.org/wiki/Harrison_Ford",
+    "actorsPhoto": [
+     "actorsPhoto61665204173317-.jpg"
+    ]
+   },
+   {
+    "id": 7,
+    "actorsName": "Jerry Ziesmer",
+    "character": "Jerry",
+    "actorsBiography": "https://en.wikipedia.org/wiki/Jerry_Ziesmer",
+    "actorsPhoto": [
+     "actorsPhoto71665204173323-.jpg"
+    ]
+   },
+   {
+    "id": 8,
+    "actorsName": "Sam Bottoms",
+    "character": "Lance B. Johnson",
+    "actorsBiography": "https://en.wikipedia.org/wiki/Sam_Bottoms",
+    "actorsPhoto": [
+     "actorsPhoto81665204173326-.jpg"
+    ]
+   },
+   {
+    "id": 9,
+    "actorsName": "Frederic Forrest",
+    "character": "Jay 'Chef' Hicks",
+    "actorsBiography": "https://en.wikipedia.org/wiki/Frederic_Forrest",
+    "actorsPhoto": [
+     "actorsPhoto91665204173328-.jpg"
+    ]
+   }
+  ]
+ }
+]

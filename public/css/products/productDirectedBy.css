@@ -1,0 +1,205 @@
+/*MAIN*/
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #212121;
+}
+
+.main {
+  margin: auto;
+  width: 100%;
+  background-color: #212121;
+}
+
+.main__container {
+  width: 90%;
+  margin: auto;
+  max-width: 1200px;
+}
+
+.main__title {
+  color: white;
+  background-color: #212121;
+  margin-top: 0px;
+  padding-top: 35px;
+  overflow-wrap: break-word;
+}
+
+.main__form {
+  padding: 20px 0px;
+  text-align: center;
+}
+
+.main__create-form {
+  display: none;
+}
+
+.text-box {
+  font-size: 0.875rem;
+  margin-bottom: 15px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: solid 1px rgba(255, 255, 255, 0.3);
+  background-color: #1b1b1b;
+  color: white;
+}
+
+.text-box::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.main__file-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.main__fieldDescription {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.875rem;
+  margin: 20px 0px;
+  text-align: left;
+}
+
+h2.main__fieldDescription {
+  color: white;
+}
+
+.main__select {
+  display: flex;
+  font-size: 16px;
+  padding: 5px;
+  width: auto;
+  max-width: 50%;
+  border: none;
+  color: white;
+  background-color: #1b1b1b;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.main__select option {
+  background-color: #1b1b1b;
+  transition: all 120ms;
+}
+
+#productPhoto {
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.main__button {
+  font-size: 0.875rem;
+}
+
+.send-button {
+  background-color: #ffc700;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  width: 70%;
+  max-width: 250px;
+  cursor: pointer;
+  transition: all 120ms;
+}
+
+.send-button:hover {
+  background-color: #fce89f;
+}
+
+.reset-button {
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  width: 70%;
+  max-width: 250px;
+  cursor: pointer;
+  transition: all 120ms;
+}
+
+.reset-button:hover {
+  background-color: #b4b4b4;
+}
+
+/* .delete-button {
+  background-color: rgb(255, 0, 0);
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  width: 70%;
+  max-width: 250px;
+  cursor: pointer;
+  transition: all 120ms;
+}
+
+.delete-button:hover {
+  background-color: rgb(255, 0, 0);
+} */
+
+div.main__button {
+  text-align: center;
+}
+
+.back-button {
+  color: #ffc700;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  width: 70%;
+  max-width: 250px;
+  cursor: pointer;
+  transition: all 120ms;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.back-button:hover {
+  background-color: rgba(126, 126, 126, 0.1);
+}
+/*MEDIA QUERIES*/
+
+/*MOBILE*/
+
+@media (max-width: 599px) {
+  /*MAIN*/
+}
+
+/*TABLET*/
+
+@media (min-width: 600px) {
+  /*MAIN*/
+  html {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .main__container {
+    width: 50%;
+  }
+}
+
+/*DESKTOP*/
+
+@media (min-width: 1200px) {
+  /*MAIN*/
+  .main__radioForm-container {
+    flex-direction: row;
+    width: 100%;
+    padding: 10px;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+}
+
+/*LARGE-DESKTOP*/
+
+@media (min-width: 1440px) {
+  /*MAIN*/
+}

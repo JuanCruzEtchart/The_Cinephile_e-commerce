@@ -1,0 +1,69 @@
+/*MAIN*/
+
+.main__product-article {
+  align-items: center;
+  height: 384.75px;
+}
+
+.main__product-name {
+  line-height: 22px;
+  font-size: 16px;
+  font-weight: bold;
+  width: 125px;
+  padding-bottom: 20px;
+}
+
+.main__boockmark {
+  display: flex;
+  color: #ffc700;
+  cursor: pointer;
+  transition: all 120ms;
+  margin-bottom: 20px;
+}
+
+.main__boockmark:hover {
+  color: #fce89f;
+}
+
+.main__boockmark-icon {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.main__boockmark-button {
+  color: #ffc700;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 120ms;
+}
+
+.main__boockmark-button:hover {
+  color: #fce89f;
+}
+
+/*MEDIA QUERIES*/
+
+/*MOBILE*/
+
+@media (max-width: 599px) {
+  /*MAIN*/
+}
+
+/*TABLET*/
+
+@media (min-width: 600px) {
+  /*MAIN*/
+}
+
+/*DESKTOP*/
+
+@media (min-width: 1200px) {
+  /*MAIN*/
+}
+
+/*LARGE-DESKTOP*/
+
+@media (min-width: 1440px) {
+  /*MAIN*/
+}

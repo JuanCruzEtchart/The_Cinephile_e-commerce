@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include("./partials/head") %>
+  <link rel="stylesheet" href="/css/products/productDetail.css" />
+</head>
+
+<body>
+  <%- include("./partials/header") %>
+  <main class="main">
+    <div class="main__background"><img src="/images/products/productsCreated/<%= product.backgroundImage ? product.backgroundImage : "Logo.png"%> " alt="Background image"></div>
+    <div class="main__container">
+      <section class="main__product-description">
+        <div class="main__product-header">
+          <div class="main__product-logo">
+            <h1><%= product.name %></h1>
+            <h4><%= product.type %> - <%= product.year %> - <%= product.rated %> - <%= product.length %></h4>
+            <img src="/images/products/productsCreated/<%= product.productImage ? product.productImage : "Logo.png"%>" alt="product logo" />
+            <form action="#" method="post" class="main__boockmark">
+              <div class="main__boockmark-icon">
+                <i class="far fa-bookmark"></i>
+              </div>
+              <button type="button" class="main__boockmark-button">
+                Añadir a Mi lista
+              </button>
+            </form>
+          </div>
+          <section class="main__score-trailer-genre">
+            <section class="main__product-score">
+              <article class="main__score-imdb">
+                <div class="main__star-score">
+                  <div class="main__star-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="main__complete-score">
+                    <div class="main__score">
+                      <span id="score"><%= product.imdbScore %></span>
+                      <span id="ten">/10</span>
+                    </div>
+                    <div><%= product.imdbTotalReviews %></div>
+                  </div>
+                </div>
+                <div>Puntuación en IMDb</div>
+              </article>
+              <article class="main__score-rottenTomatoes">
+                <div class="main__tomato-score">
+                  <span id="main__tomato-icon">
+                    <img src="/images/products/productDetail/Rotten_Tomatoes.png" alt="Rooten Tomatoes icon" />
+                  </span>
+                  <span id="main__porcentage"><%= product.tomatoScore %>%</span>
+                </div>
+                <p>Tomatometer</p>
+              </article>
+            </section>
+            <div class="main__trailer">
+              <a href=<%= product.trailerLink %> target="”_blank”"><i class="fas fa-play"></i>Trailer</a>
+            </div>
+            <article class="main__genre">
+              <div class="main__genre-1"><%= product.genre1 %></div>
+              <div class="main__genre-2"><%= product.genre2 %></div>
+            </article>
+          </section>
+        </div>
+        <div class="main__buy-rent-buttons">
+          <form action="#" method="get" class="main__buttons">
+            <button type="button" class="main__buy-button">
+              Comprar por $<%= product.purchasePrice %>
+            </button>
+            <button type="button" class="main__rent-button">
+              Alquilar por $<%= product.rentalPrice %>
+            </button>
+          </form>
+        </div>
+        <div class="main__synopsis">
+          <%= product.synopsis %>
+        </div>
+        <article class="main__product-crew">
+          <div class="main__product-director">
+            <div class="main__director">Dirección</div>
+            <a href="<%= product.directorBiography %> " target="_blank">
+              <span class="product-director"><%= product.director %></span>
+            </a>
+          </div>
+          <div class="main__product-screenwriter">
+            <div class="main__screenwriter">Guión</div>
+            <a href="<%= product.screenwriterBiography %> " >  
+              <span class="product-screenwriter"><%= product.screenwriter %></span>
+            </a>
+          </div>
+        </article>
+      </section>
+      <section class="main__sliders">
+        <article class="article__slider-1">
+          <div class="main__slider-title">
+            <h2>Reparto principal</h2>
+            <div><i class="fas fa-chevron-right"></i></div>
+          </div>
+          <div class="main__slider-wrap-principal-cast">
+            <div class="main__slider">
+              <div class="main__slider-inner" id="main__slider-1-inner">
+                <% product.cast.forEach(element => { %>
+                <div class="main__item-actor">
+                  <a href="<%= element.actorsBiography%>" target="_blank">
+                    <img src="/images/products/productsCreated/<%=element.actorsPhoto ? element.actorsPhoto : "Logo.png"%>" alt="<%= element.actor%>" />
+                    <div class="main__actor-name"><%= element.actorsName%></div>
+                    <div class="main__character-name"><%= element.character%></div>
+                  </a>
+                </div>
+                <% }) %>
+              </div>
+            </div>
+          </div>
+        </article>
+        <section class="main__product_sliders">
+          <article class="article__slider-2">
+            <div class="main__slider-title">
+              <h2>Dirigidas por <%= product.director %> </h2>
+              <div><i class="fas fa-chevron-right"></i></div>
+            </div>
+            <div class="main__slider-wrap-directedBy">
+              <div class="main__slider">
+                <div class="main__slider-inner">
+                  <% director.forEach(element => { %>
+                  <div class="main__item-product">
+                    <a href="/product/detail/<%= element.id %>">
+                      <img src="/images/products/productsCreated/<%= element.productImage ? element.productImage : "Logo.png"%>" alt="Imágen de producto" />
+                      <div class="main__product-name"><%= element.name%></div>
+                    </a>
+                    <form action="#" method="post" class="main__slider-boockmark">
+                      <div class="main__boockmark-icon">
+                        <i class="far fa-bookmark"></i>
+                      </div>
+                      <button type="button" class="main__boockmark-button">
+                        Añadir a Mi lista
+                      </button>
+                    </form>
+                  </div>
+                  <% }) %>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="article__slider-3">
+            <div class="main__slider-title">
+              <h2>Películas similares</h2>
+              <div><i class="fas fa-chevron-right"></i></div>
+            </div>
+            <article class="main__slider-wrap-directedBy">
+              <div class="main__slider">
+                <div class="main__slider-inner">
+                  <% similar.forEach(element => { %>
+                  <div class="main__item-product">
+                    <a href="/product/detail/<%= element.id %>">
+                      <img src="/images/products/productsCreated/<%= element.productImage ? element.productImage : "Logo.png"%>" alt="Imágen de producto" />
+                      <div class="main__product-name"><%= element.name%></div>
+                    </a>
+                    <form action="#" method="post" class="main__slider-boockmark">
+                      <div class="main__boockmark-icon">
+                        <i class="far fa-bookmark"></i>
+                      </div>
+                      <button type="button" class="main__boockmark-button">
+                        Añadir a Mi lista
+                      </button>
+                    </form>
+                  </div>
+                  <% }) %>
+                </div>
+              </div>
+            </article>
+          </article>
+        </section>
+      </section>
+    </div>
+  </main>
+  <%- include("./partials/footer") %>
+</body>
+
+</html>

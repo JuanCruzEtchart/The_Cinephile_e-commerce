@@ -1,0 +1,27 @@
+/*MAIN*/
+
+/*MEDIA QUERIES*/
+
+/*MOBILE*/
+
+@media (max-width: 599px) {
+  /*MAIN*/
+}
+
+/*TABLET*/
+
+@media (min-width: 600px) {
+  /*MAIN*/
+}
+
+/*DESKTOP*/
+
+@media (min-width: 1200px) {
+  /*MAIN*/
+}
+
+/*LARGE-DESKTOP*/
+
+@media (min-width: 1440px) {
+  /*MAIN*/
+}

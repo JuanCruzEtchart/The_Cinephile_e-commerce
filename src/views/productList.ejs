@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include("./partials/head") %>
+  <link rel="stylesheet" href="/css/products/productList.css" />
+  <link rel="stylesheet" href="/css/products/generalListFormat.css" />
+</head>
+
+<body>
+  <%- include("./partials/header") %>
+  <main class="main">
+    <div class="main__container">
+      <h1>Listado de productos:</h1>
+      <div class="main__button">
+        <a href="/product/create">
+          <button class="back-button">Crear nuevo producto</button>
+        </a>
+      </div>
+      <div class="prueba">
+
+        <section class="main__product-list">
+          <% product.forEach(element => { %>
+          <a href="/product/detail/<%= element.id %>">
+            <article class="main__product-article">
+              <div class="main__img-container">
+                <img src="/images/products/productsCreated/<%= element.productImage ? element.productImage : "Logo.png"%>" alt="Imágen de producto">
+              </div>
+              <div class="main__product-information">
+                <p>Información del producto:</p>
+                <ul>
+                  <li>Id: <%= element.id %> </li>
+                  <li>Nombre: <%= element.name %> </li>
+                  <li>Tipo: <%= element.type %></li>
+                  <li>Duración: <%= element.length %></li>
+                  <li>Clasificación: <%= element.rated %> </li>
+                  <li>Venta: $<%= element.purchasePrice %> </li>
+                  <li>Alquiler: $<%= element.rentalPrice %> </li>
+                </ul>
+              </div>
+              <a href="/product/edit/<%= element.id %>"><button class="main_edit-button">Editar datos</button></a>
+            </article>
+          </a>
+          <% }) %>
+        </section>
+      </div>
+    </div>
+  </main>
+  <%- include("./partials/footer") %>
+</body>
+
+</html>

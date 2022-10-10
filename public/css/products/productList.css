@@ -1,0 +1,97 @@
+/*MAIN*/
+
+h1 {
+margin-bottom: 35px;
+}
+
+.main__button {
+  font-size: 0.875rem;
+}
+
+/* div.main__button {
+  text-align: center;
+} */
+
+.back-button {
+  color: #ffc700;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  width: 70%;
+  max-width: 250px;
+  cursor: pointer;
+  transition: all 120ms;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.back-button:hover {
+  background-color: rgba(126, 126, 126, 0.1);
+}
+
+.main__product-information {
+  width: 90%;
+  margin: auto;
+}
+
+.main__product-information p {
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: left;
+  font-size: 0.75rem;
+  color: white;
+}
+
+.main__product-information ul {
+  margin: auto;
+}
+
+.main__product-information li {
+  text-align: left;
+  list-style-type: none;
+  margin-bottom: 20px;
+  font-size: 0.75rem;
+  color: white;
+}
+
+.main_edit-button {
+  border: none;
+  background-color: #ffc700;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  transition: all 120ms;
+}
+
+.main_edit-button:hover {
+  background-color: #fce89f;
+}
+
+/*MEDIA QUERIES*/
+
+/*MOBILE*/
+
+@media (max-width: 599px) {
+  /*MAIN*/
+}
+
+/*TABLET*/
+
+@media (min-width: 600px) {
+  /*MAIN*/
+}
+
+/*DESKTOP*/
+
+@media (min-width: 1200px) {
+  /*MAIN*/
+}
+
+/*LARGE-DESKTOP*/
+
+@media (min-width: 1440px) {
+  /*MAIN*/
+}
