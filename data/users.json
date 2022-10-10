@@ -1,31 +1,10 @@
 [
     {
         "id": 1,
-        "name": "Nombre",
-        "email": "Email",
-        "password": "Password",
-        "security": 1
-    },
-    {
-        "id": 8,
-        "name": "Alberto asdasd",
-        "email": "albertorosspervilar@gmail.com",
-        "password": "456",
-        "security": 1
-    },
-    {
-        "id": 3,
-        "name": "Soloyo",
-        "email": "MiEmail@flaco",
-        "password": "password234",
-        "security": 1
-    },
-    {
-        "id": 4,
-        "name": "Beto",
-        "email": "albertoropervilar@gmail.com",
-        "password": "123",
-        "security": "user"
+        "name": "admin",
+        "email": "admin@cinephile.com",
+        "password": "admin",
+        "security": "admin"
     },
     {
         "id": 5,
@@ -39,6 +18,13 @@
         "name": "asdasda",
         "email": "albertoropervilar@gmail.com",
         "password": "$2a$10$ily/aAkz.8gttKAjRwVgn.C1shluWHMuPmbWr6CcP.cJHpqd1kml2",
+        "security": "user"
+    },
+    {
+        "id": 4,
+        "name": "roberto",
+        "email": "roberto@google.com",
+        "password": "$2a$10$f9VvrIzO.rTOHR2cRgI9HOt7V0b/66/1SrkjXS0IyVyt/iG.cUfs2",
         "security": "user"
     }
 ]

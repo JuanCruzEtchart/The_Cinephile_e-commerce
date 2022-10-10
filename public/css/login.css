@@ -80,7 +80,6 @@ div.email-contraseña {
 
 #password {
   display: flex;
-  margin-bottom: 12%;
 }
 
 #email, #password {
@@ -102,6 +101,7 @@ div.email-contraseña {
 }
 #passwordbloque{
   width: 65%;
+  margin-bottom: 4%;
 }
 
 .fa-envelope:before {
@@ -158,6 +158,24 @@ button.send-button {
   margin: 0 auto;
 }
 
+
+.msg-error {
+  color: red;
+  display: flex;
+  justify-content: center;
+  padding-top: 4%;
+}
+
+#password {
+  display: flex;
+}
+
+.errorlogin {
+  color: red;
+  display: flex;
+  justify-content: center;
+  padding-top: 4%;
+}
 
 /*MEDIA QUERIES*/
 

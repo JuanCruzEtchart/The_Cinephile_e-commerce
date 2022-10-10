@@ -6,7 +6,8 @@ const validation = require("../validations/userValidations");
 /*Render del login*/
 
 router.get("/login", userController.login);
-router.post("/login", userController.check);
+router.post("/login", validation.loginValidation, userController.processLogin);
+router.post("/logout", userController.logout)
 
 /*Render del register*/
 

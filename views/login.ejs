@@ -25,8 +25,12 @@
               name="email"
               placeholder="TuEmail@Cinephile.com"
               class="mail"
-              required
             />
+            <div class="errorDiv">
+              <% if (locals.errors && locals.errors.email) { %>
+                <p class="msg-error"> <%= errors.email.msg %> </p>
+              <% } %>
+            </div>
           </div>
           <div class="email-contraseña">
             <i class="fas fa-lock"></i>
@@ -39,12 +43,19 @@
               name="password"
               placeholder="Contraseña"
               class="text-box"
-              required
             />
+            <% if (locals.errors && locals.errors.password) { %>
+              <p class="msg-error"> <%= errors.password.msg %> </p>
+            <% } %>
           </div>
           <div class="div-edit">
             <input type="submit" value="Conectarse" style="background-color: #ffc700; border: none;">
           </div>
+          <div class="errorlogin">
+          <% if(locals.errorLogin) { %>
+            <p> <%=errorLogin %> </p> 
+          <% } %>
+        </div>
           <div id="checkboxBox">
             <input type="checkbox" name="checkbox" id="checkbox" />
             <p id="quedarseConectado" style="color: white">

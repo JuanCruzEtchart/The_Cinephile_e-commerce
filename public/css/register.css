@@ -128,7 +128,9 @@ h1.Crear.Cuenta {
   padding-top: 3%;
   padding-left: 1%;
 }
-
+.errorDiv{
+  padding-top: 2%
+}
 .msg-error {
   color:red;
 }

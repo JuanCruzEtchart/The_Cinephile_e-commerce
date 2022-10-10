@@ -160,6 +160,13 @@ body {
   font-weight: bold;
 }
 
+.cerrar{
+  display: flex;
+  justify-content: flex-end;
+  background-color: black;
+  padding-right: 9%;
+}
+
 /*FOOTER*/
 
 .footer__container {
