@@ -69,7 +69,7 @@ const userController = {
 
     res.render("register", { users: data });
 
-    //Validations
+    
   },
 
   profile: (req, res) => {

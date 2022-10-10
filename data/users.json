@@ -3,7 +3,7 @@
         "id": 1,
         "name": "admin",
         "email": "admin@cinephile.com",
-        "password": "admin",
+        "password": "$2a$10$WEqcfmAShBkVpXzzE0jjaePWcmSQJ8uykhT6C/a32fod4baeZva0q", 
         "security": "admin"
     },
     {
