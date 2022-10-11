@@ -3,19 +3,20 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const methodOverride = require("method-override");
+const cookieParser = require ("cookie-parser");
+const session = require("express-session");
+
 const mainRoutes = require("./routes/mainRoutes");
 const productsRoutes = require("./routes/productsRoutes");
 const userRoutes = require("./routes/userRoutes");
-const session = require("express-session");
-const cookieParser = require ("cookie-parser");
 const localsMiddleware = require("./middleware/localsMiddle");
 const recordameMiddleware = require("./middleware/recordameMiddle");
 
 
 //CONFIG
-app.use(express.static(path.join(__dirname, "../public")));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
+app.use(express.static(path.join(__dirname, "../public")));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(cookieParser());

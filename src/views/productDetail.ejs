@@ -120,7 +120,7 @@
             </div>
             <div class="main__slider-wrap-directedBy">
               <div class="main__slider">
-                <div class="main__slider-inner">
+                <div class="main__slider-inner" id="sliderMovies">
                   <% director.forEach(element => { %>
                   <div class="main__item-product">
                     <a href="/product/detail/<%= element.id %>">
@@ -148,7 +148,7 @@
             </div>
             <article class="main__slider-wrap-directedBy">
               <div class="main__slider">
-                <div class="main__slider-inner">
+                <div class="main__slider-inner" id="sliderMovies">
                   <% similar.forEach(element => { %>
                   <div class="main__item-product">
                     <a href="/product/detail/<%= element.id %>">
