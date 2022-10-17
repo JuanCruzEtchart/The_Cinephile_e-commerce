@@ -1,1076 +1,1076 @@
 [
- {
-  "id": 1,
-  "name": "El Padrino",
-  "type": "Película",
-  "year": "1972",
-  "rated": "R",
-  "length": "2h 55m",
-  "imdbScore": "9,2",
-  "imdbTotalReviews": "1,8 M",
-  "tomatoScore": "97",
-  "trailerLink": "https://www.youtube.com/watch?v=UaVTIH8mujA",
-  "genre1": "Crimen",
-  "genre2": "Drama",
-  "purchasePrice": "1559,90",
-  "rentalPrice": "499,90",
-  "synopsis": "Don Vito Corleone es el jefe de una de las cinco familias que ejercen el mando de la \r\nCosa Nostra en Nueva York en los años 40. Don Corleone tiene cuatro hijos; una \r\nchica, Connie, y tres varones, Santino, o Sonny, como le gusta que le llamen, Michael \r\ny Freddie, al que envían exiliado a Las Vegas, dada su incapacidad para asumir \r\npuestos de mando en la ”Familia”. Cuando otro capo, Sollozzo, al rechazar el \r\nPadrino intervenir en el negocio de estupefacientes, intenta asesinar a éste, \r\nempieza una cruenta lucha de violentos episodios entre los distintos grupos.",
-  "director": "Francis Ford Coppola",
-  "directorBiography": "https://en.wikipedia.org/wiki/Francis_Ford_Coppola",
-  "screenwriter": "Mario Puzo",
-  "screenwriterBiography": "https://en.wikipedia.org/wiki/Mario_Puzo",
-  "productImage": [
-   "productImage1665200636735-.png"
-  ],
-  "backgroundImage": [
-   "backgroundImage1665200636738-.jpg"
-  ],
-  "castLength": "7",
-  "cast": [
-   {
-    "id": 1,
-    "actorsName": "Marlon Brando",
-    "character": "Vito Corleone",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Marlon_Brando",
-    "actorsPhoto": [
-     "actorsPhoto11665200827472-.jpg"
-    ]
-   },
-   {
-    "id": 2,
-    "actorsName": "Al Pacino",
-    "character": "Mickael Corleone",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Al_Pacino",
-    "actorsPhoto": [
-     "actorsPhoto21665200827473-.jpg"
-    ]
-   },
-   {
-    "id": 3,
-    "actorsName": "Diane Keaton",
-    "character": "Key Adams",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Diane_Keaton",
-    "actorsPhoto": [
-     "actorsPhoto31665200827474-.jpg"
-    ]
-   },
-   {
-    "id": 4,
-    "actorsName": "James Caan",
-    "character": "Sony Corleone",
-    "actorsBiography": "https://en.wikipedia.org/wiki/James_Caan",
-    "actorsPhoto": [
-     "actorsPhoto41665200827481-.jpg"
-    ]
-   },
-   {
-    "id": 5,
-    "actorsName": "John Cazale",
-    "character": "Fredo Corleone",
-    "actorsBiography": "https://en.wikipedia.org/wiki/John_Cazale",
-    "actorsPhoto": [
-     "actorsPhoto51665200827499-.jpg"
-    ]
-   },
-   {
-    "id": 6,
-    "actorsName": "Robert Duvall",
-    "character": "Tom Hagen",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Robert_Duvall",
-    "actorsPhoto": [
-     "actorsPhoto61665200827499-.png"
-    ]
-   },
-   {
-    "id": 7,
-    "actorsName": "Richard S. Castellano",
-    "character": "Clemenza",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Richard_S._Castellano",
-    "actorsPhoto": [
-     "actorsPhoto71665200827499-.jpg"
-    ]
-   }
-  ]
- },
- {
-  "id": 2,
-  "name": "Peaky Blinders",
-  "type": "Serie de TV",
-  "year": "2013/2022",
-  "rated": "R",
-  "length": "1h",
-  "imdbScore": "8,8",
-  "imdbTotalReviews": "530 mil",
-  "tomatoScore": "94",
-  "trailerLink": "https://www.youtube.com/watch?v=oVzVdvGIC7U",
-  "genre1": "Crimen",
-  "genre2": "Drama",
-  "purchasePrice": "1999,90",
-  "rentalPrice": "599,90",
-  "synopsis": "Peaky Blinders es un drama de BBC que narra la historia de la familia gitana Shelby y su banda de gángsters, un grupo \r\nde personas características por sus boinas con cuchillas y dueñas de los asuntos ilegales, que dominan las apuestas \r\nclandestinas y se rigen mediante extorsiones.",
-  "director": "Otto Bathurst",
-  "directorBiography": "https://en.wikipedia.org/wiki/Otto_Bathurst",
-  "screenwriter": "Steven Knight",
-  "screenwriterBiography": "https://en.wikipedia.org/wiki/Steven_Knight",
-  "productImage": [
-   "productImage1665201556571-.jpg"
-  ],
-  "backgroundImage": [
-   "backgroundImage1665201556581-.jpg"
-  ],
-  "castLength": "9",
-  "cast": [
-   {
-    "id": 1,
-    "actorsName": "Cillian Murphy",
-    "character": "Tommy Shelby",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Cillian_Murphy",
-    "actorsPhoto": [
-     "actorsPhoto91665212057685-.jpg"
-    ]
-   },
-   {
-    "id": 2,
-    "actorsName": "Paul Anderson",
-    "character": "Arthur Shelby",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Paul_Anderson_(actor)",
-    "actorsPhoto": [
-     "actorsPhoto21665202057651-.jpg"
-    ]
-   },
-   {
-    "id": 3,
-    "actorsName": "Tom Hardy",
-    "character": "Alfie Solomons",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Tom_Hardy",
-    "actorsPhoto": [
-     "actorsPhoto31665202057652-.jpg"
-    ]
-   },
-   {
-    "id": 4,
-    "actorsName": "Helen McCrory",
-    "character": "Polly Gray",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Helen_McCrory",
-    "actorsPhoto": [
-     "actorsPhoto41665202057670-.jpg"
-    ]
-   },
-   {
-    "id": 5,
-    "actorsName": "Sophie Rundle",
-    "character": "Ada Shelby",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Sophie_Rundle",
-    "actorsPhoto": [
-     "actorsPhoto51665202057671-.jpg"
-    ]
-   },
-   {
-    "id": 6,
-    "actorsName": "Joe Cole",
-    "character": "John Shelby",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Joe_Cole_(actor)",
-    "actorsPhoto": [
-     "actorsPhoto91664202057685-.jpg"
-    ]
-   },
-   {
-    "id": 7,
-    "actorsName": "Finn Cole",
-    "character": "Michael Gray",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Finn_Cole",
-    "actorsPhoto": [
-     "actorsPhoto91664201057685-.jpg"
-    ]
-   },
-   {
-    "id": 8,
-    "actorsName": "Anya Taylor-Joy",
-    "character": "Gina Gray",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Anya_Taylor-Joy",
-    "actorsPhoto": [
-     "actorsPhoto81665202057671-.jpg"
-    ]
-   },
-   {
-    "id": 9,
-    "actorsName": "Natasha O'Keeffe",
-    "character": "Lizzie Shelby",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Natasha_O%27Keeffe",
-    "actorsPhoto": [
-     "actorsPhoto91665202057685-.jpg"
-    ]
-   }
-  ]
- },
- {
-  "id": 3,
-  "name": "Apocalypse Now",
-  "type": "Película",
-  "year": "1979",
-  "rated": "R",
-  "length": "2h 27min",
-  "imdbScore": "8,5",
-  "imdbTotalReviews": "663 mil",
-  "tomatoScore": "93",
-  "trailerLink": "https://www.youtube.com/watch?v=9l-ViOOFH-s",
-  "genre1": "Bélico",
-  "genre2": "Drama",
-  "purchasePrice": "1559,90",
-  "rentalPrice": "499,90",
-  "synopsis": "Un oficial del ejército estadounidense que sirve en Vietnam recibe el encargo de \r\nasesinar a un coronel renegado de las fuerzas especiales que se ve a sí mismo \r\ncomo un dios.",
-  "director": "Francis Ford Coppola",
-  "directorBiography": "https://en.wikipedia.org/wiki/Francis_Ford_Coppola",
-  "screenwriter": "John Milius",
-  "screenwriterBiography": "https://en.wikipedia.org/wiki/John_Milius",
-  "productImage": [
-   "productImage1665203541977-.png"
-  ],
-  "backgroundImage": [
-   "backgroundImage1665203541978-.jpg"
-  ],
-  "castLength": "9",
-  "cast": [
-   {
-    "id": 1,
-    "actorsName": "Marlon Brando",
-    "character": "Colonel Walter E. Kurtz",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Marlon_Brando",
-    "actorsPhoto": [
-     "actorsPhoto11665204173305-.jpg"
-    ]
-   },
-   {
-    "id": 2,
-    "actorsName": "Martin Sheen",
-    "character": "Captain Benjamin L. Willard",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Martin_Sheen",
-    "actorsPhoto": [
-     "actorsPhoto21665204173306-.jpg"
-    ]
-   },
-   {
-    "id": 3,
-    "actorsName": "Robert Duvall",
-    "character": "Lieutenant Colonel Bill Kilgore",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Robert_Duvall",
-    "actorsPhoto": [
-     "actorsPhoto31665204173306-.png"
-    ]
-   },
-   {
-    "id": 4,
-    "actorsName": "Dennis Hopper",
-    "character": "Photojournalist",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Dennis_Hopper",
-    "actorsPhoto": [
-     "actorsPhoto41665204173309-.jpg"
-    ]
-   },
-   {
-    "id": 5,
-    "actorsName": "Laurence Fishburne",
-    "character": "Tyrone 'Clean' Miller",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Laurence_Fishburne",
-    "actorsPhoto": [
-     "actorsPhoto51665204173310-.jpg"
-    ]
-   },
-   {
-    "id": 6,
-    "actorsName": "Harrison Ford",
-    "character": "Colonel Lucas",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Harrison_Ford",
-    "actorsPhoto": [
-     "actorsPhoto61665204173317-.jpg"
-    ]
-   },
-   {
-    "id": 7,
-    "actorsName": "Jerry Ziesmer",
-    "character": "Jerry",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Jerry_Ziesmer",
-    "actorsPhoto": [
-     "actorsPhoto71665204173323-.jpg"
-    ]
-   },
-   {
-    "id": 8,
-    "actorsName": "Sam Bottoms",
-    "character": "Lance B. Johnson",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Sam_Bottoms",
-    "actorsPhoto": [
-     "actorsPhoto81665204173326-.jpg"
-    ]
-   },
-   {
-    "id": 9,
-    "actorsName": "Frederic Forrest",
-    "character": "Jay 'Chef' Hicks",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Frederic_Forrest",
-    "actorsPhoto": [
-     "actorsPhoto91665204173328-.jpg"
-    ]
-   }
-  ]
- },
- {
-  "id": 4,
-  "name": "El Padrino II",
-  "type": "Película",
-  "year": "1974",
-  "rated": "R",
-  "length": "3h 22min",
-  "imdbScore": "9",
-  "imdbTotalReviews": "1,3 M",
-  "tomatoScore": "96",
-  "trailerLink": "https://www.youtube.com/watch?v=9O1Iy9od7-A",
-  "genre1": "Crimen",
-  "genre2": "Drama",
-  "purchasePrice": "1559,90",
-  "rentalPrice": "499,90",
-  "synopsis": "El Padrino II retoma la historia de la familia Corleone en el punto al cual había llegado la primera parte, pero con una \r\nvuelta de tuerca: mientras sigue el ascenso de Michael en el mundo del crimen durante los años 50, reconstruye los \r\nprimeros años del padre de Michael, Vito, desde que escapa, aún niño, de la violenta Sicilia hasta que comienza a dar \r\nsus primeros pasos como líder mafioso en Nueva York, en las primeras décadas del siglo XX.",
-  "director": "Francis Ford Coppola",
-  "directorBiography": "https://en.wikipedia.org/wiki/Francis_Ford_Coppola",
-  "screenwriter": "Mario Puzo",
-  "screenwriterBiography": "https://en.wikipedia.org/wiki/Mario_Puzo",
-  "productImage": [
-   "productImage1665464301943-.png"
-  ],
-  "backgroundImage": [
-   "backgroundImage1665464301944-.jpg"
-  ],
-  "castLength": "9",
-  "cast": [
-   {
-    "id": 1,
-    "actorsName": "Al Pacino",
-    "character": "Mickael Corleone",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Al_Pacino",
-    "actorsPhoto": [
-     "actorsPhoto11665464776606-.jpg"
-    ]
-   },
-   {
-    "id": 2,
-    "actorsName": "Robert De Niro",
-    "character": "Vito Corleone",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Robert_De_Niro",
-    "actorsPhoto": [
-     "actorsPhoto21665464776607-.jpg"
-    ]
-   },
-   {
-    "id": 3,
-    "actorsName": "Diane Keaton",
-    "character": "Key Adams",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Diane_Keaton",
-    "actorsPhoto": [
-     "actorsPhoto31665464776632-.jpg"
-    ]
-   },
-   {
-    "id": 4,
-    "actorsName": "Robert Duvall",
-    "character": "Tom Hagen",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Robert_Duvall",
-    "actorsPhoto": [
-     "actorsPhoto41665464776655-.png"
-    ]
-   },
-   {
-    "id": 5,
-    "actorsName": "John Cazale",
-    "character": "Fredo Corleone",
-    "actorsBiography": "https://en.wikipedia.org/wiki/John_Cazale",
-    "actorsPhoto": [
-     "actorsPhoto51665464776656-.jpg"
-    ]
-   },
-   {
-    "id": 6,
-    "actorsName": "Talia Shire",
-    "character": "Connie Corleone",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Talia_Shire",
-    "actorsPhoto": [
-     "actorsPhoto61665464776657-.jpg"
-    ]
-   },
-   {
-    "id": 7,
-    "actorsName": "Michael V. Gazzo",
-    "character": "Frankie Pentangeli",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Michael_V._Gazzo",
-    "actorsPhoto": [
-     "actorsPhoto71665464776659-.jpg"
-    ]
-   },
-   {
-    "id": 8,
-    "actorsName": "Bruno Kirby",
-    "character": "Peter Clemenza",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Bruno_Kirby",
-    "actorsPhoto": [
-     "actorsPhoto81665464776660-.jpg"
-    ]
-   },
-   {
-    "id": 9,
-    "actorsName": "Lee Strasberg",
-    "character": "Hyman Roth",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Lee_Strasberg",
-    "actorsPhoto": [
-     "actorsPhoto91665464776684-.jpg"
-    ]
-   }
-  ]
- },
- {
-  "id": 5,
-  "name": "Dracula",
-  "type": "Película",
-  "year": "1992",
-  "rated": "R",
-  "length": "2h 8min",
-  "imdbScore": "7,4",
-  "imdbTotalReviews": "217 mil",
-  "tomatoScore": "76",
-  "trailerLink": "https://www.youtube.com/watch?v=CjgwUB1CXek",
-  "genre1": "Terror",
-  "genre2": "Fantasía",
-  "purchasePrice": "1259,90",
-  "rentalPrice": "399,90",
-  "synopsis": "El conde Drácula, un príncipe del siglo XV, está condenado a vivir de la sangre de los vivos por toda la eternidad. El joven \r\nabogado Jonathan Harker es enviado al castillo de Drácula para finalizar un trato de tierras, pero cuando el Conde ve \r\nuna foto de la prometida de Harker, Mina, la viva imagen de su esposa muerta, lo encarcela y se dirige a Londres para \r\nlocalizarla.",
-  "director": "Francis Ford Coppola",
-  "directorBiography": "https://en.wikipedia.org/wiki/Francis_Ford_Coppola",
-  "screenwriter": "James V. Hart",
-  "screenwriterBiography": "https://en.wikipedia.org/wiki/James_V._Hart",
-  "productImage": [
-   "productImage1665465337067-.jpg"
-  ],
-  "backgroundImage": [
-   "backgroundImage1665465337068-.jpg"
-  ],
-  "castLength": "10",
-  "cast": [
-   {
-    "id": 1,
-    "actorsName": "Gary Oldman",
-    "character": "Dracula",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Gary_Oldman",
-    "actorsPhoto": [
-     "actorsPhoto11665466023803-.jpg"
-    ]
-   },
-   {
-    "id": 2,
-    "actorsName": "Winona Ryder",
-    "character": "Mina Murray",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Winona_Ryder",
-    "actorsPhoto": [
-     "actorsPhoto21665466023805-.jpg"
-    ]
-   },
-   {
-    "id": 3,
-    "actorsName": "Anthony Hopkins",
-    "character": "Abraham Van Helsing",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Anthony_Hopkins",
-    "actorsPhoto": [
-     "actorsPhoto31665466023811-.jpg"
-    ]
-   },
-   {
-    "id": 4,
-    "actorsName": "Keanu Reeves",
-    "character": "Jonathan Harker",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Keanu_Reeves",
-    "actorsPhoto": [
-     "actorsPhoto41665466023811-.jpg"
-    ]
-   },
-   {
-    "id": 5,
-    "actorsName": "Richard E. Grant",
-    "character": "Dr. Jack Seward",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Richard_E._Grant",
-    "actorsPhoto": [
-     "actorsPhoto51665466023842-.jpg"
-    ]
-   },
-   {
-    "id": 6,
-    "actorsName": "Monica Bellucci",
-    "character": "Novia de Dracula",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Monica_Bellucci",
-    "actorsPhoto": [
-     "actorsPhoto61665466023846-.jpg"
-    ]
-   },
-   {
-    "id": 7,
-    "actorsName": "Sadie Frost",
-    "character": "Lucy Westenra",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Sadie_Frost",
-    "actorsPhoto": [
-     "actorsPhoto71665466023889-.jpg"
-    ]
-   },
-   {
-    "id": 8,
-    "actorsName": "Cary Elwes",
-    "character": "Arthur Holmwood",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Cary_Elwes",
-    "actorsPhoto": [
-     "actorsPhoto81665466023892-.jpg"
-    ]
-   },
-   {
-    "id": 9,
-    "actorsName": "Tom Waits",
-    "character": "Renfield",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Tom_Waits",
-    "actorsPhoto": [
-     "actorsPhoto91665466023901-.jpg"
-    ]
-   },
-   {
-    "id": 10,
-    "actorsName": "Billy Campbell",
-    "character": "Quincey Morris",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Billy_Campbell",
-    "actorsPhoto": [
-     "actorsPhoto101665466023902-.jpg"
-    ]
-   }
-  ]
- },
- {
-  "id": 6,
-  "name": "Taxi Driver",
-  "type": "Película",
-  "year": "1976",
-  "rated": "R",
-  "length": "1h 54min",
-  "imdbScore": "8,2",
-  "imdbTotalReviews": "822 mil",
-  "tomatoScore": "96",
-  "trailerLink": "https://www.youtube.com/watch?v=UUxD4-dEzn0",
-  "genre1": "Crimen",
-  "genre2": "Drama",
-  "purchasePrice": "1999,90",
-  "rentalPrice": "499,90",
-  "synopsis": "Aquejado de insomnio, el solitario y perturbado Travis Bickle (Robert De Niro) acepta un trabajo como taxista en la \r\nciudad de Nueva York, rondando las calles todas las noches, alejándose cada vez más de la realidad mientras sueña \r\ncon limpiar la sucia ciudad. Cuando Travis conoce a la bella trabajadora de campaña Betsy (Cybill Shepherd), se \r\nobsesiona con la idea de salvar el mundo, primero planea asesinar a un candidato presidencial y luego dirige su \r\natención a rescatar a la prostituta de 12 añ",
-  "director": "Martin Scorsese",
-  "directorBiography": "https://en.wikipedia.org/wiki/Martin_Scorsese",
-  "screenwriter": "Paul Schrader",
-  "screenwriterBiography": "https://en.wikipedia.org/wiki/Paul_Schrader",
-  "productImage": [
-   "productImage1665466396377-.jpg"
-  ],
-  "backgroundImage": [
-   "backgroundImage1665466396394-.jpg"
-  ],
-  "castLength": "6",
-  "cast": [
-   {
-    "id": 1,
-    "actorsName": "Robert De Niro",
-    "character": "Travis Bickle",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Robert_De_Niro",
-    "actorsPhoto": [
-     "actorsPhoto11665466676574-.jpg"
-    ]
-   },
-   {
-    "id": 2,
-    "actorsName": "Jodie Foster",
-    "character": "Iris",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Jodie_Foster",
-    "actorsPhoto": [
-     "actorsPhoto21665466676597-.jpg"
-    ]
-   },
-   {
-    "id": 3,
-    "actorsName": "Cybill Shepherd",
-    "character": "Betsy",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Cybill_Shepherd",
-    "actorsPhoto": [
-     "actorsPhoto31665466676609-.jpg"
-    ]
-   },
-   {
-    "id": 4,
-    "actorsName": "Albert Brooks",
-    "character": "Tom",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Albert_Brooks",
-    "actorsPhoto": [
-     "actorsPhoto41665466676611-.jpg"
-    ]
-   },
-   {
-    "id": 5,
-    "actorsName": "Harvey Keitel",
-    "character": "Matthew Higgins",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Harvey_Keitel",
-    "actorsPhoto": [
-     "actorsPhoto51665466676612-.jpg"
-    ]
-   },
-   {
-    "id": 6,
-    "actorsName": "Peter Boyle",
-    "character": "Wizard",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Peter_Boyle",
-    "actorsPhoto": [
-     "actorsPhoto61665466676613-.jpg"
-    ]
-   }
-  ]
- },
- {
-  "id": 7,
-  "name": "Breaking Bad",
-  "type": "Serie de TV",
-  "year": "2008/2013",
-  "rated": "16",
-  "length": "49min",
-  "imdbScore": "9,5",
-  "imdbTotalReviews": "1,8 M",
-  "tomatoScore": "96",
-  "trailerLink": "https://www.youtube.com/watch?v=HhesaQXLuRY",
-  "genre1": "Crimen",
-  "genre2": "Drama",
-  "purchasePrice": "1999,90",
-  "rentalPrice": "599,90",
-  "synopsis": "En Albuquerque, ciudad del estado de Nuevo México (Estados Unidos), un profesor de química de instituto llamado \r\nWalter White (Bryan Cranston) descubre que padece un cáncer incurable. A raíz de esta noticia, y temiendo por la \r\neconomía de su familia, decide aliarse con un antiguo alumno, Jesse Pinkman (Aaron Paul), para producir y vender \r\nmetanfetamina.",
-  "director": "Vince Gilligan",
-  "directorBiography": "https://en.wikipedia.org/wiki/Vince_Gilligan",
-  "screenwriter": "Vince Gilligan",
-  "screenwriterBiography": "https://en.wikipedia.org/wiki/Vince_Gilligan",
-  "productImage": [
-   "productImage1665467510398-.jpg"
-  ],
-  "backgroundImage": [
-   "backgroundImage1665467510429-.jpg"
-  ],
-  "castLength": "10",
-  "cast": [
-   {
-    "id": 1,
-    "actorsName": "Bryan Cranston",
-    "character": "Walter White",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Bryan_Cranston",
-    "actorsPhoto": [
-     "actorsPhoto11665468212541-.jpg"
-    ]
-   },
-   {
-    "id": 2,
-    "actorsName": "Aaron Paul",
-    "character": "Jesse Pinkman",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Aaron_Paul",
-    "actorsPhoto": [
-     "actorsPhoto21665468212542-.jpg"
-    ]
-   },
-   {
-    "id": 3,
-    "actorsName": "Anna Gun",
-    "character": "Skyler White",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Anna_Gunn",
-    "actorsPhoto": [
-     "actorsPhoto31665468212545-.jpg"
-    ]
-   },
-   {
-    "id": 4,
-    "actorsName": "Dean Norris",
-    "character": "Hank Schrader",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Dean_Norris",
-    "actorsPhoto": [
-     "actorsPhoto41665468212602-.jpg"
-    ]
-   },
-   {
-    "id": 5,
-    "actorsName": "RJ Mitte",
-    "character": "Walter White Jr.",
-    "actorsBiography": "https://en.wikipedia.org/wiki/RJ_Mitte",
-    "actorsPhoto": [
-     "actorsPhoto51665468212603-.jpg"
-    ]
-   },
-   {
-    "id": 6,
-    "actorsName": "Bob Odenkirk",
-    "character": "Saul Goodman",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Bob_Odenkirk",
-    "actorsPhoto": [
-     "actorsPhoto61665468212605-.jpg"
-    ]
-   },
-   {
-    "id": 7,
-    "actorsName": "Jonathan Banks",
-    "character": "Mike Ehrmantraut",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Jonathan_Banks",
-    "actorsPhoto": [
-     "actorsPhoto71665468212609-.jpg"
-    ]
-   },
-   {
-    "id": 8,
-    "actorsName": "Giancarlo Esposito",
-    "character": "Gus Fring",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Giancarlo_Esposito",
-    "actorsPhoto": [
-     "actorsPhoto81665468212622-.jpg"
-    ]
-   },
-   {
-    "id": 9,
-    "actorsName": "Betsy Brandt",
-    "character": "Marie Schrader",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Betsy_Brandt",
-    "actorsPhoto": [
-     "actorsPhoto91665468212625-.jpg"
-    ]
-   },
-   {
-    "id": 10,
-    "actorsName": "Steven Michael Quezada",
-    "character": "Steven Gomez",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Steven_Michael_Quezada",
-    "actorsPhoto": [
-     "actorsPhoto101665468212647-.jpg"
-    ]
-   }
-  ]
- },
- {
-  "id": 8,
-  "name": "Better Call Saul",
-  "type": "Serie de TV",
-  "year": "2015/2022",
-  "rated": "16",
-  "length": "46min",
-  "imdbScore": "8,9",
-  "imdbTotalReviews": "508 mil",
-  "tomatoScore": "98",
-  "trailerLink": "https://www.youtube.com/watch?v=HN4oydykJFc",
-  "genre1": "Crimen",
-  "genre2": "Drama",
-  "purchasePrice": "1999,90",
-  "rentalPrice": "599,90",
-  "synopsis": "En 2002, Jimmy McGill aún no se había convertido en Saul Goodman, uno de los abogados criminalistas más \r\nsolicitados en el mundo del hampa de Nuevo México. Por aquel entonces, McGill acababa de empezar una carrera que \r\nle acabó llevando a defender al mismísimo Walter White.",
-  "director": "Vince Gilligan",
-  "directorBiography": "https://en.wikipedia.org/wiki/Vince_Gilligan",
-  "screenwriter": "Vince Gilligan",
-  "screenwriterBiography": "https://en.wikipedia.org/wiki/Vince_Gilligan",
-  "productImage": [
-   "productImage1665468531920-.jpg"
-  ],
-  "backgroundImage": [
-   "backgroundImage1665468531923-.jpg"
-  ],
-  "castLength": "8",
-  "cast": [
-   {
-    "id": 1,
-    "actorsName": "Bob Odenkirk",
-    "character": "Saul Goodman",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Bob_Odenkirk",
-    "actorsPhoto": [
-     "actorsPhoto11665468873875-.jpg"
-    ]
-   },
-   {
-    "id": 2,
-    "actorsName": "Rhea Seehorn",
-    "character": "Kim Wexler",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Rhea_Seehorn",
-    "actorsPhoto": [
-     "actorsPhoto21665468873880-.jpg"
-    ]
-   },
-   {
-    "id": 3,
-    "actorsName": "Jonathan Banks",
-    "character": "Mike Ehrmantraut",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Jonathan_Banks",
-    "actorsPhoto": [
-     "actorsPhoto31665468873887-.jpg"
-    ]
-   },
-   {
-    "id": 4,
-    "actorsName": "Michael Mando",
-    "character": "Nacho Varga",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Michael_Mando",
-    "actorsPhoto": [
-     "actorsPhoto41665468873933-.jpg"
-    ]
-   },
-   {
-    "id": 5,
-    "actorsName": "Patrick Fabian",
-    "character": "Howard Hamlin",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Patrick_Fabian",
-    "actorsPhoto": [
-     "actorsPhoto51665468873937-.jpg"
-    ]
-   },
-   {
-    "id": 6,
-    "actorsName": "Tony Dalton",
-    "character": "Lalo Salamanca",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Tony_Dalton",
-    "actorsPhoto": [
-     "actorsPhoto61665468873941-.jpg"
-    ]
-   },
-   {
-    "id": 7,
-    "actorsName": "Giancarlo Esposito",
-    "character": "Gus Fring",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Giancarlo_Esposito",
-    "actorsPhoto": [
-     "actorsPhoto71665468873942-.jpg"
-    ]
-   },
-   {
-    "id": 8,
-    "actorsName": "Michael McKean",
-    "character": "Chuck McGill",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Michael_McKean",
-    "actorsPhoto": [
-     "actorsPhoto81665468873944-.jpg"
-    ]
-   },
-   {
-    "id": 9,
-    "actorsName": "Lavell Crawford",
-    "character": "Huell Babineaux",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Lavell_Crawford",
-    "actorsPhoto": [
-     "actorsPhoto81665468873945-.jpg"
-    ]
-   }
-  ]
- },
- {
-  "id": 9,
-  "name": "Narcos",
-  "type": "Serie de TV",
-  "year": "2015/2017",
-  "rated": "16",
-  "length": "49min",
-  "imdbScore": "8,8",
-  "imdbTotalReviews": "418 mil",
-  "tomatoScore": "89",
-  "trailerLink": "https://www.youtube.com/watch?v=RNWAKZzgbp4",
-  "genre1": "Crimen",
-  "genre2": "Drama",
-  "purchasePrice": "1999,90",
-  "rentalPrice": "599,90",
-  "synopsis": "Una mirada a las hazañas criminales del narcotraficante colombiano Pablo Escobar, así como a muchos otros capos \r\nque plagaron el país a través de los años.",
-  "director": "Carlo Bernard",
-  "directorBiography": "https://en.wikipedia.org/wiki/Carlos_Bernard",
-  "screenwriter": "Carlo Bernard",
-  "screenwriterBiography": "https://en.wikipedia.org/wiki/Carlos_Bernard",
-  "productImage": [
-   "productImage1665469986964-.jpg"
-  ],
-  "backgroundImage": [
-   "backgroundImage1665469986971-.jpg"
-  ],
-  "castLength": "7",
-  "cast": [
-   {
-    "id": 1,
-    "actorsName": "Wagner Moura",
-    "character": "Pablo Escobar",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Wagner_Moura",
-    "actorsPhoto": [
-     "actorsPhoto11665470337396-.jpg"
-    ]
-   },
-   {
-    "id": 2,
-    "actorsName": "Pedro Pascal",
-    "character": "Javier Peña",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Pedro_Pascal",
-    "actorsPhoto": [
-     "actorsPhoto21665470337398-.jpg"
-    ]
-   },
-   {
-    "id": 3,
-    "actorsName": "Boyd Holbrook",
-    "character": "Steve Murphy",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Boyd_Holbrook",
-    "actorsPhoto": [
-     "actorsPhoto31665470337423-.jpg"
-    ]
-   },
-   {
-    "id": 4,
-    "actorsName": "Alberto Ammann",
-    "character": "Hélmer Herrera",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Alberto_Ammann",
-    "actorsPhoto": [
-     "actorsPhoto41665470337450-.jpg"
-    ]
-   },
-   {
-    "id": 5,
-    "actorsName": "Andrea Londo",
-    "character": "María Salazar",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Andrea_Londo",
-    "actorsPhoto": [
-     "actorsPhoto51665470337452-.jpg"
-    ]
-   },
-   {
-    "id": 6,
-    "actorsName": "Paulina Gaitán",
-    "character": "Tata Escobar",
-    "actorsBiography": "https://es.wikipedia.org/wiki/Paulina_Gaitán",
-    "actorsPhoto": [
-     "actorsPhoto61665470337453-.jpg"
-    ]
-   },
-   {
-    "id": 7,
-    "actorsName": "Joanna Christie",
-    "character": "Connie Murphy",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Joanna_Christie",
-    "actorsPhoto": [
-     "actorsPhoto71665470337454-.jpg"
-    ]
-   }
-  ]
- },
- {
-  "id": 10,
-  "name": "The Office",
-  "type": "Serie de TV",
-  "year": "2005/2013",
-  "rated": "13",
-  "length": "22min",
-  "imdbScore": "9,0",
-  "imdbTotalReviews": "583 mil",
-  "tomatoScore": "81",
-  "trailerLink": "https://www.youtube.com/watch?v=tNcDHWpselE",
-  "genre1": "Comedia",
-  "genre2": "Sátira",
-  "purchasePrice": "1999,90",
-  "rentalPrice": "599,90",
-  "synopsis": "Un falso documental sobre un grupo de trabajadores de oficina típicos, donde la jornada laboral consiste en choques de \r\nego, comportamiento inapropiado y tedio.",
-  "director": "Greg Daniels",
-  "directorBiography": "https://en.wikipedia.org/wiki/Greg_Daniels",
-  "screenwriter": "Greg Daniels",
-  "screenwriterBiography": "https://en.wikipedia.org/wiki/Greg_Daniels",
-  "productImage": [
-   "productImage1665471103026-.jpg"
-  ],
-  "backgroundImage": [
-   "backgroundImage1665471103031-.png"
-  ],
-  "castLength": "10",
-  "cast": [
-   {
-    "id": 1,
-    "actorsName": "Steve Carrel",
-    "character": "Michael Scott",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Steve_Carell",
-    "actorsPhoto": [
-     "actorsPhoto11665471601155-.jpg"
-    ]
-   },
-   {
-    "id": 2,
-    "actorsName": "John Krasinski",
-    "character": "Jim Halpert",
-    "actorsBiography": "https://en.wikipedia.org/wiki/John_Krasinski",
-    "actorsPhoto": [
-     "actorsPhoto21665471601160-.jpg"
-    ]
-   },
-   {
-    "id": 3,
-    "actorsName": "Jenna Fischer",
-    "character": "Pam Beasly",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Jenna_Fischer",
-    "actorsPhoto": [
-     "actorsPhoto31665471601169-.jpg"
-    ]
-   },
-   {
-    "id": 4,
-    "actorsName": "Rainn Wilson",
-    "character": "Dwight Schrute",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Rainn_Wilson",
-    "actorsPhoto": [
-     "actorsPhoto41665471601169-.jpg"
-    ]
-   },
-   {
-    "id": 5,
-    "actorsName": "Ellie Kemper",
-    "character": "Erin Hannon",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Ellie_Kemper",
-    "actorsPhoto": [
-     "actorsPhoto51665471601190-.jpg"
-    ]
-   },
-   {
-    "id": 6,
-    "actorsName": "B. J. Novak",
-    "character": "Ryan Howard",
-    "actorsBiography": "https://en.wikipedia.org/wiki/B._J._Novak",
-    "actorsPhoto": [
-     "actorsPhoto61665471601194-.jpg"
-    ]
-   },
-   {
-    "id": 7,
-    "actorsName": "Ed Helms",
-    "character": "Andy Bernard",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Ed_Helms",
-    "actorsPhoto": [
-     "actorsPhoto71665471601197-.jpg"
-    ]
-   },
-   {
-    "id": 8,
-    "actorsName": "Angela Kinsey",
-    "character": "Angela Martin",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Angela_Kinsey",
-    "actorsPhoto": [
-     "actorsPhoto81665471601198-.jpg"
-    ]
-   },
-   {
-    "id": 9,
-    "actorsName": "Oscar Nuñez",
-    "character": "Oscar Martinez",
-    "actorsBiography": "https://es.wikipedia.org/wiki/Óscar_Núñez_(actor_cubano)",
-    "actorsPhoto": [
-     "actorsPhoto91665471601234-.jpg"
-    ]
-   },
-   {
-    "id": 10,
-    "actorsName": "Creed Bratton",
-    "character": "Creed Bratton",
-    "actorsBiography": "https://en.wikipedia.org/wiki/Creed_Bratton",
-    "actorsPhoto": [
-     "actorsPhoto101665471601235-.jpg"
-    ]
-   }
-  ]
- }
-]
+    {
+     "id": 1,
+     "name": "El Padrino",
+     "type": "Película",
+     "year": "1972",
+     "rated": "R",
+     "length": "2h 55m",
+     "imdbScore": "9,2",
+     "imdbTotalReviews": "1,8 M",
+     "tomatoScore": "97",
+     "trailerLink": "https://www.youtube.com/watch?v=UaVTIH8mujA",
+     "genre1": "Crimen",
+     "genre2": "Drama",
+     "purchasePrice": "1559,90",
+     "rentalPrice": "499,90",
+     "synopsis": "Don Vito Corleone es el jefe de una de las cinco familias que ejercen el mando de la \r\nCosa Nostra en Nueva York en los años 40. Don Corleone tiene cuatro hijos; una \r\nchica, Connie, y tres varones, Santino, o Sonny, como le gusta que le llamen, Michael \r\ny Freddie, al que envían exiliado a Las Vegas, dada su incapacidad para asumir \r\npuestos de mando en la ”Familia”. Cuando otro capo, Sollozzo, al rechazar el \r\nPadrino intervenir en el negocio de estupefacientes, intenta asesinar a éste, \r\nempieza una cruenta lucha de violentos episodios entre los distintos grupos.",
+     "director": "Francis Ford Coppola",
+     "directorBiography": "https://en.wikipedia.org/wiki/Francis_Ford_Coppola",
+     "screenwriter": "Mario Puzo",
+     "screenwriterBiography": "https://en.wikipedia.org/wiki/Mario_Puzo",
+     "productImage": [
+      "productImage1665200636735-.png"
+     ],
+     "backgroundImage": [
+      "backgroundImage1665200636738-.jpg"
+     ],
+     "castLength": "7",
+     "cast": [
+      {
+       "id": 1,
+       "actorsName": "Marlon Brando",
+       "character": "Vito Corleone",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Marlon_Brando",
+       "actorsPhoto": [
+        "actorsPhoto11665200827472-.jpg"
+       ]
+      },
+      {
+       "id": 2,
+       "actorsName": "Al Pacino",
+       "character": "Mickael Corleone",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Al_Pacino",
+       "actorsPhoto": [
+        "actorsPhoto21665200827473-.jpg"
+       ]
+      },
+      {
+       "id": 3,
+       "actorsName": "Diane Keaton",
+       "character": "Key Adams",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Diane_Keaton",
+       "actorsPhoto": [
+        "actorsPhoto31665200827474-.jpg"
+       ]
+      },
+      {
+       "id": 4,
+       "actorsName": "James Caan",
+       "character": "Sony Corleone",
+       "actorsBiography": "https://en.wikipedia.org/wiki/James_Caan",
+       "actorsPhoto": [
+        "actorsPhoto41665200827481-.jpg"
+       ]
+      },
+      {
+       "id": 5,
+       "actorsName": "John Cazale",
+       "character": "Fredo Corleone",
+       "actorsBiography": "https://en.wikipedia.org/wiki/John_Cazale",
+       "actorsPhoto": [
+        "actorsPhoto51665200827499-.jpg"
+       ]
+      },
+      {
+       "id": 6,
+       "actorsName": "Robert Duvall",
+       "character": "Tom Hagen",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Robert_Duvall",
+       "actorsPhoto": [
+        "actorsPhoto61665200827499-.png"
+       ]
+      },
+      {
+       "id": 7,
+       "actorsName": "Richard S. Castellano",
+       "character": "Clemenza",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Richard_S._Castellano",
+       "actorsPhoto": [
+        "actorsPhoto71665200827499-.jpg"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 2,
+     "name": "Peaky Blinders",
+     "type": "Serie de TV",
+     "year": "2013/2022",
+     "rated": "R",
+     "length": "1h",
+     "imdbScore": "8,8",
+     "imdbTotalReviews": "530 mil",
+     "tomatoScore": "94",
+     "trailerLink": "https://www.youtube.com/watch?v=oVzVdvGIC7U",
+     "genre1": "Crimen",
+     "genre2": "Drama",
+     "purchasePrice": "1999,90",
+     "rentalPrice": "599,90",
+     "synopsis": "Peaky Blinders es un drama de BBC que narra la historia de la familia gitana Shelby y su banda de gángsters, un grupo \r\nde personas características por sus boinas con cuchillas y dueñas de los asuntos ilegales, que dominan las apuestas \r\nclandestinas y se rigen mediante extorsiones.",
+     "director": "Otto Bathurst",
+     "directorBiography": "https://en.wikipedia.org/wiki/Otto_Bathurst",
+     "screenwriter": "Steven Knight",
+     "screenwriterBiography": "https://en.wikipedia.org/wiki/Steven_Knight",
+     "productImage": [
+      "productImage1665201556571-.jpg"
+     ],
+     "backgroundImage": [
+      "backgroundImage1665201556581-.jpg"
+     ],
+     "castLength": "9",
+     "cast": [
+      {
+       "id": 1,
+       "actorsName": "Cillian Murphy",
+       "character": "Tommy Shelby",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Cillian_Murphy",
+       "actorsPhoto": [
+        "actorsPhoto91665212057685-.jpg"
+       ]
+      },
+      {
+       "id": 2,
+       "actorsName": "Paul Anderson",
+       "character": "Arthur Shelby",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Paul_Anderson_(actor)",
+       "actorsPhoto": [
+        "actorsPhoto21665202057651-.jpg"
+       ]
+      },
+      {
+       "id": 3,
+       "actorsName": "Tom Hardy",
+       "character": "Alfie Solomons",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Tom_Hardy",
+       "actorsPhoto": [
+        "actorsPhoto31665202057652-.jpg"
+       ]
+      },
+      {
+       "id": 4,
+       "actorsName": "Helen McCrory",
+       "character": "Polly Gray",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Helen_McCrory",
+       "actorsPhoto": [
+        "actorsPhoto41665202057670-.jpg"
+       ]
+      },
+      {
+       "id": 5,
+       "actorsName": "Sophie Rundle",
+       "character": "Ada Shelby",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Sophie_Rundle",
+       "actorsPhoto": [
+        "actorsPhoto51665202057671-.jpg"
+       ]
+      },
+      {
+       "id": 6,
+       "actorsName": "Joe Cole",
+       "character": "John Shelby",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Joe_Cole_(actor)",
+       "actorsPhoto": [
+        "actorsPhoto91664202057685-.jpg"
+       ]
+      },
+      {
+       "id": 7,
+       "actorsName": "Finn Cole",
+       "character": "Michael Gray",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Finn_Cole",
+       "actorsPhoto": [
+        "actorsPhoto91664201057685-.jpg"
+       ]
+      },
+      {
+       "id": 8,
+       "actorsName": "Anya Taylor-Joy",
+       "character": "Gina Gray",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Anya_Taylor-Joy",
+       "actorsPhoto": [
+        "actorsPhoto81665202057671-.jpg"
+       ]
+      },
+      {
+       "id": 9,
+       "actorsName": "Natasha O'Keeffe",
+       "character": "Lizzie Shelby",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Natasha_O%27Keeffe",
+       "actorsPhoto": [
+        "actorsPhoto91665202057685-.jpg"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 3,
+     "name": "Apocalypse Now",
+     "type": "Película",
+     "year": "1979",
+     "rated": "R",
+     "length": "2h 27min",
+     "imdbScore": "8,5",
+     "imdbTotalReviews": "663 mil",
+     "tomatoScore": "93",
+     "trailerLink": "https://www.youtube.com/watch?v=9l-ViOOFH-s",
+     "genre1": "Bélico",
+     "genre2": "Drama",
+     "purchasePrice": "1559,90",
+     "rentalPrice": "499,90",
+     "synopsis": "Un oficial del ejército estadounidense que sirve en Vietnam recibe el encargo de \r\nasesinar a un coronel renegado de las fuerzas especiales que se ve a sí mismo \r\ncomo un dios.",
+     "director": "Francis Ford Coppola",
+     "directorBiography": "https://en.wikipedia.org/wiki/Francis_Ford_Coppola",
+     "screenwriter": "John Milius",
+     "screenwriterBiography": "https://en.wikipedia.org/wiki/John_Milius",
+     "productImage": [
+      "productImage1665203541977-.png"
+     ],
+     "backgroundImage": [
+      "backgroundImage1665203541978-.jpg"
+     ],
+     "castLength": "9",
+     "cast": [
+      {
+       "id": 1,
+       "actorsName": "Marlon Brando",
+       "character": "Colonel Walter E. Kurtz",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Marlon_Brando",
+       "actorsPhoto": [
+        "actorsPhoto11665204173305-.jpg"
+       ]
+      },
+      {
+       "id": 2,
+       "actorsName": "Martin Sheen",
+       "character": "Captain Benjamin L. Willard",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Martin_Sheen",
+       "actorsPhoto": [
+        "actorsPhoto21665204173306-.jpg"
+       ]
+      },
+      {
+       "id": 3,
+       "actorsName": "Robert Duvall",
+       "character": "Lieutenant Colonel Bill Kilgore",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Robert_Duvall",
+       "actorsPhoto": [
+        "actorsPhoto31665204173306-.png"
+       ]
+      },
+      {
+       "id": 4,
+       "actorsName": "Dennis Hopper",
+       "character": "Photojournalist",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Dennis_Hopper",
+       "actorsPhoto": [
+        "actorsPhoto41665204173309-.jpg"
+       ]
+      },
+      {
+       "id": 5,
+       "actorsName": "Laurence Fishburne",
+       "character": "Tyrone 'Clean' Miller",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Laurence_Fishburne",
+       "actorsPhoto": [
+        "actorsPhoto51665204173310-.jpg"
+       ]
+      },
+      {
+       "id": 6,
+       "actorsName": "Harrison Ford",
+       "character": "Colonel Lucas",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Harrison_Ford",
+       "actorsPhoto": [
+        "actorsPhoto61665204173317-.jpg"
+       ]
+      },
+      {
+       "id": 7,
+       "actorsName": "Jerry Ziesmer",
+       "character": "Jerry",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Jerry_Ziesmer",
+       "actorsPhoto": [
+        "actorsPhoto71665204173323-.jpg"
+       ]
+      },
+      {
+       "id": 8,
+       "actorsName": "Sam Bottoms",
+       "character": "Lance B. Johnson",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Sam_Bottoms",
+       "actorsPhoto": [
+        "actorsPhoto81665204173326-.jpg"
+       ]
+      },
+      {
+       "id": 9,
+       "actorsName": "Frederic Forrest",
+       "character": "Jay 'Chef' Hicks",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Frederic_Forrest",
+       "actorsPhoto": [
+        "actorsPhoto91665204173328-.jpg"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 4,
+     "name": "El Padrino II",
+     "type": "Película",
+     "year": "1974",
+     "rated": "R",
+     "length": "3h 22min",
+     "imdbScore": "9",
+     "imdbTotalReviews": "1,3 M",
+     "tomatoScore": "96",
+     "trailerLink": "https://www.youtube.com/watch?v=9O1Iy9od7-A",
+     "genre1": "Crimen",
+     "genre2": "Drama",
+     "purchasePrice": "1559,90",
+     "rentalPrice": "499,90",
+     "synopsis": "El Padrino II retoma la historia de la familia Corleone en el punto al cual había llegado la primera parte, pero con una \r\nvuelta de tuerca: mientras sigue el ascenso de Michael en el mundo del crimen durante los años 50, reconstruye los \r\nprimeros años del padre de Michael, Vito, desde que escapa, aún niño, de la violenta Sicilia hasta que comienza a dar \r\nsus primeros pasos como líder mafioso en Nueva York, en las primeras décadas del siglo XX.",
+     "director": "Francis Ford Coppola",
+     "directorBiography": "https://en.wikipedia.org/wiki/Francis_Ford_Coppola",
+     "screenwriter": "Mario Puzo",
+     "screenwriterBiography": "https://en.wikipedia.org/wiki/Mario_Puzo",
+     "productImage": [
+      "productImage1665464301943-.png"
+     ],
+     "backgroundImage": [
+      "backgroundImage1665464301944-.jpg"
+     ],
+     "castLength": "9",
+     "cast": [
+      {
+       "id": 1,
+       "actorsName": "Al Pacino",
+       "character": "Mickael Corleone",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Al_Pacino",
+       "actorsPhoto": [
+        "actorsPhoto11665464776606-.jpg"
+       ]
+      },
+      {
+       "id": 2,
+       "actorsName": "Robert De Niro",
+       "character": "Vito Corleone",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Robert_De_Niro",
+       "actorsPhoto": [
+        "actorsPhoto21665464776607-.jpg"
+       ]
+      },
+      {
+       "id": 3,
+       "actorsName": "Diane Keaton",
+       "character": "Key Adams",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Diane_Keaton",
+       "actorsPhoto": [
+        "actorsPhoto31665464776632-.jpg"
+       ]
+      },
+      {
+       "id": 4,
+       "actorsName": "Robert Duvall",
+       "character": "Tom Hagen",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Robert_Duvall",
+       "actorsPhoto": [
+        "actorsPhoto41665464776655-.png"
+       ]
+      },
+      {
+       "id": 5,
+       "actorsName": "John Cazale",
+       "character": "Fredo Corleone",
+       "actorsBiography": "https://en.wikipedia.org/wiki/John_Cazale",
+       "actorsPhoto": [
+        "actorsPhoto51665464776656-.jpg"
+       ]
+      },
+      {
+       "id": 6,
+       "actorsName": "Talia Shire",
+       "character": "Connie Corleone",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Talia_Shire",
+       "actorsPhoto": [
+        "actorsPhoto61665464776657-.jpg"
+       ]
+      },
+      {
+       "id": 7,
+       "actorsName": "Michael V. Gazzo",
+       "character": "Frankie Pentangeli",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Michael_V._Gazzo",
+       "actorsPhoto": [
+        "actorsPhoto71665464776659-.jpg"
+       ]
+      },
+      {
+       "id": 8,
+       "actorsName": "Bruno Kirby",
+       "character": "Peter Clemenza",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Bruno_Kirby",
+       "actorsPhoto": [
+        "actorsPhoto81665464776660-.jpg"
+       ]
+      },
+      {
+       "id": 9,
+       "actorsName": "Lee Strasberg",
+       "character": "Hyman Roth",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Lee_Strasberg",
+       "actorsPhoto": [
+        "actorsPhoto91665464776684-.jpg"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 5,
+     "name": "Dracula",
+     "type": "Película",
+     "year": "1992",
+     "rated": "R",
+     "length": "2h 8min",
+     "imdbScore": "7,4",
+     "imdbTotalReviews": "217 mil",
+     "tomatoScore": "76",
+     "trailerLink": "https://www.youtube.com/watch?v=CjgwUB1CXek",
+     "genre1": "Terror",
+     "genre2": "Fantasía",
+     "purchasePrice": "1259,90",
+     "rentalPrice": "399,90",
+     "synopsis": "El conde Drácula, un príncipe del siglo XV, está condenado a vivir de la sangre de los vivos por toda la eternidad. El joven \r\nabogado Jonathan Harker es enviado al castillo de Drácula para finalizar un trato de tierras, pero cuando el Conde ve \r\nuna foto de la prometida de Harker, Mina, la viva imagen de su esposa muerta, lo encarcela y se dirige a Londres para \r\nlocalizarla.",
+     "director": "Francis Ford Coppola",
+     "directorBiography": "https://en.wikipedia.org/wiki/Francis_Ford_Coppola",
+     "screenwriter": "James V. Hart",
+     "screenwriterBiography": "https://en.wikipedia.org/wiki/James_V._Hart",
+     "productImage": [
+      "productImage1665465337067-.jpg"
+     ],
+     "backgroundImage": [
+      "backgroundImage1665465337068-.jpg"
+     ],
+     "castLength": "10",
+     "cast": [
+      {
+       "id": 1,
+       "actorsName": "Gary Oldman",
+       "character": "Dracula",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Gary_Oldman",
+       "actorsPhoto": [
+        "actorsPhoto11665466023803-.jpg"
+       ]
+      },
+      {
+       "id": 2,
+       "actorsName": "Winona Ryder",
+       "character": "Mina Murray",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Winona_Ryder",
+       "actorsPhoto": [
+        "actorsPhoto21665466023805-.jpg"
+       ]
+      },
+      {
+       "id": 3,
+       "actorsName": "Anthony Hopkins",
+       "character": "Abraham Van Helsing",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Anthony_Hopkins",
+       "actorsPhoto": [
+        "actorsPhoto31665466023811-.jpg"
+       ]
+      },
+      {
+       "id": 4,
+       "actorsName": "Keanu Reeves",
+       "character": "Jonathan Harker",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Keanu_Reeves",
+       "actorsPhoto": [
+        "actorsPhoto41665466023811-.jpg"
+       ]
+      },
+      {
+       "id": 5,
+       "actorsName": "Richard E. Grant",
+       "character": "Dr. Jack Seward",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Richard_E._Grant",
+       "actorsPhoto": [
+        "actorsPhoto51665466023842-.jpg"
+       ]
+      },
+      {
+       "id": 6,
+       "actorsName": "Monica Bellucci",
+       "character": "Novia de Dracula",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Monica_Bellucci",
+       "actorsPhoto": [
+        "actorsPhoto61665466023846-.jpg"
+       ]
+      },
+      {
+       "id": 7,
+       "actorsName": "Sadie Frost",
+       "character": "Lucy Westenra",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Sadie_Frost",
+       "actorsPhoto": [
+        "actorsPhoto71665466023889-.jpg"
+       ]
+      },
+      {
+       "id": 8,
+       "actorsName": "Cary Elwes",
+       "character": "Arthur Holmwood",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Cary_Elwes",
+       "actorsPhoto": [
+        "actorsPhoto81665466023892-.jpg"
+       ]
+      },
+      {
+       "id": 9,
+       "actorsName": "Tom Waits",
+       "character": "Renfield",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Tom_Waits",
+       "actorsPhoto": [
+        "actorsPhoto91665466023901-.jpg"
+       ]
+      },
+      {
+       "id": 10,
+       "actorsName": "Billy Campbell",
+       "character": "Quincey Morris",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Billy_Campbell",
+       "actorsPhoto": [
+        "actorsPhoto101665466023902-.jpg"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 6,
+     "name": "Taxi Driver",
+     "type": "Película",
+     "year": "1976",
+     "rated": "R",
+     "length": "1h 54min",
+     "imdbScore": "8,2",
+     "imdbTotalReviews": "822 mil",
+     "tomatoScore": "96",
+     "trailerLink": "https://www.youtube.com/watch?v=UUxD4-dEzn0",
+     "genre1": "Crimen",
+     "genre2": "Drama",
+     "purchasePrice": "1999,90",
+     "rentalPrice": "499,90",
+     "synopsis": "Aquejado de insomnio, el solitario y perturbado Travis Bickle (Robert De Niro) acepta un trabajo como taxista en la \r\nciudad de Nueva York, rondando las calles todas las noches, alejándose cada vez más de la realidad mientras sueña \r\ncon limpiar la sucia ciudad. Cuando Travis conoce a la bella trabajadora de campaña Betsy (Cybill Shepherd), se \r\nobsesiona con la idea de salvar el mundo, primero planea asesinar a un candidato presidencial y luego dirige su \r\natención a rescatar a la prostituta de 12 añ",
+     "director": "Martin Scorsese",
+     "directorBiography": "https://en.wikipedia.org/wiki/Martin_Scorsese",
+     "screenwriter": "Paul Schrader",
+     "screenwriterBiography": "https://en.wikipedia.org/wiki/Paul_Schrader",
+     "productImage": [
+      "productImage1665466396377-.jpg"
+     ],
+     "backgroundImage": [
+      "backgroundImage1665466396394-.jpg"
+     ],
+     "castLength": "6",
+     "cast": [
+      {
+       "id": 1,
+       "actorsName": "Robert De Niro",
+       "character": "Travis Bickle",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Robert_De_Niro",
+       "actorsPhoto": [
+        "actorsPhoto11665466676574-.jpg"
+       ]
+      },
+      {
+       "id": 2,
+       "actorsName": "Jodie Foster",
+       "character": "Iris",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Jodie_Foster",
+       "actorsPhoto": [
+        "actorsPhoto21665466676597-.jpg"
+       ]
+      },
+      {
+       "id": 3,
+       "actorsName": "Cybill Shepherd",
+       "character": "Betsy",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Cybill_Shepherd",
+       "actorsPhoto": [
+        "actorsPhoto31665466676609-.jpg"
+       ]
+      },
+      {
+       "id": 4,
+       "actorsName": "Albert Brooks",
+       "character": "Tom",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Albert_Brooks",
+       "actorsPhoto": [
+        "actorsPhoto41665466676611-.jpg"
+       ]
+      },
+      {
+       "id": 5,
+       "actorsName": "Harvey Keitel",
+       "character": "Matthew Higgins",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Harvey_Keitel",
+       "actorsPhoto": [
+        "actorsPhoto51665466676612-.jpg"
+       ]
+      },
+      {
+       "id": 6,
+       "actorsName": "Peter Boyle",
+       "character": "Wizard",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Peter_Boyle",
+       "actorsPhoto": [
+        "actorsPhoto61665466676613-.jpg"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 7,
+     "name": "Breaking Bad",
+     "type": "Serie de TV",
+     "year": "2008/2013",
+     "rated": "16",
+     "length": "49min",
+     "imdbScore": "9,5",
+     "imdbTotalReviews": "1,8 M",
+     "tomatoScore": "96",
+     "trailerLink": "https://www.youtube.com/watch?v=HhesaQXLuRY",
+     "genre1": "Crimen",
+     "genre2": "Drama",
+     "purchasePrice": "1999,90",
+     "rentalPrice": "599,90",
+     "synopsis": "En Albuquerque, ciudad del estado de Nuevo México (Estados Unidos), un profesor de química de instituto llamado \r\nWalter White (Bryan Cranston) descubre que padece un cáncer incurable. A raíz de esta noticia, y temiendo por la \r\neconomía de su familia, decide aliarse con un antiguo alumno, Jesse Pinkman (Aaron Paul), para producir y vender \r\nmetanfetamina.",
+     "director": "Vince Gilligan",
+     "directorBiography": "https://en.wikipedia.org/wiki/Vince_Gilligan",
+     "screenwriter": "Vince Gilligan",
+     "screenwriterBiography": "https://en.wikipedia.org/wiki/Vince_Gilligan",
+     "productImage": [
+      "productImage1665467510398-.jpg"
+     ],
+     "backgroundImage": [
+      "backgroundImage1665467510429-.jpg"
+     ],
+     "castLength": "10",
+     "cast": [
+      {
+       "id": 1,
+       "actorsName": "Bryan Cranston",
+       "character": "Walter White",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Bryan_Cranston",
+       "actorsPhoto": [
+        "actorsPhoto11665468212541-.jpg"
+       ]
+      },
+      {
+       "id": 2,
+       "actorsName": "Aaron Paul",
+       "character": "Jesse Pinkman",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Aaron_Paul",
+       "actorsPhoto": [
+        "actorsPhoto21665468212542-.jpg"
+       ]
+      },
+      {
+       "id": 3,
+       "actorsName": "Anna Gun",
+       "character": "Skyler White",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Anna_Gunn",
+       "actorsPhoto": [
+        "actorsPhoto31665468212545-.jpg"
+       ]
+      },
+      {
+       "id": 4,
+       "actorsName": "Dean Norris",
+       "character": "Hank Schrader",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Dean_Norris",
+       "actorsPhoto": [
+        "actorsPhoto41665468212602-.jpg"
+       ]
+      },
+      {
+       "id": 5,
+       "actorsName": "RJ Mitte",
+       "character": "Walter White Jr.",
+       "actorsBiography": "https://en.wikipedia.org/wiki/RJ_Mitte",
+       "actorsPhoto": [
+        "actorsPhoto51665468212603-.jpg"
+       ]
+      },
+      {
+       "id": 6,
+       "actorsName": "Bob Odenkirk",
+       "character": "Saul Goodman",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Bob_Odenkirk",
+       "actorsPhoto": [
+        "actorsPhoto61665468212605-.jpg"
+       ]
+      },
+      {
+       "id": 7,
+       "actorsName": "Jonathan Banks",
+       "character": "Mike Ehrmantraut",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Jonathan_Banks",
+       "actorsPhoto": [
+        "actorsPhoto71665468212609-.jpg"
+       ]
+      },
+      {
+       "id": 8,
+       "actorsName": "Giancarlo Esposito",
+       "character": "Gus Fring",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Giancarlo_Esposito",
+       "actorsPhoto": [
+        "actorsPhoto81665468212622-.jpg"
+       ]
+      },
+      {
+       "id": 9,
+       "actorsName": "Betsy Brandt",
+       "character": "Marie Schrader",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Betsy_Brandt",
+       "actorsPhoto": [
+        "actorsPhoto91665468212625-.jpg"
+       ]
+      },
+      {
+       "id": 10,
+       "actorsName": "Steven Michael Quezada",
+       "character": "Steven Gomez",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Steven_Michael_Quezada",
+       "actorsPhoto": [
+        "actorsPhoto101665468212647-.jpg"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 8,
+     "name": "Better Call Saul",
+     "type": "Serie de TV",
+     "year": "2015/2022",
+     "rated": "16",
+     "length": "46min",
+     "imdbScore": "8,9",
+     "imdbTotalReviews": "508 mil",
+     "tomatoScore": "98",
+     "trailerLink": "https://www.youtube.com/watch?v=HN4oydykJFc",
+     "genre1": "Crimen",
+     "genre2": "Drama",
+     "purchasePrice": "1999,90",
+     "rentalPrice": "599,90",
+     "synopsis": "En 2002, Jimmy McGill aún no se había convertido en Saul Goodman, uno de los abogados criminalistas más \r\nsolicitados en el mundo del hampa de Nuevo México. Por aquel entonces, McGill acababa de empezar una carrera que \r\nle acabó llevando a defender al mismísimo Walter White.",
+     "director": "Vince Gilligan",
+     "directorBiography": "https://en.wikipedia.org/wiki/Vince_Gilligan",
+     "screenwriter": "Vince Gilligan",
+     "screenwriterBiography": "https://en.wikipedia.org/wiki/Vince_Gilligan",
+     "productImage": [
+      "productImage1665468531920-.jpg"
+     ],
+     "backgroundImage": [
+      "backgroundImage1665468531923-.jpg"
+     ],
+     "castLength": "8",
+     "cast": [
+      {
+       "id": 1,
+       "actorsName": "Bob Odenkirk",
+       "character": "Saul Goodman",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Bob_Odenkirk",
+       "actorsPhoto": [
+        "actorsPhoto11665468873875-.jpg"
+       ]
+      },
+      {
+       "id": 2,
+       "actorsName": "Rhea Seehorn",
+       "character": "Kim Wexler",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Rhea_Seehorn",
+       "actorsPhoto": [
+        "actorsPhoto21665468873880-.jpg"
+       ]
+      },
+      {
+       "id": 3,
+       "actorsName": "Jonathan Banks",
+       "character": "Mike Ehrmantraut",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Jonathan_Banks",
+       "actorsPhoto": [
+        "actorsPhoto31665468873887-.jpg"
+       ]
+      },
+      {
+       "id": 4,
+       "actorsName": "Michael Mando",
+       "character": "Nacho Varga",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Michael_Mando",
+       "actorsPhoto": [
+        "actorsPhoto41665468873933-.jpg"
+       ]
+      },
+      {
+       "id": 5,
+       "actorsName": "Patrick Fabian",
+       "character": "Howard Hamlin",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Patrick_Fabian",
+       "actorsPhoto": [
+        "actorsPhoto51665468873937-.jpg"
+       ]
+      },
+      {
+       "id": 6,
+       "actorsName": "Tony Dalton",
+       "character": "Lalo Salamanca",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Tony_Dalton",
+       "actorsPhoto": [
+        "actorsPhoto61665468873941-.jpg"
+       ]
+      },
+      {
+       "id": 7,
+       "actorsName": "Giancarlo Esposito",
+       "character": "Gus Fring",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Giancarlo_Esposito",
+       "actorsPhoto": [
+        "actorsPhoto71665468873942-.jpg"
+       ]
+      },
+      {
+       "id": 8,
+       "actorsName": "Michael McKean",
+       "character": "Chuck McGill",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Michael_McKean",
+       "actorsPhoto": [
+        "actorsPhoto81665468873944-.jpg"
+       ]
+      },
+      {
+       "id": 9,
+       "actorsName": "Lavell Crawford",
+       "character": "Huell Babineaux",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Lavell_Crawford",
+       "actorsPhoto": [
+        "actorsPhoto81665468873945-.jpg"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 9,
+     "name": "Narcos",
+     "type": "Serie de TV",
+     "year": "2015/2017",
+     "rated": "16",
+     "length": "49min",
+     "imdbScore": "8,8",
+     "imdbTotalReviews": "418 mil",
+     "tomatoScore": "89",
+     "trailerLink": "https://www.youtube.com/watch?v=RNWAKZzgbp4",
+     "genre1": "Crimen",
+     "genre2": "Drama",
+     "purchasePrice": "1999,90",
+     "rentalPrice": "599,90",
+     "synopsis": "Una mirada a las hazañas criminales del narcotraficante colombiano Pablo Escobar, así como a muchos otros capos \r\nque plagaron el país a través de los años.",
+     "director": "Carlo Bernard",
+     "directorBiography": "https://en.wikipedia.org/wiki/Carlos_Bernard",
+     "screenwriter": "Carlo Bernard",
+     "screenwriterBiography": "https://en.wikipedia.org/wiki/Carlos_Bernard",
+     "productImage": [
+      "productImage1665469986964-.jpg"
+     ],
+     "backgroundImage": [
+      "backgroundImage1665469986971-.jpg"
+     ],
+     "castLength": "7",
+     "cast": [
+      {
+       "id": 1,
+       "actorsName": "Wagner Moura",
+       "character": "Pablo Escobar",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Wagner_Moura",
+       "actorsPhoto": [
+        "actorsPhoto11665470337396-.jpg"
+       ]
+      },
+      {
+       "id": 2,
+       "actorsName": "Pedro Pascal",
+       "character": "Javier Peña",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Pedro_Pascal",
+       "actorsPhoto": [
+        "actorsPhoto21665470337398-.jpg"
+       ]
+      },
+      {
+       "id": 3,
+       "actorsName": "Boyd Holbrook",
+       "character": "Steve Murphy",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Boyd_Holbrook",
+       "actorsPhoto": [
+        "actorsPhoto31665470337423-.jpg"
+       ]
+      },
+      {
+       "id": 4,
+       "actorsName": "Alberto Ammann",
+       "character": "Hélmer Herrera",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Alberto_Ammann",
+       "actorsPhoto": [
+        "actorsPhoto41665470337450-.jpg"
+       ]
+      },
+      {
+       "id": 5,
+       "actorsName": "Andrea Londo",
+       "character": "María Salazar",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Andrea_Londo",
+       "actorsPhoto": [
+        "actorsPhoto51665470337452-.jpg"
+       ]
+      },
+      {
+       "id": 6,
+       "actorsName": "Paulina Gaitán",
+       "character": "Tata Escobar",
+       "actorsBiography": "https://es.wikipedia.org/wiki/Paulina_Gaitán",
+       "actorsPhoto": [
+        "actorsPhoto61665470337453-.jpg"
+       ]
+      },
+      {
+       "id": 7,
+       "actorsName": "Joanna Christie",
+       "character": "Connie Murphy",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Joanna_Christie",
+       "actorsPhoto": [
+        "actorsPhoto71665470337454-.jpg"
+       ]
+      }
+     ]
+    },
+    {
+     "id": 10,
+     "name": "The Office",
+     "type": "Serie de TV",
+     "year": "2005/2013",
+     "rated": "13",
+     "length": "22min",
+     "imdbScore": "9,0",
+     "imdbTotalReviews": "583 mil",
+     "tomatoScore": "81",
+     "trailerLink": "https://www.youtube.com/watch?v=tNcDHWpselE",
+     "genre1": "Comedia",
+     "genre2": "Sátira",
+     "purchasePrice": "1999,90",
+     "rentalPrice": "599,90",
+     "synopsis": "Un falso documental sobre un grupo de trabajadores de oficina típicos, donde la jornada laboral consiste en choques de \r\nego, comportamiento inapropiado y tedio.",
+     "director": "Greg Daniels",
+     "directorBiography": "https://en.wikipedia.org/wiki/Greg_Daniels",
+     "screenwriter": "Greg Daniels",
+     "screenwriterBiography": "https://en.wikipedia.org/wiki/Greg_Daniels",
+     "productImage": [
+      "productImage1665471103026-.jpg"
+     ],
+     "backgroundImage": [
+      "backgroundImage1665471103031-.png"
+     ],
+     "castLength": "10",
+     "cast": [
+      {
+       "id": 1,
+       "actorsName": "Steve Carrel",
+       "character": "Michael Scott",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Steve_Carell",
+       "actorsPhoto": [
+        "actorsPhoto11665471601155-.jpg"
+       ]
+      },
+      {
+       "id": 2,
+       "actorsName": "John Krasinski",
+       "character": "Jim Halpert",
+       "actorsBiography": "https://en.wikipedia.org/wiki/John_Krasinski",
+       "actorsPhoto": [
+        "actorsPhoto21665471601160-.jpg"
+       ]
+      },
+      {
+       "id": 3,
+       "actorsName": "Jenna Fischer",
+       "character": "Pam Beasly",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Jenna_Fischer",
+       "actorsPhoto": [
+        "actorsPhoto31665471601169-.jpg"
+       ]
+      },
+      {
+       "id": 4,
+       "actorsName": "Rainn Wilson",
+       "character": "Dwight Schrute",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Rainn_Wilson",
+       "actorsPhoto": [
+        "actorsPhoto41665471601169-.jpg"
+       ]
+      },
+      {
+       "id": 5,
+       "actorsName": "Ellie Kemper",
+       "character": "Erin Hannon",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Ellie_Kemper",
+       "actorsPhoto": [
+        "actorsPhoto51665471601190-.jpg"
+       ]
+      },
+      {
+       "id": 6,
+       "actorsName": "B. J. Novak",
+       "character": "Ryan Howard",
+       "actorsBiography": "https://en.wikipedia.org/wiki/B._J._Novak",
+       "actorsPhoto": [
+        "actorsPhoto61665471601194-.jpg"
+       ]
+      },
+      {
+       "id": 7,
+       "actorsName": "Ed Helms",
+       "character": "Andy Bernard",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Ed_Helms",
+       "actorsPhoto": [
+        "actorsPhoto71665471601197-.jpg"
+       ]
+      },
+      {
+       "id": 8,
+       "actorsName": "Angela Kinsey",
+       "character": "Angela Martin",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Angela_Kinsey",
+       "actorsPhoto": [
+        "actorsPhoto81665471601198-.jpg"
+       ]
+      },
+      {
+       "id": 9,
+       "actorsName": "Oscar Nuñez",
+       "character": "Oscar Martinez",
+       "actorsBiography": "https://es.wikipedia.org/wiki/Óscar_Núñez_(actor_cubano)",
+       "actorsPhoto": [
+        "actorsPhoto91665471601234-.jpg"
+       ]
+      },
+      {
+       "id": 10,
+       "actorsName": "Creed Bratton",
+       "character": "Creed Bratton",
+       "actorsBiography": "https://en.wikipedia.org/wiki/Creed_Bratton",
+       "actorsPhoto": [
+        "actorsPhoto101665471601235-.jpg"
+       ]
+      }
+     ]
+    }
+   ]
