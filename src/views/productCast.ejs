@@ -72,18 +72,18 @@
           <% for( let i = 1; i <= product.castLength; i++ ) { %>
           <h2 class="main__fieldDescription">Actor n°<%= i %> </h2>
           <div>
-            <input type="text" class="text-box" id="actorsName" name="actorsName<%= i %>" placeholder="Nombre del actor">
+            <input type="text" class="text-box" id="actorsName" name="actorsName<%= i %>" placeholder="Nombre del actor" required>
           </div>
           <div>
-            <input type="text" class="text-box" id="character" name="character<%= i %>" placeholder="Nombre del personaje">
+            <input type="text" class="text-box" id="character" name="character<%= i %>" placeholder="Nombre del personaje" required>
           </div>
           <div>
-            <input type="text" class="text-box" id="actorsBiography" name="actorsBiography<%= i %>" placeholder="Link de biografía del actor">
+            <input type="url" class="text-box" id="actorsBiography" name="actorsBiography<%= i %>" placeholder="Link de biografía del actor" required>
           </div>
           <div class="main__file-wrap">
             <div class="main__fieldDescription">Fotografía del actor</div>
             <label for="actorsPhoto"></label>
-            <input type="file" id="actorsPhoto" name="actorsPhoto<%= i %>">
+            <input type="file" id="actorsPhoto" name="actorsPhoto<%= i %>" accept="image/jpg, image/png, image/jpeg" required>
           </div>
           <% } %>
         </div>

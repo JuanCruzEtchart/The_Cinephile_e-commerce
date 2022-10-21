@@ -18,7 +18,7 @@
       </div>
       <form class="main__form-put" action="/product/edit/<%= product.id %>?_method=PUT" enctype="multipart/form-data" method="POST">
         <div>
-          <input type="text" class="text-box" id="name" name="name" value="<%= product.name %>" placeholder="Nombre del producto">
+          <input type="text" class="text-box" id="name" name="name" value="<%= product.name %>" placeholder="Nombre del producto" required>
         </div>
         <div class="main__radioForm">
           <div class="main__radioForm-container">
@@ -37,24 +37,24 @@
           </div>
         </div>
         <div>
-          <input type="text" class="text-box" id="year" name="year" value="<%= product.year %>" placeholder="Año de salida">
+          <input type="text" class="text-box" id="year" name="year" value="<%= product.year %>" placeholder="Año de salida" required>
         </div>
         <div>
-          <input type="text" class="text-box" id="rated" name="rated" value="<%= product.rated %>" placeholder="Clasificación">
+          <input type="text" class="text-box" id="rated" name="rated" value="<%= product.rated %>" placeholder="Clasificación" required>
         </div>
         <div>
-          <input type="text" class="text-box" id="length" name="length" value="<%= product.length %>" placeholder="Duración">
+          <input type="text" class="text-box" id="length" name="length" value="<%= product.length %>" placeholder="Duración" required>
           <div>
-            <input type="text" class="text-box" id="imdbScore" name="imdbScore" value="<%= product.imdbScore %>" placeholder="Puntaje de IMDb">
+            <input type="text" class="text-box" id="imdbScore" name="imdbScore" value="<%= product.imdbScore %>" placeholder="Puntaje de IMDb" required>
           </div>
           <div>
-            <input type="text" class="text-box" id="imdbTotalReviews" name="imdbTotalReviews" value="<%= product.imdbTotalReviews %>" placeholder="Reseñas totales de IMDb">
+            <input type="text" class="text-box" id="imdbTotalReviews" name="imdbTotalReviews" value="<%= product.imdbTotalReviews %>" placeholder="Reseñas totales de IMDb" required>
           </div>
           <div>
-            <input type="text" class="text-box" id="tomatoScore" name="tomatoScore" value="<%= product.tomatoScore %>" placeholder="Puntaje de Rotten Tomatoes">
+            <input type="text" class="text-box" id="tomatoScore" name="tomatoScore" value="<%= product.tomatoScore %>" placeholder="Puntaje de Rotten Tomatoes" required>
           </div>
           <div>
-            <input type="text" class="text-box" id="trailerLink" name="trailerLink" value="<%= product.trailerLink %>" placeholder="Link del trailer">
+            <input type="url" class="text-box" id="trailerLink" name="trailerLink" value="<%= product.trailerLink %>" placeholder="Link del trailer" required>
           </div>
           <div class="main__genreSelect">
             <div class="main__fieldDescription">Elegir género 1</div>
@@ -91,29 +91,35 @@
             </select>
           </div>
           <div>
-            <input type="text" class="text-box" id="purchasePrice" name="purchasePrice" value="<%= product.purchasePrice %>" placeholder="Precio de venta">
-            <input type="text" class="text-box" id="rentalPrice" name="rentalPrice" value="<%= product.rentalPrice %>" placeholder="Precio de alquiler">
+            <input type="text" class="text-box" id="purchasePrice" name="purchasePrice" value="<%= product.purchasePrice %>" placeholder="Precio de venta" required>
+            <input type="text" class="text-box" id="rentalPrice" name="rentalPrice" value="<%= product.rentalPrice %>" placeholder="Precio de alquiler" required>
           </div>
           <div>
             <textarea class="textarea" id="synopsis" name="synopsis" cols="30" rows="10" wrap="hard" placeholder="Sinopsis del producto"><%= product.synopsis %></textarea>
           </div>
           <div>
-            <input type="text" class="text-box" id="director" name="director" value="<%= product.director %>" placeholder="Director">
+            <input type="text" class="text-box" id="director" name="director" value="<%= product.director %>" placeholder="Director" required>
           </div>
           <div>
-            <input type="text" class="text-box" id="script" name="script" value="<%= product.script %>" placeholder="Guionista">
+            <input type="url" class="text-box" id="directorBiography" name="directorBiography" value="<%= product.directorBiography %>">
+          </div>
+          <div>
+            <input type="text" class="text-box" id="script" name="script" value="<%= product.screenwriter %>" placeholder="Guionista" required>
+          </div>
+          <div>
+            <input type="url" class="text-box" id="screenwriterBiography" name="screenwriterBiography" value="<%= product.screenwriterBiography%>">
           </div>
           <div class="main__file-wrap">
             <div class="main__fieldDescription">Imagen del producto</div>
             <img src="/images/products/productsCreated/<%= product.productImage %> " alt="Product image">
             <label for="productImage"></label>
-            <input type="file" id="productImage" name="productImage">
+            <input type="file" id="productImage" name="productImage" accept="image/jpg, image/png, image/jpeg" required>
           </div>
           <div class="main__file-wrap">
             <div class="main__fieldDescription">Imagen del fondo</div>
             <img id="background-image" src="/images/products/productsCreated/<%= product.backgroundImage %> " alt="Background image">
             <label for="backgroundImage"></label>
-            <input type="file" id="backgroundImage" name="backgroundImage">
+            <input type="file" id="backgroundImage" name="backgroundImage" accept="image/jpg, image/png, image/jpeg" required>
           </div>
           <div class="main__button">
             <button type="submit" class="send-button">Actualizar</button>

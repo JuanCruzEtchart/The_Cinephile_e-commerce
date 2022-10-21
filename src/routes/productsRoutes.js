@@ -1,13 +1,17 @@
 const express = require("express");
 const router = express.Router();
-const productController = require("../controllers/productController.js");
 const multer = require("multer");
 const path = require("path");
-const data = require("express-validator");
+const { body } = require("express-validator");
+const productController = require("../controllers/productController.js");
+const productValidation = require("../validations/productValidations.js");
 
 let storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, path.join(__dirname, "../../public/images/products/productsCreated"));
+    cb(
+      null,
+      path.join(__dirname, "../../public/images/products/productsCreated")
+    );
   },
 
   filename: (req, file, cb) => {
@@ -17,7 +21,19 @@ let storage = multer.diskStorage({
   },
 });
 
-let upload = multer({ storage: storage });
+let upload = multer({
+  storage: storage,
+  fileFilter: (req, file, cb) => {
+    //Validación de archivos
+    const allowedExtensions = [".jpg", ".png", ".jpeg"];
+
+    const imageExtension = path.extname(file.originalname);
+
+    const result = allowedExtensions.includes(imageExtension);
+
+    cb(null, result);
+  },
+});
 
 //Carga de imágenes de detalle producto
 let uploadDetailImages = upload.fields([
@@ -38,7 +54,12 @@ router.get("/detail/:id", productController.detail);
 /*Render de la vista de creación de productos*/
 
 router.get("/create", productController.create);
-router.post("/create", uploadDetailImages, productController.store);
+router.post(
+  "/create",
+  uploadDetailImages,
+ /*  productValidation, */
+  productController.store
+);
 
 /*Render de la vista de creación de repartos*/
 
