@@ -1,5 +1,6 @@
 const path = require("path");
 const fs = require("fs");
+const { validationResult } = require("express-validator");
 
 function findAll() {
   const jsonData = fs.readFileSync(
@@ -69,6 +70,9 @@ const productController = {
 
   //Guardado de producto creado
   store: (req, res) => {
+    const dataTemp = findAllTemp();
+    const validationErrors = validationResult(req);
+
     const productImage = req.files.productImage.map(function (image) {
       return image.filename;
     });
@@ -76,34 +80,45 @@ const productController = {
       return image.filename;
     });
     console.log(req.files);
+    console.log(validationErrors);
 
-    const newProduct = {
-      name: req.body.name,
-      type: req.body.type,
-      year: req.body.year,
-      rated: req.body.rated,
-      length: req.body.length,
-      imdbScore: req.body.imdbScore,
-      imdbTotalReviews: req.body.imdbTotalReviews,
-      tomatoScore: req.body.tomatoScore,
-      trailerLink: req.body.trailerLink,
-      genre1: req.body.genre1,
-      genre2: req.body.genre2,
-      purchasePrice: req.body.purchasePrice,
-      rentalPrice: req.body.rentalPrice,
-      synopsis: req.body.synopsis,
-      director: req.body.director,
-      directorBiography: req.body.directorBiography,
-      screenwriter: req.body.screenwriter,
-      screenwriterBiography: req.body.screenwriterBiography,
-      productImage: productImage,
-      backgroundImage: backgroundImage,
-      castLength: req.body.castLength,
-    };
+    if (!validationErrors.isEmpty()) {
+      res.render("productCreate", {
+        errors: validationErrors.array(),
+        errors2: validationErrors.mapped(),
+        old: req.body,
+      });
+      console.log(validationErrors);
+    } else {
+      const newProduct = {
+        name: req.body.name,
+        type: req.body.type,
+        year: req.body.year,
+        rated: req.body.rated,
+        length: req.body.length,
+        imdbScore: Number(req.body.imdbScore),
+        imdbTotalReviews: req.body.imdbTotalReviews,
+        tomatoScore: req.body.tomatoScore,
+        trailerLink: req.body.trailerLink,
+        genre1: req.body.genre1,
+        genre2: req.body.genre2,
+        purchasePrice: Number(req.body.purchasePrice),
+        rentalPrice: Number(req.body.rentalPrice),
+        synopsis: req.body.synopsis,
+        director: req.body.director,
+        directorBiography: req.body.directorBiography,
+        screenwriter: req.body.screenwriter,
+        screenwriterBiography: req.body.screenwriterBiography,
+        productImage: productImage,
+        backgroundImage: backgroundImage,
+        castLength: req.body.castLength,
+      };
 
-    writeFileTemp(newProduct);
-    res.redirect("/product/create/cast");
-    console.log(newProduct);
+      writeFileTemp(newProduct);
+      res.redirect("/product/create/cast");
+      console.log(newProduct);
+      console.log("Producto temporal creado");
+    }
   },
 
   //Render de vista de edición de productos
@@ -118,6 +133,8 @@ const productController = {
   //Guardado de edición de productos
   update: (req, res) => {
     const data = findAll();
+    const validationErrors = validationResult(req);
+
     let productFound = data.find((product) => {
       return product.id == req.params.id;
     });
@@ -129,30 +146,39 @@ const productController = {
       return image.filename;
     });
 
-    productFound.name = req.body.name;
-    productFound.type = req.body.type;
-    productFound.year = req.body.year;
-    productFound.rated = req.body.rated;
-    productFound.length = req.body.length;
-    productFound.imdbScore = req.body.imdbScore;
-    productFound.imdbTotalReviews = req.body.imdbTotalReviews;
-    productFound.tomatoScore = req.body.tomatoScore;
-    productFound.trailerLink = req.body.trailerLink;
-    productFound.genre1 = req.body.genre1;
-    productFound.genre2 = req.body.genre2;
-    productFound.purchasePrice = req.body.purchasePrice;
-    productFound.rentalPrice = req.body.rentalPrice;
-    productFound.synopsis = req.body.synopsis;
-    productFound.director = req.body.director;
-    productFound.directorBiography = req.body.directorBiography;
-    productFound.screenwriter = req.body.screenwriter;
-    productFound.screenwriterBiography = req.body.screenwriterBiography;
-    productFound.productImage = productImage;
-    productFound.backgroundImage = backgroundImage;
-    productFound.castLength = req.body.castLength;
+    if (!validationErrors.isEmpty()) {
+      res.render("productUpdate", {
+        product: productFound,
+        errors: validationErrors.array(),
+        errors2: validationErrors.mapped(),
+      });
+      console.log(validationErrors);
+    } else {
+      productFound.name = req.body.name;
+      productFound.type = req.body.type;
+      productFound.year = req.body.year;
+      productFound.rated = req.body.rated;
+      productFound.length = req.body.length;
+      productFound.imdbScore = req.body.imdbScore;
+      productFound.imdbTotalReviews = req.body.imdbTotalReviews;
+      productFound.tomatoScore = req.body.tomatoScore;
+      productFound.trailerLink = req.body.trailerLink;
+      productFound.genre1 = req.body.genre1;
+      productFound.genre2 = req.body.genre2;
+      productFound.purchasePrice = req.body.purchasePrice;
+      productFound.rentalPrice = req.body.rentalPrice;
+      productFound.synopsis = req.body.synopsis;
+      productFound.director = req.body.director;
+      productFound.directorBiography = req.body.directorBiography;
+      productFound.screenwriter = req.body.screenwriter;
+      productFound.screenwriterBiography = req.body.screenwriterBiography;
+      productFound.productImage = productImage;
+      productFound.backgroundImage = backgroundImage;
+      productFound.castLength = req.body.castLength;
 
-    writeFile(data);
-    res.redirect("/product/list");
+      writeFile(data);
+      res.redirect("/product/list");
+    }
   },
 
   //Eliminación de productos
@@ -211,14 +237,14 @@ const productController = {
       year: req.body.year,
       rated: req.body.rated,
       length: req.body.length,
-      imdbScore: req.body.imdbScore,
+      imdbScore: Number(req.body.imdbScore),
       imdbTotalReviews: req.body.imdbTotalReviews,
       tomatoScore: req.body.tomatoScore,
       trailerLink: req.body.trailerLink,
       genre1: req.body.genre1,
       genre2: req.body.genre2,
-      purchasePrice: req.body.purchasePrice,
-      rentalPrice: req.body.rentalPrice,
+      purchasePrice: Number(req.body.purchasePrice),
+      rentalPrice: Number(req.body.rentalPrice),
       synopsis: req.body.synopsis,
       director: req.body.director,
       directorBiography: req.body.directorBiography,

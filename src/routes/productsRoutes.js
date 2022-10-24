@@ -2,9 +2,13 @@ const express = require("express");
 const router = express.Router();
 const multer = require("multer");
 const path = require("path");
-const { body } = require("express-validator");
 const productController = require("../controllers/productController.js");
-const productValidation = require("../validations/productValidations.js");
+const {
+  createProductValidations,
+} = require("../validations/productValidation.js");
+const {
+  updateProductValidations,
+} = require("../validations/productValidation.js");
 
 let storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -57,7 +61,7 @@ router.get("/create", productController.create);
 router.post(
   "/create",
   uploadDetailImages,
- /*  productValidation, */
+  createProductValidations,
   productController.store
 );
 
@@ -69,7 +73,12 @@ router.post("/create/cast", uploadActorsPhoto, productController.castUpolad);
 /*Render de la vista de edición de productos*/
 
 router.get("/edit/:id", productController.edit);
-router.put("/edit/:id", uploadDetailImages, productController.update);
+router.put(
+  "/edit/:id",
+  uploadDetailImages,
+  updateProductValidations,
+  productController.update
+);
 router.delete("/delete/:id", productController.destroy);
 
 /*Render de la vista de lista de productos*/

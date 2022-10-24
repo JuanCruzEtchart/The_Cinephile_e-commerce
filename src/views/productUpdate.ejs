@@ -16,6 +16,15 @@
           <button class="back-button">Volver a lista de productos</button>
         </a>
       </div>
+      <% if (locals.errors) { %>
+      <ul class="main__errors">
+        <% errors.forEach(element => { %>
+        <li>
+          <%= element.msg %>
+        </li>
+        <% }) %>
+      </ul>
+      <% } %>
       <form class="main__form-put" action="/product/edit/<%= product.id %>?_method=PUT" enctype="multipart/form-data" method="POST">
         <div>
           <input type="text" class="text-box" id="name" name="name" value="<%= product.name %>" placeholder="Nombre del producto" required>
@@ -104,7 +113,7 @@
             <input type="url" class="text-box" id="directorBiography" name="directorBiography" value="<%= product.directorBiography %>">
           </div>
           <div>
-            <input type="text" class="text-box" id="script" name="script" value="<%= product.screenwriter %>" placeholder="Guionista" required>
+            <input type="text" class="text-box" id="screenwriter" name="screenwriter" value="<%= product.screenwriter %>" placeholder="Guionista" required>
           </div>
           <div>
             <input type="url" class="text-box" id="screenwriterBiography" name="screenwriterBiography" value="<%= product.screenwriterBiography%>">
