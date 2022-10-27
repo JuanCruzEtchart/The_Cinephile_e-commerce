@@ -77,6 +77,7 @@
 .main__product-logo h4 {
   font-weight: 100;
   margin-left: 10px;
+  width: 200%;
 }
 
 .main__product-logo img {
@@ -216,16 +217,15 @@
   font-size: 12px;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 50px;
-  margin-right: 66.5;
+  /* margin-bottom: 50px; */
+  margin-bottom: 20px;
   transition: all 120ms;
 }
 
 .main__trailer:hover {
   background-color: #fce89f;
 }
-
-.main__trailer i {
+ain__genre .main__trailer i {
   padding: 5px;
 }
 
@@ -236,13 +236,14 @@
 
 .main__genre {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   width: auto;
   /*  max-width: 165px; */
   height: 28px;
   color: white;
-  margin-right: 16.5px;
+  margin-right: 7.36px;
 }
 
 .main__genre-1 {
@@ -251,12 +252,12 @@
   border: rgba(255, 255, 255, 0.5) solid 1px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
+  margin-bottom: 15px;
 }
 
 .main__genre-2 {
   text-align: center;
   padding: 15px;
-  margin-left: 30px;
   border: rgba(255, 255, 255, 0.5) solid 1px;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
@@ -390,7 +391,7 @@
   z-index: 5;
 }
 
-/* Main Cast*/
+/*  Cast*/
 
 .main__slider-wrap-principal-cast {
   width: 100%;
@@ -570,15 +571,29 @@
   }
 
   .main__product-score {
-    margin-right: 70px;
+    margin-right: 16.5px;
   }
 
   .main__trailer {
-    margin-right: 75px;
+    margin-right: 16.5px;
+    margin-bottom: 50px;
+    /* margin-right: 75px; */
   }
 
   .main__genre {
-    margin-right: 75px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 16.5px;
+    /*  max-width: 165px; */
+  }
+
+  .main__genre-1 {
+    margin-bottom: 0px;
+  }
+
+  .main__genre-2 {
+    margin-left: 30px;
   }
 
   .main__buttons {
@@ -634,7 +649,7 @@
   }
 
   .main__product-score {
-    margin-right: 70px;
+    /*     margin-right: 70px; */
     flex-direction: row;
     margin-bottom: 250px;
   }
@@ -691,7 +706,8 @@
   }
 
   .main__genre {
-    margin-right: 75px;
+    margin-right: 16.5px;
+    /* margin-right: 75px; */
   }
 
   .main__buttons {
