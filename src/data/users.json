@@ -1,65 +1,58 @@
 [
-    {
-        "id": 1,
-        "name": "admin",
-        "email": "admin@cinephile.com",
-        "password": "$2a$10$WEqcfmAShBkVpXzzE0jjaePWcmSQJ8uykhT6C/a32fod4baeZva0q",
-        "security": "admin"
-    },
-    {
-        "id": 5,
-        "name": "MiNuevoUsuariopelis",
-        "email": "MiNuevoMail@gmail.com",
-        "password": "$2a$10$6cvnksmhmbfbRJmZuD0vZOs/J8/6fAYpCzAEEzOyVCixnzj7dsKtu",
-        "security": "user"
-    },
-    {
-        "id": 6,
-        "name": "asdasda",
-        "email": "albertoropervilar@gmail.com",
-        "password": "$2a$10$ily/aAkz.8gttKAjRwVgn.C1shluWHMuPmbWr6CcP.cJHpqd1kml2",
-        "security": "user"
-    },
-    {
-        "id": 4,
-        "name": "roberto",
-        "email": "roberto@google.com",
-        "password": "$2a$10$f9VvrIzO.rTOHR2cRgI9HOt7V0b/66/1SrkjXS0IyVyt/iG.cUfs2",
-        "security": "user"
-    },
-    {
-        "id": 5,
-        "name": "timburton",
-        "email": "timburton@gmail.com",
-        "password": "$2a$10$b91zIzdc1UObYm1mrcXCSOxHZbHKVi.eosTYhfCRaveARoGgdS0R.",
-        "security": "user"
-    },
-    {
-        "id": 6,
-        "name": "Juan",
-        "email": "Juan@gmail.com",
-        "password": "$2a$10$8ZD9Lqab7x1QygKt2JnnluvRBhZTcld8E.yXLC79i36JvBwbBC0hm",
-        "security": "user"
-    },
-    {
-        "id": 7,
-        "name": "magdalenaSuarez",
-        "email": "magdaSuarez@gmail.com",
-        "password": "$2a$10$WWIWrJ7nwDo/NrFphZJQN.85n5O0RU.91ktO86W/EqieqU.G1WT.6",
-        "security": "user"
-    },
-    {
-        "id": 8,
-        "name": "digitalhouse",
-        "email": "digitalhouse@gmail.com",
-        "password": "$2a$10$rmdnJ7MItdDBkjRHoLtVgecXrdzK2OTGmoTubg.DIa.wEqShVY7qS",
-        "security": "user"
-    },
-    {
-        "id": 9,
-        "name": "albaro",
-        "email": "albaro@gmail.com",
-        "password": "$2a$10$1u5Ae5ukjdghihJIu9xt0uhhp1XNgM2SG3RfYqXeaF0iZW96rBCdG",
-        "security": "user"
-    }
+  {
+    "id": 1,
+    "name": "admin",
+    "email": "admin@cinephile.com",
+    "password": "$2a$10$WEqcfmAShBkVpXzzE0jjaePWcmSQJ8uykhT6C/a32fod4baeZva0q",
+    "security": "admin"
+  },
+  {
+    "id": 5,
+    "name": "MiNuevoUsuariopelis",
+    "email": "MiNuevoMail@gmail.com",
+    "password": "$2a$10$6cvnksmhmbfbRJmZuD0vZOs/J8/6fAYpCzAEEzOyVCixnzj7dsKtu",
+    "security": "user"
+  },
+  {
+    "id": 6,
+    "name": "asdasda",
+    "email": "albertoropervilar@gmail.com",
+    "password": "$2a$10$ily/aAkz.8gttKAjRwVgn.C1shluWHMuPmbWr6CcP.cJHpqd1kml2",
+    "security": "user"
+  },
+  {
+    "id": 4,
+    "name": "roberto",
+    "email": "roberto@google.com",
+    "password": "$2a$10$f9VvrIzO.rTOHR2cRgI9HOt7V0b/66/1SrkjXS0IyVyt/iG.cUfs2",
+    "security": "user"
+  },
+  {
+    "id": 5,
+    "name": "timburton",
+    "email": "timburton@gmail.com",
+    "password": "$2a$10$b91zIzdc1UObYm1mrcXCSOxHZbHKVi.eosTYhfCRaveARoGgdS0R.",
+    "security": "user"
+  },
+  {
+    "id": 6,
+    "name": "Juan",
+    "email": "Juan@gmail.com",
+    "password": "$2a$10$8ZD9Lqab7x1QygKt2JnnluvRBhZTcld8E.yXLC79i36JvBwbBC0hm",
+    "security": "user"
+  },
+  {
+    "id": 7,
+    "name": "magdalenaSuarez",
+    "email": "magdaSuarez@gmail.com",
+    "password": "$2a$10$WWIWrJ7nwDo/NrFphZJQN.85n5O0RU.91ktO86W/EqieqU.G1WT.6",
+    "security": "user"
+  },
+  {
+    "id": 8,
+    "name": "digitalhouse",
+    "email": "digitalhouse@gmail.com",
+    "password": "$2a$10$rmdnJ7MItdDBkjRHoLtVgecXrdzK2OTGmoTubg.DIa.wEqShVY7qS",
+    "security": "user"
+  }
 ]
