@@ -57,7 +57,7 @@ const userController = {
         res.cookie("recordame", userFound.id)
       }
 
-      res.redirect("/")
+      res.redirect("profile")
     }
 
   },

@@ -1,375 +1,356 @@
 * {
-    box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
-  }
-  
-  body {
-    font-family: Roboto;
-    font-size: 12px;
-    background-color: white;
-    line-height: 0px;
-    text-decoration: none;
-    color: black;
-  }
-  
-  /*HEADER*/
-  
-  .header__container {
-    display: flex;
-    background-color: black;
-    justify-content: space-between;
-    align-items: center;
-    height: 50px;
-    padding: 0px 5%;
-  }
-  
-  .header__dropMenu-logo {
-    width: 45%;
-  }
-  
-  .header__drop-logo-form {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .header__burger-menu {
-    color: white;
-    background-color: black;
-    border: none;
-    font-size: 20px;
-    margin-right: 20px;
-    cursor: pointer;
-    transition: all 120ms;
-  }
-  
-  .header__burger-menu:hover {
-    color: #ffc700;
-  }
-  
-  .header__logo {
-    background-color: black;
-    border: none;
-  }
-  
-  .header__logo img {
-    height: auto;
-    width: auto;
-    max-width: 110px;
-    cursor: pointer;
-  }
-  
-  .header__search-container {
-    width: 50%;
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .header__search-bar {
-    flex-grow: 7;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    border-radius: 5px;
-    padding: 5px 10px;
-    background-color: white;
-  }
-  
-  .header__search-bar input {
-    flex: 1;
-    border: 0;
-    font-size: 15px;
-    color: #666666;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    color: black;
-  }
-  
-  .header__search-bar button {
-    background-color: white;
-    border: none;
-    border-radius: 5px;
-    margin-left: 10px;
-    font-size: 15px;
-    color: #666666;
-    transition: all 120ms;
-  }
-  
-  .header__search-bar button:hover {
-    color: #ffc700;
-    cursor: pointer;
-  }
-  
-  .header__nav {
-    width: 30%;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .header__dropdown-buttons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 75%;
-    padding-right: 60px;
-  }
-  
-  .header__dropdown-buttons a {
-    width: 100px;
-    font-size: 15px;
-    text-align: center;
-    padding: 13px;
-    border-radius: 5px;
-    border: none;
-    color: white;
-    background-color: #1b1b1b;
-    text-decoration: none;
-    transition: all 120ms;
-  }
-  
-  .header__dropdown-buttons a:hover {
-    background-color: #ffc700;
-    color: black;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  .header__nav-buttons {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .header__nav-buttons a {
-    color: white;
-    background-color: black;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-    transition: all 120ms;
-  }
-  
-  .header__nav-buttons a:hover {
-    color: #ffc700;
-    font-weight: bold;
-  }
-  
-  /*MAIN*/
-  
-.main{
-  background-color: #212121;
-  position: relative;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
 }
 
-  /*Main profile header*/
+body {
+  font-family: Roboto;
+  font-size: 12px;
+  background-color: white;
+  line-height: 0px;
+  text-decoration: none;
+  color: black;
+}
+
+/*HEADER*/
+
+.header__container {
+  display: flex;
+  background-color: black;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 0px 5%;
+}
+
+.header__dropMenu-logo {
+  width: 45%;
+}
+
+.header__drop-logo-form {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+}
+
+.header__burger-menu {
+  color: white;
+  background-color: black;
+  border: none;
+  font-size: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+  transition: all 120ms;
+}
+
+.header__burger-menu:hover {
+  color: #ffc700;
+}
+
+.header__logo {
+  background-color: black;
+  border: none;
+}
+
+.header__logo img {
+  height: auto;
+  width: auto;
+  max-width: 110px;
+  cursor: pointer;
+}
+
+.header__search-container {
+  width: 50%;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__search-bar {
+  flex-grow: 7;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: white;
+}
+
+.header__search-bar input {
+  flex: 1;
+  border: 0;
+  font-size: 15px;
+  color: #666666;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: black;
+}
+
+.header__search-bar button {
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  font-size: 15px;
+  color: #666666;
+  transition: all 120ms;
+}
+
+.header__search-bar button:hover {
+  color: #ffc700;
+  cursor: pointer;
+}
+
+.header__nav {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__dropdown-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 75%;
+  padding-right: 60px;
+}
+
+.header__dropdown-buttons a {
+  width: 100px;
+  font-size: 15px;
+  text-align: center;
+  padding: 13px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background-color: #1b1b1b;
+  text-decoration: none;
+  transition: all 120ms;
+}
+
+.header__dropdown-buttons a:hover {
+  background-color: #ffc700;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.header__nav-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__nav-buttons a {
+  color: white;
+  background-color: black;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 120ms;
+}
+
+.header__nav-buttons a:hover {
+  color: #ffc700;
+  font-weight: bold;
+}
+
+/*MAIN*/
+
+.main{
+background-color: #212121;
+position: relative;
+}
+
+/*Main profile header*/
 
 .main__profile-header{
-  display: flex;
-  flex-wrap: wrap;
-  padding: 30px 35px;
-  border-bottom: solid 1px black;
+display: flex;
+flex-wrap: wrap;
+padding: 30px 35px;
+border-bottom: solid 1px black;
+justify-content: space-between;
 }
 
 .main__profile-header div{
-  font-size: 22px;
-  color: white;
+font-size: 22px;
+color: white;
+}
+
+.cerrar-sesion form{
+font-size: 10px;
+margin: -10px -4px;
+}
+
+.cerrar-sesion form button{
+padding: 4px;
+border: rgba(255, 255, 255, 0.5) solid 1px;
+background-color: #ffc700;
+border-radius: 10px;
+transition: all 120ms;
+}
+
+.cerrar-sesion form button:hover{
+opacity: 70%;
 }
 
 /*Main profile datos principales*/
 
 .main__profile-datos-principales{
-  display: flex;
-  padding: 10px;
-  margin: 0px 15px;
-  flex-wrap: wrap;
-  align-items: center;
-  flex-direction: row;
-  justify-content: space-around;
+display: flex;
+padding: 10px;
+margin: 0px 15px;
+flex-wrap: wrap;
+align-items: center;
+flex-direction: row;
+justify-content: space-around;
 }
 
 
 .main__profile-avatar{
-  width: 110px;
-  border: 5px solid black;
-  border-radius: 68px;
-  margin-right: 7px;
+width: 110px;
+border: 5px solid black;
+border-radius: 68px;
+margin-right: 7px;
 }
 
 .main__profile-nombre-edad-pais{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items:center
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items:center
 }
 
 .main__profile-nombre{
-  padding: 10px 0px;
-  margin: 15px;
-  color: #c0c0c0;
+margin: 15px;
+color: #c0c0c0;
+padding: 12px;
+border: rgba(255, 255, 255, 0.5) solid 1px;
+background-color: #171717;
+border-radius: 20px;
 }
 
 .main__profile-edad-y-pais{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-content: flex-start;
-  flex-direction: row;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+align-content: flex-start;
+flex-direction: row;
 }
 
 
 .main__profile-edad{
-    padding: 8px;
-    border: rgba(255, 255, 255, 0.5) solid 1px;
-    background-color: #ffc700;
-    border-radius: 10px;
-    font-size: 10px;
-    margin-right: 4px;
-}
-
-.main__profile-pais{
   padding: 8px;
   border: rgba(255, 255, 255, 0.5) solid 1px;
   background-color: #ffc700;
   border-radius: 10px;
   font-size: 10px;
+  margin-right: 4px;
 }
 
- /*Main profile datos secundarios*/
+.main__profile-pais{
+padding: 8px;
+border: rgba(255, 255, 255, 0.5) solid 1px;
+background-color: #ffc700;
+border-radius: 10px;
+font-size: 10px;
+}
+
+/*Main profile datos secundarios*/
 
 .main__profile-datos-secundarios{
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  margin: 0px 10px;
+padding: 10px;
+display: flex;
+flex-direction: column;
+margin: 0px 10px;
 }
 
 .main__profile-articles{
-  display: flex;
-  justify-content: flex-start;
-  padding: 10px;
-  flex-direction: row;
-  flex-wrap: wrap;
+display: flex;
+justify-content: flex-start;
+padding: 10px;
+flex-direction: row;
+flex-wrap: wrap;
 }
 
 #items{
-  color: #ffc700;
-  font-size: 10px;
-  padding: 7px;
+color: #ffc700;
+font-size: 11px;
+padding: 7px;
 }
 
 #items-respuestas{
-  color: #c0c0c0;
-  font-size: 10px;
-  padding: 7px 0px;
+color: #c0c0c0;
+font-size: 10px;
+padding: 7px 0px;
 }
 
 .main__profile-article-generos{
-  color: #c0c0c0;
-  font-size: 8px;
-  padding: 7px;
-  border: rgba(255, 255, 255, 0.5) solid 1px;
-  border-radius: 10px;
-  margin: 0px 2px;
+color: #c0c0c0;
+font-size: 8px;
+padding: 7px;
+border: rgba(255, 255, 255, 0.5) solid 1px;
+border-radius: 10px;
+margin: 0px 2px;
 }
 
 /*Main profile sliders*/
 
 .main__profile-sliders{
-    padding: 15px;
-    padding-top: 10px;
-    height: 100%;
-    z-index: 5;
+  padding: 15px;
+  padding-top: 10px;
+  height: 100%;
+  z-index: 5;
 }
 
 .main__profile-sliders-title{
-    display: flex;
-    align-items: center;
-    height: 18px;
-    width: auto;
-    color: white;
-    border-left: #ffc700 solid 1px;
-    padding-left: 5px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+  display: flex;
+  align-items: center;
+  height: 18px;
+  width: auto;
+  color: white;
+  border-left: #ffc700 solid 1px;
+  padding-left: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .main__profile-sliders-title i{
-  color: #ffc700;
-  padding-left: 4px;
+color: #ffc700;
+padding-left: 4px;
 }
 
 
 .main__profile-slider-peliculas-alquiladas{
-    width: 100%;
-    height: auto;
-    cursor: grab;
-    margin-bottom: 30px;
-    margin-top: 20px;
-}
-
-.main__slider{
-    height: 100%;
-    width: 100%;
-    overflow: scroll;
-}
-
-.main__slider-inner{
-    display: flex;
-    justify-content: space-between;
-    width: auto;
-    height: 100%;
-    border-top: solid 2px black;
-    padding: 15px 0px;
-}
-
-.main__item-peliculas-alquiladas{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    width: auto;
-    color: white;
-    margin-right: 28px;
-    padding-bottom: 17px;
-    background-color: #171717;
-    border-radius: 10px;
-}
-
-.main__item-peliculas-alquiladas img{
-  border-radius: 10px;
-  margin-bottom: 20px;
-  width: 130px;
-  height: 191px;
-}
-
-.peliculas-alquiladas-nombres{
-    line-height: 22px;
-    font-size: 14px;
-    font-weight: bold;
-    width: 125px;
-    padding-bottom: 10px;
-    text-align: center;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-
-
-.main__profile-slider-mi-lista{
   width: 100%;
   height: auto;
   cursor: grab;
   margin-bottom: 30px;
+  margin-top: 20px;
 }
 
-.main__item-mi-lista{
+.main__slider{
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
+}
+
+.main__slider-inner{
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  height: 100%;
+  border-top: solid 2px black;
+  padding: 15px 0px;
+}
+
+.main__item-peliculas-alquiladas{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -382,578 +363,628 @@
   border-radius: 10px;
 }
 
+.main__item-peliculas-alquiladas img{
+border-radius: 10px;
+margin-bottom: 20px;
+width: 130px;
+height: 191px;
+}
+
+.peliculas-alquiladas-nombres{
+  line-height: 22px;
+  font-size: 14px;
+  font-weight: bold;
+  width: 125px;
+  padding-bottom: 10px;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+
+.main__profile-slider-mi-lista{
+width: 100%;
+height: auto;
+cursor: grab;
+margin-bottom: 30px;
+}
+
+.main__item-mi-lista{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: flex-start;
+width: auto;
+color: white;
+margin-right: 28px;
+padding-bottom: 17px;
+background-color: #171717;
+border-radius: 10px;
+}
+
 .main__item-mi-lista img{
-  border-radius: 10px;
-  margin-bottom: 20px;
-  width: 130px;
-  height: 191px;
+border-radius: 10px;
+margin-bottom: 20px;
+width: 130px;
+height: 191px;
 }
 
 .main__profile-slider-mi-lista{
-  width: 100%;
-  height: auto;
-  cursor: grab;
-  margin-bottom: 30px;
-  margin-top: 20px;
+width: 100%;
+height: auto;
+cursor: grab;
+margin-bottom: 30px;
+margin-top: 20px;
 }
 
-  
+
+
+/*FOOTER*/
+
+.footer__container {
+  background-color: black;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+.footer__logo {
+  background-color: black;
+  border: none;
+}
+
+.footer__logo img {
+  width: 110px;
+  cursor: pointer;
+}
+
+.footer__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: 400px;
+  width: 50%;
+  margin-bottom: 50px;
+  margin-top: 10px;
+}
+
+.footer__buttons a {
+  font-size: 16px;
+  text-decoration: none;
+  color: white;
+  height: 16px;
+  line-height: 22px;
+  transition: all 120ms;
+  text-align: center;
+  padding: 0px 15px;
+}
+
+.footer__buttons a:hover {
+  color: #ffc700;
+}
+
+.footer__buttons #lenguage {
+  background-color: transparent;
+  font-size: 16px;
+  height: 21px;
+  width: auto;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.footer__buttons #lenguage option {
+  background-color: black;
+  transition: all 120ms;
+}
+
+.footer__buttons #lenguage option:hover {
+  background-color: #ffc700;
+}
+
+.footer__media {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  width: 80%;
+  height: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  justify-content: space-around;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  order: -1;
+  max-width: 288px;
+}
+
+.footer__media a {
+  font-size: 25px;
+  color: white;
+  transition: all 120ms;
+}
+
+.footer__media a:hover {
+  color: #ffc700;
+}
+
+.copy {
+  color: white;
+  height: 5%;
+  position: absolute;
+  bottom: 5px;
+  left: 20px;
+  font-size: 12;
+}
+
+/*MEDIA QUERIES*/
+
+/*MOBILE*/
+
+@media (max-width: 599px) {
+  /*HEADER*/
+  .header__container {
+    width: 100%;
+  }
+
+  .header__search-container {
+    display: none;
+  }
+
+  .header__dropdown-buttons {
+    display: none;
+  }
+
+  /*MAIN*/
 
   /*FOOTER*/
-  
-  .footer__container {
-    background-color: black;
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    position: relative;
-  }
-  
-  .footer__logo {
-    background-color: black;
-    border: none;
-  }
-  
+
   .footer__logo img {
+    display: none;
+  }
+}
+
+/*TABLET*/
+
+@media (min-width: 600px) {
+  /*HEADER*/
+
+  .header__dropMenu-logo {
+    width: auto;
+  }
+
+  .header__burger-menu {
+    margin-right: 40px;
+  }
+
+  .header__logo img {
     width: 110px;
-    cursor: pointer;
+  }
+
+  .header__search-container {
+    width: 45%;
+  }
+
+  .header__nav {
+    width: 15%;
+  }
+
+  .header__dropdown-buttons {
+    display: none;
+  }
+
+  .header__profile {
+    margin-left: 15%;
+  }
+
+  .header__nav-search {
+    display: none;
+  }
+
+  /*MAIN*/
+
+  /*Main profile header*/
+
+  .main__profile-header{
+    border-bottom: solid 2px black
+  }
+  .main__profile-header div {
+    font-size: 25px;
+  } 
+
+  /*Main profile datos principales*/
+
+  .main__profile-datos-principales{
+    flex-direction: column;
+    margin: 10px 15px;
+  }
+
+  .cerrar-sesion form{
+    font-size: 12px;
+    margin: -10px 15px;
+  }
+
+  
+  .datos{
+    background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5));
+    background-image: url(/images/profile/cortina.jpeg);
+    background-attachment: fixed;
+    background-color: #c0c0c0;
+    border: solid 1px black;
+    border-radius: 50px;
+    margin: 20px;
+  }
+
+  .main__profile-avatar{
+    width: 150px;
+    border: 5px solid black;
+    border-radius: 126px;
+    margin-right: 7px;
+  }
+
+  .main__profile-nombre{
+    font-size: 25px;
+    padding: 18px;
+  }
+
+  .main__profile-edad{
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .main__profile-pais{
+    padding: 10px;
+    font-size: 12px;
+  }
+  /*Main profile datos secundarios*/
+
+  .main__profile-datos-secundarios{
+    margin-top: 30px;
+    
+  }
+
+  #items{
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  #items-respuestas{
+    font-size: 18px;
+  }
+
+  .main__profile-article-generos{
+    font-size: 16px;
+    padding: 10px;
+
+  }
+
+  /*Main profile sliders*/
+
+  .main__profile-sliders{
+    padding-top: 20px;
   }
   
+  .main__profile-sliders-title{
+    border-left: #ffc700 solid 2px;
+    height: 30px;
+
+  }
+
+  .main__profile-sliders-title h4{
+    font-size: 18px;
+  }
+
+  .main__profile-sliders-title i{
+    font-size: 18px;
+  }
+
+  .main__item-peliculas-alquiladas img{
+    width: 200px;
+    height: 260px;
+    transition: all 120ms;
+  }
+
+  .main__item-peliculas-alquiladas img:hover{
+    opacity: 70%;
+  }
+
+  .main__item-mi-lista img{
+    width: 200px;
+    height: 260px;
+    transition: all 120ms;
+  }
+
+  .main__item-mi-lista img:hover{
+    opacity: 70%;
+  }
+
+  .peliculas-alquiladas-nombres{
+    font-size: 16px;
+  }
+
+
+  /*FOOTER*/
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+  }
+
+  .footer__container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 230px;
+    width: 600px;
+    padding-top: 20px;
+  }
+
+  .footer__logo img {
+    width: 200px;
+  }
+  .footer__buttons {
+    width: 90%;
+    height: 30%;
+    order: 3;
+  }
+  .footer__media {
+    order: 2;
+    width: 230px;
+  }
+}
+
+/*DESKTOP*/
+
+@media (min-width: 1200px) {
+  /*HEADER*/
+  .header__container {
+    padding: 0px 30px;
+  }
+
+  .header__dropMenu-logo {
+    width: 20%;
+    justify-content: center;
+  }
+
+  .header__drop-logo-form {
+    justify-content: center;
+  }
+
+  .header__burger-menu {
+    display: none;
+  }
+
+  .header__search-container {
+    display: none;
+  }
+
+  .header__nav {
+    width: 75%;
+  }
+
+  .header__dropdown-buttons {
+    display: flex;
+  }
+
+  .header__nav-buttons {
+    width: 20%;
+    margin-right: 30px;
+  }
+
+  .header__profile {
+    margin-left: 0px;
+  }
+
+  .header__dropdown-buttons a {
+    display: block;
+  }
+
+  .header__nav-search {
+    display: block;
+  }
+
+  /*MAIN*/
+
+  /*Main profile header*/
+
+  .main__profile-header{
+    padding-top: 45px;
+    border-bottom: none;
+  }
+  .main__profile-header div {
+    font-size: 30px;
+    padding-left: 10px;
+}
+
+.cerrar-sesion form{
+  font-size: 14px;
+  margin: -10px 58px;
+}
+
+  /*Main profile datos principales*/
+
+  .main__profile-datos-principales{
+    flex-direction: column;
+    margin: 0px 15px;
+  
+  }
+
+  .datos{
+    background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5));
+    background-image: url(/images/profile/cortina.jpeg);
+    background-attachment: fixed;
+    background-color: #c0c0c0;
+    border: solid 1px black;
+    border-radius: 50px;
+    margin: 20px;
+  }
+
+  .main__profile-avatar{
+    width: 250px;
+    border: 6px solid black;
+    border-radius: 126px;
+    transition: all 120ms;
+  }
+
+  .main__profile-avatar:hover{
+    opacity: 90%;
+  }
+
+  .main__profile-nombre{
+    font-size: 30px;
+  }
+
+  .main__profile-edad{
+    padding: 16px;
+    font-size: 18px;
+    transition: all 120ms;
+  }
+
+  .main__profile-edad:hover{
+    opacity: 70%;
+  }
+
+  .main__profile-pais{
+    padding: 16px;
+    font-size: 18px;
+    transition: all 120ms;
+  }
+
+  .main__profile-pais:hover{
+    opacity: 70%;
+  }
+  /*Main profile datos secundarios*/
+
+  #items{
+    font-size: 22px;
+    padding: 14px;
+  }
+
+  #items-respuestas{
+    font-size: 22px;
+    padding: 14px;
+  }
+
+  .main__profile-article-generos{
+    font-size: 20px;
+    padding: 14px;
+    transition: all 120ms;
+
+  }
+
+  .main__profile-article-generos:hover{
+    opacity: 70%;
+  }
+
+  /*Main profile sliders*/
+
+  .main__profile-sliders{
+    padding-top: 15px;
+  }
+  
+  .main__profile-sliders-title{
+    border-left: #ffc700 solid 2px;
+    height: 45px;
+  }
+
+  .main__profile-sliders-title h4{
+    font-size: 25px;
+  }
+
+  .main__profile-sliders-title i{
+    font-size: 18px;
+  }
+
+  .main__item-peliculas-alquiladas img{
+    width: 240px;
+    height: 300px;
+  }
+
+  .main__item-mi-lista img{
+    width: 240px;
+    height: 300px;
+  }
+
+  .peliculas-alquiladas-nombres{
+    font-size: 18px;
+  }
+
+  /*FOOTER*/
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    height: 150px;
+    background-color: black;
+  }
+
+  .footer__container {
+    width: 1200px;
+    height: 150px;
+    flex-direction: row;
+    padding-top: 0px;
+  }
+
+  .footer__logo {
+    display: flex;
+  }
+
+  .footer__logo img {
+    width: 200px;
+  }
+
   .footer__buttons {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    height: 400px;
-    width: 50%;
-    margin-bottom: 50px;
-    margin-top: 10px;
+    justify-content: space-between;
+    font-size: 15px;
+    height: 75px;
+    width: 500px;
+    margin-bottom: 0px;
+    order: 1;
   }
-  
   .footer__buttons a {
-    font-size: 16px;
-    text-decoration: none;
-    color: white;
-    height: 16px;
-    line-height: 22px;
-    transition: all 120ms;
-    text-align: center;
-    padding: 0px 15px;
+    padding: 0px;
   }
-  
-  .footer__buttons a:hover {
-    color: #ffc700;
-  }
-  
-  .footer__buttons #lenguage {
-    background-color: transparent;
-    font-size: 16px;
-    height: 21px;
-    width: auto;
-    border: none;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .footer__buttons #lenguage option {
-    background-color: black;
-    transition: all 120ms;
-  }
-  
-  .footer__buttons #lenguage option:hover {
-    background-color: #ffc700;
-  }
-  
+
   .footer__media {
-    margin-top: 15px;
-    margin-bottom: 10px;
+    order: 1;
+    width: 230px;
+  }
+}
+
+/*LARGE-DESKTOP*/
+
+@media (min-width: 1440px) {
+  /*HEADER*/
+  .header__search-container {
+    display: block;
+    width: 30%;
+  }
+
+  .header__search-bar {
+    width: 90%;
+  }
+
+  .header__dropdown-buttons {
     width: 80%;
-    height: 40px;
-    display: flex;
-    flex-wrap: wrap;
-    color: white;
-    justify-content: space-around;
-    align-items: center;
-    text-decoration: none;
-    color: white;
-    order: -1;
-    max-width: 288px;
-  }
-  
-  .footer__media a {
-    font-size: 25px;
-    color: white;
-    transition: all 120ms;
-  }
-  
-  .footer__media a:hover {
-    color: #ffc700;
-  }
-  
-  .copy {
-    color: white;
-    height: 5%;
-    position: absolute;
-    bottom: 5px;
-    left: 20px;
-    font-size: 12;
-  }
-  
-  /*MEDIA QUERIES*/
-  
-  /*MOBILE*/
-  
-  @media (max-width: 599px) {
-    /*HEADER*/
-    .header__container {
-      width: 100%;
-    }
-  
-    .header__search-container {
-      display: none;
-    }
-  
-    .header__dropdown-buttons {
-      display: none;
-    }
-  
-    /*MAIN*/
-  
-    /*FOOTER*/
-  
-    .footer__logo img {
-      display: none;
-    }
-  }
-  
-  /*TABLET*/
-  
-  @media (min-width: 600px) {
-    /*HEADER*/
-  
-    .header__dropMenu-logo {
-      width: auto;
-    }
-  
-    .header__burger-menu {
-      margin-right: 40px;
-    }
-  
-    .header__logo img {
-      width: 110px;
-    }
-  
-    .header__search-container {
-      width: 45%;
-    }
-  
-    .header__nav {
-      width: 15%;
-    }
-  
-    .header__dropdown-buttons {
-      display: none;
-    }
-  
-    .header__profile {
-      margin-left: 15%;
-    }
-  
-    .header__nav-search {
-      display: none;
-    }
-  
-    /*MAIN*/
-
-    /*Main profile header*/
-
-    .main__profile-header{
-      border-bottom: solid 2px black
-    }
-    .main__profile-header div {
-      font-size: 25px;
-    } 
-
-    /*Main profile datos principales*/
-
-    .main__profile-datos-principales{
-      flex-direction: column;
-      margin: 10px 15px;
-    }
-
-    
-    .datos{
-      background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5));
-      background-image: url(/images/profile/cortina.jpeg);
-      background-attachment: fixed;
-      background-color: #c0c0c0;
-      border: solid 1px black;
-      border-radius: 50px;
-      margin: 20px;
-    }
-
-    .main__profile-avatar{
-      width: 150px;
-      border: 5px solid black;
-      border-radius: 126px;
-      margin-right: 7px;
-    }
-
-    .main__profile-nombre{
-      font-size: 25px;
-    }
-
-    .main__profile-edad{
-      padding: 10px;
-      font-size: 12px;
-    }
-
-    .main__profile-pais{
-      padding: 10px;
-      font-size: 12px;
-    }
-    /*Main profile datos secundarios*/
-
-    .main__profile-datos-secundarios{
-      margin-top: 30px;
-      
-    }
-
-    #items{
-      font-size: 18px;
-      padding: 10px;
-    }
-
-    #items-respuestas{
-      font-size: 18px;
-    }
-
-    .main__profile-article-generos{
-      font-size: 16px;
-      padding: 10px;
-
-    }
-
-    /*Main profile sliders*/
-
-    .main__profile-sliders{
-      padding-top: 20px;
-    }
-    
-    .main__profile-sliders-title{
-      border-left: #ffc700 solid 2px;
-      height: 30px;
-
-    }
-
-    .main__profile-sliders-title h4{
-      font-size: 18px;
-    }
-
-    .main__profile-sliders-title i{
-      font-size: 18px;
-    }
-
-    .main__item-peliculas-alquiladas img{
-      width: 200px;
-      height: 260px;
-      transition: all 120ms;
-    }
-
-    .main__item-peliculas-alquiladas img:hover{
-      opacity: 70%;
-    }
-
-    .main__item-mi-lista img{
-      width: 200px;
-      height: 260px;
-      transition: all 120ms;
-    }
-
-    .main__item-mi-lista img:hover{
-      opacity: 70%;
-    }
-
-    .peliculas-alquiladas-nombres{
-      font-size: 16px;
-    }
-
-
-    /*FOOTER*/
-  
-    .footer {
-      display: flex;
-      justify-content: center;
-      background-color: black;
-    }
-  
-    .footer__container {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      height: 230px;
-      width: 600px;
-      padding-top: 20px;
-    }
-  
-    .footer__logo img {
-      width: 200px;
-    }
-    .footer__buttons {
-      width: 90%;
-      height: 30%;
-      order: 3;
-    }
-    .footer__media {
-      order: 2;
-      width: 230px;
-    }
-  }
-  
-  /*DESKTOP*/
-  
-  @media (min-width: 1200px) {
-    /*HEADER*/
-    .header__container {
-      padding: 0px 30px;
-    }
-  
-    .header__dropMenu-logo {
-      width: 20%;
-      justify-content: center;
-    }
-  
-    .header__drop-logo-form {
-      justify-content: center;
-    }
-  
-    .header__burger-menu {
-      display: none;
-    }
-  
-    .header__search-container {
-      display: none;
-    }
-  
-    .header__nav {
-      width: 75%;
-    }
-  
-    .header__dropdown-buttons {
-      display: flex;
-    }
-  
-    .header__nav-buttons {
-      width: 20%;
-      margin-right: 30px;
-    }
-  
-    .header__profile {
-      margin-left: 0px;
-    }
-  
-    .header__dropdown-buttons a {
-      display: block;
-    }
-  
-    .header__nav-search {
-      display: block;
-    }
-  
-    /*MAIN*/
-  
-    /*Main profile header*/
-
-    .main__profile-header{
-      padding-top: 45px;
-      border-bottom: none;
-    }
-    .main__profile-header div {
-      font-size: 30px;
-      padding-left: 10px;
   }
 
-    /*Main profile datos principales*/
-
-    .main__profile-datos-principales{
-      flex-direction: column;
-      margin: 0px 15px;
-    
-    }
-
-    .datos{
-      background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5));
-      background-image: url(/images/profile/cortina.jpeg);
-      background-attachment: fixed;
-      background-color: #c0c0c0;
-      border: solid 1px black;
-      border-radius: 50px;
-      margin: 20px;
-    }
-
-    .main__profile-avatar{
-      width: 250px;
-      border: 6px solid black;
-      border-radius: 126px;
-      transition: all 120ms;
-    }
-
-    .main__profile-avatar:hover{
-      opacity: 90%;
-    }
-
-    .main__profile-nombre{
-      font-size: 30px;
-    }
-
-    .main__profile-edad{
-      padding: 16px;
-      font-size: 18px;
-      transition: all 120ms;
-    }
-
-    .main__profile-edad:hover{
-      opacity: 70%;
-    }
-
-    .main__profile-pais{
-      padding: 16px;
-      font-size: 18px;
-      transition: all 120ms;
-    }
-
-    .main__profile-pais:hover{
-      opacity: 70%;
-    }
-    /*Main profile datos secundarios*/
-
-    #items{
-      font-size: 22px;
-      padding: 14px;
-    }
-
-    #items-respuestas{
-      font-size: 22px;
-      padding: 14px;
-    }
-
-    .main__profile-article-generos{
-      font-size: 20px;
-      padding: 14px;
-      transition: all 120ms;
-
-    }
-
-    .main__profile-article-generos:hover{
-      opacity: 70%;
-    }
-
-    /*Main profile sliders*/
-
-    .main__profile-sliders{
-      padding-top: 15px;
-    }
-    
-    .main__profile-sliders-title{
-      border-left: #ffc700 solid 2px;
-      height: 45px;
-    }
-
-    .main__profile-sliders-title h4{
-      font-size: 25px;
-    }
-
-    .main__profile-sliders-title i{
-      font-size: 18px;
-    }
-
-    .main__item-peliculas-alquiladas img{
-      width: 240px;
-      height: 300px;
-    }
-
-    .main__item-mi-lista img{
-      width: 240px;
-      height: 300px;
-    }
-
-    .peliculas-alquiladas-nombres{
-      font-size: 18px;
-    }
-
-    /*FOOTER*/
-  
-    .footer {
-      display: flex;
-      justify-content: center;
-      height: 150px;
-      background-color: black;
-    }
-  
-    .footer__container {
-      width: 1200px;
-      height: 150px;
-      flex-direction: row;
-      padding-top: 0px;
-    }
-  
-    .footer__logo {
-      display: flex;
-    }
-  
-    .footer__logo img {
-      width: 200px;
-    }
-  
-    .footer__buttons {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      font-size: 15px;
-      height: 75px;
-      width: 500px;
-      margin-bottom: 0px;
-      order: 1;
-    }
-    .footer__buttons a {
-      padding: 0px;
-    }
-  
-    .footer__media {
-      order: 1;
-      width: 230px;
-    }
+  .header__nav-buttons {
+    width: 12%;
+    margin-right: 60px;
   }
-  
-  /*LARGE-DESKTOP*/
-  
-  @media (min-width: 1440px) {
-    /*HEADER*/
-    .header__search-container {
-      display: block;
-      width: 30%;
-    }
-  
-    .header__search-bar {
-      width: 90%;
-    }
-  
-    .header__dropdown-buttons {
-      width: 80%;
-    }
-  
-    .header__nav-buttons {
-      width: 12%;
-      margin-right: 60px;
-    }
-  
-    .header__nav-search {
-      display: none;
-    }
-  
-    /*MAIN*/
+
+  .header__nav-search {
+    display: none;
   }
-  
+
+  /*MAIN*/
+}
