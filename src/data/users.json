@@ -43,15 +43,9 @@
     },
     {
         "id": 7,
-<<<<<<< HEAD
         "name": "magdalenaSuarez",
         "email": "magdaSuarez@gmail.com",
         "password": "$2a$10$WWIWrJ7nwDo/NrFphZJQN.85n5O0RU.91ktO86W/EqieqU.G1WT.6",
-=======
-        "name": "magdalenasuarez",
-        "email": "magdalenasuarez@gmail.com",
-        "password": "$2a$10$pnxghovlt0lKEq1R0TWH1eXPkLSHri9wmIoWAklOAYyPkYnzlFeca",
->>>>>>> 27305662dd841c5369d81bdb8565db08651adf57
         "security": "user"
     }
 ]
