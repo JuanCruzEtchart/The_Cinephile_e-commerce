@@ -47,5 +47,19 @@
         "email": "magdaSuarez@gmail.com",
         "password": "$2a$10$WWIWrJ7nwDo/NrFphZJQN.85n5O0RU.91ktO86W/EqieqU.G1WT.6",
         "security": "user"
+    },
+    {
+        "id": 8,
+        "name": "digitalhouse",
+        "email": "digitalhouse@gmail.com",
+        "password": "$2a$10$rmdnJ7MItdDBkjRHoLtVgecXrdzK2OTGmoTubg.DIa.wEqShVY7qS",
+        "security": "user"
+    },
+    {
+        "id": 9,
+        "name": "albaro",
+        "email": "albaro@gmail.com",
+        "password": "$2a$10$1u5Ae5ukjdghihJIu9xt0uhhp1XNgM2SG3RfYqXeaF0iZW96rBCdG",
+        "security": "user"
     }
 ]
