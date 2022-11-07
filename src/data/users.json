@@ -40,5 +40,12 @@
         "email": "Juan@gmail.com",
         "password": "$2a$10$8ZD9Lqab7x1QygKt2JnnluvRBhZTcld8E.yXLC79i36JvBwbBC0hm",
         "security": "user"
+    },
+    {
+        "id": 7,
+        "name": "magdalenaSuarez",
+        "email": "magdaSuarez@gmail.com",
+        "password": "$2a$10$WWIWrJ7nwDo/NrFphZJQN.85n5O0RU.91ktO86W/EqieqU.G1WT.6",
+        "security": "user"
     }
 ]
