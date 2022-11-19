@@ -3,20 +3,20 @@ module.exports = (sequelize, dataTypes) => {
   let cols = {
     id: {
       type: dataTypes.INTEGER(10),
-      primarKey: true,
+      primaryKey: true,
       autoIncrement: true,
     },
     full_name: {
       type: dataTypes.STRING(100),
-      allowNull: false,
+      allowNull: true,
     },
     biography_link: {
       type: dataTypes.STRING(500),
-      allowNull: false,
+      allowNull: true,
     },
     product_image: {
       type: dataTypes.BLOB,
-      allowNull: false,
+      allowNull: true,
     },
   };
 
@@ -28,7 +28,7 @@ module.exports = (sequelize, dataTypes) => {
   const Actor = sequelize.define(alias, cols, config);
 
   Actor.associate = (models) => {
-    Movie.belongToMany(models.Movie, {
+    Actor.belongsToMany(models.Movie, {
       as: "movies",
       through: "actor_movie",
       foreingKey: "actor_id",
@@ -36,7 +36,7 @@ module.exports = (sequelize, dataTypes) => {
       timestamps: false,
     });
 
-    Actor.belongToMany(models.Serie, {
+    Actor.belongsToMany(models.Serie, {
       as: "series",
       through: "actor_serie",
       foreingKey: "actor_id",

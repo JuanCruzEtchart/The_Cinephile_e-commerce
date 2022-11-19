@@ -20,7 +20,7 @@
       <div class="prueba">
 
         <section class="main__product-list">
-          <% product.forEach(element => { %>
+          <% movies.forEach(element => { %>
           <a href="/product/detail/<%= element.id %>">
             <article class="main__product-article">
               <div class="main__img-container">
@@ -42,6 +42,28 @@
             </article>
           </a>
           <% }) %>
+          <% series.forEach(element => { %>
+            <a href="/product/detail/<%= element.id %>">
+              <article class="main__product-article">
+                <div class="main__img-container">
+                  <img src="/images/products/productsCreated/<%= element.productImage ? element.productImage : "Logo.png"%>" alt="Imágen de producto">
+                </div>
+                <div class="main__product-information">
+                  <p>Información del producto:</p>
+                  <ul>
+                    <li>Id: <%= element.id %> </li>
+                    <li>Nombre: <%= element.name %> </li>
+                    <li>Tipo: <%= element.type %></li>
+                    <li>Duración: <%= element.length %></li>
+                    <li>Clasificación: <%= element.rated %> </li>
+                    <li>Venta: $<%= element.purchasePrice %> </li>
+                    <li>Alquiler: $<%= element.rentalPrice %> </li>
+                  </ul>
+                </div>
+                <a href="/product/edit/<%= element.id %>"><button class="main_edit-button">Editar datos</button></a>
+              </article>
+            </a>
+            <% }) %>
         </section>
       </div>
     </div>

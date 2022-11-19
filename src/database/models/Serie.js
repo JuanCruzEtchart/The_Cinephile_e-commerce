@@ -3,75 +3,75 @@ module.exports = (sequelize, dataTypes) => {
   let cols = {
     id: {
       type: dataTypes.INTEGER(10),
-      primarKey: true,
+      primaryKey: true,
       autoIncrement: true,
     },
     name: {
       type: dataTypes.STRING(100),
-      allowNull: false,
+      allowNull: true,
     },
     release_year: {
       type: dataTypes.TINYINT(4),
-      allowNull: false,
+      allowNull: true,
     },
     rating: {
       type: dataTypes.STRING(30),
-      allowNull: false,
+      allowNull: true,
     },
     length: {
       type: dataTypes.STRING(30),
-      allowNull: false,
+      allowNull: true,
     },
     imdb_score: {
       type: dataTypes.DECIMAL(3, 1),
-      allowNull: false,
+      allowNull: true,
     },
     imdb_total_reviews: {
       type: dataTypes.STRING(30),
-      allowNull: false,
+      allowNull: true,
     },
     tomato_score: {
       type: dataTypes.INTEGER(3),
     },
     trailer_link: {
       type: dataTypes.STRING(500),
-      allowNull: false,
+      allowNull: true,
     },
     purchase_price: {
       type: dataTypes.DECIMAL(6, 2),
-      allowNull: false,
+      allowNull: true,
     },
     rental_price: {
       type: dataTypes.DECIMAL(6, 2),
-      allowNull: false,
+      allowNull: true,
     },
     synopsis: {
       type: dataTypes.TEXT,
-      allowNull: false,
+      allowNull: true,
     },
     director_id: {
       type: dataTypes.INTEGER(10),
-      allowNull: false,
+      allowNull: true,
     },
     screenwriter_id: {
       type: dataTypes.INTEGER(10),
-      allowNull: false,
+      allowNull: true,
     },
     product_image: {
       type: dataTypes.BLOB,
-      allowNull: false,
+      allowNull: true,
     },
     background_image: {
       type: dataTypes.BLOB,
-      allowNull: false,
+      allowNull: true,
     },
     genre1_id: {
       type: dataTypes.INTEGER(10),
-      allowNull: false,
+      allowNull: true,
     },
     genre2_id: {
       type: dataTypes.INTEGER(10),
-      allowNull: false,
+      allowNull: true,
     },
   };
 
@@ -85,28 +85,28 @@ module.exports = (sequelize, dataTypes) => {
   Serie.associate = (models) => {
     Serie.belongsTo(models.Director, {
       as: "director",
-      foreingKey: "director_id",
+      foreignKey: "director_id",
     });
 
     Serie.belongsTo(models.Screenwriter, {
       as: "screenwriter",
-      foreingKey: "screenwriter_id",
+      foreignKey: "screenwriter_id",
     });
 
     Serie.belongsTo(models.Genre, {
       as: "genre1",
-      foreingKey: "genre1_id",
+      foreignKey: "genre1_id",
     });
 
     Serie.belongsTo(models.Genre, {
       as: "genre2",
-      foreingKey: "genre2_id",
+      foreignKey: "genre2_id",
     });
 
-    Serie.belongToMany(models.Actor, {
+    Serie.belongsToMany(models.Actor, {
       as: "actors",
       through: "actor_serie",
-      foreingKey: "movie_id",
+      foreignKey: "movie_id",
       otherKey: "actor_id",
       timestamps: false,
     });

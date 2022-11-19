@@ -1,14 +1,19 @@
 const path = require("path");
 const fs = require("fs");
 const { validationResult } = require("express-validator");
+const db = require("../database/models");
 
-function findAll() {
+const Movies = db.Movie;
+const Series = db.Serie;
+const Actors = db.Actor;
+
+/* function findAll() {
   const jsonData = fs.readFileSync(
     path.join(__dirname, "../data/products.json")
   );
   const data = JSON.parse(jsonData);
   return data;
-}
+} */
 
 function writeFile(data) {
   const dataString = JSON.stringify(data, null, 1);
@@ -264,32 +269,63 @@ const productController = {
 
   //Render de vista de lista general de productos
   list: (req, res) => {
-    const data = findAll();
-    res.render("productList", { product: data });
+    /*     const data = findAll();
+    res.render("productList", { product: data }); */
+    const movies = Movies.findAll();
+    const series = Series.findAll();
+    Promise.all([movies, series])
+      .then(([allMovies, allSeries]) => {
+        res.render("productList", { movies: allMovies, series: allSeries });
+      })
+      .catch((error) => {
+        res.send(error);
+      });
+
+    /*     Movies.findAll()
+      .then((movies) => {
+        res.render("productList", { movies });
+      })
+      .catch((error) => {
+        res.send(error);
+      }); */
   },
 
   //Render de vista de lista de películas
   movies: (req, res) => {
-    const data = findAll();
+    /*     const data = findAll();
     let movies = [];
     data.forEach((product) => {
       if (product.type == "Película") {
         movies.push(product);
       }
     });
-    res.render("moviesList", { product: movies });
+    res.render("moviesList", { product: movies }); */
+    Movies.findAll()
+      .then((movies) => {
+        res.render("moviesList", { movies });
+      })
+      .catch((error) => {
+        res.send(error);
+      });
   },
 
   //Render de vista de lista de series
   series: (req, res) => {
-    const data = findAll();
+    /*     const data = findAll();
     let series = [];
     data.forEach((product) => {
       if (product.type == "Serie de TV") {
         series.push(product);
       }
     });
-    res.render("seriesList", { product: series });
+    res.render("seriesList", { product: series }); */
+    Series.findAll()
+      .then((series) => {
+        res.render("seriesList", { series });
+      })
+      .catch((error) => {
+        res.send(error);
+      });
   },
 
   //Render de vista de carrito

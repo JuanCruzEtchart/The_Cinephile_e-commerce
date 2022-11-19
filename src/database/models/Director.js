@@ -3,16 +3,16 @@ module.exports = (sequelize, dataTypes) => {
   let cols = {
     id: {
       type: dataTypes.INTEGER(10),
-      primarKey: true,
+      primaryKey: true,
       autoIncrement: true,
     },
     name: {
       type: dataTypes.STRING(100),
-      allowNull: false,
+      allowNull: true,
     },
     biography_link: {
       type: dataTypes.STRING(500),
-      allowNull: false,
+      allowNull: true,
     },
   };
 
