@@ -58,11 +58,11 @@ module.exports = (sequelize, dataTypes) => {
       allowNull: true,
     },
     product_image: {
-      type: dataTypes.BLOB,
+      type: dataTypes.BLOB("medium"),
       allowNull: true,
     },
     background_image: {
-      type: dataTypes.BLOB,
+      type: dataTypes.BLOB("medium"),
       allowNull: true,
     },
     genre1_id: {

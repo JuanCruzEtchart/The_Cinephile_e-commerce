@@ -2,10 +2,13 @@ const path = require("path");
 const fs = require("fs");
 const { validationResult } = require("express-validator");
 const db = require("../database/models");
+const { resolveNaptr } = require("dns");
 
 const Movies = db.Movie;
 const Series = db.Serie;
 const Actors = db.Actor;
+const Directors = db.Director;
+const Screenwriters = db.Screenwriter;
 
 /* function findAll() {
   const jsonData = fs.readFileSync(
@@ -38,8 +41,8 @@ function writeFileTemp(data) {
 
 const productController = {
   //Render de vista de detalle de productos
-  detail: (req, res) => {
-    const data = findAll();
+  detailMovie: (req, res) => {
+    /*     const data = findAll();
     const directorsFilter = [];
     const similarFilter = [];
 
@@ -64,7 +67,131 @@ const productController = {
       list: data,
       director: directorsFilter,
       similar: similarFilter,
+    }); */
+    const id = req.params.id;
+    db.Movie.findByPk(id, {
+      include: [
+        "director",
+        "screenwriter",
+        "genre1",
+        "genre2" /* , "actors" */,
+      ],
+    })
+      .then((product) => {
+        res.render("productDetail", { product });
+      })
+      .catch((error) => {
+        res.send(error);
+      });
+  },
+
+  detailSerie: (req, res) => {
+    /*     const data = findAll();
+        const directorsFilter = [];
+        const similarFilter = [];
+    
+        let productFound = data.find((product) => {
+          return product.id == req.params.id;
+        });
+    
+        data.forEach((filtered) => {
+          if (filtered.director == productFound.director) {
+            directorsFilter.push(filtered);
+          }
+        });
+    
+        data.forEach((filtered) => {
+          if (filtered.genre1 == productFound.genre1) {
+            similarFilter.push(filtered);
+          }
+        });
+    
+        res.render("productDetail", {
+          product: productFound,
+          list: data,
+          director: directorsFilter,
+          similar: similarFilter,
+        }); */
+    const id = req.params.id;
+    db.Serie.findByPk(id, {
+      include: [
+        "director",
+        "screenwriter",
+        "genre1",
+        "genre2" /* , "actors" */,
+      ],
+    })
+      .then((product) => {
+        res.render("productDetail", { product });
+      })
+      .catch((error) => {
+        res.send(error);
+      });
+  },
+
+  //Render de vista de carga de directores y guionistas
+  createDirectorScreenwriter: (req, res) => {
+    const directors = Directors.findAll();
+    const screenwriters = Screenwriters.findAll();
+    Promise.all([directors, screenwriters])
+      .then(([allDirectors, allScreenwriters]) => {
+        res.render("directorScreenwriter", {
+          directors: allDirectors,
+          screenwriters: allScreenwriters,
+        });
+      })
+      .catch((error) => {
+        res.send(error);
+      });
+  },
+
+  //Guardado de directores y guionistas
+  directorScreenwriterUpload: (req, res) => {
+    if (req.body.radio == "director") {
+      Directors.create({
+        full_name: req.body.name,
+        biography_link: req.body.biography_link,
+        directors_photo: req.body.photo,
+      })
+        .then(() => {
+          console.log("Director creado!");
+          res.redirect("/product/create/director-screenwriter");
+        })
+        .catch((error) => res.send(error));
+    } else {
+      Screenwriters.create({
+        full_name: req.body.name,
+        biography_link: req.body.biography_link,
+        screenwriter_photo: req.body.photo,
+      })
+        .then(() => {
+          console.log("Guionista creado!");
+          res.redirect("/product/create/director-screenwriter");
+        })
+        .catch((error) => res.send(error));
+    }
+  },
+  //Render de la vista de carga de actores
+  createActor: (req, res) => {
+    Actors.findAll().then((actors) => {
+      res.render("createActor", { actors });
     });
+  },
+
+  //Guardado de actores
+  uploadActor: (req, res) => {
+    Actors.create({
+      full_name: req.body.name,
+      biography_link: req.body.biography_link,
+      actors_photo: req.body.photo,
+    })
+      .then(() => {
+        console.log("Actor creado!");
+        res.redirect("/product/create/actor");
+      })
+      .catch((error) => {
+        res.send(error);
+      });
   },
 
   //Render de vista de creación de productos
@@ -206,7 +333,7 @@ const productController = {
   },
 
   //Guardado de repartos
-  castUpolad: (req, res) => {
+  castUpload: (req, res) => {
     const data = findAll();
     const dataTemp = findAllTemp();
     const productImage = dataTemp.productImage.map(function (image) {

@@ -6,12 +6,16 @@ module.exports = (sequelize, dataTypes) => {
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    full_name: {
       type: dataTypes.STRING(100),
       allowNull: true,
     },
     biography_link: {
       type: dataTypes.STRING(500),
+      allowNull: true,
+    },
+    screenwriter_photo: {
+      type: dataTypes.BLOB("medium"),
       allowNull: true,
     },
   };
