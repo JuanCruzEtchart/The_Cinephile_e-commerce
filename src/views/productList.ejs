@@ -13,11 +13,8 @@
     <div class="main__container">
       <h1>Listado de productos:</h1>
       <div class="main__button">
-        <a href="/product/create/director-screenwriter">
-          <button class="back-button">Cargar nuevo director/guionista</button>
-        </a>
-        <a href="/product/create/actor">
-          <button class="back-button actor-button">Cargar nuevo actor</button>
+        <a href="/product/create/productionTeam">
+          <button class="back-button">Cargar actor/director/guionista</button>
         </a>
         <a href="/product/create">
           <button class="back-button product-button">Crear nuevo producto</button>
@@ -30,7 +27,7 @@
           <a href="/product/movie/detail/<%= element.id %>">
             <article class="main__product-article">
               <div class="main__img-container">
-                <img src="/images/products/productsCreated/<%= element.productImage ? element.productImage : "Logo.png"%>" alt="Imágen de producto">
+                <img src="/images/products/productsCreated/<%= element.product_image ? element.product_image : "Logo.png"%>" alt="Imágen de producto">
               </div>
               <div class="main__product-information">
                 <p>Información del producto:</p>
@@ -39,9 +36,9 @@
                   <li>Nombre: <%= element.name %> </li>
                   <li>Tipo: <%= element.type %></li>
                   <li>Duración: <%= element.length %></li>
-                  <li>Clasificación: <%= element.rated %> </li>
-                  <li>Venta: $<%= element.purchasePrice %> </li>
-                  <li>Alquiler: $<%= element.rentalPrice %> </li>
+                  <li>Clasificación: <%= element.rating %> </li>
+                  <li>Venta: $<%= element.purchase_price %> </li>
+                  <li>Alquiler: $<%= element.rental_price %> </li>
                 </ul>
               </div>
               <a href="/product/edit/<%= element.id %>"><button class="main_edit-button">Editar datos</button></a>
@@ -52,7 +49,7 @@
           <a href="/product/serie/detail/<%= element.id %>">
             <article class="main__product-article">
               <div class="main__img-container">
-                <img src="/images/products/productsCreated/<%= element.productImage ? element.productImage : "Logo.png"%>" alt="Imágen de producto">
+                <img src="/images/products/productsCreated/<%= element.product_image ? element.product_image : "Logo.png"%>" alt="Imágen de producto">
               </div>
               <div class="main__product-information">
                 <p>Información del producto:</p>
@@ -61,9 +58,9 @@
                   <li>Nombre: <%= element.name %> </li>
                   <li>Tipo: <%= element.type %></li>
                   <li>Duración: <%= element.length %></li>
-                  <li>Clasificación: <%= element.rated %> </li>
-                  <li>Venta: $<%= element.purchasePrice %> </li>
-                  <li>Alquiler: $<%= element.rentalPrice %> </li>
+                  <li>Clasificación: <%= element.rating %> </li>
+                  <li>Venta: $<%= element.purchase_price %> </li>
+                  <li>Alquiler: $<%= element.rental_price %> </li>
                 </ul>
               </div>
               <a href="/product/edit/<%= element.id %>"><button class="main_edit-button">Editar datos</button></a>

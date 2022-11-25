@@ -60,13 +60,13 @@ router.get("/serie/detail/:id", productController.detailSerie);
 
 /*Render de la vista de carga de actores, directores y guionistas*/
 router.get(
-  "/create/director-screenwriter",
-  productController.createDirectorScreenwriter
+  "/create/productionTeam",
+  productController.createProductionTeam
 );
 router.post(
-  "/create/director-screenwriter",
+  "/create/productionTeam",
   uploadPhoto,
-  productController.directorScreenwriterUpload
+  productController.productionTeamUpload
 );
 router.get("/create/actor", uploadPhoto, productController.createActor);
 router.post("/create/actor", uploadPhoto, productController.uploadActor);

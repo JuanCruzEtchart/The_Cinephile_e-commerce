@@ -9,6 +9,7 @@ const Series = db.Serie;
 const Actors = db.Actor;
 const Directors = db.Director;
 const Screenwriters = db.Screenwriter;
+const Genres = db.Genre;
 
 /* function findAll() {
   const jsonData = fs.readFileSync(
@@ -70,12 +71,7 @@ const productController = {
     }); */
     const id = req.params.id;
     db.Movie.findByPk(id, {
-      include: [
-        "director",
-        "screenwriter",
-        "genre1",
-        "genre2" /* , "actors" */,
-      ],
+      include: ["director", "screenwriter", "genre1", "genre2", "actors"],
     })
       .then((product) => {
         res.render("productDetail", { product });
@@ -114,12 +110,7 @@ const productController = {
         }); */
     const id = req.params.id;
     db.Serie.findByPk(id, {
-      include: [
-        "director",
-        "screenwriter",
-        "genre1",
-        "genre2" /* , "actors" */,
-      ],
+      include: ["director", "screenwriter", "genre1", "genre2", "actors"],
     })
       .then((product) => {
         res.render("productDetail", { product });
@@ -130,12 +121,12 @@ const productController = {
   },
 
   //Render de vista de carga de directores y guionistas
-  createDirectorScreenwriter: (req, res) => {
+  createProductionTeam: (req, res) => {
     const directors = Directors.findAll();
     const screenwriters = Screenwriters.findAll();
     Promise.all([directors, screenwriters])
       .then(([allDirectors, allScreenwriters]) => {
-        res.render("directorScreenwriter", {
+        res.render("createProductionTeam", {
           directors: allDirectors,
           screenwriters: allScreenwriters,
         });
@@ -146,27 +137,38 @@ const productController = {
   },
 
   //Guardado de directores y guionistas
-  directorScreenwriterUpload: (req, res) => {
-    if (req.body.radio == "director") {
+  productionTeamUpload: (req, res) => {
+    if (req.body.radio == "actor") {
+      Actors.create({
+        full_name: req.body.name,
+        biography_link: req.body.biography_link,
+        actors_photo: req.file.filename,
+      })
+        .then(() => {
+          console.log("Actor creado!");
+          res.redirect("/product/create/productionTeam");
+        })
+        .catch((error) => res.send(error));
+    } else if (req.body.radio == "director") {
       Directors.create({
         full_name: req.body.name,
         biography_link: req.body.biography_link,
-        directors_photo: req.body.photo,
+        directors_photo: req.file.filename,
       })
         .then(() => {
           console.log("Director creado!");
-          res.redirect("/product/create/director-screenwriter");
+          res.redirect("/product/create/productionTeam");
         })
         .catch((error) => res.send(error));
     } else {
       Screenwriters.create({
         full_name: req.body.name,
         biography_link: req.body.biography_link,
-        screenwriter_photo: req.body.photo,
+        screenwriter_photo: req.file.filename,
       })
         .then(() => {
           console.log("Guionista creado!");
-          res.redirect("/product/create/director-screenwriter");
+          res.redirect("/product/create/productionTeam");
         })
         .catch((error) => res.send(error));
     }
@@ -195,12 +197,22 @@ const productController = {
   },
 
   //Render de vista de creación de productos
-  create: (req, res) => {
-    const dataTemp = findAllTemp();
-    res.render("productCreate", { old: dataTemp });
+  create: async (req, res) => {
+    const dataTemp = await findAllTemp();
+    const genres = await Genres.findAll();
+    const actors = await Actors.findAll();
+    const directors = await Directors.findAll();
+    const screenwriter = await Screenwriters.findAll();
+    res.render("productCreate", {
+      old: dataTemp,
+      genres,
+      actors,
+      directors,
+      screenwriter,
+    });
   },
 
-  //Guardado de producto creado
+  //Guardado de producto temporal
   store: (req, res) => {
     const dataTemp = findAllTemp();
     const validationErrors = validationResult(req);
@@ -214,7 +226,7 @@ const productController = {
     console.log(req.files);
     console.log(validationErrors);
 
-    if (!validationErrors.isEmpty()) {
+    /*     if (!validationErrors.isEmpty()) {
       res.render("productCreate", {
         errors: validationErrors.array(),
         errors2: validationErrors.mapped(),
@@ -223,34 +235,83 @@ const productController = {
       console.log(validationErrors);
     } else {
       const newProduct = {
-        name: req.body.name,
         type: req.body.type,
-        year: req.body.year,
-        rated: req.body.rated,
+        name: req.body.name,
+        release_year: req.body.release_year,
+        rating: req.file.rating,
         length: req.body.length,
-        imdbScore: Number(req.body.imdbScore),
-        imdbTotalReviews: req.body.imdbTotalReviews,
-        tomatoScore: req.body.tomatoScore,
-        trailerLink: req.body.trailerLink,
-        genre1: req.body.genre1,
-        genre2: req.body.genre2,
-        purchasePrice: Number(req.body.purchasePrice),
-        rentalPrice: Number(req.body.rentalPrice),
+        imdb_score: req.body.imdbScore,
+        imdb_total_reviews: req.body.imdbTotalReviews,
+        tomato_score: req.body.tomatoScore,
+        trailer_link: req.body.trailerLink,
+        genre1_id: req.body.genre1,
+        genre2_id: req.body.genre2,
+        purchase_price: req.body.purchasePrice,
+        rental_price: req.body.rentalPrice,
         synopsis: req.body.synopsis,
-        director: req.body.director,
-        directorBiography: req.body.directorBiography,
-        screenwriter: req.body.screenwriter,
-        screenwriterBiography: req.body.screenwriterBiography,
-        productImage: productImage,
-        backgroundImage: backgroundImage,
-        castLength: req.body.castLength,
+        director_id: req.body.director,
+        screenwriter_id: req.body.screenwriter,
+        product_image: productImage,
+        background_image: backgroundImage,
       };
 
       writeFileTemp(newProduct);
       res.redirect("/product/create/cast");
       console.log(newProduct);
-      console.log("Producto temporal creado");
-    }
+      console.log("Producto temporal creado!"); 
+    } */
+    const newProduct = {
+      type: req.body.type,
+      name: req.body.name,
+      release_year: req.body.release_year,
+      rating: req.body.rating,
+      length: req.body.length,
+      imdb_score: req.body.imdbScore,
+      imdb_total_reviews: req.body.imdbTotalReviews,
+      tomato_score: req.body.tomatoScore,
+      trailer_link: req.body.trailerLink,
+      genre1_id: req.body.genre1,
+      genre2_id: req.body.genre2,
+      purchase_price: req.body.purchasePrice,
+      rental_price: req.body.rentalPrice,
+      synopsis: req.body.synopsis,
+      director_id: req.body.director,
+      screenwriter_id: req.body.screenwriter,
+      product_image: productImage,
+      background_image: backgroundImage,
+      castLength: req.body.castLength,
+    };
+
+    writeFileTemp(newProduct);
+    res.redirect("/product/create/cast");
+    console.log(newProduct);
+    console.log("Producto temporal creado!");
+    /*     if (req.body.type == "Película") {
+      Movies.create({
+        name: req.body.name,
+        release_year: req.body.release_year,
+        rating: req.file.rating,
+        length: req.body.length,
+        imdb_score: req.body.imdbScore,
+        imdb_total_reviews: req.body.imdbTotalReviews,
+        tomato_score: req.body.tomatoScore,
+        trailer_link: req.body.trailerLink,
+        purchase_price: req.body.purchasePrice,
+        rental_price: req.body.rentalPrice,
+        synopsis: req.body.synopsis,
+        director_id: req.body.director,
+        screenwriter_id: req.body.screenwriter,
+        product_image: productImage,
+        background_image: backgroundImage,
+      })
+        .then((movie) => {
+          console.log("Película creada!");
+          movie.set;
+          //res.redirect("/product/create");
+        })
+        .catch((error) => res.send(error));
+    } else {
+    } */
   },
 
   //Render de vista de edición de productos
@@ -328,13 +389,14 @@ const productController = {
   //Render de vista de creación de repartos
   castCreate: (req, res) => {
     const dataTemp = findAllTemp();
-
-    res.render("productCast", { product: dataTemp });
+    Actors.findAll().then((actors) => {
+      res.render("productCast", { product: dataTemp, actors });
+    });
   },
 
-  //Guardado de repartos
+  //Guardado de repartos y producto final
   castUpload: (req, res) => {
-    const data = findAll();
+    /*     const data = findAll();
     const dataTemp = findAllTemp();
     const productImage = dataTemp.productImage.map(function (image) {
       return image;
@@ -391,7 +453,67 @@ const productController = {
     data.push(newCast);
     writeFileTemp({});
     writeFile(data);
-    res.redirect("/product/list");
+    res.redirect("/product/list"); */
+
+    if (req.body.type == "Película") {
+      Movies.create({
+        name: req.body.name,
+        release_year: req.body.release_year,
+        rating: req.body.rating,
+        length: req.body.length,
+        imdb_score: req.body.imdb_score,
+        imdb_total_reviews: req.body.imdb_total_reviews,
+        tomato_score: req.body.tomato_score,
+        trailer_link: req.body.trailer_link,
+        genre1_id: req.body.genre1_id,
+        genre2_id: req.body.genre2_id,
+        purchase_price: req.body.purchase_price,
+        rental_price: req.body.rental_price,
+        synopsis: req.body.synopsis,
+        director_id: req.body.director_id,
+        screenwriter_id: req.body.screenwriter_id,
+        product_image: req.body.productImage,
+        background_image: req.body.backgroundImage,
+      })
+        .then((movie) => {
+          for (let i = 1; i <= req.body.castLength; i++) {
+            movie.setActors(req.body["actor" + i]);
+          }
+          writeFileTemp({});
+          console.log("Película creada!");
+          res.redirect("/product/list");
+        })
+        .catch((error) => res.send(error));
+    } else {
+      Series.create({
+        name: req.body.name,
+        release_year: req.body.release_year,
+        rating: req.body.rating,
+        length: req.body.length,
+        imdb_score: req.body.imdb_score,
+        imdb_total_reviews: req.body.imdb_total_reviews,
+        tomato_score: req.body.tomato_score,
+        trailer_link: req.body.trailer_link,
+        genre1_id: req.body.genre1_id,
+        genre2_id: req.body.genre2_id,
+        purchase_price: req.body.purchase_price,
+        rental_price: req.body.rental_price,
+        synopsis: req.body.synopsis,
+        director_id: req.body.director_id,
+        screenwriter_id: req.body.screenwriter_id,
+        product_image: req.body.productImage,
+        background_image: req.body.backgroundImage,
+      })
+        .then((serie) => {
+          for (let i = 1; i <= req.body.castLength; i++) {
+            serie.setActors(req.body["actor" + i]);
+          }
+          writeFileTemp({});
+          console.log("Serie creada!");
+          res.redirect("/product/list");
+        })
+        .catch((error) => res.send(error));
+    }
   },
 
   //Render de vista de lista general de productos

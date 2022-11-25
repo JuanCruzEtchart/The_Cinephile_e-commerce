@@ -9,14 +9,14 @@
 <body>
   <%- include("./partials/header") %>
   <main class="main">
-    <div class="main__background"><img src=<%="data:image/gif;base64, product.background_image" ? "data:image/gif;base64,product.background_image" : "/images/products/productsCreated/Logo.png"%> " alt=" Background image"></div>
+    <div class="main__background"><img src="/images/products/productsCreated/<%= product.background_image ? product.background_image : "Logo.png"%>" alt="Background image"></div>
     <div class="main__container">
       <section class="main__product-description">
         <div class="main__product-header">
           <div class="main__product-logo">
             <h1><%= product.name %></h1>
             <h4><%= product.type %> - <%= product.release_year %> - <%= product.rating %> - <%= product.length %></h4>
-            <img src="/images/products/productsCreated/<%= product.productImage ? product.productImage : "Logo.png"%>" alt="product logo" />
+            <img src="/images/products/productsCreated/<%= product.product_image ? product.product_image : "Logo.png"%>" alt="Product image" />
             <form action="#" method="post" class="main__boockmark">
               <div class="main__boockmark-icon">
                 <i class="far fa-bookmark"></i>
@@ -79,13 +79,13 @@
           <div class="main__product-director">
             <div class="main__director">Dirección</div>
             <a href="<%= product.director.biography_link %> " target="_blank">
-              <span class="product-director"><%= product.director.name %></span>
+              <span class="product-director"><%= product.director.full_name %></span>
             </a>
           </div>
           <div class="main__product-screenwriter">
             <div class="main__screenwriter">Guión</div>
             <a href="<%= product.screenwriter.biography_link %> ">
-              <span class="product-screenwriter"><%= product.screenwriter.name %></span>
+              <span class="product-screenwriter"><%= product.screenwriter.full_name %></span>
             </a>
           </div>
         </article>
@@ -99,7 +99,15 @@
           <div class="main__slider-wrap-principal-cast">
             <div class="main__slider">
               <div class="main__slider-inner" id="main__slider-1-inner">
-                <!-- FALTA SLIDER DE REPARTO  -->
+                <% product.actors.forEach(element => { %>
+                <div class="main__item-actor">
+                  <a href="<%= element.biography_link%>" target="_blank">
+                    <img src="/images/products/productsCreated/<%=element.actors_photo ? element.actors_photo : "Logo.png"%>" alt="<%= element.actor%>" />
+                    <div class="main__actor-name"><%= element.full_name%></div>
+    
+                  </a>
+                </div>
+                <% }) %>
               </div>
             </div>
           </div>

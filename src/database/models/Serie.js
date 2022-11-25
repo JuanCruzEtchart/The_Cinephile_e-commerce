@@ -58,11 +58,11 @@ module.exports = (sequelize, dataTypes) => {
       allowNull: true,
     },
     product_image: {
-      type: dataTypes.BLOB("medium"),
+      type: dataTypes.STRING(100),
       allowNull: true,
     },
     background_image: {
-      type: dataTypes.BLOB("medium"),
+      type: dataTypes.STRING(100),
       allowNull: true,
     },
     genre1_id: {
@@ -106,7 +106,7 @@ module.exports = (sequelize, dataTypes) => {
     Serie.belongsToMany(models.Actor, {
       as: "actors",
       through: "actor_serie",
-      foreignKey: "movie_id",
+      foreignKey: "serie_id",
       otherKey: "actor_id",
       timestamps: false,
     });

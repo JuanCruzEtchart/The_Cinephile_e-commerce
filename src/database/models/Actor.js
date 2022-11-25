@@ -15,7 +15,7 @@ module.exports = (sequelize, dataTypes) => {
       allowNull: true,
     },
     actors_photo: {
-      type: dataTypes.BLOB("medium"),
+      type: dataTypes.STRING(100),
       allowNull: true,
     },
   };
