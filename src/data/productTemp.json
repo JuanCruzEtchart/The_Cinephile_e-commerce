@@ -1,21 +1,25 @@
 {
-  "type": "Película",
-  "name": "Iron Man",
-  "release_year": "2005",
-  "rating": "R",
-  "length": "2h 55m",
-  "imdb_score": "8",
-  "imdb_total_reviews": "1,8 M",
-  "tomato_score": "80",
-  "trailer_link": "http://localhost/phpmyadmin/index.php?route=/table/structure&db=the_cinephile&table=actor_character",
-  "genre1_id": "1",
-  "genre2_id": "3",
-  "purchase_price": "1500",
-  "rental_price": "1500",
-  "synopsis": "Hola!",
-  "director_id": "2",
-  "screenwriter_id": "2",
-  "product_image": ["productImage1669435419301-.jpg"],
-  "background_image": ["backgroundImage1669435419317-.jpg"],
-  "castLength": "2"
+ "type": "Serie de TV",
+ "name": "Iron a",
+ "release_year": "2005",
+ "rating": "R",
+ "length": "2h 55m",
+ "imdb_score": "8",
+ "imdb_total_reviews": "1,8 M",
+ "tomato_score": "80",
+ "trailer_link": "http://localhost/phpmyadmin/index.php?route=/table/structure&db=the_cinephile&table=actor_character",
+ "genre1_id": "1",
+ "genre2_id": "3",
+ "purchase_price": "1500",
+ "rental_price": "1500",
+ "synopsis": "Hola!",
+ "director_id": "2",
+ "screenwriter_id": "2",
+ "product_image": [
+  "productImage1669446065005-.jpg"
+ ],
+ "background_image": [
+  "backgroundImage1669446065089-.jpg"
+ ],
+ "castLength": "2"
 }

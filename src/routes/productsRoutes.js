@@ -55,8 +55,7 @@ let uploadActorsPhoto = upload.any();
 let uploadPhoto = upload.single("photo");
 
 /*Render del detalle de productos*/
-router.get("/movie/detail/:id", productController.detailMovie);
-router.get("/serie/detail/:id", productController.detailSerie);
+router.get("/detail/:id", productController.detailProduct);
 
 /*Render de la vista de carga de actores, directores y guionistas*/
 router.get("/create/productionTeam", productController.createProductionTeam);

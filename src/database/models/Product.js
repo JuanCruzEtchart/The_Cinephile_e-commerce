@@ -1,11 +1,15 @@
 module.exports = (sequelize, dataTypes) => {
-  let alias = "Movie";
+  let alias = "Product";
   let cols = {
     id: {
       type: dataTypes.INTEGER(10),
       primaryKey: true,
       autoIncrement: true,
       allowNull: false,
+    },
+    type: {
+      type: dataTypes.STRING(100),
+      allowNull: true,
     },
     name: {
       type: dataTypes.STRING(100),
@@ -78,48 +82,48 @@ module.exports = (sequelize, dataTypes) => {
 
   let config = {
     timestamps: false,
-    tableName: "movies",
+    tableName: "products",
   };
 
-  const Movie = sequelize.define(alias, cols, config);
+  const Product = sequelize.define(alias, cols, config);
 
-  Movie.associate = (models) => {
-    Movie.belongsTo(models.Director, {
+  Product.associate = (models) => {
+    Product.belongsTo(models.Director, {
       as: "director",
       foreignKey: "director_id",
     });
 
-    Movie.belongsTo(models.Screenwriter, {
+    Product.belongsTo(models.Screenwriter, {
       as: "screenwriter",
       foreignKey: "screenwriter_id",
     });
 
-    Movie.belongsTo(models.Genre, {
+    Product.belongsTo(models.Genre, {
       as: "genre1",
       foreignKey: "genre1_id",
     });
 
-    Movie.belongsTo(models.Genre, {
+    Product.belongsTo(models.Genre, {
       as: "genre2",
       foreignKey: "genre2_id",
     });
 
-    Movie.belongsToMany(models.Actor, {
+    Product.belongsToMany(models.Actor, {
       as: "actors",
-      through: "actor_movie",
-      foreignKey: "movie_id",
+      through: "actor_product",
+      foreignKey: "product_id",
       otherKey: "actor_id",
       timestamps: false,
     });
 
-    Movie.belongsToMany(models.Character, {
+    Product.belongsToMany(models.Character, {
       as: "characters",
-      through: "movie_character",
-      foreignKey: "movie_id",
+      through: "product_character",
+      foreignKey: "product_id",
       otherKey: "character_id",
       timestamps: false,
     });
   };
 
-  return Movie;
+  return Product;
 };

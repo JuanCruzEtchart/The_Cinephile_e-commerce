@@ -79,8 +79,8 @@
           </select>
           <h3 class="main__fieldDescription">Personaje del actor :</h3>
           <select name="character<%= i %>" class="main__select" required>
-            <% characters.forEach(element => { %>
             <option value="" disabled selected></option>
+            <% characters.forEach(element => { %>
             <option value="<%= element.id %>"><%= element.name %> </option>
             <% }) %>
           </select>

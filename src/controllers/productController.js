@@ -4,8 +4,7 @@ const { validationResult } = require("express-validator");
 const db = require("../database/models");
 const { resolveNaptr } = require("dns");
 
-const Movies = db.Movie;
-const Series = db.Serie;
+const Product = db.Product;
 const Actors = db.Actor;
 const Directors = db.Director;
 const Screenwriters = db.Screenwriter;
@@ -43,7 +42,7 @@ function writeFileTemp(data) {
 
 const productController = {
   //Render de vista de detalle de productos
-  detailMovie: (req, res) => {
+  detailProduct: (req, res) => {
     /*     const data = findAll();
     const directorsFilter = [];
     const similarFilter = [];
@@ -71,53 +70,7 @@ const productController = {
       similar: similarFilter,
     }); */
     const id = req.params.id;
-    Movies.findByPk(id, {
-      include: [
-        "director",
-        "screenwriter",
-        "genre1",
-        "genre2",
-        "actors",
-        "characters",
-      ],
-    })
-      .then((product) => {
-        res.render("productDetail", { product });
-      })
-      .catch((error) => {
-        res.send(error);
-      });
-  },
-
-  detailSerie: (req, res) => {
-    /*     const data = findAll();
-        const directorsFilter = [];
-        const similarFilter = [];
-    
-        let productFound = data.find((product) => {
-          return product.id == req.params.id;
-        });
-    
-        data.forEach((filtered) => {
-          if (filtered.director == productFound.director) {
-            directorsFilter.push(filtered);
-          }
-        });
-    
-        data.forEach((filtered) => {
-          if (filtered.genre1 == productFound.genre1) {
-            similarFilter.push(filtered);
-          }
-        });
-    
-        res.render("productDetail", {
-          product: productFound,
-          list: data,
-          director: directorsFilter,
-          similar: similarFilter,
-        }); */
-    const id = req.params.id;
-    Series.findByPk(id, {
+    Product.findByPk(id, {
       include: [
         "director",
         "screenwriter",
@@ -331,14 +284,9 @@ const productController = {
 
   //Render de vista de edición de productos
   edit: async (req, res) => {
-    /*    const data = findAll();
-    let productFound = data.find((product) => {
-      return product.id == req.params.id;
-    });
-    res.render("productUpdate", { product: productFound }); */
     const id = req.params.id;
 
-    const movie = await Movies.findByPk(id, {
+    const movie = await Product.findByPk(id, {
       include: [
         "director",
         "screenwriter",
@@ -358,28 +306,23 @@ const productController = {
       directors,
       screenwriter,
     });
-    /*       .then((product) => {
-        res.render("productDetail", { product });
-      })
-      .catch((error) => {
-        res.send(error);
-      }); */
   },
 
   //Guardado de edición de productos
   update: (req, res) => {
-    const data = findAll();
+    const productId = req.params.id;
+    //const data = findAll();
     const validationErrors = validationResult(req);
-
-    let productFound = data.find((product) => {
-      return product.id == req.params.id;
-    });
 
     const productImage = req.files.productImage.map(function (image) {
       return image.filename;
     });
     const backgroundImage = req.files.backgroundImage.map(function (image) {
       return image.filename;
+    });
+
+    /*  */ /*     let productFound = data.find((product) => {
+      return product.id == req.params.id;
     });
 
     if (!validationErrors.isEmpty()) {
@@ -414,7 +357,39 @@ const productController = {
 
       writeFile(data);
       res.redirect("/product/list");
-    }
+    } */
+    Product.update(
+      {
+        type: req.body.type,
+        name: req.body.name,
+        release_year: req.body.release_year,
+        rating: req.body.rating,
+        length: req.body.length,
+        imdb_score: req.body.imdbScore,
+        imdb_total_reviews: req.body.imdbTotalReviews,
+        tomato_score: req.body.tomatoScore,
+        trailer_link: req.body.trailerLink,
+        genre1_id: req.body.genre1,
+        genre2_id: req.body.genre2,
+        purchase_price: req.body.purchasePrice,
+        rental_price: req.body.rentalPrice,
+        synopsis: req.body.synopsis,
+        director_id: req.body.director,
+        screenwriter_id: req.body.screenwriter,
+        product_image: productImage.toString(),
+        background_image: backgroundImage.toString(),
+      },
+      {
+        where: { id: productId },
+      }
+    )
+      .then(() => {
+        console.log("Producto editado!");
+        res.redirect("/product/list");
+      })
+      .catch((error) => {
+        res.send(error);
+      });
   },
 
   //Eliminación de productos
@@ -498,104 +473,52 @@ const productController = {
     writeFileTemp({});
     writeFile(data);
     res.redirect("/product/list"); */
-
-    if (req.body.type == "Película") {
-      Movies.create({
-        name: req.body.name,
-        release_year: req.body.release_year,
-        rating: req.body.rating,
-        length: req.body.length,
-        imdb_score: req.body.imdb_score,
-        imdb_total_reviews: req.body.imdb_total_reviews,
-        tomato_score: req.body.tomato_score,
-        trailer_link: req.body.trailer_link,
-        genre1_id: req.body.genre1_id,
-        genre2_id: req.body.genre2_id,
-        purchase_price: req.body.purchase_price,
-        rental_price: req.body.rental_price,
-        synopsis: req.body.synopsis,
-        director_id: req.body.director_id,
-        screenwriter_id: req.body.screenwriter_id,
-        product_image: req.body.productImage,
-        background_image: req.body.backgroundImage,
+    Product.create({
+      type: req.body.type,
+      name: req.body.name,
+      release_year: req.body.release_year,
+      rating: req.body.rating,
+      length: req.body.length,
+      imdb_score: req.body.imdb_score,
+      imdb_total_reviews: req.body.imdb_total_reviews,
+      tomato_score: req.body.tomato_score,
+      trailer_link: req.body.trailer_link,
+      genre1_id: req.body.genre1_id,
+      genre2_id: req.body.genre2_id,
+      purchase_price: req.body.purchase_price,
+      rental_price: req.body.rental_price,
+      synopsis: req.body.synopsis,
+      director_id: req.body.director_id,
+      screenwriter_id: req.body.screenwriter_id,
+      product_image: req.body.productImage,
+      background_image: req.body.backgroundImage,
+    })
+      .then((product) => {
+        for (let i = 1; i <= req.body.castLength; i++) {
+          product.setActors(req.body["actor" + i]);
+          product.setCharacters(req.body["character" + i]);
+        }
+        writeFileTemp({});
+        console.log("Producto creado!");
+        res.redirect("/product/list");
       })
-        .then((movie) => {
-          for (let i = 1; i <= req.body.castLength; i++) {
-            movie.setActors(req.body["actor" + i]);
-            movie.setCharacters(req.body["character" + i]);
-          }
-          writeFileTemp({});
-          console.log("Película creada!");
-          res.redirect("/product/list");
-        })
-        .catch((error) => res.send(error));
-    } else {
-      Series.create({
-        name: req.body.name,
-        release_year: req.body.release_year,
-        rating: req.body.rating,
-        length: req.body.length,
-        imdb_score: req.body.imdb_score,
-        imdb_total_reviews: req.body.imdb_total_reviews,
-        tomato_score: req.body.tomato_score,
-        trailer_link: req.body.trailer_link,
-        genre1_id: req.body.genre1_id,
-        genre2_id: req.body.genre2_id,
-        purchase_price: req.body.purchase_price,
-        rental_price: req.body.rental_price,
-        synopsis: req.body.synopsis,
-        director_id: req.body.director_id,
-        screenwriter_id: req.body.screenwriter_id,
-        product_image: req.body.productImage,
-        background_image: req.body.backgroundImage,
-      })
-        .then((serie) => {
-          for (let i = 1; i <= req.body.castLength; i++) {
-            serie.setActors(req.body["actor" + i]);
-            serie.setCharacters(req.body["character" + i]);
-          }
-          writeFileTemp({});
-          console.log("Serie creada!");
-          res.redirect("/product/list");
-        })
-        .catch((error) => res.send(error));
-    }
+      .catch((error) => res.send(error));
   },
 
   //Render de vista de lista general de productos
   list: (req, res) => {
-    /*     const data = findAll();
-    res.render("productList", { product: data }); */
-    const movies = Movies.findAll();
-    const series = Series.findAll();
-    Promise.all([movies, series])
-      .then(([allMovies, allSeries]) => {
-        res.render("productList", { movies: allMovies, series: allSeries });
+    Product.findAll()
+      .then((products) => {
+        res.render("productList", { products });
       })
       .catch((error) => {
         res.send(error);
       });
-
-    /*     Movies.findAll()
-      .then((movies) => {
-        res.render("productList", { movies });
-      })
-      .catch((error) => {
-        res.send(error);
-      }); */
   },
 
   //Render de vista de lista de películas
   movies: (req, res) => {
-    /*     const data = findAll();
-    let movies = [];
-    data.forEach((product) => {
-      if (product.type == "Película") {
-        movies.push(product);
-      }
-    });
-    res.render("moviesList", { product: movies }); */
-    Movies.findAll()
+    Product.findAll({ where: { type: "Película" } })
       .then((movies) => {
         res.render("moviesList", { movies });
       })
@@ -606,15 +529,7 @@ const productController = {
 
   //Render de vista de lista de series
   series: (req, res) => {
-    /*     const data = findAll();
-    let series = [];
-    data.forEach((product) => {
-      if (product.type == "Serie de TV") {
-        series.push(product);
-      }
-    });
-    res.render("seriesList", { product: series }); */
-    Series.findAll()
+    Product.findAll({ where: { type: "Serie de TV" } })
       .then((series) => {
         res.render("seriesList", { series });
       })

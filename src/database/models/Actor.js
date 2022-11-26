@@ -28,19 +28,11 @@ module.exports = (sequelize, dataTypes) => {
   const Actor = sequelize.define(alias, cols, config);
 
   Actor.associate = (models) => {
-    Actor.belongsToMany(models.Movie, {
-      as: "movies",
-      through: "actor_movie",
+    Actor.belongsToMany(models.Product, {
+      as: "products",
+      through: "actor_product",
       foreingKey: "actor_id",
-      otherKey: "movie_id",
-      timestamps: false,
-    });
-
-    Actor.belongsToMany(models.Serie, {
-      as: "series",
-      through: "actor_serie",
-      foreingKey: "actor_id",
-      otherKey: "serie_id",
+      otherKey: "product_id",
       timestamps: false,
     });
 
