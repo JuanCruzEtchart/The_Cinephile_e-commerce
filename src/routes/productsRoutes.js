@@ -59,17 +59,16 @@ router.get("/movie/detail/:id", productController.detailMovie);
 router.get("/serie/detail/:id", productController.detailSerie);
 
 /*Render de la vista de carga de actores, directores y guionistas*/
-router.get(
-  "/create/productionTeam",
-  productController.createProductionTeam
-);
+router.get("/create/productionTeam", productController.createProductionTeam);
 router.post(
   "/create/productionTeam",
   uploadPhoto,
   productController.productionTeamUpload
 );
-router.get("/create/actor", uploadPhoto, productController.createActor);
-router.post("/create/actor", uploadPhoto, productController.uploadActor);
+
+/*Render de la vista de carga de personajes*/ 
+router.get("/create/character", productController.createCharacter);
+router.post("/create/character", productController.uploadCharacter);
 
 /*Render de la vista de creación de productos*/
 router.get("/create", productController.create);

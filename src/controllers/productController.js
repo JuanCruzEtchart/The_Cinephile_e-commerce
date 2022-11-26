@@ -10,6 +10,7 @@ const Actors = db.Actor;
 const Directors = db.Director;
 const Screenwriters = db.Screenwriter;
 const Genres = db.Genre;
+const Characters = db.Character;
 
 /* function findAll() {
   const jsonData = fs.readFileSync(
@@ -70,8 +71,15 @@ const productController = {
       similar: similarFilter,
     }); */
     const id = req.params.id;
-    db.Movie.findByPk(id, {
-      include: ["director", "screenwriter", "genre1", "genre2", "actors"],
+    Movies.findByPk(id, {
+      include: [
+        "director",
+        "screenwriter",
+        "genre1",
+        "genre2",
+        "actors",
+        "characters",
+      ],
     })
       .then((product) => {
         res.render("productDetail", { product });
@@ -109,8 +117,15 @@ const productController = {
           similar: similarFilter,
         }); */
     const id = req.params.id;
-    db.Serie.findByPk(id, {
-      include: ["director", "screenwriter", "genre1", "genre2", "actors"],
+    Series.findByPk(id, {
+      include: [
+        "director",
+        "screenwriter",
+        "genre1",
+        "genre2",
+        "actors",
+        "characters",
+      ],
     })
       .then((product) => {
         res.render("productDetail", { product });
@@ -120,15 +135,17 @@ const productController = {
       });
   },
 
-  //Render de vista de carga de directores y guionistas
+  //Render de vista de carga de directores, guionistas y actores
   createProductionTeam: (req, res) => {
     const directors = Directors.findAll();
     const screenwriters = Screenwriters.findAll();
-    Promise.all([directors, screenwriters])
-      .then(([allDirectors, allScreenwriters]) => {
+    const actors = Actors.findAll();
+    Promise.all([directors, screenwriters, actors])
+      .then(([allDirectors, allScreenwriters, allActors]) => {
         res.render("createProductionTeam", {
           directors: allDirectors,
           screenwriters: allScreenwriters,
+          actors: allActors,
         });
       })
       .catch((error) => {
@@ -136,7 +153,7 @@ const productController = {
       });
   },
 
-  //Guardado de directores y guionistas
+  //Guardado de directores, guionistas y actores
   productionTeamUpload: (req, res) => {
     if (req.body.radio == "actor") {
       Actors.create({
@@ -173,23 +190,21 @@ const productController = {
         .catch((error) => res.send(error));
     }
   },
-  //Render de la vista de carga de actores
-  createActor: (req, res) => {
-    Actors.findAll().then((actors) => {
-      res.render("createActor", { actors });
+  //Render de la vista de carga de personajes
+  createCharacter: (req, res) => {
+    Characters.findAll().then((characters) => {
+      res.render("createCharacter", { characters });
     });
   },
 
-  //Guardado de actores
-  uploadActor: (req, res) => {
-    Actors.create({
-      full_name: req.body.name,
-      biography_link: req.body.biography_link,
-      actors_photo: req.body.photo,
+  //Guardado de personajes
+  uploadCharacter: (req, res) => {
+    Characters.create({
+      name: req.body.name,
     })
       .then(() => {
-        console.log("Actor creado!");
-        res.redirect("/product/create/actor");
+        console.log("Personaje creado!");
+        res.redirect("/product/create/character");
       })
       .catch((error) => {
         res.send(error);
@@ -315,12 +330,40 @@ const productController = {
   },
 
   //Render de vista de edición de productos
-  edit: (req, res) => {
-    const data = findAll();
+  edit: async (req, res) => {
+    /*    const data = findAll();
     let productFound = data.find((product) => {
       return product.id == req.params.id;
     });
-    res.render("productUpdate", { product: productFound });
+    res.render("productUpdate", { product: productFound }); */
+    const id = req.params.id;
+
+    const movie = await Movies.findByPk(id, {
+      include: [
+        "director",
+        "screenwriter",
+        "genre1",
+        "genre2",
+        "actors",
+        "characters",
+      ],
+    });
+    const genres = await Genres.findAll();
+    //const actors = await Actors.findAll();
+    const directors = await Directors.findAll();
+    const screenwriter = await Screenwriters.findAll();
+    res.render("productUpdate", {
+      product: movie,
+      genres,
+      directors,
+      screenwriter,
+    });
+    /*       .then((product) => {
+        res.render("productDetail", { product });
+      })
+      .catch((error) => {
+        res.send(error);
+      }); */
   },
 
   //Guardado de edición de productos
@@ -387,11 +430,12 @@ const productController = {
   },
 
   //Render de vista de creación de repartos
-  castCreate: (req, res) => {
-    const dataTemp = findAllTemp();
-    Actors.findAll().then((actors) => {
-      res.render("productCast", { product: dataTemp, actors });
-    });
+  castCreate: async (req, res) => {
+    const dataTemp = await findAllTemp();
+    const characters = await Characters.findAll();
+    const actors = await Actors.findAll();
+
+    res.render("productCast", { product: dataTemp, actors, characters });
   },
 
   //Guardado de repartos y producto final
@@ -478,6 +522,7 @@ const productController = {
         .then((movie) => {
           for (let i = 1; i <= req.body.castLength; i++) {
             movie.setActors(req.body["actor" + i]);
+            movie.setCharacters(req.body["character" + i]);
           }
           writeFileTemp({});
           console.log("Película creada!");
@@ -507,6 +552,7 @@ const productController = {
         .then((serie) => {
           for (let i = 1; i <= req.body.castLength; i++) {
             serie.setActors(req.body["actor" + i]);
+            serie.setCharacters(req.body["character" + i]);
           }
           writeFileTemp({});
           console.log("Serie creada!");

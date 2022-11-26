@@ -43,6 +43,14 @@ module.exports = (sequelize, dataTypes) => {
       otherKey: "serie_id",
       timestamps: false,
     });
+
+    Actor.belongsToMany(models.Character, {
+      as: "characters",
+      through: "actor_character",
+      foreignKey: "actor_id",
+      otherKey: "character_id",
+      timestamps: false,
+    });
   };
 
   return Actor;

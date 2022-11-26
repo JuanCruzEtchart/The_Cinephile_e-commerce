@@ -77,6 +77,13 @@
             <option value="<%= element.id %>"><%= element.full_name %> </option>
             <% }) %>
           </select>
+          <h3 class="main__fieldDescription">Personaje del actor :</h3>
+          <select name="character<%= i %>" class="main__select" required>
+            <% characters.forEach(element => { %>
+            <option value="" disabled selected></option>
+            <option value="<%= element.id %>"><%= element.name %> </option>
+            <% }) %>
+          </select>
           <!--           <div>
             <input type="text" class="text-box" id="actorsName" name="actorsName<%= i %>" placeholder="Nombre del actor" required>
           </div>

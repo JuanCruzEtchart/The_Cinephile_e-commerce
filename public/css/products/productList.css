@@ -96,6 +96,9 @@ h1 {
     flex-direction: row;
   }
   .product-button {
+    margin-left: 30px;
+  }
+  .character-button {
     margin-left: 15px;
   }
 }
