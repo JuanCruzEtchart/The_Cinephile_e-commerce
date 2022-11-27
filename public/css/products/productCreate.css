@@ -37,6 +37,22 @@
   background-color: rgba(126, 126, 126, 0.1);
 }
 
+.main__errors {
+  text-align: center;
+  list-style-type: none;
+  color: white;
+  margin: 20px 0px;
+}
+
+.main__errors li{
+  margin: 20px 0px;
+  padding: 10px;
+  font-size: 0.875rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 .main__form {
   padding: 20px 0px;
   text-align: center;

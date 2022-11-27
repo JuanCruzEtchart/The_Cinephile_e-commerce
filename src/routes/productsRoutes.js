@@ -1,13 +1,21 @@
 const express = require("express");
 const router = express.Router();
-const productController = require("../controllers/productController.js");
 const multer = require("multer");
 const path = require("path");
-const data = require("express-validator");
+const productController = require("../controllers/productController.js");
+const {
+  createProductValidations,
+} = require("../validations/productValidation.js");
+const {
+  updateProductValidations,
+} = require("../validations/productValidation.js");
 
 let storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, path.join(__dirname, "../../public/images/products/productsCreated"));
+    cb(
+      null,
+      path.join(__dirname, "../../public/images/products/productsCreated")
+    );
   },
 
   filename: (req, file, cb) => {
@@ -17,7 +25,19 @@ let storage = multer.diskStorage({
   },
 });
 
-let upload = multer({ storage: storage });
+let upload = multer({
+  storage: storage,
+  fileFilter: (req, file, cb) => {
+    //Validación de archivos
+    const allowedExtensions = [".jpg", ".png", ".jpeg"];
+
+    const imageExtension = path.extname(file.originalname);
+
+    const result = allowedExtensions.includes(imageExtension);
+
+    cb(null, result);
+  },
+});
 
 //Carga de imágenes de detalle producto
 let uploadDetailImages = upload.fields([
@@ -31,24 +51,45 @@ let uploadDetailImages = upload.fields([
 //Carga de imágenes de reparto de actores
 let uploadActorsPhoto = upload.any();
 
-/*Render del detalle de productos*/
+//Carga de imágenes de reparto de actores
+let uploadPhoto = upload.single("photo");
 
-router.get("/detail/:id", productController.detail);
+/*Render del detalle de productos*/
+router.get("/detail/:id", productController.detailProduct);
+
+/*Render de la vista de carga de actores, directores y guionistas*/
+router.get("/create/productionTeam", productController.createProductionTeam);
+router.post(
+  "/create/productionTeam",
+  uploadPhoto,
+  productController.productionTeamUpload
+);
+
+/*Render de la vista de carga de personajes*/ 
+router.get("/create/character", productController.createCharacter);
+router.post("/create/character", productController.uploadCharacter);
 
 /*Render de la vista de creación de productos*/
-
 router.get("/create", productController.create);
-router.post("/create", uploadDetailImages, productController.store);
+router.post(
+  "/create",
+  uploadDetailImages,
+  createProductValidations,
+  productController.store
+);
 
 /*Render de la vista de creación de repartos*/
-
 router.get("/create/cast", productController.castCreate);
-router.post("/create/cast", uploadActorsPhoto, productController.castUpolad);
+router.post("/create/cast", uploadActorsPhoto, productController.castUpload);
 
 /*Render de la vista de edición de productos*/
-
 router.get("/edit/:id", productController.edit);
-router.put("/edit/:id", uploadDetailImages, productController.update);
+router.put(
+  "/edit/:id",
+  uploadDetailImages,
+  updateProductValidations,
+  productController.update
+);
 router.delete("/delete/:id", productController.destroy);
 
 /*Render de la vista de lista de productos*/

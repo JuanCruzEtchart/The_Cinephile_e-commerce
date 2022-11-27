@@ -135,10 +135,10 @@ button.send-button {
     padding: 10px 0;
     display: flex;
     width: 100%;
-    padding-top: 3%;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
+    padding-bottom: 3%;
 }
 
 #checkbox {
@@ -146,12 +146,13 @@ button.send-button {
 }
 
 #contraseña {
-  color: #00d4bb;
+  color: #ffc700;
   padding-top: 5%;
+  
 }
 
 #olvidaste {
-  padding-bottom: 10%;
+  padding-bottom: 7%;
   display: flex;
   width: 75%;
   justify-content: center;
@@ -228,11 +229,7 @@ button.send-button {
   .div-edit {
     height: 50px;   
 }
-#checkboxBox {
 
-  padding-top: 5%;
-  
-}
 #checkbox {
   height: 30px;
   width: 24px;

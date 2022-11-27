@@ -30,20 +30,25 @@
         <a href="#" class="header__nav-search">
           <i class="fas fa-search"></i>
         </a>
+        <% if (locals.usuario){ %>
+        <a href="/user/profile" class="header__profile">
+          <i class="fas fa-user-circle"></i>
+        </a>
+        <% } else {%>
         <a href="/user/login" class="header__profile">
           <i class="fas fa-user-circle"></i>
         </a>
+        <% } %>
+        <% if (locals.usuario){ %>
         <a href="/product/cart" class="header__cart">
           <i class="fas fa-shopping-cart"></i>
         </a>
+        <% } else {%>
+        <a href="/user/login" class="header__cart">
+          <i class="fas fa-shopping-cart"></i>
+        </a>
+        <% } %>
       </div>
     </div>
   </div>
-  <% if (locals.usuario){ %>
-    <div class="cerrar">
-      <form action="/user/logout" method="post"> 
-        <button type="submit" >Cerrar Sesion</button>
-      </form>
-    </div>
-  <% } %>
 </header>

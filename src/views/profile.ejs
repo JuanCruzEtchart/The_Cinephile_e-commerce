@@ -12,34 +12,31 @@
           <section class="main__profile-description">
             <div class="main__profile-header">
               <div>Perfil</div>
+              <% if (locals.usuario){ %>
+                <div class="cerrar-sesion">
+                  <form action="/user/logout" method="post">
+                    <button type="submit">Cerrar Sesion</button>
+                  </form>
+                </div>
+                <% } %>
             </div>
             <div class="datos">
             
               <div class="main__profile-datos-principales">
                 <img class="main__profile-avatar" src="/images/profile/avatar.png">
                 <section class="main__profile-nombre-edad-pais">
-                <h2 class="main__profile-nombre">Magdalena Suarez</h2>
-                <div class="main__profile-edad-y-pais">
-                  <span class="main__profile-edad">25 años</span>
-                  <span class="main__profile-pais">Buenos Aires, Argentina</span>
-                </div>
+                <h2 class="main__profile-nombre"><%= locals.usuario.name%></h2>               
                 </section>
               </div>
               <div class="main__profile-datos-secundarios">
                 <article class="main__profile-articles">
                   <p id="items">E-mail:</p>
-                  <p id="items-respuestas">magdasuarez@gmail.com</p>
+                  <p id="items-respuestas"><%= locals.usuario.email%></p>
                 </article>
                 <article class="main__profile-articles">
                   <p id="items">Nombre de usuario:</p>
-                  <p id="items-respuestas">@magda_from_mordor</p>
-                </article>
-                <article class="main__profile-articles">
-                  <p id="items">Generos favoritos:</p>
-                  <p class="main__profile-article-generos">Fantasia</p>
-                  <p class="main__profile-article-generos">Terror</p>
-                  <p class="main__profile-article-generos">Anime</p>
-                </article>
+                  <p id="items-respuestas"><%= locals.usuario.name%></p>
+                </article>                
               </div>
             </div>
           </section>
