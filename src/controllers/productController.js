@@ -42,7 +42,7 @@ function writeFileTemp(data) {
 
 const productController = {
   //Render de vista de detalle de productos
-  detailProduct: (req, res) => {
+  detailProduct: async (req, res) => {
     /*     const data = findAll();
     const directorsFilter = [];
     const similarFilter = [];
@@ -70,7 +70,7 @@ const productController = {
       similar: similarFilter,
     }); */
     const id = req.params.id;
-    Product.findByPk(id, {
+    let product = await Product.findByPk(id, {
       include: [
         "director",
         "screenwriter",
@@ -79,13 +79,18 @@ const productController = {
         "actors",
         "characters",
       ],
-    })
-      .then((product) => {
-        res.render("productDetail", { product });
-      })
-      .catch((error) => {
-        res.send(error);
-      });
+    });
+    let allProducts = await Product.findAll({
+      include: [
+        "director",
+        "screenwriter",
+        "genre1",
+        "genre2",
+        "actors",
+        "characters",
+      ],
+    });
+    res.render("productDetail", { product, allProducts });
   },
 
   //Render de vista de carga de directores, guionistas y actores
@@ -311,15 +316,8 @@ const productController = {
   //Guardado de edición de productos
   update: (req, res) => {
     const productId = req.params.id;
-    //const data = findAll();
     const validationErrors = validationResult(req);
-
-    const productImage = req.files.productImage.map(function (image) {
-      return image.filename;
-    });
-    const backgroundImage = req.files.backgroundImage.map(function (image) {
-      return image.filename;
-    });
+    //const data = findAll();
 
     /*  */ /*     let productFound = data.find((product) => {
       return product.id == req.params.id;
@@ -354,10 +352,28 @@ const productController = {
       productFound.productImage = productImage;
       productFound.backgroundImage = backgroundImage;
       productFound.castLength = req.body.castLength;
-
+      
       writeFile(data);
       res.redirect("/product/list");
     } */
+    let product = Product.findByPk(productId);
+    /*     const image =
+      req.files.productImage != undefined
+        ? product.product_image
+        : req.files.productImage.map(function (image) {
+            return image.filename.toString();
+          });
+
+    console.log("IMAGEN" + image); */
+
+    const productImage = req.files.productImage.map(function (image) {
+      return image.filename;
+    });
+
+    const backgroundImage = req.files.backgroundImage.map(function (image) {
+      return image.filename;
+    });
+
     Product.update(
       {
         type: req.body.type,
@@ -376,8 +392,14 @@ const productController = {
         synopsis: req.body.synopsis,
         director_id: req.body.director,
         screenwriter_id: req.body.screenwriter,
-        product_image: productImage.toString(),
-        background_image: backgroundImage.toString(),
+        product_image:
+          req.files.productImage == undefined
+            ? product.product_image
+            : productImage.toString(),
+        background_image:
+          req.files.backgroundImage == undefined
+            ? product.product_image
+            : backgroundImage.toString(),
       },
       {
         where: { id: productId },
@@ -393,14 +415,13 @@ const productController = {
   },
 
   //Eliminación de productos
-  destroy: (req, res) => {
-    const data = findAll();
-    let productFound = data.findIndex((product) => {
-      return product.id == req.params.id;
-    });
+  destroy: async (req, res) => {
+    const productId = req.params.id;
 
-    data.splice(productFound, 1);
-    writeFile(data);
+    let product = await Product.findByPk(productId);
+    await product.setCharacters([]);
+    await product.setActors([]);
+    await Product.destroy({ where: { id: productId } });
     res.redirect("/product/list");
   },
 
@@ -496,7 +517,9 @@ const productController = {
       .then((product) => {
         for (let i = 1; i <= req.body.castLength; i++) {
           product.setActors(req.body["actor" + i]);
+          console.log("Actor:" + req.body["actor" + i]);
           product.setCharacters(req.body["character" + i]);
+          console.log("Personaje:" + req.body["character" + i]);
         }
         writeFileTemp({});
         console.log("Producto creado!");
@@ -507,7 +530,16 @@ const productController = {
 
   //Render de vista de lista general de productos
   list: (req, res) => {
-    Product.findAll()
+    Product.findAll({
+      include: [
+        "director",
+        "screenwriter",
+        "genre1",
+        "genre2",
+        "actors",
+        "characters",
+      ],
+    })
       .then((products) => {
         res.render("productList", { products });
       })

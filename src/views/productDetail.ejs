@@ -104,7 +104,7 @@
                   <a href="<%= element.biography_link%>" target="_blank">
                     <img src="/images/products/productsCreated/<%=element.actors_photo ? element.actors_photo : "Logo.png"%>" alt="<%= element.actor%>" />
                     <div class="main__actor-name"><%= element.full_name%></div>
-    
+
                   </a>
                 </div>
                 <% }) %>
@@ -135,6 +135,24 @@
               <div class="main__slider">
                 <div class="main__slider-inner" id="sliderMovies">
                   <!-- FALTA SLIDER  DE PELÍCULAS SIMILARES-->
+                  <% allProducts.forEach(element => { %>
+                  <% if (product.genre1.name == element.genre1.name) { %>
+                  <div class="main__item-product">
+                    <a href="/product/detail/<%= element.id %>">
+                      <img src="/images/products/productsCreated/<%= element.product_image ? element.product_image : "Logo.png"%>" alt="Imágen de producto" />
+                      <div class="main__product-name"><%= element.name%></div>
+                    </a>
+                    <form action="#" method="post" class="main__slider-boockmark">
+                      <div class="main__boockmark-icon">
+                        <i class="far fa-bookmark"></i>
+                      </div>
+                      <button type="button" class="main__boockmark-button">
+                        Añadir a Mi lista
+                      </button>
+                    </form>
+                  </div>
+                  <% } %>
+                  <% }) %>
                 </div>
               </div>
             </article>
