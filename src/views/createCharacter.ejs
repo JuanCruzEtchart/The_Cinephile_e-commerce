@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include("./partials/head") %>
+  <link rel="stylesheet" href="/css/products/productCast.css" />
+</head>
+
+<body>
+  <%- include("./partials/header") %>
+  <main class="main">
+    <div class="main__container">
+      <h1 class="main__title">Nuevo personaje</h1>
+      <form class="main__form" action="/product/create/character" method="POST">
+        <div>
+          <input type="text" class="text-box" id="actorsName" name="name" placeholder="Nombre" required>
+        </div>
+        <div class="main__button">
+          <button type="submit" class="send-button">Subir</button>
+        </div>
+        <div class="main__button">
+          <button type="reset" class="reset-button">Reiniciar campo</button>
+        </div>
+      </form>
+      <div class="main__button">
+        <a href="/product/list">
+          <button class="back-button">Volver atras</button>
+        </a>
+      </div>
+    </div>
+  </main>
+  <%- include("./partials/footer") %>
+</body>
+
+</html>

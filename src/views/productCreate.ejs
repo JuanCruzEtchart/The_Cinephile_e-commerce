@@ -26,103 +26,87 @@
       </ul>
       <% } %>
       <form class="main__form" action="/product/create" enctype="multipart/form-data" method="POST">
-        <div>
-          <input type="text" class="text-box" id="name" name="name" value="<%= locals.old ? old.name : '' %>" placeholder="Nombre" required>
-        </div>
         <div class="main__radioForm">
           <div class="main__radioForm-container">
             <div>
-              <input type="radio" name="type" id="movie" value="Película" checked />
+              <input type="radio" name="type" id="movie" value="Película" <% if (old.type == "Película") { %><%= 'checked' %><% }; %>/>
               <label for="movie">Película</label>
             </div>
             <div>
-              <input type="radio" name="type" id="tvSeries" value="Serie de TV" />
+              <input type="radio" name="type" id="tvSeries" value="Serie de TV" <% if (old.type == "Serie de TV") { %><%= 'checked' %><% }; %>/>
               <label for="tvSeries">Serie de TV</label>
-            </div>
-            <div>
-              <input type="radio" name="type" id="documentary" value="Documental" />
-              <label for="documentary">Documental</label>
             </div>
           </div>
         </div>
         <div>
-          <input type="text" class="text-box" id="year" name="year" value="<%= locals.old ? old.year : '' %>" placeholder="Año de salida" required>
+          <input type="text" class="text-box" id="name" name="name" value="<%= locals.old ? old.name : '' %>" placeholder="Nombre" required>
         </div>
         <div>
-          <input type="text" class="text-box" id="rated" name="rated" value="<%= locals.old ? old.rated : '' %>" placeholder="Clasificación" required>
+          <input type="text" class="text-box" id="year" name="release_year" value="<%= locals.old ? old.release_year : '' %>" placeholder="Año de salida" required>
+        </div>
+        <div>
+          <input type="text" class="text-box" id="rated" name="rating" value="<%= locals.old ? old.rating : '' %>" placeholder="Clasificación" required>
         </div>
         <div>
           <input type="text" class="text-box" id="length" name="length" value="<%= locals.old ? old.length : '' %>" placeholder="Duración" required>
         </div>
         <div>
-          <input type="number" class="text-box" id="imdbScore" name="imdbScore" step="0.01" min="0" max="10" value="<%= locals.old ? old.imdbScore : '' %>" placeholder="Puntaje de IMDb" required>
+          <input type="number" class="text-box" id="imdbScore" name="imdbScore" step="0.01" min="0" max="10" value="<%= locals.old ? old.imdb_score : '' %>" placeholder="Puntaje de IMDb" required>
         </div>
         <div>
-          <input type="text" class="text-box" id="imdbTotalReviews" name="imdbTotalReviews" value="<%= locals.old ? old.imdbTotalReviews : '' %>" placeholder="Reseñas totales de IMDb" required>
+          <input type="text" class="text-box" id="imdbTotalReviews" name="imdbTotalReviews" value="<%= locals.old ? old.imdb_total_reviews : '' %>" placeholder="Reseñas totales de IMDb" required>
         </div>
         <div>
-          <input type="number" class="text-box" id="tomatoScore" name="tomatoScore" min="0" max="100" value="<%= locals.old ? old.tomatoScore : '' %>" placeholder="Puntaje de Rotten Tomatoes" required>
+          <input type="number" class="text-box" id="tomatoScore" name="tomatoScore" min="0" max="100" value="<%= locals.old ? old.tomato_score : '' %>" placeholder="Puntaje de Rotten Tomatoes" required>
         </div>
         <div>
-          <input type="url" class="text-box" id="trailerLink" name="trailerLink" value="<%= locals.old ? old.trailerLink: '' %>" placeholder="Link del trailer" required>
+          <input type="url" class="text-box" id="trailerLink" name="trailerLink" value="<%= locals.old ? old.trailer_link: '' %>" placeholder="Link del trailer" required>
         </div>
         <div class="main__genreSelect">
           <div class="main__fieldDescription">Elegir género 1</div>
-          <select name="genre1" class="main__select">
-            <option value="Acción">Acción</option>
-            <option value="Crimen">Crimen</option>
-            <option value="Drama">Drama</option>
-            <option value="Infantil">Infantil</option>
-            <option value="Terror">Terror</option>
-            <option value="Aventura">Aventura</option>
-            <option value="Ciencia Ficcón">Ciencia Ficcón</option>
-            <option value="Fantasía">Fantasía</option>
-            <option value="Musical">Musical</option>
-            <option value="Bélico">Bélico</option>
-            <option value="Comedia">Comedia</option>
-            <option value="Sitcom">Sitcom</option>
-            <option value="Sátira">Sátira</option>
+          <select name="genre1" class="main__select" required>
+            <option value="" disabled selected></option>
+            <% genres.forEach(element => { %>
+            <option value="<%= element.id %>" <% if (old.genre1_id == element.id) { %><%= 'selected' %><% }; %>><%= element.name %></option>
+            <% }) %>
           </select>
           <div class="main__fieldDescription">Elegir género 2</div>
-          <select name="genre2" class="main__select">
-            <option value="Acción">Acción</option>
-            <option value="Crimen">Crimen</option>
-            <option value="Drama">Drama</option>
-            <option value="Infantil">Infantil</option>
-            <option value="Terror">Terror</option>
-            <option value="Aventura">Aventura</option>
-            <option value="Ciencia Ficcón">Ciencia Ficcón</option>
-            <option value="Fantasía">Fantasía</option>
-            <option value="Musical">Musical</option>
-            <option value="Bélico">Bélico</option>
-            <option value="Comedia">Comedia</option>
-            <option value="Sitcom">Sitcom</option>
-            <option value="Sátira">Sátira</option>
+          <select name="genre2" class="main__select" required>
+            <option value="" disabled selected></option>
+            <% genres.forEach(element => { %>
+            <option value="<%= element.id %>" <% if (old.genre2_id == element.id) { %><%= 'selected' %><% }; %>><%= element.name %></option>
+            <% }) %>
           </select>
         </div>
         <div>
-          <input type="number" class="text-box" id="purchasePrice" name="purchasePrice" step="0.01" value="<%= locals.old ? old.purchasePrice : '' %>" placeholder="Precio de venta" required>
-          <input type="number" class="text-box" id="rentalPrice" name="rentalPrice" step="0.01" value="<%= locals.old ? old.rentalPrice : '' %>" placeholder="Precio de alquiler" required>
+          <input type="number" class="text-box" id="purchasePrice" name="purchasePrice" step="0.01" value="<%= locals.old ? old.purchase_price : '' %>" placeholder="Precio de venta" required>
+          <input type="number" class="text-box" id="rentalPrice" name="rentalPrice" step="0.01" value="<%= locals.old ? old.rental_price : '' %>" placeholder="Precio de alquiler" required>
         </div>
         <div>
           <textarea class="textarea" id="synopsis" name="synopsis" cols="30" rows="10" wrap="hard" placeholder="Sinopsis"><%= locals.old ? old.synopsis : '' %></textarea>
         </div>
         <div>
-          <input type="text" class="text-box" id="director" name="director" value="<%= locals.old ? old.director : '' %>" placeholder="Director" required>
+          <div class="main__fieldDescription">Elegir director</div>
+          <select name="director" class="main__select" required>
+            <option value="" disabled selected></option>
+            <% directors.forEach(element => { %>
+            <option value="<%= element.id %>" <% if (old.director_id == element.id) { %><%= 'selected' %><% }; %>><%= element.full_name %> </option>
+            <% }) %>
+          </select>
         </div>
         <div>
-          <input type="url" class="text-box" id="directorBiography" name="directorBiography" value="<%= locals.old ? old.directorBiography : '' %>" placeholder="Link de biografía del director" required>
-        </div>
-        <div>
-          <input type="text" class="text-box" id="screenwriter" name="screenwriter" value="<%= locals.old ? old.screenwriter : '' %>" placeholder="Guionista" required>
-        </div>
-        <div>
-          <input type="url" class="text-box" id="screenwriterBiography" name="screenwriterBiography" value="<%= locals.old ? old.screenwriterBiography : '' %>" placeholder="Link de biografía del guionista" required>
+          <div class="main__fieldDescription">Elegir guionista</div>
+          <select name="screenwriter" class="main__select" required>
+            <option value="" disabled selected></option>
+            <% screenwriter.forEach(element => { %>
+            <option value="<%= element.id %>" <% if (old.screenwriter_id == element.id) { %><%= 'selected' %><% }; %>><%= element.full_name %> </option>
+            <% }) %>
+          </select>
         </div>
         <div class="main__fieldDescription">Elegir cantidad de actores</div>
         <select name="castLength" class="main__select">
           <% for(let i = 1; i<=20; i++) {%>
-          <option value="<%= [i] %>"><%= [i] %></option>
+          <option value="<%= [i] %>" <% if (old.castLength == [i]) { %><%= 'selected' %><% }; %>><%= [i] %></option>
           <% }%>
         </select>
         <div class="main__file-wrap">

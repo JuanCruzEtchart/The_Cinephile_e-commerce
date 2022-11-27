@@ -51,12 +51,25 @@ let uploadDetailImages = upload.fields([
 //Carga de imágenes de reparto de actores
 let uploadActorsPhoto = upload.any();
 
-/*Render del detalle de productos*/
+//Carga de imágenes de reparto de actores
+let uploadPhoto = upload.single("photo");
 
-router.get("/detail/:id", productController.detail);
+/*Render del detalle de productos*/
+router.get("/detail/:id", productController.detailProduct);
+
+/*Render de la vista de carga de actores, directores y guionistas*/
+router.get("/create/productionTeam", productController.createProductionTeam);
+router.post(
+  "/create/productionTeam",
+  uploadPhoto,
+  productController.productionTeamUpload
+);
+
+/*Render de la vista de carga de personajes*/ 
+router.get("/create/character", productController.createCharacter);
+router.post("/create/character", productController.uploadCharacter);
 
 /*Render de la vista de creación de productos*/
-
 router.get("/create", productController.create);
 router.post(
   "/create",
@@ -66,12 +79,10 @@ router.post(
 );
 
 /*Render de la vista de creación de repartos*/
-
 router.get("/create/cast", productController.castCreate);
-router.post("/create/cast", uploadActorsPhoto, productController.castUpolad);
+router.post("/create/cast", uploadActorsPhoto, productController.castUpload);
 
 /*Render de la vista de edición de productos*/
-
 router.get("/edit/:id", productController.edit);
 router.put(
   "/edit/:id",

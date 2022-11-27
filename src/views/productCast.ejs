@@ -21,48 +21,48 @@
           </div>
         </div>
         <div class="main__create-form">
-          <input type="hidden" class="text-box" id="year" name="year" value="<%= product.year %>">
+          <input type="hidden" class="text-box" id="year" name="release_year" value="<%= product.release_year %>">
         </div>
         <div class="main__create-form">
-          <input type="hidden" class="text-box" id="rated" name="rated" value="<%= product.rated %>">
+          <input type="hidden" class="text-box" id="rated" name="rating" value="<%= product.rating %>">
         </div>
         <div class="main__create-form">
           <input type="hidden" class="text-box" id="length" name="length" value="<%= product.length %>">
         </div>
         <div class="main__create-form">
-          <input type="hidden" class="text-box" id="imdbScore" name="imdbScore" value="<%= product.imdbScore %>">
+          <input type="hidden" class="text-box" id="imdbScore" name="imdb_score" value="<%= product.imdb_score %>">
         </div>
         <div class="main__create-form">
-          <input type="hidden" class="text-box" id="imdbTotalReviews" name="imdbTotalReviews" value="<%= product.imdbTotalReviews %>">
+          <input type="hidden" class="text-box" id="imdbTotalReviews" name="imdb_total_reviews" value="<%= product.imdb_total_reviews %>">
         </div>
         <div class="main__create-form">
-          <input type="hidden" class="text-box" id="tomatoScore" name="tomatoScore" value="<%= product.tomatoScore %>">
+          <input type="hidden" class="text-box" id="tomatoScore" name="tomato_score" value="<%= product.tomato_score %>">
         </div>
         <div class="main__create-form">
-          <input type="hidden" class="text-box" id="trailerLink" name="trailerLink" value="<%= product.trailerLink %>">
+          <input type="hidden" class="text-box" id="trailerLink" name="trailer_link" value="<%= product.trailer_link %>">
         </div>
         <div class="main__create-form">
-          <input type="hidden" class="text-box" id="genre1" name="genre1" value="<%= product.genre1 %>">
-          <input type="hidden" class="text-box" id="genre2" name="genre2" value="<%= product.genre2 %>">
+          <input type="hidden" class="text-box" id="genre1" name="genre1_id" value="<%= product.genre1_id %>">
+          <input type="hidden" class="text-box" id="genre2" name="genre2_id" value="<%= product.genre2_id %>">
         </div>
         <div class="main__create-form">
-          <input type="hidden" class="text-box" id="purchasePrice" name="purchasePrice" value="<%= product.purchasePrice %>">
-          <input type="hidden" class="text-box" id="rentalPrice" name="rentalPrice" value="<%= product.rentalPrice %>">
+          <input type="hidden" class="text-box" id="purchasePrice" name="purchase_price" value="<%= product.purchase_price %>">
+          <input type="hidden" class="text-box" id="rentalPrice" name="rental_price" value="<%= product.rental_price %>">
         </div>
         <div class="main__create-form">
           <textarea hidden class="textarea" id="synopsis" name="synopsis" cols="30" rows="10" wrap="hard"><%= product.synopsis %></textarea>
         </div>
         <div class="main__create-form">
-          <input type="hidden" class="text-box" id="director" name="director" value="<%= product.director %>">
+          <input type="hidden" class="text-box" id="director" name="director_id" value="<%= product.director_id %>">
         </div>
         <div class="main__create-form">
-          <input type="hidden" class="text-box" id="directorBiography" name="directorBiography" value="<%= product.directorBiography %>">
+          <input type="hidden" class="text-box" id="screenwriter" name="screenwriter_id" value="<%= product.screenwriter_id %>">
         </div>
         <div class="main__create-form">
-          <input type="hidden" class="text-box" id="screenwriter" name="screenwriter" value="<%= product.screenwriter %>">
+          <input type="hidden" class="text-box" id="screenwriter" name="productImage" value="<%= product.product_image %>">
         </div>
         <div class="main__create-form">
-          <input type="hidden" class="text-box" id="screenwriterBiography" name="screenwriterBiography" value="<%= product.screenwriterBiography%>">
+          <input type="hidden" class="text-box" id="screenwriter" name="backgroundImage" value="<%= product.background_image %>">
         </div>
 
         <div class="main__create-form">
@@ -71,7 +71,20 @@
         <div>
           <% for( let i = 1; i <= product.castLength; i++ ) { %>
           <h2 class="main__fieldDescription">Actor n°<%= i %> </h2>
-          <div>
+          <select name="actor<%= i %>" class="main__select" required>
+            <option value="" disabled selected></option>
+            <% actors.forEach(element => { %>
+            <option value="<%= element.id %>"><%= element.full_name %> </option>
+            <% }) %>
+          </select>
+          <h3 class="main__fieldDescription">Personaje del actor :</h3>
+          <select name="character<%= i %>" class="main__select" required>
+            <option value="" disabled selected></option>
+            <% characters.forEach(element => { %>
+            <option value="<%= element.id %>"><%= element.name %> </option>
+            <% }) %>
+          </select>
+          <!--           <div>
             <input type="text" class="text-box" id="actorsName" name="actorsName<%= i %>" placeholder="Nombre del actor" required>
           </div>
           <div>
@@ -84,7 +97,7 @@
             <div class="main__fieldDescription">Fotografía del actor</div>
             <label for="actorsPhoto"></label>
             <input type="file" id="actorsPhoto" name="actorsPhoto<%= i %>" accept="image/jpg, image/png, image/jpeg" required>
-          </div>
+          </div> -->
           <% } %>
         </div>
         <div class="main__button">
