@@ -517,9 +517,7 @@ const productController = {
       .then((product) => {
         for (let i = 1; i <= req.body.castLength; i++) {
           product.setActors(req.body["actor" + i]);
-          console.log("Actor:" + req.body["actor" + i]);
           product.setCharacters(req.body["character" + i]);
-          console.log("Personaje:" + req.body["character" + i]);
         }
         writeFileTemp({});
         console.log("Producto creado!");
