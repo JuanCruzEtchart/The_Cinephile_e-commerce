@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-11-2022 a las 22:41:26
+-- Tiempo de generación: 29-11-2022 a las 09:23:48
 -- Versión del servidor: 10.4.25-MariaDB
 -- Versión de PHP: 8.1.10
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `the_cinephile`
 --
+CREATE DATABASE IF NOT EXISTS `the_cinephile` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `the_cinephile`;
 
 -- --------------------------------------------------------
 
@@ -61,6 +63,15 @@ CREATE TABLE `actor_character` (
   `character_id` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `actor_character`
+--
+
+INSERT INTO `actor_character` (`id`, `actor_id`, `character_id`) VALUES
+(7, 1, 2),
+(8, 9, 5),
+(9, 4, 3);
+
 -- --------------------------------------------------------
 
 --
@@ -78,19 +89,6 @@ CREATE TABLE `actor_product` (
 --
 
 INSERT INTO `actor_product` (`id`, `actor_id`, `product_id`) VALUES
-(1, 1, 6),
-(2, 4, 6),
-(3, 5, 6),
-(4, 1, 7),
-(5, 4, 7),
-(6, 5, 7),
-(7, 1, 8),
-(8, 4, 8),
-(9, 5, 8),
-(10, 1, 9),
-(11, 4, 9),
-(12, 1, 10),
-(13, 4, 10),
 (14, 4, 11),
 (15, 5, 11),
 (16, 4, 12),
@@ -124,7 +122,18 @@ INSERT INTO `actor_product` (`id`, `actor_id`, `product_id`) VALUES
 (48, 1, 30),
 (49, 4, 30),
 (50, 1, 31),
-(51, 5, 31);
+(51, 5, 31),
+(58, 1, 34),
+(59, 1, 35),
+(60, 4, 35),
+(61, 1, 36),
+(62, 4, 36),
+(77, 1, 44),
+(78, 5, 44),
+(79, 9, 44),
+(80, 1, 45),
+(81, 4, 45),
+(82, 9, 45);
 
 -- --------------------------------------------------------
 
@@ -144,7 +153,9 @@ CREATE TABLE `characters` (
 INSERT INTO `characters` (`id`, `name`) VALUES
 (1, 'Iron Man'),
 (2, 'Batman'),
-(3, 'Thomas Shelby');
+(3, 'Thomas Shelby'),
+(4, 'Messi'),
+(5, 'aaaaaaa');
 
 -- --------------------------------------------------------
 
@@ -238,13 +249,8 @@ CREATE TABLE `products` (
 
 INSERT INTO `products` (`id`, `type`, `name`, `release_year`, `rating`, `length`, `imdb_score`, `imdb_total_reviews`, `tomato_score`, `trailer_link`, `purchase_price`, `rental_price`, `synopsis`, `director_id`, `screenwriter_id`, `product_image`, `background_image`, `genre1_id`, `genre2_id`) VALUES
 (1, '', 'El Padrino', 1972, 'R', '2h 55m', '9.0', '1,8 M', 97, 'https://www.youtube.com/watch?v=UaVTIH8mujA', '1559.00', '499.00', 'Don Vito Corleone es el jefe de una de las cinco familias que ejercen el mando de la \r\nCosa Nostra en Nueva York en los años 40. Don Corleone tiene cuatro hijos; una \r\nchica, Connie, y tres varones, Santino, o Sonny, como le gusta que le llamen, Michael \r\ny Freddie, al que envían exiliado a Las Vegas, dada su incapacidad para asumir \r\npuestos de mando en la ”Familia”. Cuando otro capo, Sollozzo, al rechazar el \r\nPadrino intervenir en el negocio de estupefacientes, intenta asesinar a éste, \r\nempieza una cruenta lucha de violentos episodios entre los distintos grupos.', 1, 1, '?PNG\r\n\Z\n\0\0\0\rIHDR\0\0\0?\0\0Y\0\0\0?1?\0\0\0 \0IDATx^??ٓ$?u?yc?ȵr?-??P????@iZ?=??6?1?MO??4o????4??L?i', NULL, 2, 3),
-(3, '', 'El Padrino', 1972, 'R', '2h 55m', '9.0', '1,8 M', 97, 'https://www.youtube.com/watch?v=UaVTIH8mujA', '1559.00', '499.00', 'Don Vito Corleone es el jefe de una de las cinco familias que ejercen el mando de la \r\nCosa Nostra en Nueva York en los años 40. Don Corleone tiene cuatro hijos; una \r\nchica, Connie, y tres varones, Santino, o Sonny, como le gusta que le llamen, Michael \r\ny Freddie, al que envían exiliado a Las Vegas, dada su incapacidad para asumir \r\npuestos de mando en la ”Familia”. Cuando otro capo, Sollozzo, al rechazar el \r\nPadrino intervenir en el negocio de estupefacientes, intenta asesinar a éste, \r\nempieza una cruenta lucha de violentos episodios entre los distintos grupos.', 1, 1, NULL, NULL, 2, 3),
+(3, '', 'El Padrino', 1972, 'R', '2h 55m', '9.0', '1,8 M', 97, 'https://www.youtube.com/watch?v=UaVTIH8mujA', '1559.00', '499.00', 'Don Vito Corleone es el jefe de una de las cinco familias que ejercen el mando de la \r\nCosa Nostra en Nueva York en los años 40. Don Corleone tiene cuatro hijos; una \r\nchica, Connie, y tres varones, Santino, o Sonny, como le gusta que le llamen, Michael \r\ny Freddie, al que envían exiliado a Las Vegas, dada su incapacidad para asumir \r\npuestos de mando en la ”Familia”. Cuando otro capo, Sollozzo, al rechazar el \r\nPadrino intervenir en el negocio de estupefacientes, intenta asesinar a éste, \r\nempieza una cruenta lucha de violentos episodios entre los distintos grupos.', 1, 1, NULL, NULL, 7, 3),
 (4, '', 'El Padrino', 1972, 'R', '2h 55m', '9.0', '1,8 M', 97, 'https://www.youtube.com/watch?v=UaVTIH8mujA', '1559.00', '499.00', 'Don Vito Corleone es el jefe de una de las cinco familias que ejercen el mando de la \r\nCosa Nostra en Nueva York en los años 40. Don Corleone tiene cuatro hijos; una \r\nchica, Connie, y tres varones, Santino, o Sonny, como le gusta que le llamen, Michael \r\ny Freddie, al que envían exiliado a Las Vegas, dada su incapacidad para asumir \r\npuestos de mando en la ”Familia”. Cuando otro capo, Sollozzo, al rechazar el \r\nPadrino intervenir en el negocio de estupefacientes, intenta asesinar a éste, \r\nempieza una cruenta lucha de violentos episodios entre los distintos grupos.', 1, 1, NULL, NULL, 2, 3),
-(6, '', 'A', NULL, NULL, '2', NULL, NULL, NULL, NULL, NULL, NULL, '2', NULL, NULL, NULL, NULL, NULL, NULL),
-(7, '', 'A', 12, '2', '2', '2.0', '2', 2, 'https://stackoverflow.com/questions/31258158/how-to-implement-search-feature-using-sequelizejs', '2.00', '2.00', '2', 2, 1, 'productImage1669351165447-.jpg', 'backgroundImage1669351165447-.png', NULL, NULL),
-(8, '', 'A', 12, '2', '2', '2.0', '2', 2, 'https://stackoverflow.com/questions/31258158/how-to-implement-search-feature-using-sequelizejs', '2.00', '2.00', '2', 2, 1, 'productImage1669351165447-.jpg', 'backgroundImage1669351165447-.png', NULL, NULL),
-(9, '', 'Iron Man', 2007, 'R', '2h 55m', '9.2', '1,8 M', 97, 'https://stackoverflow.com/questions/31258158/how-to-implement-search-feature-using-sequelizejs', '1500.00', '1600.00', 'Milanesa', 1, 2, 'productImage1669354135905-.jpg', 'backgroundImage1669354135918-.jpg', NULL, NULL),
-(10, '', 'Iron Man', 2007, 'R', '2h 55m', '9.2', '1,8 M', 97, 'https://stackoverflow.com/questions/31258158/how-to-implement-search-feature-using-sequelizejs', '1500.00', '1600.00', 'Milanesa', 1, 2, 'productImage1669354241627-.jpg', 'backgroundImage1669354241628-.jpg', 6, NULL),
 (11, '', 'Iron Man', 2007, 'R', '2h 55m', '9.2', '1,8 M', 97, 'https://stackoverflow.com/questions/31258158/how-to-implement-search-feature-using-sequelizejs', '1500.00', '1600.00', 'Milanesa', 1, 2, 'productImage1669354269086-.jpg', 'backgroundImage1669354269087-.jpg', 1, 6),
 (12, '', 'Iron Man', 2007, 'R', '2h 55m', '9.2', '1,8 M', 97, 'https://stackoverflow.com/questions/31258158/how-to-implement-search-feature-using-sequelizejs', '1500.00', '1600.00', 'Milanesa', 1, 2, 'productImage1669354269086-.jpg', 'backgroundImage1669354269087-.jpg', 1, 6),
 (13, '', 'Mundial', 2022, 'G', '2h 55m', '10.0', '1,8 M', 100, 'https://www.youtube.com/watch?v=UaVTIH8mujA', '5.00', '500.00', 'Hola', 2, 1, 'productImage1669358277670-.jpg', 'backgroundImage1669358277683-.jpg', 2, 7),
@@ -264,7 +270,14 @@ INSERT INTO `products` (`id`, `type`, `name`, `release_year`, `rating`, `length`
 (28, 'Película', 'Iron a', 2005, 'R', '2h 55m', '8.0', '1,8 M', 80, 'http://localhost/phpmyadmin/index.php?route=/table/structure&db=the_cinephile&table=actor_character', '1500.00', '1500.00', 'Hola!', 2, 2, 'productImage1669531351800-.jpg', 'backgroundImage1669531351806-.jpg', 1, 3),
 (29, 'Película', 'Iron a', 2005, 'R', '2h 55m', '8.0', '1,8 M', 80, 'http://localhost/phpmyadmin/index.php?route=/table/structure&db=the_cinephile&table=actor_character', '1500.00', '1500.00', 'Hola!', 2, 2, 'productImage1669531351800-.jpg', 'backgroundImage1669531351806-.jpg', 1, 3),
 (30, 'Película', 'Iron a', 2005, 'R', '2h 55m', '8.0', '1,8 M', 80, 'http://localhost/phpmyadmin/index.php?route=/table/structure&db=the_cinephile&table=actor_character', '1500.00', '1500.00', 'Hola!', 2, 2, 'productImage1669531351800-.jpg', 'backgroundImage1669531351806-.jpg', 1, 3),
-(31, 'Serie de TV', 'Iron aAA', 2005, 'R', '2h 55m', '8.0', '1,8 M', 80, 'http://localhost/phpmyadmin/index.php?route=/table/structure&db=the_cinephile&table=actor_character', '1500.00', '1500.00', 'Hola!', 2, 2, 'productImage1669536164993-.jpg', 'backgroundImage1669536164994-.jpg', 1, 3);
+(31, 'Serie de TV', 'Iron aAA', 2005, 'R', '2h 55m', '8.0', '1,8 M', 80, 'http://localhost/phpmyadmin/index.php?route=/table/structure&db=the_cinephile&table=actor_character', '1500.00', '1500.00', 'Hola!', 2, 2, 'productImage1669536164993-.jpg', 'backgroundImage1669536164994-.jpg', 1, 3),
+(34, 'Película', 'Iron Man', 2005, 'R', '2h 55m', '8.0', '1,8 M', 80, 'http://localhost/phpmyadmin/index.php?route=/table/structure&db=the_cinephile&table=actor_character', '1500.00', '1500.00', 'Hola!', 2, 2, 'productImage1669435419301-.jpg', 'backgroundImage1669435419317-.jpg', 1, 3),
+(35, 'Película', 'Iron Man', 2005, 'R', '2h 55m', '8.0', '1,8 M', 80, 'http://localhost/phpmyadmin/index.php?route=/table/structure&db=the_cinephile&table=actor_character', '1500.00', '1500.00', 'Hola!', 2, 2, 'productImage1669435419301-.jpg', 'backgroundImage1669435419317-.jpg', 1, 3),
+(36, 'Película', 'Iron Man', 2005, 'R', '2h 55m', '8.0', '1,8 M', 80, 'http://localhost/phpmyadmin/index.php?route=/table/structure&db=the_cinephile&table=actor_character', '1500.00', '1500.00', 'Hola!', 2, 2, 'productImage1669435419301-.jpg', 'backgroundImage1669435419317-.jpg', 1, 3),
+(41, 'Serie de TV', 'Prueba', 2005, 'R', '2h 55m', '8.0', '1,8 M', 80, 'http://localhost/phpmyadmin/index.php?route=/table/structure&db=the_cinephile&table=actor_character', '1500.00', '1500.00', 'Hola!', 3, 1, 'productImage1669708507505-.jpg', 'backgroundImage1669708507507-.jpg', 1, 3),
+(42, 'Serie de TV', 'Prueba', 2005, 'R', '2h 55m', '8.0', '1,8 M', 80, 'http://localhost/phpmyadmin/index.php?route=/table/structure&db=the_cinephile&table=actor_character', '1500.00', '1500.00', 'Hola!', 3, 1, 'productImage1669708507505-.jpg', 'backgroundImage1669708507507-.jpg', 1, 3),
+(44, 'Serie de TV', 'Prueba', 2005, 'R', '2h 55m', '8.0', '1,8 M', 80, 'http://localhost/phpmyadmin/index.php?route=/table/structure&db=the_cinephile&table=actor_character', '1500.00', '1500.00', 'Hola!', 3, 1, 'productImage1669708733395-.jpg', 'backgroundImage1669708733446-.jpg', 1, 3),
+(45, 'Serie de TV', 'Prueba', 2005, 'R', '2h 55m', '8.0', '1,8 M', 80, 'http://localhost/phpmyadmin/index.php?route=/table/structure&db=the_cinephile&table=actor_character', '1500.00', '1500.00', 'Hola!', 3, 1, 'productImage1669708733395-.jpg', 'backgroundImage1669708733446-.jpg', 1, 3);
 
 -- --------------------------------------------------------
 
@@ -311,7 +324,18 @@ INSERT INTO `product_character` (`id`, `product_id`, `character_id`) VALUES
 (30, 30, 2),
 (31, 30, 1),
 (32, 31, 1),
-(33, 31, 2);
+(33, 31, 2),
+(40, 34, 2),
+(41, 35, 1),
+(42, 35, 3),
+(43, 36, 3),
+(44, 36, 1),
+(59, 44, 2),
+(60, 44, 1),
+(61, 44, 3),
+(62, 45, 2),
+(63, 45, 3),
+(64, 45, 5);
 
 -- --------------------------------------------------------
 
@@ -418,19 +442,19 @@ ALTER TABLE `actors`
 -- AUTO_INCREMENT de la tabla `actor_character`
 --
 ALTER TABLE `actor_character`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `actor_product`
 --
 ALTER TABLE `actor_product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
 
 --
 -- AUTO_INCREMENT de la tabla `characters`
 --
 ALTER TABLE `characters`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `directors`
@@ -448,13 +472,13 @@ ALTER TABLE `genres`
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT de la tabla `product_character`
 --
 ALTER TABLE `product_character`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
 -- AUTO_INCREMENT de la tabla `screenwriters`
