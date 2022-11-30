@@ -1,0 +1,31 @@
+module.exports = (sequelize, dataTypes) => {
+  let alias = "ProductActorCharacter";
+  let cols = {
+    id: {
+      type: dataTypes.INTEGER(11),
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    product_id: {
+      type: dataTypes.INTEGER(11),
+      allowNull: true,
+    },
+    actor_id: {
+      type: dataTypes.INTEGER(11),
+      allowNull: true,
+    },
+    character_id: {
+      type: dataTypes.INTEGER(11),
+      allowNull: true,
+    },
+  };
+
+  let config = {
+    timestamps: false,
+    tableName: "product_actor_character",
+  };
+
+  const ProductActorCharacter = sequelize.define(alias, cols, config);
+
+  return ProductActorCharacter;
+};

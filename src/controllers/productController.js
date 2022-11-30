@@ -11,6 +11,7 @@ const Screenwriters = db.Screenwriter;
 const Genres = db.Genre;
 const Characters = db.Character;
 const ActorCharacter = db.ActorCharacter;
+const ProductActorCharacter = db.ProductActorCharacter;
 
 /* function findAll() {
   const jsonData = fs.readFileSync(
@@ -158,14 +159,18 @@ const productController = {
   create: async (req, res) => {
     try {
       const dataTemp = await findAllTemp();
-      const genres = await Genres.findAll();
-      const actors = await Actors.findAll();
-      const directors = await Directors.findAll();
-      const screenwriter = await Screenwriters.findAll();
+      const genres = await Genres.findAll({
+        order: [["name", "ASC"]],
+      });
+      const directors = await Directors.findAll({
+        order: [["full_name", "ASC"]],
+      });
+      const screenwriter = await Screenwriters.findAll({
+        order: [["full_name", "ASC"]],
+      });
       res.render("productCreate", {
         old: dataTemp,
         genres,
-        actors,
         directors,
         screenwriter,
       });
@@ -227,10 +232,15 @@ const productController = {
           "characters",
         ],
       });
-      const genres = await Genres.findAll();
-      //const actors = await Actors.findAll();
-      const directors = await Directors.findAll();
-      const screenwriter = await Screenwriters.findAll();
+      const genres = await Genres.findAll({
+        order: [["name", "ASC"]],
+      });
+      const directors = await Directors.findAll({
+        order: [["full_name", "ASC"]],
+      });
+      const screenwriter = await Screenwriters.findAll({
+        order: [["full_name", "ASC"]],
+      });
       res.render("productUpdate", {
         product: movie,
         genres,
@@ -315,8 +325,12 @@ const productController = {
   castCreate: async (req, res) => {
     try {
       const dataTemp = await findAllTemp();
-      const characters = await Characters.findAll();
-      const actors = await Actors.findAll();
+      const characters = await Characters.findAll({
+        order: [["name", "ASC"]],
+      });
+      const actors = await Actors.findAll({
+        order: [["full_name", "ASC"]],
+      });
 
       res.render("productCast", { product: dataTemp, actors, characters });
     } catch (err) {
@@ -353,6 +367,11 @@ const productController = {
         actors.push(req.body["actor" + i]);
         characters.push(req.body["character" + i]);
         ActorCharacter.create({
+          actor_id: req.body["actor" + i],
+          character_id: req.body["character" + i],
+        });
+        ProductActorCharacter.create({
+          product_id: product.id,
           actor_id: req.body["actor" + i],
           character_id: req.body["character" + i],
         });
