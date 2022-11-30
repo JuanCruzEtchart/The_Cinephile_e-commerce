@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-11-2022 a las 08:53:09
+-- Tiempo de generación: 30-11-2022 a las 21:14:12
 -- Versión del servidor: 10.4.25-MariaDB
 -- Versión de PHP: 8.1.10
 
@@ -327,6 +327,17 @@ INSERT INTO `actor_product` (`id`, `actor_id`, `product_id`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `cart`
+--
+
+CREATE TABLE `cart` (
+  `id_user` int(11) NOT NULL,
+  `id_product` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `characters`
 --
 
@@ -442,6 +453,17 @@ INSERT INTO `directors` (`id`, `full_name`, `biography_link`, `directors_photo`)
 (10, 'Vince Gilligan', 'https://en.wikipedia.org/wiki/Vince_Gilligan', 'photo1669791694648-.jpg'),
 (11, 'Carlo Bernard', 'https://en.wikipedia.org/wiki/Carlos_Bernard', 'photo1669792689217-.jpg'),
 (12, 'Greg Daniels', 'https://en.wikipedia.org/wiki/Greg_Daniels', 'photo1669793318934-.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `favorites`
+--
+
+CREATE TABLE `favorites` (
+  `id_user` int(11) NOT NULL,
+  `id_product` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -754,6 +776,18 @@ INSERT INTO `screenwriters` (`id`, `full_name`, `biography_link`, `screenwriter_
 (12, 'Carlo Bernard', 'https://en.wikipedia.org/wiki/Carlos_Bernard', 'photo1669792704098-.jpg'),
 (13, 'Greg Daniels', 'https://en.wikipedia.org/wiki/Greg_Daniels', 'photo1669793340067-.jpg');
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `users`
+--
+
+CREATE TABLE `users` (
+  `id_user` int(11) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `password` varchar(12) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 --
 -- Índices para tablas volcadas
 --
@@ -781,6 +815,13 @@ ALTER TABLE `actor_product`
   ADD KEY `product_id` (`product_id`);
 
 --
+-- Indices de la tabla `cart`
+--
+ALTER TABLE `cart`
+  ADD PRIMARY KEY (`id_user`),
+  ADD KEY `id_product` (`id_product`);
+
+--
 -- Indices de la tabla `characters`
 --
 ALTER TABLE `characters`
@@ -791,6 +832,13 @@ ALTER TABLE `characters`
 --
 ALTER TABLE `directors`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `favorites`
+--
+ALTER TABLE `favorites`
+  ADD PRIMARY KEY (`id_user`),
+  ADD KEY `id_product` (`id_product`);
 
 --
 -- Indices de la tabla `genres`
@@ -832,6 +880,12 @@ ALTER TABLE `screenwriters`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id_user`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -854,6 +908,12 @@ ALTER TABLE `actor_product`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=168;
 
 --
+-- AUTO_INCREMENT de la tabla `cart`
+--
+ALTER TABLE `cart`
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de la tabla `characters`
 --
 ALTER TABLE `characters`
@@ -864,6 +924,12 @@ ALTER TABLE `characters`
 --
 ALTER TABLE `directors`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT de la tabla `favorites`
+--
+ALTER TABLE `favorites`
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `genres`
@@ -896,6 +962,12 @@ ALTER TABLE `screenwriters`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
+-- AUTO_INCREMENT de la tabla `users`
+--
+ALTER TABLE `users`
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- Restricciones para tablas volcadas
 --
 
@@ -912,6 +984,19 @@ ALTER TABLE `actor_character`
 ALTER TABLE `actor_product`
   ADD CONSTRAINT `actor_product_ibfk_1` FOREIGN KEY (`actor_id`) REFERENCES `actors` (`id`),
   ADD CONSTRAINT `actor_product_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`);
+
+--
+-- Filtros para la tabla `cart`
+--
+ALTER TABLE `cart`
+  ADD CONSTRAINT `cart_ibfk_1` FOREIGN KEY (`id_product`) REFERENCES `products` (`id`) ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `favorites`
+--
+ALTER TABLE `favorites`
+  ADD CONSTRAINT `favorites_ibfk_1` FOREIGN KEY (`id_product`) REFERENCES `products` (`id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `favorites_ibfk_2` FOREIGN KEY (`id_user`) REFERENCES `users` (`id_user`) ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `products`
@@ -936,6 +1021,12 @@ ALTER TABLE `product_actor_character`
 ALTER TABLE `product_character`
   ADD CONSTRAINT `product_character_ibfk_1` FOREIGN KEY (`character_id`) REFERENCES `characters` (`id`),
   ADD CONSTRAINT `product_character_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`);
+
+--
+-- Filtros para la tabla `users`
+--
+ALTER TABLE `users`
+  ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `cart` (`id_user`) ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
