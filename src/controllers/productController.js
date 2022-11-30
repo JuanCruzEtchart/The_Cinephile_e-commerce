@@ -2,7 +2,7 @@ const path = require("path");
 const fs = require("fs");
 const { validationResult } = require("express-validator");
 const db = require("../database/models");
-const { resolveNaptr } = require("dns");
+const Op = db.Sequelize.Op;
 
 const Product = db.Product;
 const Actors = db.Actor;
@@ -37,6 +37,18 @@ function writeFileTemp(data) {
 }
 
 const productController = {
+  //Barra de búsqueda
+  search: async (req, res) => {
+    try {
+      const products = await Product.findAll({
+        where: { name: { [Op.like]: "%" + req.query.product + "%" } },
+      });
+      res.render("searchResult", { products });
+    } catch (err) {
+      res.send(err);
+    }
+  },
+
   //Render de vista de detalle de productos
   detailProduct: async (req, res) => {
     const id = req.params.id;
@@ -118,6 +130,7 @@ const productController = {
       res.send(err);
     }
   },
+
   //Render de la vista de carga de personajes
   createCharacter: async (req, res) => {
     try {
@@ -194,7 +207,6 @@ const productController = {
       background_image: backgroundImage,
       castLength: req.body.castLength,
     };
-
     writeFileTemp(newProduct);
     res.redirect("/product/create/cast");
     console.log(newProduct);

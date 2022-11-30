@@ -54,6 +54,9 @@ let uploadActorsPhoto = upload.any();
 //Carga de imágenes de reparto de actores
 let uploadPhoto = upload.single("photo");
 
+/*Barra de búsqueda*/
+router.get("/search", productController.search);
+
 /*Render del detalle de productos*/
 router.get("/detail/:id", productController.detailProduct);
 
@@ -65,7 +68,7 @@ router.post(
   productController.productionTeamUpload
 );
 
-/*Render de la vista de carga de personajes*/ 
+/*Render de la vista de carga de personajes*/
 router.get("/create/character", productController.createCharacter);
 router.post("/create/character", productController.uploadCharacter);
 
@@ -93,13 +96,11 @@ router.put(
 router.delete("/delete/:id", productController.destroy);
 
 /*Render de la vista de lista de productos*/
-
 router.get("/list", productController.list);
 router.get("/movies", productController.movies);
 router.get("/series", productController.series);
 
 /*Render carrito de productos*/
-
 router.get("/cart", productController.cart);
 
 module.exports = router;

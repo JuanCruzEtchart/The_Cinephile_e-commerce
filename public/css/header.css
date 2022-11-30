@@ -79,7 +79,7 @@ body {
 
 .header__search-bar input {
   flex: 1;
-  border: 0;
+  border: 0px;
   font-size: 15px;
   color: #666666;
   overflow: hidden;
