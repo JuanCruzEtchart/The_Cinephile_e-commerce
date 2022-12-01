@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-11-2022 a las 21:14:12
+-- Tiempo de generación: 01-12-2022 a las 01:08:35
 -- Versión del servidor: 10.4.25-MariaDB
 -- Versión de PHP: 8.1.10
 
@@ -331,6 +331,7 @@ INSERT INTO `actor_product` (`id`, `actor_id`, `product_id`) VALUES
 --
 
 CREATE TABLE `cart` (
+  `id` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
   `id_product` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -461,6 +462,7 @@ INSERT INTO `directors` (`id`, `full_name`, `biography_link`, `directors_photo`)
 --
 
 CREATE TABLE `favorites` (
+  `id` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
   `id_product` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -818,8 +820,9 @@ ALTER TABLE `actor_product`
 -- Indices de la tabla `cart`
 --
 ALTER TABLE `cart`
-  ADD PRIMARY KEY (`id_user`),
-  ADD KEY `id_product` (`id_product`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_product` (`id_product`),
+  ADD KEY `id_user` (`id_user`);
 
 --
 -- Indices de la tabla `characters`
@@ -837,8 +840,9 @@ ALTER TABLE `directors`
 -- Indices de la tabla `favorites`
 --
 ALTER TABLE `favorites`
-  ADD PRIMARY KEY (`id_user`),
-  ADD KEY `id_product` (`id_product`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_product` (`id_product`),
+  ADD KEY `id_user` (`id_user`);
 
 --
 -- Indices de la tabla `genres`
@@ -911,7 +915,7 @@ ALTER TABLE `actor_product`
 -- AUTO_INCREMENT de la tabla `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `characters`
@@ -929,7 +933,7 @@ ALTER TABLE `directors`
 -- AUTO_INCREMENT de la tabla `favorites`
 --
 ALTER TABLE `favorites`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `genres`
@@ -995,8 +999,8 @@ ALTER TABLE `cart`
 -- Filtros para la tabla `favorites`
 --
 ALTER TABLE `favorites`
-  ADD CONSTRAINT `favorites_ibfk_1` FOREIGN KEY (`id_product`) REFERENCES `products` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `favorites_ibfk_2` FOREIGN KEY (`id_user`) REFERENCES `users` (`id_user`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `favorites_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `users` (`id_user`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `favorites_ibfk_2` FOREIGN KEY (`id_product`) REFERENCES `products` (`id`) ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `products`
