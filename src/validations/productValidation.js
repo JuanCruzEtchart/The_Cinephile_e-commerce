@@ -8,87 +8,113 @@ const backgroundImage = req.files.backgroundImage.map(function (image) {
 }); */
 
 module.exports = {
-  createProductValidations: [
-    body("name").notEmpty().withMessage("Campo de nombre incompleto"),
-    body("year").notEmpty().withMessage("Campo de año de salida incompleto"),
-    body("rated").notEmpty().withMessage("Campo de clasificación incompleto"),
-    body("length").notEmpty().withMessage("Campo de duración incompleto"),
-    body("imdbScore")
+  createProductionTeamValidations: [
+    body("type").notEmpty().withMessage("El selector de está tipo incompleto!"),
+    body("name").notEmpty().withMessage("El campo de nombre está incompleto!"),
+    body("biography_link")
       .notEmpty()
-      .withMessage("Campo de puntaje de IMDb incompleto")
-      .bail()
-      .isDecimal()
-      .withMessage("Campo de puntaje de IMDb debe contener solo números"),
-    body("imdbTotalReviews")
-      .notEmpty()
-      .withMessage("Campo de reseñas totales de IMDb incompleto"),
-    body("tomatoScore")
-      .notEmpty()
-      .withMessage("Campo de puntaje de Rotten Tomatoes incompleto")
-      .bail()
-      .isNumeric()
-      .withMessage(
-        "Campo de puntaje de Rotten Tomatoes debe contener solo números"
-      ),
-    body("trailerLink")
-      .notEmpty()
-      .withMessage("Campo de trailer incompleto")
+      .withMessage("El campo de link de biografía está incompleto!")
       .bail()
       .isURL()
-      .withMessage("Campo de trailer debe ser una URL"),
-    body("purchasePrice")
-      .notEmpty()
-      .withMessage("Campo de precio de venta incompleto")
-      .bail()
-      .isDecimal()
-      .withMessage("Campo de precio de venta debe contener solo números"),
-    body("rentalPrice")
-      .notEmpty()
-      .withMessage("Campo de precio de alquiler incompleto")
-      .bail()
-      .isDecimal()
-      .withMessage("Campo de precio de alquiler debe contener solo números"),
-    body("synopsis").notEmpty().withMessage("Campo de sinopsis incompleto"),
-    body("director").notEmpty().withMessage("Campo de director incompleto"),
-    body("directorBiography")
-      .notEmpty()
-      .withMessage("Campo de link de biografía del director incompleto")
-      .bail()
-      .isURL()
-      .withMessage("Campo de link de biografía del director debe ser una URL"),
-    body("screenwriter")
-      .notEmpty()
-      .withMessage("Campo de guionista incompleto"),
-    body("screenwriterBiography")
-      .notEmpty()
-      .withMessage("Campo de link de biografía del guionista incompleto")
-      .bail()
-      .isURL()
-      .withMessage("Campo de link de biografía del guionista debe ser una URL"),
-    /*     body("productImage")
+      .withMessage("El campo de link de biografía debe ser una URL!"),
+    body("photo")
       .custom(function (value, { req }) {
         return req.file;
       })
-      .withMessage("Campo de imagen de producto es obligatorio")
+      .withMessage("La carga de fotografía es obligatoria!")
       .bail()
       .custom(function (value, { req }) {
-        const allowedExtensions = [".jpg", ".png", ".jpeg"];
-        const imageExtension = path.extname(req.file.originalname);
-        return allowedExtensions.includes(imageExtension);
+        const validExtensions = [".png", ".jpg", ".jpeg"];
+        const extension = path.extname(req.file.originalname);
+        return validExtensions.includes(extension);
       })
-      .withMessage("Imagen de producto inválida"),
+      .withMessage("Extensión de archivo inválida!"),
+  ],
+  createCharacterValidations: [
+    body("name").notEmpty().withMessage("El campo de nombre está incompleto!"),
+  ],
+  createProductValidations: [
+    body("type").notEmpty().withMessage("El selector de tipo está incompleto!"),
+    body("name").notEmpty().withMessage("El campo de nombre está incompleto!"),
+    body("release_year")
+      .notEmpty()
+      .withMessage("El campo de año de salida está incompleto!"),
+    body("rating")
+      .notEmpty()
+      .withMessage("El campo de clasificación está incompleto!"),
+    body("length")
+      .notEmpty()
+      .withMessage("El campo de duración está incompleto!"),
+    body("imdbScore")
+      .notEmpty()
+      .withMessage("El campo de puntaje de IMDb está incompleto!")
+      .bail()
+      .isDecimal()
+      .withMessage("El campo de puntaje de IMDb debe contener solo números!"),
+    body("imdbTotalReviews")
+      .notEmpty()
+      .withMessage("El campo de reseñas totales de IMDb está incompleto!"),
+    body("tomatoScore")
+      .notEmpty()
+      .withMessage("El campo de puntaje de Rotten Tomatoes está incompleto!")
+      .bail()
+      .isNumeric()
+      .withMessage(
+        "El campo de puntaje de Rotten Tomatoes debe contener solo números!"
+      ),
+    body("trailerLink")
+      .notEmpty()
+      .withMessage("El campo de trailer está incompleto!")
+      .bail()
+      .isURL()
+      .withMessage("El campo de trailer debe ser una URL!"),
+    body("purchasePrice")
+      .notEmpty()
+      .withMessage("El campo de precio de venta está incompleto!")
+      .bail()
+      .isDecimal()
+      .withMessage("El campo de precio de venta debe contener solo números!"),
+    body("rentalPrice")
+      .notEmpty()
+      .withMessage("El campo de precio de alquiler está incompleto!")
+      .bail()
+      .isDecimal()
+      .withMessage(
+        "El campo de precio de alquiler debe contener solo números!"
+      ),
+    body("synopsis")
+      .notEmpty()
+      .withMessage("El campo de sinopsis está incompleto!"),
+    body("director")
+      .notEmpty()
+      .withMessage("El selector de director está incompleto!"),
+    body("screenwriter")
+      .notEmpty()
+      .withMessage("El selector de guionista está incompleto!"),
+    body("productImage")
+      .custom(function (value, { req }) {
+        return req.file;
+      })
+      .withMessage("La carga de imagen de producto es obligatoria!")
+      .bail()
+      .custom((value, { req }) => {
+        const validExtensions = [".png", ".jpg", ".jpeg"];
+        const extension = path.extname(req.file.originalname);
+        return validExtensions.includes(extension);
+      })
+      .withMessage("La extensión de archivo de imagen de producto es inválida"),
     body("backgroundImage")
       .custom(function (value, { req }) {
         return req.file;
       })
-      .withMessage("Campo de imagen de fondo es obligatorio")
+      .withMessage("La carga de imagen de fondo es obligatoria")
       .bail()
       .custom(function (value, { req }) {
-        const allowedExtensions = [".jpg", ".png", ".jpeg"];
-        const imageExtension = path.extname(req.file.originalname);
-        return allowedExtensions.includes(imageExtension);
+        const validExtensions = [".png", ".jpg", ".jpeg"];
+        const extension = path.extname(req.file.originalname);
+        return validExtensions.includes(extension);
       })
-      .withMessage("Imagen de fondo inválida"), */
+      .withMessage("La extensión de archivo de imagen de fondo es inválida"),
   ],
   createProductCast: [
     /* 
@@ -106,86 +132,76 @@ module.exports = {
     }, */
   ],
   updateProductValidations: [
-    body("name").notEmpty().withMessage("Campo de nombre incompleto"),
-    body("year").notEmpty().withMessage("Campo de año de salida incompleto"),
-    body("rated").notEmpty().withMessage("Campo de clasificación incompleto"),
-    body("length").notEmpty().withMessage("Campo de duración incompleto"),
+    body("type").notEmpty().withMessage("El selector de tipo está incompleto!"),
+    body("name").notEmpty().withMessage("El campo de nombre está incompleto!"),
+    body("release_year")
+      .notEmpty()
+      .withMessage("El campo de año de salida está incompleto!"),
+    body("rating")
+      .notEmpty()
+      .withMessage("El campo de clasificación está incompleto!"),
+    body("length")
+      .notEmpty()
+      .withMessage("El campo de duración está incompleto!"),
     body("imdbScore")
       .notEmpty()
-      .withMessage("Campo de puntaje de IMDb incompleto"),
+      .withMessage("El campo de puntaje de IMDb está incompleto!")
+      .bail()
+      .isDecimal()
+      .withMessage("El campo de puntaje de IMDb debe contener solo números!"),
     body("imdbTotalReviews")
       .notEmpty()
-      .withMessage("Campo de reseñas totales de IMDb incompleto"),
+      .withMessage("El campo de reseñas totales de IMDb está incompleto!"),
     body("tomatoScore")
       .notEmpty()
-      .withMessage("Campo de puntaje de Rotten Tomatoes incompleto")
+      .withMessage("El campo de puntaje de Rotten Tomatoes está incompleto!")
       .bail()
       .isNumeric()
       .withMessage(
-        "Campo de puntaje de Rotten Tomatoes debe contener solo números"
+        "El campo de puntaje de Rotten Tomatoes debe contener solo números!"
       ),
     body("trailerLink")
       .notEmpty()
-      .withMessage("Campo de trailer incompleto")
+      .withMessage("El campo de trailer está incompleto!")
       .bail()
       .isURL()
-      .withMessage("Campo de trailer debe ser una URL"),
+      .withMessage("El campo de trailer debe ser una URL!"),
     body("purchasePrice")
       .notEmpty()
-      .withMessage("Campo de precio de venta incompleto"),
-    /*     .bail()
-      .isDecimal()
-      .withMessage("Campo de precio de venta debe contener solo números") */ body(
-      "rentalPrice"
-    )
-      .notEmpty()
-      .withMessage("Campo de precio de alquiler incompleto"),
-    /*       .bail()
-      .isDecimal()
-      .withMessage("Campo de precio de alquiler debe contener solo números") */ body(
-      "synopsis"
-    )
-      .notEmpty()
-      .withMessage("Campo de sinopsis incompleto"),
-    body("director").notEmpty().withMessage("Campo de director incompleto"),
-    body("directorBiography")
-      .notEmpty()
-      .withMessage("Campo de link de biografía del director incompleto")
+      .withMessage("El campo de precio de venta está incompleto!")
       .bail()
-      .isURL()
-      .withMessage("Campo de link de biografía del director debe ser una URL"),
+      .isDecimal()
+      .withMessage("El campo de precio de venta debe contener solo números!"),
+    body("rentalPrice")
+      .notEmpty()
+      .withMessage("El campo de precio de alquiler está incompleto!")
+      .bail()
+      .isDecimal()
+      .withMessage(
+        "El campo de precio de alquiler debe contener solo números!"
+      ),
+    body("synopsis")
+      .notEmpty()
+      .withMessage("El campo de sinopsis está incompleto!"),
+    body("director")
+      .notEmpty()
+      .withMessage("El selector de director está incompleto!"),
     body("screenwriter")
       .notEmpty()
-      .withMessage("Campo de guionista incompleto"),
-    body("screenwriterBiography")
-      .notEmpty()
-      .withMessage("Campo de link de biografía del guionista incompleto")
-      .bail()
-      .isURL()
-      .withMessage("Campo de link de biografía del guionista debe ser una URL"),
-    /*     body("productImage")
-      .custom(function (value, { req }) {
-        return req.file;
+      .withMessage("El selector de guionista está incompleto!"),
+    body("productImage")
+      .custom((value, { req }) => {
+        const validExtensions = [".png", ".jpg", ".jpeg"];
+        const extension = path.extname(req.file.originalname);
+        return validExtensions.includes(extension);
       })
-      .withMessage("Campo de imagen de producto es obligatorio")
-      .bail()
-      .custom(function (value, { req }) {
-        const allowedExtensions = [".jpg", ".png", ".jpeg"];
-        const imageExtension = path.extname(req.file.originalname);
-        return allowedExtensions.includes(imageExtension);
-      })
-      .withMessage("Imagen de producto inválida"),
+      .withMessage("La extensión de archivo de imagen de producto es inválida"),
     body("backgroundImage")
       .custom(function (value, { req }) {
-        return req.file;
+        const validExtensions = [".png", ".jpg", ".jpeg"];
+        const extension = path.extname(req.file.originalname);
+        return validExtensions.includes(extension);
       })
-      .withMessage("Campo de imagen de fondo es obligatorio")
-      .bail()
-      .custom(function (value, { req }) {
-        const allowedExtensions = [".jpg", ".png", ".jpeg"];
-        const imageExtension = path.extname(req.file.originalname);
-        return allowedExtensions.includes(imageExtension);
-      })
-      .withMessage("Imagen de fondo inválida"), */
+      .withMessage("La extensión de archivo de imagen de fondo es inválida"),
   ],
 };

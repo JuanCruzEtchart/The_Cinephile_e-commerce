@@ -9,6 +9,12 @@ const {
 const {
   updateProductValidations,
 } = require("../validations/productValidation.js");
+const {
+  createProductionTeamValidations,
+} = require("../validations/productValidation.js");
+const {
+  createCharacterValidations,
+} = require("../validations/productValidation.js");
 
 let storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -65,12 +71,17 @@ router.get("/create/productionTeam", productController.createProductionTeam);
 router.post(
   "/create/productionTeam",
   uploadPhoto,
+  createProductionTeamValidations,
   productController.productionTeamUpload
 );
 
 /*Render de la vista de carga de personajes*/
 router.get("/create/character", productController.createCharacter);
-router.post("/create/character", productController.uploadCharacter);
+router.post(
+  "/create/character",
+  createCharacterValidations,
+  productController.uploadCharacter
+);
 
 /*Render de la vista de creación de productos*/
 router.get("/create", productController.create);

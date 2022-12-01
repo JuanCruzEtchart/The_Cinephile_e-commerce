@@ -10,10 +10,19 @@
   <%- include("./partials/header") %>
   <main class="main">
     <div class="main__container">
+      <% if (locals.errors) { %>
+      <ul class="main__errors">
+        <% errors.forEach(element => { %>
+        <li>
+          <%= element.msg %>
+        </li>
+        <% }) %>
+      </ul>
+      <% } %>
       <h1 class="main__title">Nuevo personaje</h1>
       <form class="main__form" action="/product/create/character" method="POST">
         <div>
-          <input type="text" class="text-box" id="actorsName" name="name" placeholder="Nombre" required>
+          <input type="text" class="text-box" id="actorsName" name="name" value="<%= locals.old ? old.name : '' %>" placeholder="Nombre" required>
         </div>
         <div class="main__button">
           <button type="submit" class="send-button">Subir</button>

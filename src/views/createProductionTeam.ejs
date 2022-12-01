@@ -10,28 +10,37 @@
   <%- include("./partials/header") %>
   <main class="main">
     <div class="main__container">
+      <% if (locals.errors) { %>
+      <ul class="main__errors">
+        <% errors.forEach(element => { %>
+        <li>
+          <%= element.msg %>
+        </li>
+        <% }) %>
+      </ul>
+      <% } %>
       <form class="main__form" action="/product/create/productionTeam" enctype="multipart/form-data" method="POST">
         <div class="main__radioForm">
           <div class="main__radioForm-container">
             <div>
-              <input type="radio" name="radio" id="actor" value="actor" required />
+              <input type="radio" name="type" id="actor" value="actor" <% if (locals.old) { %> <% if (old.type == "actor") { %><%= 'checked' %><% }; %> <% } %> required />
               <label for="actor">Actor</label>
             </div>
             <div>
-              <input type="radio" name="radio" id="director" value="director" required />
+              <input type="radio" name="type" id="director" value="director" <% if (locals.old) { %> <% if (old.type == "director") { %><%= 'checked' %><% }; %> <% } %>required />
               <label for="director">Director</label>
             </div>
             <div>
-              <input type="radio" name="radio" id="screenwriter" value="screenwriter" required />
+              <input type="radio" name="type" id="screenwriter" value="screenwriter" <% if (locals.old) { %> <% if (old.type == "screenwriter") { %><%= 'checked' %><% }; %> <% } %>required />
               <label for="screenwriter">Guionista</label>
             </div>
           </div>
         </div>
         <div>
-          <input type="text" class="text-box" id="actorsName" name="name" placeholder="Nombre y apellido" required>
+          <input type="text" class="text-box" id="actorsName" name="name" value="<%= locals.old ? old.name : '' %>" placeholder="Nombre y apellido" required>
         </div>
         <div>
-          <input type="url" class="text-box" id="actorsBiography" name="biography_link" placeholder="Link de biografía" required>
+          <input type="url" class="text-box" id="actorsBiography" name="biography_link" value="<%= locals.old ? old.biography_link : '' %>" placeholder="Link de biografía" required>
         </div>
         <div class="main__file-wrap">
           <div class="main__fieldDescription">Fotografía</div>

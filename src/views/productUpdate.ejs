@@ -42,10 +42,10 @@
           </div>
         </div>
         <div>
-          <input type="text" class="text-box" id="year" name="year" value="<%= product.release_year %>" placeholder="Año de salida" required>
+          <input type="text" class="text-box" id="year" name="release_year" value="<%= product.release_year %>" placeholder="Año de salida" required>
         </div>
         <div>
-          <input type="text" class="text-box" id="rated" name="rated" value="<%= product.rating %>" placeholder="Clasificación" required>
+          <input type="text" class="text-box" id="rated" name="rating" value="<%= product.rating %>" placeholder="Clasificación" required>
         </div>
         <div>
           <input type="text" class="text-box" id="length" name="length" value="<%= product.length %>" placeholder="Duración" required>
@@ -106,13 +106,13 @@
             <div class="main__fieldDescription">Imagen del producto</div>
             <img src="/images/products/productsCreated/<%= product.product_image %> " alt="Product image">
             <label for="productImage"></label>
-            <input type="file" id="productImage" name="productImage" accept="image/jpg, image/png, image/jpeg" >
+            <input type="file" id="productImage" name="productImage" accept="image/jpg, image/png, image/jpeg">
           </div>
           <div class="main__file-wrap">
             <div class="main__fieldDescription">Imagen del fondo</div>
             <img id="background-image" src="/images/products/productsCreated/<%= product.background_image %> " alt="Background image">
             <label for="backgroundImage"></label>
-            <input type="file" id="backgroundImage" name="backgroundImage" accept="image/jpg, image/png, image/jpeg" >
+            <input type="file" id="backgroundImage" name="backgroundImage" accept="image/jpg, image/png, image/jpeg">
           </div>
           <div class="main__button">
             <button type="submit" class="send-button">Actualizar</button>
