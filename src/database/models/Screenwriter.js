@@ -2,7 +2,7 @@ module.exports = (sequelize, dataTypes) => {
   let alias = "Screenwriter";
   let cols = {
     id: {
-      type: dataTypes.INTEGER(10),
+      type: dataTypes.INTEGER(11),
       primaryKey: true,
       autoIncrement: true,
     },

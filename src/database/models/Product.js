@@ -123,6 +123,20 @@ module.exports = (sequelize, dataTypes) => {
       otherKey: "character_id",
       timestamps: false,
     });
+    Product.belongsToMany(models.User, {
+      as: "product_cart",
+      through: "user_cart",
+      foreingKey: "id_product",
+      otherKey: "id_user",
+      timestamps: false, 
+    });
+    Product.belongsToMany(models.User, {
+      as: "product_favorite",
+      through: "user_favorites",
+      foreingKey: "id_product",
+      otherKey: "id_user",
+      timestamps: false, 
+    });
   };
 
   return Product;
