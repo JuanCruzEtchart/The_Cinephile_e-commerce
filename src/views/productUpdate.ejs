@@ -103,15 +103,13 @@
             </select>
           </div>
           <div class="main__file-wrap">
-            <div class="main__fieldDescription">Imagen del producto</div>
+            <label class="main__fieldDescription" for="productImage">Imagen del producto</label>
             <img src="/images/products/productsCreated/<%= product.product_image %> " alt="Product image">
-            <label for="productImage"></label>
             <input type="file" id="productImage" name="productImage" accept="image/jpg, image/png, image/jpeg">
           </div>
           <div class="main__file-wrap">
-            <div class="main__fieldDescription">Imagen del fondo</div>
+            <label class="main__fieldDescription" for="backgroundImage">Imagen del fondo</label>
             <img id="background-image" src="/images/products/productsCreated/<%= product.background_image %> " alt="Background image">
-            <label for="backgroundImage"></label>
             <input type="file" id="backgroundImage" name="backgroundImage" accept="image/jpg, image/png, image/jpeg">
           </div>
           <div class="main__button">

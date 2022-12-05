@@ -4,6 +4,7 @@
 <head>
   <%- include("./partials/head") %>
   <link rel="stylesheet" href="/css/products/productCast.css" />
+  <script src="/js/productionTeamValidation.js"></script>
 </head>
 
 <body>
@@ -19,33 +20,36 @@
         <% }) %>
       </ul>
       <% } %>
+      <ul hidden class="main__errors errors"></ul>
       <form class="main__form" action="/product/create/productionTeam" enctype="multipart/form-data" method="POST">
         <div class="main__radioForm">
           <div class="main__radioForm-container">
             <div>
-              <input type="radio" name="type" id="actor" value="actor" <% if (locals.old) { %> <% if (old.type == "actor") { %><%= 'checked' %><% }; %> <% } %> required />
+              <input type="radio" name="type" id="actor" class="type" value="actor" <% if (locals.old) { %> <% if (old.type == "actor") { %><%= 'checked' %><% }; %> <% } %> />
               <label for="actor">Actor</label>
             </div>
             <div>
-              <input type="radio" name="type" id="director" value="director" <% if (locals.old) { %> <% if (old.type == "director") { %><%= 'checked' %><% }; %> <% } %>required />
+              <input type="radio" name="type" id="director" class="type" value="director" <% if (locals.old) { %> <% if (old.type == "director") { %><%= 'checked' %><% }; %> <% } %> />
               <label for="director">Director</label>
             </div>
             <div>
-              <input type="radio" name="type" id="screenwriter" value="screenwriter" <% if (locals.old) { %> <% if (old.type == "screenwriter") { %><%= 'checked' %><% }; %> <% } %>required />
+              <input type="radio" name="type" id="screenwriter" class="type" value="screenwriter" <% if (locals.old) { %> <% if (old.type == "screenwriter") { %><%= 'checked' %><% }; %> <% } %> />
               <label for="screenwriter">Guionista</label>
             </div>
           </div>
         </div>
-        <div>
-          <input type="text" class="text-box" id="actorsName" name="name" value="<%= locals.old ? old.name : '' %>" placeholder="Nombre y apellido" required>
+        <div class="input">
+          <input type="text" class="text-box field" id="actorsName" name="name" value="<%= locals.old ? old.name : '' %>" placeholder="Nombre y apellido">
+          <span class="inputStatus"></span>
         </div>
-        <div>
-          <input type="url" class="text-box" id="actorsBiography" name="biography_link" value="<%= locals.old ? old.biography_link : '' %>" placeholder="Link de biografía" required>
+        <div class="input">
+          <input type="text" class="text-box field" id="actorsBiography" name="biography_link" value="<%= locals.old ? old.biography_link : '' %>" placeholder="Link de biografía">
+          <span class="inputStatus"></span>
         </div>
         <div class="main__file-wrap">
-          <div class="main__fieldDescription">Fotografía</div>
-          <label for="directorsPhoto"></label>
-          <input type="file" id="actorsPhoto" name="photo" accept="image/jpg, image/png, image/jpeg" required>
+          <label class="main__fieldDescription" for="actorsPhoto">Fotografía</label>
+          <input type="file" id="actorsPhoto" name="photo" >
+          <span class="inputStatus"></span>
         </div>
         <div class="main__button">
           <button type="submit" class="send-button">Subir</button>
