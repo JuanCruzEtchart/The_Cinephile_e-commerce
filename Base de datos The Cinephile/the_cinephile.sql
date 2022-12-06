@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-12-2022 a las 03:00:25
+-- Tiempo de generación: 06-12-2022 a las 02:16:24
 -- Versión del servidor: 10.4.25-MariaDB
 -- Versión de PHP: 8.1.10
 
@@ -764,8 +764,17 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `username` varchar(15) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `password` varchar(12) NOT NULL
+  `password` varchar(300) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
+(2, 'NuevaCuenta', 'NuevaCuenta@gmail.com', '1234'),
+(3, 'Prueba2', 'Prueba2@gmail.com', '$2a$10$QBI9InoR7bGvEdsAmC8sAeNwqbztkAdKTq39UIMhyWPSjxwXhetAi'),
+(4, 'Loguearme', 'Loguearme@gmail.com', '$2a$10$4JvQNZTZJh4fVaXrZHGqvuwO3yLoK2VK8UxXChQrKfaSGITQa7hsO');
 
 -- --------------------------------------------------------
 
@@ -958,7 +967,7 @@ ALTER TABLE `screenwriters`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `user_cart`
@@ -1013,12 +1022,6 @@ ALTER TABLE `product_actor_character`
 ALTER TABLE `product_character`
   ADD CONSTRAINT `product_character_ibfk_1` FOREIGN KEY (`character_id`) REFERENCES `characters` (`id`),
   ADD CONSTRAINT `product_character_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`);
-
---
--- Filtros para la tabla `users`
---
-ALTER TABLE `users`
-  ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`id`) REFERENCES `user_cart` (`id_user`) ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `user_cart`
