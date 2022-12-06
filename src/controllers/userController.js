@@ -1,30 +1,38 @@
 const fs = require("fs");
 const path = require("path");
-const bcryptjs = require("bcryptjs");
+const bcrypt = require("bcryptjs");
 const { validationResult } = require("express-validator");
+const db = require("../database/models");
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
 
+
+//Modelos
+const User = db.User;
+
+/*
 function findAll() {
   const jsonData = fs.readFileSync(path.join(__dirname, "../data/users.json"))
   const data = JSON.parse(jsonData);
   return data
 };
 
+
 function stringAndCreate(data) {
   const dataString = JSON.stringify(data, null, 4)
   fs.writeFileSync(path.join(__dirname, "../data/users.json"), dataString);
 }
-
+*/
 
 const userController = {
 
   login: (req, res) => {
-    const data = findAll();
-    res.render("login", { users: data });
-
-    //validations
+    const users = User.findAll();
+    res.render("login", { users: users });
   },
 
-  processLogin: (req, res) => {
+  processLogin: async (req, res) => {
+    try {
     const errors = validationResult(req);
 
     if (!errors.isEmpty()) {
@@ -33,14 +41,9 @@ const userController = {
       return res.render("login", { errors: errors.mapped(), old: req.body });
     }
 
-    const users = findAll();
-
-
-    const userFound = users.find(function (user) {
-      return user.email == req.body.email && bcryptjs.compareSync(req.body.password, user.password)
-    })
-
-    if (!userFound) {
+    let userFound = await User.findOne({ where: { email:req.body.email}})
+    //bcrypt.compareSync(req.body.password, user.password
+    if (!userFound && !bcrypt.compareSync(req.body.password, userFound.password)) {
       console.log(userFound);
       return res.render("login", { errorLogin: 'Credenciales Invalidas' })
     }
@@ -48,31 +51,36 @@ const userController = {
     else {
       req.session.usuarioLogueado = {
         id: userFound.id,
-        name: userFound.name,
+        name: userFound.username,
         email: userFound.email,
-        security: userFound.security
       };
 
       if (req.body.checkbox) {
-        res.cookie("recordame", userFound.id)
+        res.cookie("recordame", userFound.id, {maxAge:9999999*100})
       }
 
       res.redirect("profile")
     }
+  } 
+  catch (err) {
+  res.send(err);
+  }
+  },  
+
+  register: async function (req, res)  {
+
+    const users = await User.findAll();
+
+    res.render("register", { users });
 
   },
 
-  register: (req, res) => {
-
-    const data = findAll();
-
-    res.render("register", { users: data });
-
+  profile: async function (req, res) {
     
-  },
-
-  profile: (req, res) => {
-    res.render("profile");
+    const users = await User.findAll();
+    
+    res.render("profile", { users });
+ 
   },
 
 
@@ -81,31 +89,27 @@ const userController = {
     res.render("thankyou");
   },
 
-  store: (req, res) => {
+  store: async (req, res) => {
 
     const errors = validationResult(req);
     console.log(errors);
+
     if (!errors.isEmpty()) {
       console.log(errors.mapped());
 
       return res.render("register", { errors: errors.mapped(), old: req.body });
     }
-
-    const data = findAll();
-
-    const newUser = {
-      id: data.length + 1,
-      name: req.body.user,
-      email: req.body.email,
-      password: bcryptjs.hashSync(req.body.password, 10),
-      security: "user"
+    try {
+      await User.create({
+        username: req.body.user,
+        email: req.body.email,
+        password: bcrypt.hashSync(req.body.password, 10),
+      })
+      res.redirect("/user/thankyou");
     }
-    console.log(newUser);
-    data.push(newUser);
-
-    stringAndCreate(data);
-
-    res.redirect("/user/thankyou")
+    catch (err) {
+      res.send(err);
+    }
   },
 
   logout: (req, res) => {

@@ -1,32 +1,34 @@
 const fs = require("fs");
 const path = require("path");
+const db = require("../database/models");
+const User = db.User;
 
-function findAll() {
-    const jsonData = fs.readFileSync(path.join(__dirname, "../data/users.json"))
-    const data = JSON.parse(jsonData);
-    return data
-};
+let recordame =  async (req, res, next) => {
 
+    try {
 
-function recordame(req, res, next) {
+        if (req.cookies.recordame && !req.session.usuarioLogueado) {
 
-    if (req.cookies.recordame && !req.session.usuarioLogueado) {
-        const users = findAll();
-        const userFound = users.find(function (user) {
-            return user.id == req.cookies.recordame
-        })
+            const userFound = await User.findOne({ where: { id: req.cookies.recordame } });
+            req.session.usuarioLogueado = {
+                id: userFound.id,
+                name: userFound.username,
+                email: userFound.email,
+              };
+            console.log(req.session.usuarioLogueado);
+            return next();
+        }
+        else {
+            return next();
+        }
 
-        req.session.usuarioLogueado = {
-            id: userFound.id,
-            name: userFound.name,
-            email: userFound.email,
-            security: userFound.security
-        };
     }
 
-    next();
-
+    catch (err) {
+        res.send(err);
+    }
 
 }
 
 module.exports = recordame;
+
