@@ -11,7 +11,7 @@
   <%- include("./partials/header") %>
   <main class="main">
     <div class="main__container">
-      <h1>Resultados encontrados:</h1>
+      <h1>Resultados encontrados de "<%= query %>" </h1>
       <section class="main__product-list">
         <% products.forEach(element => { %>
         <a href="/product/detail/<%= element.id %>">

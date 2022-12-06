@@ -73,10 +73,12 @@ module.exports = (sequelize, dataTypes) => {
     genre1_id: {
       type: dataTypes.INTEGER(10),
       allowNull: true,
+      foreignKey: true,
     },
     genre2_id: {
       type: dataTypes.INTEGER(10),
       allowNull: true,
+      foreignKey: true,
     },
   };
 
@@ -124,14 +126,14 @@ module.exports = (sequelize, dataTypes) => {
       timestamps: false,
     });
 
-   /*  Product.belongsToMany(models.User, {
+    /*  Product.belongsToMany(models.User, {
       as: "product_cart",
       through: "user_cart",
       foreingKey: "id_product",
       otherKey: "id_user",
       timestamps: false,
     }); */
-    
+
     Product.belongsToMany(models.User, {
       as: "product_favorite",
       through: "user_favorites",

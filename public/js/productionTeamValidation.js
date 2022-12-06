@@ -1,5 +1,4 @@
 window.addEventListener("load", function (e) {
-  console.log("hola");
   let form = document.querySelector(".main__form");
   let types = document.querySelectorAll(".type");
   let fullName = document.querySelector("#actorsName");
@@ -9,23 +8,36 @@ window.addEventListener("load", function (e) {
 
   fullName.focus();
 
-  fields.forEach(function (field) {
-    field.addEventListener("blur", function (e) {
-      if (
-        (field.name == "name" || field.name == "biography_link") &&
-        field.value.length < 1
-      ) {
-        field.nextElementSibling.innerHTML = "Completar campo!";
-        field.nextElementSibling.classList.add("invalid");
-        field.nextElementSibling.classList.remove("valid");
-        field.classList.remove("valid");
-      } else {
-        field.nextElementSibling.innerHTML = "👍";
-        field.nextElementSibling.classList.remove("invalid");
-        field.nextElementSibling.classList.add("valid");
-        field.classList.add("valid");
-      }
-    });
+  fullName.addEventListener("blur", function (e) {
+    if (fullName.value.length < 1) {
+      fullName.nextElementSibling.innerHTML = "Completar campo!";
+      fullName.nextElementSibling.classList.add("invalid");
+      fullName.nextElementSibling.classList.remove("valid");
+      fullName.classList.remove("valid");
+    } else {
+      fullName.nextElementSibling.innerHTML = "👍";
+      fullName.nextElementSibling.classList.remove("invalid");
+      fullName.nextElementSibling.classList.add("valid");
+      fullName.classList.add("valid");
+    }
+  });
+
+  biography.addEventListener("blur", function (e) {
+    if (biography.value.length < 1) {
+      biography.nextElementSibling.innerHTML = "Completar campo!";
+      biography.nextElementSibling.classList.add("invalid");
+      biography.nextElementSibling.classList.remove("valid");
+      biography.classList.remove("valid");
+    } else if (!validator.isURL(biography.value)) {
+      biography.nextElementSibling.innerHTML = "Tiene que ser URL!";
+      biography.nextElementSibling.classList.add("invalid");
+      biography.nextElementSibling.classList.remove("valid");
+    } else {
+      biography.nextElementSibling.innerHTML = "👍";
+      biography.nextElementSibling.classList.remove("invalid");
+      biography.nextElementSibling.classList.add("valid");
+      biography.classList.add("valid");
+    }
   });
 
   form.addEventListener("submit", function (e) {
@@ -47,9 +59,9 @@ window.addEventListener("load", function (e) {
 
     if (biography.value == "") {
       errors.push("El campo de biografía no puede estar vacio!");
-    } /* else if (!validator.isURL(biography.value)) {
+    } else if (!validator.isURL(biography.value)) {
       errors.push("El campo de biografía debe ser una URL!");
-    } */
+    }
 
     if (photo.value == "") {
       errors.push("Es obligatorio cargar una foto!");
@@ -67,6 +79,7 @@ window.addEventListener("load", function (e) {
         ulErrors.innerHTML += `<li>${error}</li>`;
       });
       ulErrors.style.display = "block";
+      fullName.focus();
     } else {
       alert("La carga se realizó exitosamente");
     }

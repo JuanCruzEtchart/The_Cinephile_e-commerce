@@ -44,7 +44,7 @@ const productController = {
       const products = await Product.findAll({
         where: { name: { [Op.like]: "%" + req.query.product + "%" } },
       });
-      res.render("searchResult", { products });
+      res.render("searchResult", { products, query: req.query.product });
     } catch (err) {
       res.send(err);
     }

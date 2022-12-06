@@ -4,14 +4,15 @@
 <head>
   <%- include("./partials/head") %>
   <link rel="stylesheet" href="/css/products/productCreate.css" />
-  <script src="/js/productCreateValidations.js"></script>
+ <!--  <script src="/js/productCreateValidations.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/validator/13.7.0/validator.min.js" integrity="sha512-rJU+PnS2bHzDCvRGFhXouCSxf4YYaUyUfjXMHsHFfMKhWDIEBr8go2LZ2EYXOqASey1tWc2qToeOCYh9et2aGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
   <%- include("./partials/header") %>
   <main class="main">
     <div class="main__container">
-      <h1 class="main__title">Creación de productos:</h1>
+      <h1 class="main__title">Nuevo producto:</h1>
       <div class="main__button">
         <a href="/product/list">
           <button class="back-button">Ir a lista de productos</button>
@@ -26,7 +27,7 @@
         <% }) %>
       </ul>
       <% } %>
-      <ul class="errors"></ul>
+      <ul hidden class="main__errors errors"></ul>
       <form class="main__form" action="/product/create" enctype="multipart/form-data" method="POST">
         <div class="main__radioForm">
           <div class="main__radioForm-container">
@@ -40,70 +41,83 @@
             </div>
           </div>
         </div>
-        <div>
-          <input type="text" class="text-box" id="name" name="name" value="<%= locals.old ? old.name : '' %>" placeholder="Nombre" required>
+        <div class="input">
+          <input type="text" class="text-box" id="name" name="name" value="<%= locals.old ? old.name : '' %>" placeholder="Nombre">
+          <span class="inputStatus"></span>
         </div>
-        <div>
-          <input type="text" class="text-box" id="year" name="release_year" value="<%= locals.old ? old.release_year : '' %>" placeholder="Año de salida" required>
+        <div class="input">
+          <input type="text" class="text-box" id="year" name="release_year" value="<%= locals.old ? old.release_year : '' %>" placeholder="Año de salida">
+          <span class="inputStatus"></span>
         </div>
-        <div>
+        <div class="input">
           <input type="text" class="text-box" id="rated" name="rating" value="<%= locals.old ? old.rating : '' %>" placeholder="Clasificación">
+          <span class="inputStatus"></span>
         </div>
-        <div>
-          <input type="text" class="text-box" id="length" name="length" value="<%= locals.old ? old.length : '' %>" placeholder="Duración" required>
+        <div class="input">
+          <input type="text" class="text-box" id="length" name="length" value="<%= locals.old ? old.length : '' %>" placeholder="Duración">
+          <span class="inputStatus"></span>
         </div>
-        <div>
-          <input type="number" class="text-box" id="imdbScore" name="imdbScore" step="0.01" min="0" max="10" value="<%= locals.old ? old.imdb_score : '' %>" placeholder="Puntaje de IMDb" required>
+        <div class="input">
+          <input type="text" class="text-box" id="imdbScore" name="imdbScore" step="0.01" min="0" max="10" value="<%= locals.old ? old.imdb_score : '' %>" placeholder="Puntaje de IMDb">
+          <span class="inputStatus"></span>
         </div>
-        <div>
-          <input type="text" class="text-box" id="imdbTotalReviews" name="imdbTotalReviews" value="<%= locals.old ? old.imdb_total_reviews : '' %>" placeholder="Reseñas totales de IMDb" required>
+        <div class="input">
+          <input type="text" class="text-box" id="imdbTotalReviews" name="imdbTotalReviews" value="<%= locals.old ? old.imdb_total_reviews : '' %>" placeholder="Reseñas totales de IMDb">
+          <span class="inputStatus"></span>
         </div>
-        <div>
-          <input type="number" class="text-box" id="tomatoScore" name="tomatoScore" min="0" max="100" value="<%= locals.old ? old.tomato_score : '' %>" placeholder="Puntaje de Rotten Tomatoes" required>
+        <div class="input">
+          <input type="text" class="text-box" id="tomatoScore" name="tomatoScore" min="0" max="100" value="<%= locals.old ? old.tomato_score : '' %>" placeholder="Puntaje de Rotten Tomatoes">
+          <span class="inputStatus"></span>
         </div>
-        <div>
-          <input type="url" class="text-box" id="trailerLink" name="trailerLink" value="<%= locals.old ? old.trailer_link: '' %>" placeholder="Link del trailer" required>
+        <div class="input">
+          <input type="text" class="text-box" id="trailerLink" name="trailerLink" value="<%= locals.old ? old.trailer_link: '' %>" placeholder="Link del trailer">
+          <span class="inputStatus"></span>
         </div>
         <div class="main__genreSelect">
           <div class="main__fieldDescription">Elegir género 1</div>
-          <select name="genre1" class="main__select" id="genre1" required>
+          <select name="genre1" class="main__select" id="genre1">
             <option value="" disabled selected></option>
             <% genres.forEach(element => { %>
             <option value="<%= element.id %>" <% if (old.genre1_id == element.id) { %><%= 'selected' %><% }; %>><%= element.name %></option>
             <% }) %>
           </select>
           <div class="main__fieldDescription">Elegir género 2</div>
-          <select name="genre2" class="main__select" id="genre2" required>
+          <select name="genre2" class="main__select" id="genre2">
             <option value="" disabled selected></option>
             <% genres.forEach(element => { %>
             <option value="<%= element.id %>" <% if (old.genre2_id == element.id) { %><%= 'selected' %><% }; %>><%= element.name %></option>
             <% }) %>
           </select>
         </div>
-        <div>
-          <input type="number" class="text-box" id="purchasePrice" name="purchasePrice" step="0.01" value="<%= locals.old ? old.purchase_price : '' %>" placeholder="Precio de venta" required>
-          <input type="number" class="text-box" id="rentalPrice" name="rentalPrice" step="0.01" value="<%= locals.old ? old.rental_price : '' %>" placeholder="Precio de alquiler" required>
+        <div class="input">
+          <input type="number" class="text-box" id="purchasePrice" name="purchasePrice" step="0.01" value="<%= locals.old ? old.purchase_price : '' %>" placeholder="Precio de venta">
+          <span class="inputStatus"></span>
+          <input type="number" class="text-box" id="rentalPrice" name="rentalPrice" step="0.01" value="<%= locals.old ? old.rental_price : '' %>" placeholder="Precio de alquiler">
+          <span class="inputStatus"></span>
         </div>
-        <div>
+        <div class="input">
           <textarea class="textarea" id="synopsis" name="synopsis" cols="30" rows="10" wrap="hard" placeholder="Sinopsis"><%= locals.old ? old.synopsis : '' %></textarea>
+          <span class="inputStatus"></span>
         </div>
         <div>
           <div class="main__fieldDescription">Elegir director</div>
-          <select name="director" class="main__select" id="director" required>
+          <select name="director" class="main__select" id="director">
             <option value="" disabled selected></option>
             <% directors.forEach(element => { %>
             <option value="<%= element.id %>" <% if (old.director_id == element.id) { %><%= 'selected' %><% }; %>><%= element.full_name %> </option>
             <% }) %>
           </select>
+          <span class="inputStatus"></span>
         </div>
         <div>
           <div class="main__fieldDescription">Elegir guionista</div>
-          <select name="screenwriter" class="main__select" id="screenwriter" required>
+          <select name="screenwriter" class="main__select" id="screenwriter">
             <option value="" disabled selected></option>
             <% screenwriter.forEach(element => { %>
             <option value="<%= element.id %>" <% if (old.screenwriter_id == element.id) { %><%= 'selected' %><% }; %>><%= element.full_name %> </option>
             <% }) %>
           </select>
+          <span class="inputStatus"></span>
         </div>
         <div class="main__fieldDescription">Elegir cantidad de actores</div>
         <select name="castLength" class="main__select" id="castLength">
@@ -113,11 +127,11 @@
         </select>
         <div class="main__file-wrap">
           <label class="main__fieldDescription" for="productImage">Imagen del producto</label>
-          <input type="file" id="productImage" name="productImage" id="productImage" accept="image/jpg, image/png, image/jpeg" required>
+          <input type="file" id="productImage" name="productImage" id="productImage" accept="image/jpg, image/png, image/jpeg">
         </div>
         <div class="main__file-wrap">
           <label class="main__fieldDescription" for="backgroundImage">Imagen del fondo</label>
-          <input type="file" id="backgroundImage" name="backgroundImage" id="backgroundImage" accept="image/jpg, image/png, image/jpeg" required>
+          <input type="file" id="backgroundImage" name="backgroundImage" id="backgroundImage" accept="image/jpg, image/png, image/jpeg">
         </div>
         <div class="main__button">
           <button type="submit" class="send-button">Siguiente</button>
