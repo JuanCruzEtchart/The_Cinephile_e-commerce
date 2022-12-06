@@ -4,6 +4,7 @@
 <head>
   <%- include("./partials/head") %>
   <link rel="stylesheet" href="/css/products/productDetail.css" />
+  <!-- <script src="/js/productDetail.js"></script> -->
 </head>
 
 <body>
@@ -122,7 +123,7 @@
               <div class="main__slider">
                 <div class="main__slider-inner" id="sliderMovies">
                   <% allProducts.forEach(element => { %>
-                  <% if (product.director.full_name == element.director.full_name) { %>
+                  <% if (product.name != element.name && product.director.full_name == element.director.full_name) { %>
                   <div class="main__item-product">
                     <a href="/product/detail/<%= element.id %>">
                       <img src="/images/products/productsCreated/<%= element.product_image ? element.product_image : "Logo.png"%>" alt="Imágen de producto" />
@@ -152,7 +153,7 @@
               <div class="main__slider">
                 <div class="main__slider-inner" id="sliderMovies">
                   <% allProducts.forEach(element => { %>
-                  <% if (product.genre1.name == element.genre1.name) { %>
+                  <% if (product.name != element.name && product.genre1.name == element.genre1.name) { %>
                   <div class="main__item-product">
                     <a href="/product/detail/<%= element.id %>">
                       <img src="/images/products/productsCreated/<%= element.product_image ? element.product_image : "Logo.png"%>" alt="Imágen de producto" />

@@ -9,7 +9,9 @@ const backgroundImage = req.files.backgroundImage.map(function (image) {
 
 module.exports = {
   createProductionTeamValidations: [
-    body("type").notEmpty().withMessage("El selector de está tipo incompleto!"),
+    body("type")
+      .notEmpty()
+      .withMessage("El selector de tipo está incompleto!"),
     body("name").notEmpty().withMessage("El campo de nombre está incompleto!"),
     body("biography_link")
       .notEmpty()

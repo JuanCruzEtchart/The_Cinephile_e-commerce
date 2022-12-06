@@ -396,7 +396,7 @@ ain__genre .main__trailer i {
 .main__slider-wrap-principal-cast {
   width: 100%;
   height: auto;
-  cursor: grab;
+  /* cursor: grab; */
   margin-bottom: 30px;
 }
 
@@ -464,7 +464,7 @@ ain__genre .main__trailer i {
 .main__slider-wrap-directedBy {
   width: 100%;
   height: auto;
-  cursor: grab;
+ /*  cursor: grab; */
   margin-bottom: 30px;
 }
 

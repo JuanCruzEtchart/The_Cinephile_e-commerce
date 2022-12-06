@@ -4,6 +4,7 @@
 <head>
   <%- include("./partials/head") %>
   <link rel="stylesheet" href="/css/products/productCreate.css" />
+  <script src="/js/productCreateValidations.js"></script>
 </head>
 
 <body>
@@ -25,15 +26,16 @@
         <% }) %>
       </ul>
       <% } %>
+      <ul class="errors"></ul>
       <form class="main__form" action="/product/create" enctype="multipart/form-data" method="POST">
         <div class="main__radioForm">
           <div class="main__radioForm-container">
             <div>
-              <input type="radio" name="type" id="movie" value="Película" <% if (old.type == "Película") { %><%= 'checked' %><% }; %>/>
+              <input type="radio" name="type" id="movie" class="type" value="Película" <% if (old.type == "Película") { %><%= 'checked' %><% }; %> />
               <label for="movie">Película</label>
             </div>
             <div>
-              <input type="radio" name="type" id="tvSeries" value="Serie de TV" <% if (old.type == "Serie de TV") { %><%= 'checked' %><% }; %>/>
+              <input type="radio" name="type" id="tvSeries" class="type" value="Serie de TV" <% if (old.type == "Serie de TV") { %><%= 'checked' %><% }; %> />
               <label for="tvSeries">Serie de TV</label>
             </div>
           </div>
@@ -45,7 +47,7 @@
           <input type="text" class="text-box" id="year" name="release_year" value="<%= locals.old ? old.release_year : '' %>" placeholder="Año de salida" required>
         </div>
         <div>
-          <input type="text" class="text-box" id="rated" name="rating" value="<%= locals.old ? old.rating : '' %>" placeholder="Clasificación" >
+          <input type="text" class="text-box" id="rated" name="rating" value="<%= locals.old ? old.rating : '' %>" placeholder="Clasificación">
         </div>
         <div>
           <input type="text" class="text-box" id="length" name="length" value="<%= locals.old ? old.length : '' %>" placeholder="Duración" required>
@@ -64,14 +66,14 @@
         </div>
         <div class="main__genreSelect">
           <div class="main__fieldDescription">Elegir género 1</div>
-          <select name="genre1" class="main__select" required>
+          <select name="genre1" class="main__select" id="genre1" required>
             <option value="" disabled selected></option>
             <% genres.forEach(element => { %>
             <option value="<%= element.id %>" <% if (old.genre1_id == element.id) { %><%= 'selected' %><% }; %>><%= element.name %></option>
             <% }) %>
           </select>
           <div class="main__fieldDescription">Elegir género 2</div>
-          <select name="genre2" class="main__select" required>
+          <select name="genre2" class="main__select" id="genre2" required>
             <option value="" disabled selected></option>
             <% genres.forEach(element => { %>
             <option value="<%= element.id %>" <% if (old.genre2_id == element.id) { %><%= 'selected' %><% }; %>><%= element.name %></option>
@@ -87,7 +89,7 @@
         </div>
         <div>
           <div class="main__fieldDescription">Elegir director</div>
-          <select name="director" class="main__select" required>
+          <select name="director" class="main__select" id="director" required>
             <option value="" disabled selected></option>
             <% directors.forEach(element => { %>
             <option value="<%= element.id %>" <% if (old.director_id == element.id) { %><%= 'selected' %><% }; %>><%= element.full_name %> </option>
@@ -96,7 +98,7 @@
         </div>
         <div>
           <div class="main__fieldDescription">Elegir guionista</div>
-          <select name="screenwriter" class="main__select" required>
+          <select name="screenwriter" class="main__select" id="screenwriter" required>
             <option value="" disabled selected></option>
             <% screenwriter.forEach(element => { %>
             <option value="<%= element.id %>" <% if (old.screenwriter_id == element.id) { %><%= 'selected' %><% }; %>><%= element.full_name %> </option>
@@ -104,24 +106,20 @@
           </select>
         </div>
         <div class="main__fieldDescription">Elegir cantidad de actores</div>
-        <select name="castLength" class="main__select">
+        <select name="castLength" class="main__select" id="castLength">
           <% for(let i = 1; i<=20; i++) {%>
           <option value="<%= [i] %>" <% if (old.castLength == [i]) { %><%= 'selected' %><% }; %>><%= [i] %></option>
           <% }%>
         </select>
         <div class="main__file-wrap">
-          <div class="main__fieldDescription">Imagen del producto</div>
-          <label for="productImage"></label>
-          <input type="file" id="productImage" name="productImage" accept="image/jpg, image/png, image/jpeg" required>
+          <label class="main__fieldDescription" for="productImage">Imagen del producto</label>
+          <input type="file" id="productImage" name="productImage" id="productImage" accept="image/jpg, image/png, image/jpeg" required>
         </div>
         <div class="main__file-wrap">
-          <div class="main__fieldDescription">Imagen del fondo</div>
-          <label for="backgroundImage"></label>
-          <input type="file" id="backgroundImage" name="backgroundImage" accept="image/jpg, image/png, image/jpeg" required>
+          <label class="main__fieldDescription" for="backgroundImage">Imagen del fondo</label>
+          <input type="file" id="backgroundImage" name="backgroundImage" id="backgroundImage" accept="image/jpg, image/png, image/jpeg" required>
         </div>
         <div class="main__button">
-          <!--     <a href="/product/create/">
-          </a> -->
           <button type="submit" class="send-button">Siguiente</button>
         </div>
         <div class="main__button">
