@@ -87,15 +87,6 @@
   color: white;
 }
 
-.valid {
-  color: rgb(46, 255, 46);
-  border-color: rgb(46, 255, 46);
-}
-
-.invalid {
-  color: red;
-}
-
 .text-box::placeholder {
   color: rgba(255, 255, 255, 0.75);
 }
@@ -161,6 +152,15 @@
   font-size: 0.875rem;
   margin: 20px 0px;
   text-align: left;
+}
+
+.valid {
+  color: rgb(46, 255, 46);
+  border-color: rgb(46, 255, 46);
+}
+
+.invalid {
+  color: red;
 }
 
 #productImage {

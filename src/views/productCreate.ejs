@@ -4,7 +4,7 @@
 <head>
   <%- include("./partials/head") %>
   <link rel="stylesheet" href="/css/products/productCreate.css" />
- <!--  <script src="/js/productCreateValidations.js"></script> -->
+  <script src="/js/productCreateValidations.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/validator/13.7.0/validator.min.js" integrity="sha512-rJU+PnS2bHzDCvRGFhXouCSxf4YYaUyUfjXMHsHFfMKhWDIEBr8go2LZ2EYXOqASey1tWc2qToeOCYh9et2aGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
@@ -46,7 +46,7 @@
           <span class="inputStatus"></span>
         </div>
         <div class="input">
-          <input type="text" class="text-box" id="year" name="release_year" value="<%= locals.old ? old.release_year : '' %>" placeholder="Año de salida">
+          <input type="number" class="text-box" id="year" name="release_year" value="<%= locals.old ? old.release_year : '' %>" placeholder="Año de salida">
           <span class="inputStatus"></span>
         </div>
         <div class="input">
@@ -58,7 +58,7 @@
           <span class="inputStatus"></span>
         </div>
         <div class="input">
-          <input type="text" class="text-box" id="imdbScore" name="imdbScore" step="0.01" min="0" max="10" value="<%= locals.old ? old.imdb_score : '' %>" placeholder="Puntaje de IMDb">
+          <input type="number" class="text-box" id="imdbScore" name="imdbScore" step="0.1" min="0" max="10" value="<%= locals.old ? old.imdb_score : '' %>" placeholder="Puntaje de IMDb">
           <span class="inputStatus"></span>
         </div>
         <div class="input">
@@ -66,7 +66,7 @@
           <span class="inputStatus"></span>
         </div>
         <div class="input">
-          <input type="text" class="text-box" id="tomatoScore" name="tomatoScore" min="0" max="100" value="<%= locals.old ? old.tomato_score : '' %>" placeholder="Puntaje de Rotten Tomatoes">
+          <input type="number" class="text-box" id="tomatoScore" name="tomatoScore" min="0" max="100" value="<%= locals.old ? old.tomato_score : '' %>" placeholder="Puntaje de Rotten Tomatoes">
           <span class="inputStatus"></span>
         </div>
         <div class="input">
@@ -90,8 +90,10 @@
           </select>
         </div>
         <div class="input">
-          <input type="number" class="text-box" id="purchasePrice" name="purchasePrice" step="0.01" value="<%= locals.old ? old.purchase_price : '' %>" placeholder="Precio de venta">
+          <input type="number" lang="es" class="text-box" id="purchasePrice" name="purchasePrice" step="0.01" value="<%= locals.old ? old.purchase_price : '' %>" placeholder="Precio de venta">
           <span class="inputStatus"></span>
+        </div>
+        <div class="input">
           <input type="number" class="text-box" id="rentalPrice" name="rentalPrice" step="0.01" value="<%= locals.old ? old.rental_price : '' %>" placeholder="Precio de alquiler">
           <span class="inputStatus"></span>
         </div>
@@ -107,7 +109,6 @@
             <option value="<%= element.id %>" <% if (old.director_id == element.id) { %><%= 'selected' %><% }; %>><%= element.full_name %> </option>
             <% }) %>
           </select>
-          <span class="inputStatus"></span>
         </div>
         <div>
           <div class="main__fieldDescription">Elegir guionista</div>
@@ -117,17 +118,17 @@
             <option value="<%= element.id %>" <% if (old.screenwriter_id == element.id) { %><%= 'selected' %><% }; %>><%= element.full_name %> </option>
             <% }) %>
           </select>
-          <span class="inputStatus"></span>
         </div>
         <div class="main__fieldDescription">Elegir cantidad de actores</div>
         <select name="castLength" class="main__select" id="castLength">
+          <option value="" disabled selected></option>
           <% for(let i = 1; i<=20; i++) {%>
           <option value="<%= [i] %>" <% if (old.castLength == [i]) { %><%= 'selected' %><% }; %>><%= [i] %></option>
           <% }%>
         </select>
         <div class="main__file-wrap">
           <label class="main__fieldDescription" for="productImage">Imagen del producto</label>
-          <input type="file" id="productImage" name="productImage" id="productImage" accept="image/jpg, image/png, image/jpeg">
+          <input type="file" id="productImage" name="productImage" id="productImage" >
         </div>
         <div class="main__file-wrap">
           <label class="main__fieldDescription" for="backgroundImage">Imagen del fondo</label>

@@ -9,6 +9,7 @@ module.exports = (sequelize, dataTypes) => {
     name: {
       type: dataTypes.STRING(100),
       allowNull: true,
+      unique: { args: true, msg: "El personaje ya fue creado!" },
     },
   };
 

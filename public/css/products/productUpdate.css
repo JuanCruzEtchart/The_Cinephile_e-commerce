@@ -38,19 +38,37 @@
 }
 
 .main__errors {
-  text-align: center;
   list-style-type: none;
   color: white;
-  margin: 20px 0px;
+  margin: 10px 0px;
+  padding: 5px;
+  background-color: #1b1b1b;
+  text-align: center;
+  border-radius: 10px;
+  width: auto;
 }
 
 .main__errors li {
-  margin: 20px 0px;
+  margin: 10px 0px;
   padding: 10px;
   font-size: 0.875rem;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+.input {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.inputStatus {
+  font-size: 0.675rem;
+  text-align: center;
+  margin-left: 10px;
+  color: white;
 }
 
 .main__form-put {
@@ -60,8 +78,8 @@
 
 .text-box {
   font-size: 0.875rem;
-  margin-bottom: 15px;
-  width: 100%;
+  width: 70%;
+  max-width: 495.5px;
   padding: 10px;
   border-radius: 10px;
   border: solid 1px rgba(255, 255, 255, 0.3);
@@ -164,6 +182,15 @@
   font-size: 0.875rem;
   margin: 20px 0px;
   text-align: left;
+}
+
+.valid {
+  color: rgb(46, 255, 46);
+  border-color: rgb(46, 255, 46);
+}
+
+.invalid {
+  color: red;
 }
 
 #productImage {

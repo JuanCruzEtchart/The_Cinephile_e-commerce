@@ -1,18 +1,47 @@
 const { body } = require("express-validator");
 const path = require("path");
-/* const productImage = req.files.productImage.map(function (image) {
-  return image.filename;
-});
-const backgroundImage = req.files.backgroundImage.map(function (image) {
-  return image.filename;
-}); */
+const db = require("../database/models");
 
 module.exports = {
   createProductionTeamValidations: [
-    body("type")
+    body("type").notEmpty().withMessage("El selector de tipo está incompleto!"),
+    body("name")
       .notEmpty()
-      .withMessage("El selector de tipo está incompleto!"),
-    body("name").notEmpty().withMessage("El campo de nombre está incompleto!"),
+      .withMessage("El campo de nombre está incompleto!")
+      .bail()
+      .custom((value, { req }) => {
+        if (req.body.type == "actor") {
+          return db.Actor.findOne({
+            where: {
+              full_name: value,
+            },
+          }).then((actor) => {
+            if (actor) {
+              return Promise.reject("Este actor ya fue creado!");
+            }
+          });
+        } else if (req.body.type == "director") {
+          return db.Director.findOne({
+            where: {
+              full_name: value,
+            },
+          }).then((director) => {
+            if (director) {
+              return Promise.reject("Este director ya fue creado!");
+            }
+          });
+        } else if (req.body.type == "screenwriter") {
+          return db.Screenwriter.findOne({
+            where: {
+              full_name: value,
+            },
+          }).then((screenwriter) => {
+            if (screenwriter) {
+              return Promise.reject("Este guionista ya fue creado!");
+            }
+          });
+        }
+      }),
     body("biography_link")
       .notEmpty()
       .withMessage("El campo de link de biografía está incompleto!")
@@ -25,7 +54,7 @@ module.exports = {
       })
       .withMessage("La carga de fotografía es obligatoria!")
       .bail()
-      .custom(function (value, { req }) {
+      .custom((value, { req }) => {
         const validExtensions = [".png", ".jpg", ".jpeg"];
         const extension = path.extname(req.file.originalname);
         return validExtensions.includes(extension);
@@ -33,11 +62,39 @@ module.exports = {
       .withMessage("Extensión de archivo inválida!"),
   ],
   createCharacterValidations: [
-    body("name").notEmpty().withMessage("El campo de nombre está incompleto!"),
+    body("name")
+      .notEmpty()
+      .withMessage("El campo de nombre está incompleto!")
+      .bail()
+      .custom((value, { req }) => {
+        return db.Character.findOne({
+          where: {
+            name: value,
+          },
+        }).then((character) => {
+          if (character) {
+            return Promise.reject("Este personaje ya fue creado!");
+          }
+        });
+      }),
   ],
   createProductValidations: [
     body("type").notEmpty().withMessage("El selector de tipo está incompleto!"),
-    body("name").notEmpty().withMessage("El campo de nombre está incompleto!"),
+    body("name")
+      .notEmpty()
+      .withMessage("El campo de nombre está incompleto!")
+      .bail()
+      .custom((value, { req }) => {
+        return db.Product.findOne({
+          where: {
+            name: value,
+          },
+        }).then((product) => {
+          if (product) {
+            return Promise.reject("Este producto ya fue creado!");
+          }
+        });
+      }),
     body("release_year")
       .notEmpty()
       .withMessage("El campo de año de salida está incompleto!"),
@@ -93,9 +150,9 @@ module.exports = {
     body("screenwriter")
       .notEmpty()
       .withMessage("El selector de guionista está incompleto!"),
-    body("productImage")
-      .custom(function (value, { req }) {
-        return req.file;
+    /*     body("productImage")
+      .custom((value, { req }) => {
+        return req.files.productImage;
       })
       .withMessage("La carga de imagen de producto es obligatoria!")
       .bail()
@@ -106,21 +163,30 @@ module.exports = {
       })
       .withMessage("La extensión de archivo de imagen de producto es inválida"),
     body("backgroundImage")
-      .custom(function (value, { req }) {
-        return req.file;
+      .custom((value, { req }) => {
+        return req.files.backgroundImage;
       })
       .withMessage("La carga de imagen de fondo es obligatoria")
       .bail()
-      .custom(function (value, { req }) {
+      .custom((value, { req }) => {
         const validExtensions = [".png", ".jpg", ".jpeg"];
         const extension = path.extname(req.file.originalname);
         return validExtensions.includes(extension);
       })
-      .withMessage("La extensión de archivo de imagen de fondo es inválida"),
+      .withMessage("La extensión de archivo de imagen de fondo es inválida"), */
   ],
   createProductCast: [
-    /* 
-    (req, res) => {
+    body().custom((value, { req }) => {
+      console.log(value); //Los campos dinámicos directamente no llegan al value cuando están incompletos
+      console.log("hola");
+      for (let i = 1; i <= req.body.castLength; i++) {
+        console.log(req.body["actor" + i]); //ESCRIBIR LÓGICA DE PARA MUESTRA DE ERRORES EN EL CONTROLLER, REENVIAR ACTORES Y PERSONAJES
+        if (!req.body["actor" + i]) {
+          throw new Error("Campo de actor " + i + " incompleto");
+        }
+      }
+    }),
+    /*     (req, res) => {
       for (let i = 1; i <= req.body.castLength; i++) {
         body("actorsName"+i).notEmpty().withMessage("Campo de actor " + i + " incompleto"),
         body("character"+i).notEmpty().withMessage("Campo de personaje " + i + " incompleto"),
@@ -131,7 +197,7 @@ module.exports = {
         .isURL()
         .withMessage("Campo de link de biografía del actor debe ser una URL"),
       }
-    }, */
+    },  */
   ],
   updateProductValidations: [
     body("type").notEmpty().withMessage("El selector de tipo está incompleto!"),
@@ -191,19 +257,41 @@ module.exports = {
     body("screenwriter")
       .notEmpty()
       .withMessage("El selector de guionista está incompleto!"),
-    body("productImage")
+    /* body("productImage")
       .custom((value, { req }) => {
         const validExtensions = [".png", ".jpg", ".jpeg"];
-        const extension = path.extname(req.file.originalname);
-        return validExtensions.includes(extension);
+        console.log(req.files);
+        console.log("hola");
+        if (req.files.productImage) {
+          const productImage = req.files.productImage.map(function (image) {
+            return image.originalname;
+          });
+          console.log("Nombre original " + productImage); //Muestro el nombre original del archivo
+          console.log("Extensión " + path.extname(productImage)); //Este log no se llega a hacer
+          const extension = path.extname(productImage); //Path rompe la ejecución del custom?
+          console.log(extension); //Todo lo que venga después del extname, ya no se ve en consola
+          console.log("hola");
+          return validExtensions.includes(extension);
+        } else {
+          return true;
+        }
       })
       .withMessage("La extensión de archivo de imagen de producto es inválida"),
     body("backgroundImage")
-      .custom(function (value, { req }) {
+      .custom((value, { req }) => {
         const validExtensions = [".png", ".jpg", ".jpeg"];
-        const extension = path.extname(req.file.originalname);
-        return validExtensions.includes(extension);
+        if (req.files.backgroundImage) {
+          const backgroundImage = req.files.backgroundImage.map(function (
+            image
+          ) {
+            return image.originalname;
+          });
+          const extension = path.extname(backgroundImage);
+          return validExtensions.includes(extension);
+        } else {
+          return true;
+        }
       })
-      .withMessage("La extensión de archivo de imagen de fondo es inválida"),
+      .withMessage("La extensión de archivo de imagen de fondo es inválida"), */
   ],
 };

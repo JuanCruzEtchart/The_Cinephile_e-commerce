@@ -46,7 +46,9 @@ const productController = {
       });
       res.render("searchResult", { products, query: req.query.product });
     } catch (err) {
-      res.send(err);
+      err.errors.forEach((error) => {
+        res.send(error.message);
+      });
     }
   },
 
@@ -79,7 +81,9 @@ const productController = {
       });
       res.render("productDetail", { product, actor, allProducts });
     } catch (err) {
-      res.send(err);
+      err.errors.forEach((error) => {
+        res.send(error.message);
+      });
     }
   },
 
@@ -95,7 +99,9 @@ const productController = {
         actors,
       });
     } catch (err) {
-      res.send(err);
+      err.errors.forEach((error) => {
+        res.send(error.message);
+      });
     }
   },
 
@@ -127,7 +133,7 @@ const productController = {
           });
           console.log("Director creado!");
           res.redirect("/product/create/productionTeam");
-        } else {
+        } else if (req.body.type == "screenwriter") {
           await Screenwriters.create({
             full_name: req.body.name,
             biography_link: req.body.biography_link,
@@ -137,7 +143,9 @@ const productController = {
           res.redirect("/product/create/productionTeam");
         }
       } catch (err) {
-        res.send(err);
+        err.errors.forEach((error) => {
+          res.send(error.message);
+        });
       }
     }
   },
@@ -148,7 +156,9 @@ const productController = {
       const characters = await Characters.findAll();
       res.render("createCharacter", { characters });
     } catch (err) {
-      res.send(err);
+      err.errors.forEach((error) => {
+        res.send(error.message);
+      });
     }
   },
 
@@ -170,7 +180,9 @@ const productController = {
         console.log("Personaje creado!");
         res.redirect("/product/create/character");
       } catch (err) {
-        res.send(err);
+        err.errors.forEach((error) => {
+          res.send(error.message);
+        });
       }
     }
   },
@@ -195,7 +207,9 @@ const productController = {
         screenwriter,
       });
     } catch (err) {
-      res.send(err);
+      err.errors.forEach((error) => {
+        res.send(error.message);
+      });
     }
   },
 
@@ -210,6 +224,7 @@ const productController = {
     const backgroundImage = req.files.backgroundImage.map(function (image) {
       return image.filename;
     });
+
     if (!validationErrors.isEmpty()) {
       try {
         const genres = await Genres.findAll({
@@ -231,7 +246,9 @@ const productController = {
         });
         console.log(validationErrors);
       } catch (err) {
-        res.send(err);
+        err.errors.forEach((error) => {
+          res.send(error.message);
+        });
       }
     } else {
       const newProduct = {
@@ -240,14 +257,14 @@ const productController = {
         release_year: req.body.release_year,
         rating: req.body.rating,
         length: req.body.length,
-        imdb_score: req.body.imdbScore,
-        imdb_total_reviews: req.body.imdbTotalReviews,
+        imdb_score: req.body.imdbScore.replace(".", ","),
+        imdb_total_reviews: req.body.imdbTotalReviews.replace(".", ","),
         tomato_score: req.body.tomatoScore,
         trailer_link: req.body.trailerLink,
         genre1_id: req.body.genre1,
         genre2_id: req.body.genre2,
-        purchase_price: req.body.purchasePrice,
-        rental_price: req.body.rentalPrice,
+        purchase_price: req.body.purchasePrice.replace(".", "."),
+        rental_price: req.body.rentalPrice.replace(".", ","),
         synopsis: req.body.synopsis,
         director_id: req.body.director,
         screenwriter_id: req.body.screenwriter,
@@ -292,7 +309,9 @@ const productController = {
         screenwriter,
       });
     } catch (err) {
-      res.send(err);
+      err.errors.forEach((error) => {
+        res.send(error.message);
+      });
     }
   },
 
@@ -378,7 +397,9 @@ const productController = {
         console.log("Producto editado!");
         res.redirect("/product/list");
       } catch (err) {
-        res.send(err);
+        err.errors.forEach((error) => {
+          res.send(error.message);
+        });
       }
     }
   },
@@ -393,7 +414,9 @@ const productController = {
       await Product.destroy({ where: { id: productId } });
       res.redirect("/product/list");
     } catch (err) {
-      res.send(err);
+      err.errors.forEach((error) => {
+        res.send(error.message);
+      });
     }
   },
 
@@ -410,12 +433,16 @@ const productController = {
 
       res.render("productCast", { product: dataTemp, actors, characters });
     } catch (err) {
-      res.send(err);
+      err.errors.forEach((error) => {
+        res.send(error.message);
+      });
     }
   },
 
   //Guardado de repartos y producto final
   castUpload: async (req, res) => {
+    /* const validationErrors = validationResult(req); 
+    if (!validationErrors.isEmpty()) {*/
     try {
       const product = await Product.create({
         type: req.body.type,
@@ -460,6 +487,7 @@ const productController = {
     } catch (err) {
       res.send(err);
     }
+    /*  } */
   },
 
   //Render de vista de lista general de productos
@@ -477,7 +505,9 @@ const productController = {
       });
       res.render("productList", { products });
     } catch (err) {
-      res.send(err);
+      err.errors.forEach((error) => {
+        res.send(error.message);
+      });
     }
   },
 
@@ -487,7 +517,9 @@ const productController = {
       const movies = await Product.findAll({ where: { type: "Película" } });
       res.render("moviesList", { movies });
     } catch (err) {
-      res.send(err);
+      err.errors.forEach((error) => {
+        res.send(error.message);
+      });
     }
   },
 
@@ -497,7 +529,9 @@ const productController = {
       const series = await Product.findAll({ where: { type: "Serie de TV" } });
       res.render("seriesList", { series });
     } catch (err) {
-      res.send(err);
+      err.errors.forEach((error) => {
+        res.send(error.message);
+      });
     }
   },
 

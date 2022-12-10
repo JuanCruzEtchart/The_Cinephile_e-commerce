@@ -5,7 +5,7 @@ window.addEventListener("load", function (e) {
   name.focus();
 
   name.addEventListener("blur", function (e) {
-    if (name.value.length < 1) {
+    if (name.value.length == "") {
       name.nextElementSibling.innerHTML = "Completar campo!";
       name.nextElementSibling.classList.add("invalid");
       name.nextElementSibling.classList.remove("valid");

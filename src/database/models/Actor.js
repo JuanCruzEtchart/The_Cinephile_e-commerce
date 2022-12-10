@@ -9,6 +9,7 @@ module.exports = (sequelize, dataTypes) => {
     full_name: {
       type: dataTypes.STRING(100),
       allowNull: true,
+      unique: { args: true, msg: "El actor ya fue creado!" },
     },
     biography_link: {
       type: dataTypes.STRING(500),

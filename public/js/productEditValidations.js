@@ -1,5 +1,5 @@
 window.addEventListener("load", function (e) {
-  let form = document.querySelector(".main__form");
+  let form = document.querySelector(".main__form-put");
   let types = document.querySelectorAll(".type");
   let name = document.querySelector("#name");
   let release_year = document.querySelector("#year");
@@ -16,7 +16,6 @@ window.addEventListener("load", function (e) {
   let synopsis = document.querySelector("#synopsis");
   let director = document.querySelector("#director");
   let screenwriter = document.querySelector("#screenwriter");
-  let castLength = document.querySelector("#castLength");
   let productImage = document.querySelector("#productImage");
   let backgroundImage = document.querySelector("#backgroundImage");
 
@@ -359,21 +358,14 @@ window.addEventListener("load", function (e) {
       errors.push("El selector de guionista no puede estar vacio!");
     }
 
-    if (castLength.value == "") {
-      errors.push("El selector de cantidad de actores no puede estar vacio!");
-    }
-
-    if (productImage.value == "") {
-      errors.push("Es obligatorio cargar una imagen de producto!");
-    }
-
-    if (backgroundImage.value == "") {
-      errors.push("Es obligatorio cargar una imagen de fondo!");
-    }
-
     if (
-      !validExtensions.exec(backgroundImageValue) ||
-      !validExtensions.exec(productImageValue)
+      !productImage.value == "" &&
+      !validExtensions.exec(productImage.value)
+    ) {
+      errors.push("Solamente se permiten archivos tipo .jpeg/.jpg/.png");
+    } else if (
+      !backgroundImage.value == "" &&
+      !validExtensions.exec(backgroundImage.value)
     ) {
       errors.push("Solamente se permiten archivos tipo .jpeg/.jpg/.png");
     }
@@ -390,7 +382,7 @@ window.addEventListener("load", function (e) {
       ulErrors.style.display = "block";
       name.focus();
     } else {
-      alert("La carga se realizó exitosamente");
+      alert("La edición se realizó exitosamente");
     }
   });
 });

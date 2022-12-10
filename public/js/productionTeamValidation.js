@@ -9,7 +9,7 @@ window.addEventListener("load", function (e) {
   fullName.focus();
 
   fullName.addEventListener("blur", function (e) {
-    if (fullName.value.length < 1) {
+    if (fullName.value.length == "") {
       fullName.nextElementSibling.innerHTML = "Completar campo!";
       fullName.nextElementSibling.classList.add("invalid");
       fullName.nextElementSibling.classList.remove("valid");
@@ -23,7 +23,7 @@ window.addEventListener("load", function (e) {
   });
 
   biography.addEventListener("blur", function (e) {
-    if (biography.value.length < 1) {
+    if (biography.value.length == "") {
       biography.nextElementSibling.innerHTML = "Completar campo!";
       biography.nextElementSibling.classList.add("invalid");
       biography.nextElementSibling.classList.remove("valid");
@@ -32,6 +32,7 @@ window.addEventListener("load", function (e) {
       biography.nextElementSibling.innerHTML = "Tiene que ser URL!";
       biography.nextElementSibling.classList.add("invalid");
       biography.nextElementSibling.classList.remove("valid");
+      trailerLink.classList.remove("valid");
     } else {
       biography.nextElementSibling.innerHTML = "👍";
       biography.nextElementSibling.classList.remove("invalid");

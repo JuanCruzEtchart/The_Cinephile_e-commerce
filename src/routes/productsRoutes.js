@@ -5,15 +5,10 @@ const path = require("path");
 const productController = require("../controllers/productController.js");
 const {
   createProductValidations,
-} = require("../validations/productValidation.js");
-const {
   updateProductValidations,
-} = require("../validations/productValidation.js");
-const {
   createProductionTeamValidations,
-} = require("../validations/productValidation.js");
-const {
   createCharacterValidations,
+  createProductCast,
 } = require("../validations/productValidation.js");
 
 let storage = multer.diskStorage({
@@ -35,7 +30,7 @@ let upload = multer({
   storage: storage,
   fileFilter: (req, file, cb) => {
     //Validación de archivos
-    const allowedExtensions = [".jpg", ".png", ".jpeg"];
+    const allowedExtensions = [".jpg", ".png", ".jpeg", ".pdf"];
 
     const imageExtension = path.extname(file.originalname);
 
@@ -94,7 +89,12 @@ router.post(
 
 /*Render de la vista de creación de repartos*/
 router.get("/create/cast", productController.castCreate);
-router.post("/create/cast", uploadActorsPhoto, productController.castUpload);
+router.post(
+  "/create/cast",
+  uploadActorsPhoto,
+/*   createProductCast, */
+  productController.castUpload
+);
 
 /*Render de la vista de edición de productos*/
 router.get("/edit/:id", productController.edit);

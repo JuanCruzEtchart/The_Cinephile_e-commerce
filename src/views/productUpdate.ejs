@@ -4,6 +4,8 @@
 <head>
   <%- include("./partials/head") %>
   <link rel="stylesheet" href="/css/products/productUpdate.css" />
+  <script src="/js/productEditValidations.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/validator/13.7.0/validator.min.js" integrity="sha512-rJU+PnS2bHzDCvRGFhXouCSxf4YYaUyUfjXMHsHFfMKhWDIEBr8go2LZ2EYXOqASey1tWc2qToeOCYh9et2aGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
@@ -25,99 +27,114 @@
         <% }) %>
       </ul>
       <% } %>
+      <ul hidden class="main__errors errors"></ul>
       <form class="main__form-put" action="/product/edit/<%= product.id %>?_method=PUT" enctype="multipart/form-data" method="POST">
-        <div>
-          <input type="text" class="text-box" id="name" name="name" value="<%= product.name %>" placeholder="Nombre del producto" required>
-        </div>
         <div class="main__radioForm">
           <div class="main__radioForm-container">
             <div>
-              <input type="radio" name="type" id="movie" value="Película" <% if (product.type == "Película") { %><%= 'checked' %><% }; %> />
+              <input type="radio" name="type" id="movie" class="type" value="Película" <% if (product.type == "Película") { %><%= 'checked' %><% }; %> />
               <label for="movie">Película</label>
             </div>
             <div>
-              <input type="radio" name="type" id="tvSeries" value="Serie de TV" <% if (product.type == "Serie de TV") { %><%= 'checked' %><% }; %> />
+              <input type="radio" name="type" id="tvSeries" class="type" value="Serie de TV" <% if (product.type == "Serie de TV") { %><%= 'checked' %><% }; %> />
               <label for="tvSeries">Serie de TV</label>
             </div>
           </div>
         </div>
-        <div>
+        <div class="input">
+          <input type="text" class="text-box" id="name" name="name" value="<%= product.name %>" placeholder="Nombre del producto" required>
+          <span class="inputStatus"></span>
+        </div>
+        <div class="input">
           <input type="text" class="text-box" id="year" name="release_year" value="<%= product.release_year %>" placeholder="Año de salida" required>
+          <span class="inputStatus"></span>
         </div>
-        <div>
+        <div class="input">
           <input type="text" class="text-box" id="rated" name="rating" value="<%= product.rating %>" placeholder="Clasificación" required>
+          <span class="inputStatus"></span>
+        </div>
+        <div class="input">
+          <input type="text" class="text-box" id="length" name="length" value="<%= product.length %>" placeholder="Duración" required>
+          <span class="inputStatus"></span>
+        </div>
+        <div class="input">
+          <input type="text" class="text-box" id="imdbScore" name="imdbScore" step="0.01" min="0" max="10" value="<%= product.imdb_score %>" placeholder="Puntaje de IMDb" required>
+          <span class="inputStatus"></span>
+        </div>
+        <div class="input">
+          <input type="text" class="text-box" id="imdbTotalReviews" name="imdbTotalReviews" value="<%= product.imdb_total_reviews %>" placeholder="Reseñas totales de IMDb" required>
+          <span class="inputStatus"></span>
+        </div>
+        <div class="input">
+          <input type="text" class="text-box" id="tomatoScore" name="tomatoScore" value="<%= product.tomato_score %>" placeholder="Puntaje de Rotten Tomatoes" required>
+          <span class="inputStatus"></span>
+        </div>
+        <div class="input">
+          <input type="url" class="text-box" id="trailerLink" name="trailerLink" value="<%= product.trailer_link %>" placeholder="Link del trailer" required>
+          <span class="inputStatus"></span>
+        </div>
+        <div class="main__genreSelect">
+          <div class="main__fieldDescription">Elegir género 1</div>
+          <select name="genre1" class="main__select" id="genre1" required>
+            <option value="" disabled selected></option>
+            <% genres.forEach(element => { %>
+            <option value="<%= element.id %>" <% if (product.genre1_id == element.id) { %><%= 'selected' %><% }; %>><%= element.name %></option>
+            <% }) %>
+          </select>
+          <div class="main__fieldDescription">Elegir género 2</div>
+          <select name="genre2" class="main__select" id="genre2" required>
+            <option value="" disabled selected></option>
+            <% genres.forEach(element => { %>
+            <option value="<%= element.id %>" <% if (product.genre2_id == element.id) { %><%= 'selected' %><% }; %>><%= element.name %></option>
+            <% }) %>
+          </select>
+        </div>
+        <div class="input">
+          <input type="text" class="text-box" id="purchasePrice" name="purchasePrice" value="<%= product.purchase_price %>" placeholder="Precio de venta" required>
+          <span class="inputStatus"></span>
+        </div>
+        <div class="input">
+          <input type="text" class="text-box" id="rentalPrice" name="rentalPrice" value="<%= product.rental_price %>" placeholder="Precio de alquiler" required>
+          <span class="inputStatus"></span>
+        </div>
+        <div class="input">
+          <textarea class="textarea" id="synopsis" name="synopsis" cols="30" rows="10" wrap="hard" placeholder="Sinopsis del producto"><%= product.synopsis %></textarea>
+          <span class="inputStatus"></span>
         </div>
         <div>
-          <input type="text" class="text-box" id="length" name="length" value="<%= product.length %>" placeholder="Duración" required>
-          <div>
-            <input type="text" class="text-box" id="imdbScore" name="imdbScore" step="0.01" min="0" max="10" value="<%= product.imdb_score %>" placeholder="Puntaje de IMDb" required>
-          </div>
-          <div>
-            <input type="text" class="text-box" id="imdbTotalReviews" name="imdbTotalReviews" value="<%= product.imdb_total_reviews %>" placeholder="Reseñas totales de IMDb" required>
-          </div>
-          <div>
-            <input type="text" class="text-box" id="tomatoScore" name="tomatoScore" value="<%= product.tomato_score %>" placeholder="Puntaje de Rotten Tomatoes" required>
-          </div>
-          <div>
-            <input type="url" class="text-box" id="trailerLink" name="trailerLink" value="<%= product.trailer_link %>" placeholder="Link del trailer" required>
-          </div>
-          <div class="main__genreSelect">
-            <div class="main__fieldDescription">Elegir género 1</div>
-            <select name="genre1" class="main__select" required>
-              <option value="" disabled selected></option>
-              <% genres.forEach(element => { %>
-              <option value="<%= element.id %>" <% if (product.genre1_id == element.id) { %><%= 'selected' %><% }; %>><%= element.name %></option>
-              <% }) %>
-            </select>
-            <div class="main__fieldDescription">Elegir género 2</div>
-            <select name="genre2" class="main__select" required>
-              <option value="" disabled selected></option>
-              <% genres.forEach(element => { %>
-              <option value="<%= element.id %>" <% if (product.genre2_id == element.id) { %><%= 'selected' %><% }; %>><%= element.name %></option>
-              <% }) %>
-            </select>
-          </div>
-          <div>
-            <input type="text" class="text-box" id="purchasePrice" name="purchasePrice" value="<%= product.purchase_price %>" placeholder="Precio de venta" required>
-            <input type="text" class="text-box" id="rentalPrice" name="rentalPrice" value="<%= product.rental_price %>" placeholder="Precio de alquiler" required>
-          </div>
-          <div>
-            <textarea class="textarea" id="synopsis" name="synopsis" cols="30" rows="10" wrap="hard" placeholder="Sinopsis del producto"><%= product.synopsis %></textarea>
-          </div>
-          <div>
-            <div class="main__fieldDescription">Elegir director</div>
-            <select name="director" class="main__select" required>
-              <option value="" disabled selected></option>
-              <% directors.forEach(element => { %>
-              <option value="<%= element.id %>" <% if (product.director_id == element.id) { %><%= 'selected' %><% }; %>><%= element.full_name %> </option>
-              <% }) %>
-            </select>
-          </div>
-          <div>
-            <div class="main__fieldDescription">Elegir guionista</div>
-            <select name="screenwriter" class="main__select" required>
-              <option value="" disabled selected></option>
-              <% screenwriter.forEach(element => { %>
-              <option value="<%= element.id %>" <% if (product.screenwriter_id == element.id) { %><%= 'selected' %><% }; %>><%= element.full_name %> </option>
-              <% }) %>
-            </select>
-          </div>
-          <div class="main__file-wrap">
-            <label class="main__fieldDescription" for="productImage">Imagen del producto</label>
-            <img src="/images/products/productsCreated/<%= product.product_image %> " alt="Product image">
-            <input type="file" id="productImage" name="productImage" accept="image/jpg, image/png, image/jpeg">
-          </div>
-          <div class="main__file-wrap">
-            <label class="main__fieldDescription" for="backgroundImage">Imagen del fondo</label>
-            <img id="background-image" src="/images/products/productsCreated/<%= product.background_image %> " alt="Background image">
-            <input type="file" id="backgroundImage" name="backgroundImage" accept="image/jpg, image/png, image/jpeg">
-          </div>
-          <div class="main__button">
-            <button type="submit" class="send-button">Actualizar</button>
-          </div>
-          <div class="main__button">
-            <button type="reset" class="reset-button">Reiniciar campos</button>
-          </div>
+          <div class="main__fieldDescription">Elegir director</div>
+          <select name="director" class="main__select" id="director" required>
+            <option value="" disabled selected></option>
+            <% directors.forEach(element => { %>
+            <option value="<%= element.id %>" <% if (product.director_id == element.id) { %><%= 'selected' %><% }; %>><%= element.full_name %> </option>
+            <% }) %>
+          </select>
+        </div>
+        <div>
+          <div class="main__fieldDescription">Elegir guionista</div>
+          <select name="screenwriter" class="main__select" id="screenwriter" required>
+            <option value="" disabled selected></option>
+            <% screenwriter.forEach(element => { %>
+            <option value="<%= element.id %>" <% if (product.screenwriter_id == element.id) { %><%= 'selected' %><% }; %>><%= element.full_name %> </option>
+            <% }) %>
+          </select>
+        </div>
+        <div class="main__file-wrap">
+          <label class="main__fieldDescription" for="productImage">Imagen del producto</label>
+          <img src="/images/products/productsCreated/<%= product.product_image %> " alt="Product image">
+          <input type="file" id="productImage" name="productImage">
+        </div>
+        <div class="main__file-wrap">
+          <label class="main__fieldDescription" for="backgroundImage">Imagen del fondo</label>
+          <img id="background-image" src="/images/products/productsCreated/<%= product.background_image %> " alt="Background image">
+          <input type="file" id="backgroundImage" name="backgroundImage">
+        </div>
+        <div class="main__button">
+          <button type="submit" class="send-button">Actualizar</button>
+        </div>
+        <div class="main__button">
+          <button type="reset" class="reset-button">Reiniciar campos</button>
+        </div>
       </form>
       <form class="main__form-delete" action="/product/delete/<%= product.id  %>?_method=DELETE" method="POST">
         <div class="main__button">
