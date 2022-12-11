@@ -37,6 +37,10 @@
   background-color: rgba(126, 126, 126, 0.1);
 }
 
+#back-button {
+  text-align: center;
+}
+
 .main__errors {
   list-style-type: none;
   color: white;
@@ -60,20 +64,31 @@
 .input {
   display: flex;
   justify-content: flex-start;
-  margin-bottom: 15px;
   align-items: center;
+  margin-bottom: 15px;
+  width: 100%;
 }
 
 .inputStatus {
   font-size: 0.675rem;
-  text-align: center;
   margin-left: 10px;
   color: white;
+  width: 30%;
+  text-align: center;
+  padding-top: 21px;
+  height: 42.13px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+  padding-left: 10px;
+  border-radius: 10px;
+  background-color: #1b1b1b;
 }
 
 .main__form-put {
-  padding: 20px 0px 0px 0px;
   text-align: center;
+  width: 100%;
 }
 
 .text-box {
@@ -82,8 +97,8 @@
   max-width: 495.5px;
   padding: 10px;
   border-radius: 10px;
-  border: solid 1px rgba(255, 255, 255, 0.3);
   background-color: #1b1b1b;
+  border: solid 1px rgba(255, 255, 255, 0.3);
   color: white;
 }
 
@@ -115,10 +130,6 @@
   padding-left: 10px;
 }
 
-#trailerLink {
-  margin-bottom: 5px;
-}
-
 .main__genreSelect {
   margin-bottom: 15px;
 }
@@ -144,10 +155,9 @@
 #synopsis {
   resize: none;
   word-wrap: break-word;
-  width: 100%;
+  width: 70%;
   font-size: 0.875rem;
-  margin-bottom: 15px;
-  width: 100%;
+  max-width: 495.5px;
   padding: 10px;
   border-radius: 10px;
   border: solid 1px rgba(255, 255, 255, 0.3);
@@ -180,13 +190,20 @@
 .main__fieldDescription {
   color: rgba(255, 255, 255, 0.75);
   font-size: 0.875rem;
-  margin: 20px 0px;
+  margin-top: 30px;
+  margin-bottom: 20px;
   text-align: left;
 }
 
 .valid {
   color: rgb(46, 255, 46);
   border-color: rgb(46, 255, 46);
+}
+
+.valid-status {
+  color: rgb(46, 255, 46);
+  border-color: rgb(46, 255, 46);
+  font-size: 1.2rem;
 }
 
 .invalid {
@@ -212,7 +229,7 @@
   border: none;
   padding: 10px;
   border-radius: 10px;
-  margin-top: 15px;
+  margin-top: 30px;
   margin-bottom: 30px;
   width: 70%;
   max-width: 250px;
@@ -240,7 +257,6 @@
 }
 
 .main__form-delete {
-  padding-bottom: 20px;
   text-align: center;
 }
 
@@ -249,6 +265,7 @@
   border: none;
   padding: 10px;
   border-radius: 10px;
+  margin-bottom: 30px;
   width: 70%;
   max-width: 250px;
   cursor: pointer;
@@ -258,6 +275,11 @@
 .delete-button:hover {
   background-color: rgb(253 57 57);
 }
+
+#main__last-button {
+  margin-bottom: 30px;
+}
+
 /*MEDIA QUERIES*/
 
 /*MOBILE*/
@@ -274,6 +296,10 @@
     font-size: 20px;
     line-height: 28px;
   }
+}
+
+@media (min-width: 900px) {
+  /*MAIN*/
   .main__container {
     width: 50%;
   }

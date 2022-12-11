@@ -25,12 +25,12 @@ window.addEventListener("load", function (e) {
     if (name.value == "") {
       name.nextElementSibling.innerHTML = "Completar campo!";
       name.nextElementSibling.classList.add("invalid");
-      name.nextElementSibling.classList.remove("valid");
+      name.nextElementSibling.classList.remove("valid-status");
       name.classList.remove("valid");
     } else {
       name.nextElementSibling.innerHTML = "👍";
       name.nextElementSibling.classList.remove("invalid");
-      name.nextElementSibling.classList.add("valid");
+      name.nextElementSibling.classList.add("valid-status");
       name.classList.add("valid");
     }
   });
@@ -39,7 +39,7 @@ window.addEventListener("load", function (e) {
     if (release_year.value == "") {
       release_year.nextElementSibling.innerHTML = "Completar campo!";
       release_year.nextElementSibling.classList.add("invalid");
-      release_year.nextElementSibling.classList.remove("valid");
+      release_year.nextElementSibling.classList.remove("valid-status");
       release_year.classList.remove("valid");
     } else if (
       !validator.isNumeric(release_year.value) ||
@@ -48,17 +48,17 @@ window.addEventListener("load", function (e) {
       release_year.nextElementSibling.innerHTML =
         "Debe ser un número entero de 4 dígitos";
       release_year.nextElementSibling.classList.add("invalid");
-      release_year.nextElementSibling.classList.remove("valid");
+      release_year.nextElementSibling.classList.remove("valid-status");
       release_year.classList.remove("valid");
     } else if (release_year.value.length !== 4) {
       release_year.nextElementSibling.innerHTML = "Debe tener 4 dígitos!";
       release_year.nextElementSibling.classList.add("invalid");
-      release_year.nextElementSibling.classList.remove("valid");
+      release_year.nextElementSibling.classList.remove("valid-status");
       release_year.classList.remove("valid");
     } else {
       release_year.nextElementSibling.innerHTML = "👍";
       release_year.nextElementSibling.classList.remove("invalid");
-      release_year.nextElementSibling.classList.add("valid");
+      release_year.nextElementSibling.classList.add("valid-status");
       release_year.classList.add("valid");
     }
   });
@@ -67,12 +67,12 @@ window.addEventListener("load", function (e) {
     if (rating.value == "") {
       rating.nextElementSibling.innerHTML = "Completar campo!";
       rating.nextElementSibling.classList.add("invalid");
-      rating.nextElementSibling.classList.remove("valid");
+      rating.nextElementSibling.classList.remove("valid-status");
       rating.classList.remove("valid");
     } else {
       rating.nextElementSibling.innerHTML = "👍";
       rating.nextElementSibling.classList.remove("invalid");
-      rating.nextElementSibling.classList.add("valid");
+      rating.nextElementSibling.classList.add("valid-status");
       rating.classList.add("valid");
     }
   });
@@ -81,12 +81,12 @@ window.addEventListener("load", function (e) {
     if (length.value == "") {
       length.nextElementSibling.innerHTML = "Completar campo!";
       length.nextElementSibling.classList.add("invalid");
-      length.nextElementSibling.classList.remove("valid");
+      length.nextElementSibling.classList.remove("valid-status");
       length.classList.remove("valid");
     } else {
       length.nextElementSibling.innerHTML = "👍";
       length.nextElementSibling.classList.remove("invalid");
-      length.nextElementSibling.classList.add("valid");
+      length.nextElementSibling.classList.add("valid-status");
       length.classList.add("valid");
     }
   });
@@ -95,7 +95,7 @@ window.addEventListener("load", function (e) {
     if (imdbScore.value == "") {
       imdbScore.nextElementSibling.innerHTML = "Completar campo!";
       imdbScore.nextElementSibling.classList.add("invalid");
-      imdbScore.nextElementSibling.classList.remove("valid");
+      imdbScore.nextElementSibling.classList.remove("valid-status");
       imdbScore.classList.remove("valid");
     } else if (
       !validator.isNumeric(imdbScore.value) ||
@@ -105,17 +105,17 @@ window.addEventListener("load", function (e) {
       imdbScore.nextElementSibling.innerHTML =
         "Debe ser un número decimal entre 0 y 10!";
       imdbScore.nextElementSibling.classList.add("invalid");
-      imdbScore.nextElementSibling.classList.remove("valid");
+      imdbScore.nextElementSibling.classList.remove("valid-status");
       imdbScore.classList.remove("valid");
     } else if (imdbScore.value.length !== 3) {
       imdbScore.nextElementSibling.innerHTML = "Debe tener 2 dígitos!";
       imdbScore.nextElementSibling.classList.add("invalid");
-      imdbScore.nextElementSibling.classList.remove("valid");
+      imdbScore.nextElementSibling.classList.remove("valid-status");
       imdbScore.classList.remove("valid");
     } else {
       imdbScore.nextElementSibling.innerHTML = "👍";
       imdbScore.nextElementSibling.classList.remove("invalid");
-      imdbScore.nextElementSibling.classList.add("valid");
+      imdbScore.nextElementSibling.classList.add("valid-status");
       imdbScore.classList.add("valid");
     }
   });
@@ -124,12 +124,12 @@ window.addEventListener("load", function (e) {
     if (imdbTotalReviews.value == "") {
       imdbTotalReviews.nextElementSibling.innerHTML = "Completar campo!";
       imdbTotalReviews.nextElementSibling.classList.add("invalid");
-      imdbTotalReviews.nextElementSibling.classList.remove("valid");
+      imdbTotalReviews.nextElementSibling.classList.remove("valid-status");
       imdbTotalReviews.classList.remove("valid");
     } else {
       imdbTotalReviews.nextElementSibling.innerHTML = "👍";
       imdbTotalReviews.nextElementSibling.classList.remove("invalid");
-      imdbTotalReviews.nextElementSibling.classList.add("valid");
+      imdbTotalReviews.nextElementSibling.classList.add("valid-status");
       imdbTotalReviews.classList.add("valid");
     }
   });
@@ -138,24 +138,24 @@ window.addEventListener("load", function (e) {
     if (tomatoScore.value == "") {
       tomatoScore.nextElementSibling.innerHTML = "Completar campo!";
       tomatoScore.nextElementSibling.classList.add("invalid");
-      tomatoScore.nextElementSibling.classList.remove("valid");
+      tomatoScore.nextElementSibling.classList.remove("valid-status");
       tomatoScore.classList.remove("valid");
     } else if (!validator.isInt(tomatoScore.value) || tomatoScore.value > 100) {
       tomatoScore.nextElementSibling.innerHTML =
         "Debe ser un número entero entre 0 y 100!";
       tomatoScore.nextElementSibling.classList.add("invalid");
-      tomatoScore.nextElementSibling.classList.remove("valid");
+      tomatoScore.nextElementSibling.classList.remove("valid-status");
       tomatoScore.classList.remove("valid");
     } else if (tomatoScore.value.length > 3) {
       tomatoScore.nextElementSibling.innerHTML =
         "Puede tener máximo 3 dígitos!";
       tomatoScore.nextElementSibling.classList.add("invalid");
-      tomatoScore.nextElementSibling.classList.remove("valid");
+      tomatoScore.nextElementSibling.classList.remove("valid-status");
       tomatoScore.classList.remove("valid");
     } else {
       tomatoScore.nextElementSibling.innerHTML = "👍";
       tomatoScore.nextElementSibling.classList.remove("invalid");
-      tomatoScore.nextElementSibling.classList.add("valid");
+      tomatoScore.nextElementSibling.classList.add("valid-status");
       tomatoScore.classList.add("valid");
     }
   });
@@ -164,17 +164,17 @@ window.addEventListener("load", function (e) {
     if (trailerLink.value.length == "") {
       trailerLink.nextElementSibling.innerHTML = "Completar campo!";
       trailerLink.nextElementSibling.classList.add("invalid");
-      trailerLink.nextElementSibling.classList.remove("valid");
+      trailerLink.nextElementSibling.classList.remove("valid-status");
       trailerLink.classList.remove("valid");
     } else if (!validator.isURL(trailerLink.value)) {
-      trailerLink.nextElementSibling.innerHTML = "Tiene que ser URL!";
+      trailerLink.nextElementSibling.innerHTML = "Debe ser una URL!";
       trailerLink.nextElementSibling.classList.add("invalid");
-      trailerLink.nextElementSibling.classList.remove("valid");
+      trailerLink.nextElementSibling.classList.remove("valid-status");
       trailerLink.classList.remove("valid");
     } else {
       trailerLink.nextElementSibling.innerHTML = "👍";
       trailerLink.nextElementSibling.classList.remove("invalid");
-      trailerLink.nextElementSibling.classList.add("valid");
+      trailerLink.nextElementSibling.classList.add("valid-status");
       trailerLink.classList.add("valid");
     }
   });
@@ -183,7 +183,7 @@ window.addEventListener("load", function (e) {
     if (purchasePrice.value == "") {
       purchasePrice.nextElementSibling.innerHTML = "Completar campo!";
       purchasePrice.nextElementSibling.classList.add("invalid");
-      purchasePrice.nextElementSibling.classList.remove("valid");
+      purchasePrice.nextElementSibling.classList.remove("valid-status");
       purchasePrice.classList.remove("valid");
     } else if (
       !validator.isNumeric(purchasePrice.value) ||
@@ -192,12 +192,12 @@ window.addEventListener("load", function (e) {
       purchasePrice.nextElementSibling.innerHTML =
         "Debe ser un número decimal!";
       purchasePrice.nextElementSibling.classList.add("invalid");
-      purchasePrice.nextElementSibling.classList.remove("valid");
+      purchasePrice.nextElementSibling.classList.remove("valid-status");
       purchasePrice.classList.remove("valid");
     } else {
       purchasePrice.nextElementSibling.innerHTML = "👍";
       purchasePrice.nextElementSibling.classList.remove("invalid");
-      purchasePrice.nextElementSibling.classList.add("valid");
+      purchasePrice.nextElementSibling.classList.add("valid-status");
       purchasePrice.classList.add("valid");
     }
   });
@@ -206,7 +206,7 @@ window.addEventListener("load", function (e) {
     if (rentalPrice.value == "") {
       rentalPrice.nextElementSibling.innerHTML = "Completar campo!";
       rentalPrice.nextElementSibling.classList.add("invalid");
-      rentalPrice.nextElementSibling.classList.remove("valid");
+      rentalPrice.nextElementSibling.classList.remove("valid-status");
       rentalPrice.classList.remove("valid");
     } else if (
       !validator.isNumeric(rentalPrice.value) ||
@@ -214,12 +214,12 @@ window.addEventListener("load", function (e) {
     ) {
       rentalPrice.nextElementSibling.innerHTML = "Debe ser un número decimal!";
       rentalPrice.nextElementSibling.classList.add("invalid");
-      rentalPrice.nextElementSibling.classList.remove("valid");
+      rentalPrice.nextElementSibling.classList.remove("valid-status");
       rentalPrice.classList.remove("valid");
     } else {
       rentalPrice.nextElementSibling.innerHTML = "👍";
       rentalPrice.nextElementSibling.classList.remove("invalid");
-      rentalPrice.nextElementSibling.classList.add("valid");
+      rentalPrice.nextElementSibling.classList.add("valid-status");
       rentalPrice.classList.add("valid");
     }
   });
@@ -228,12 +228,12 @@ window.addEventListener("load", function (e) {
     if (synopsis.value == "") {
       synopsis.nextElementSibling.innerHTML = "Completar campo!";
       synopsis.nextElementSibling.classList.add("invalid");
-      synopsis.nextElementSibling.classList.remove("valid");
+      synopsis.nextElementSibling.classList.remove("valid-status");
       synopsis.classList.remove("valid");
     } else {
       synopsis.nextElementSibling.innerHTML = "👍";
       synopsis.nextElementSibling.classList.remove("invalid");
-      synopsis.nextElementSibling.classList.add("valid");
+      synopsis.nextElementSibling.classList.add("valid-status");
       synopsis.classList.add("valid");
     }
   });

@@ -8,12 +8,12 @@ window.addEventListener("load", function (e) {
     if (name.value.length == "") {
       name.nextElementSibling.innerHTML = "Completar campo!";
       name.nextElementSibling.classList.add("invalid");
-      name.nextElementSibling.classList.remove("valid");
+      name.nextElementSibling.classList.remove("valid-status");
       name.classList.remove("valid");
     } else {
       name.nextElementSibling.innerHTML = "👍";
       name.nextElementSibling.classList.remove("invalid");
-      name.nextElementSibling.classList.add("valid");
+      name.nextElementSibling.classList.add("valid-status");
       name.classList.add("valid");
     }
   });

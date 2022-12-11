@@ -146,14 +146,14 @@ body {
 }
 
 .main__fieldDescription {
-  color: white;
+  color: rgba(255, 255, 255, 0.75);
   font-size: 0.875rem;
   margin: 20px 0px;
   text-align: left;
 }
 
 h2.main__fieldDescription {
-  color: #ffc700;
+  color: white;
 }
 
 .main__select {
@@ -190,7 +190,7 @@ h2.main__fieldDescription {
   border: none;
   padding: 10px;
   border-radius: 10px;
-
+  margin-top: 30px;
   margin-bottom: 30px;
   width: 70%;
   max-width: 250px;
@@ -254,6 +254,13 @@ div.main__button {
     font-size: 20px;
     line-height: 28px;
   }
+  /*   .main__container {
+    width: 50%;
+  } */
+}
+
+@media (min-width: 900px) {
+  /*MAIN*/
   .main__container {
     width: 50%;
   }

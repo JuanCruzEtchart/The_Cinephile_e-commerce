@@ -3,7 +3,7 @@
 
 <head>
   <%- include("./partials/head") %>
-  <link rel="stylesheet" href="/css/products/productCast.css" />
+  <link rel="stylesheet" href="/css/products/productCrew.css" />
   <script src="/js/productionTeamValidation.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/validator/13.7.0/validator.min.js" integrity="sha512-rJU+PnS2bHzDCvRGFhXouCSxf4YYaUyUfjXMHsHFfMKhWDIEBr8go2LZ2EYXOqASey1tWc2qToeOCYh9et2aGQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
@@ -41,16 +41,16 @@
         </div>
         <div class="input">
           <input type="text" class="text-box field" id="actorsName" name="name" value="<%= locals.old ? old.name : '' %>" placeholder="Nombre y apellido">
-          <span class="inputStatus"></span>
+          <span class="inputStatus">Estado del campo</span>
         </div>
         <div class="input">
           <input type="text" class="text-box field" id="actorsBiography" name="biography_link" value="<%= locals.old ? old.biography_link : '' %>" placeholder="Link de biografía">
-          <span class="inputStatus"></span>
+          <span class="inputStatus">Estado del campo</span>
         </div>
         <div class="main__file-wrap">
           <label class="main__fieldDescription" for="actorsPhoto">Fotografía</label>
           <input type="file" id="actorsPhoto" name="photo" accept="image/jpg, image/png, image/jpeg">
-          <span class="inputStatus"></span>
+    
         </div>
         <div class="main__button">
           <button type="submit" class="send-button">Subir</button>
@@ -61,7 +61,7 @@
       </form>
       <div class="main__button">
         <a href="/product/list">
-          <button class="back-button">Volver atras</button>
+          <button class="back-button">Volver a lista de productos</button>
         </a>
       </div>
     </div>

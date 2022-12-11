@@ -42,47 +42,47 @@
           </div>
         </div>
         <div class="input">
-          <input type="text" class="text-box" id="name" name="name" value="<%= product.name %>" placeholder="Nombre del producto" required>
-          <span class="inputStatus"></span>
+          <input type="text" class="text-box" id="name" name="name" value="<%= product.name %>" placeholder="Nombre del producto">
+          <span class="inputStatus">Estado del campo</span>
         </div>
         <div class="input">
-          <input type="text" class="text-box" id="year" name="release_year" value="<%= product.release_year %>" placeholder="Año de salida" required>
-          <span class="inputStatus"></span>
+          <input type="number" class="text-box" id="year" name="release_year" value="<%= product.release_year %>" placeholder="Año de salida">
+          <span class="inputStatus">Estado del campo</span>
         </div>
         <div class="input">
-          <input type="text" class="text-box" id="rated" name="rating" value="<%= product.rating %>" placeholder="Clasificación" required>
-          <span class="inputStatus"></span>
+          <input type="text" class="text-box" id="rated" name="rating" value="<%= product.rating %>" placeholder="Clasificación">
+          <span class="inputStatus">Estado del campo</span>
         </div>
         <div class="input">
-          <input type="text" class="text-box" id="length" name="length" value="<%= product.length %>" placeholder="Duración" required>
-          <span class="inputStatus"></span>
+          <input type="text" class="text-box" id="length" name="length" value="<%= product.length %>" placeholder="Duración">
+          <span class="inputStatus">Estado del campo</span>
         </div>
         <div class="input">
-          <input type="text" class="text-box" id="imdbScore" name="imdbScore" step="0.01" min="0" max="10" value="<%= product.imdb_score %>" placeholder="Puntaje de IMDb" required>
-          <span class="inputStatus"></span>
+          <input type="number" class="text-box" id="imdbScore" name="imdbScore" step="0.01" min="0" max="10" value="<%= product.imdb_score %>" placeholder="Puntaje de IMDb">
+          <span class="inputStatus">Estado del campo</span>
         </div>
         <div class="input">
-          <input type="text" class="text-box" id="imdbTotalReviews" name="imdbTotalReviews" value="<%= product.imdb_total_reviews %>" placeholder="Reseñas totales de IMDb" required>
-          <span class="inputStatus"></span>
+          <input type="text" class="text-box" id="imdbTotalReviews" name="imdbTotalReviews" value="<%= product.imdb_total_reviews %>" placeholder="Reseñas totales de IMDb">
+          <span class="inputStatus">Estado del campo</span>
         </div>
         <div class="input">
-          <input type="text" class="text-box" id="tomatoScore" name="tomatoScore" value="<%= product.tomato_score %>" placeholder="Puntaje de Rotten Tomatoes" required>
-          <span class="inputStatus"></span>
+          <input type="number" class="text-box" id="tomatoScore" name="tomatoScore" value="<%= product.tomato_score %>" placeholder="Puntaje de Rotten Tomatoes">
+          <span class="inputStatus">Estado del campo</span>
         </div>
         <div class="input">
-          <input type="url" class="text-box" id="trailerLink" name="trailerLink" value="<%= product.trailer_link %>" placeholder="Link del trailer" required>
-          <span class="inputStatus"></span>
+          <input type="url" class="text-box" id="trailerLink" name="trailerLink" value="<%= product.trailer_link %>" placeholder="Link del trailer">
+          <span class="inputStatus">Estado del campo</span>
         </div>
         <div class="main__genreSelect">
           <div class="main__fieldDescription">Elegir género 1</div>
-          <select name="genre1" class="main__select" id="genre1" required>
+          <select name="genre1" class="main__select" id="genre1">
             <option value="" disabled selected></option>
             <% genres.forEach(element => { %>
             <option value="<%= element.id %>" <% if (product.genre1_id == element.id) { %><%= 'selected' %><% }; %>><%= element.name %></option>
             <% }) %>
           </select>
           <div class="main__fieldDescription">Elegir género 2</div>
-          <select name="genre2" class="main__select" id="genre2" required>
+          <select name="genre2" class="main__select" id="genre2">
             <option value="" disabled selected></option>
             <% genres.forEach(element => { %>
             <option value="<%= element.id %>" <% if (product.genre2_id == element.id) { %><%= 'selected' %><% }; %>><%= element.name %></option>
@@ -90,20 +90,20 @@
           </select>
         </div>
         <div class="input">
-          <input type="text" class="text-box" id="purchasePrice" name="purchasePrice" value="<%= product.purchase_price %>" placeholder="Precio de venta" required>
-          <span class="inputStatus"></span>
+          <input type="number" class="text-box" id="purchasePrice" name="purchasePrice" value="<%= product.purchase_price %>" placeholder="Precio de venta">
+          <span class="inputStatus">Estado del campo</span>
         </div>
         <div class="input">
-          <input type="text" class="text-box" id="rentalPrice" name="rentalPrice" value="<%= product.rental_price %>" placeholder="Precio de alquiler" required>
-          <span class="inputStatus"></span>
+          <input type="number" class="text-box" id="rentalPrice" name="rentalPrice" value="<%= product.rental_price %>" placeholder="Precio de alquiler">
+          <span class="inputStatus">Estado del campo</span>
         </div>
         <div class="input">
-          <textarea class="textarea" id="synopsis" name="synopsis" cols="30" rows="10" wrap="hard" placeholder="Sinopsis del producto"><%= product.synopsis %></textarea>
-          <span class="inputStatus"></span>
+          <textarea class="textarea" id="synopsis" name="synopsis" rows="10" wrap="hard" placeholder="Sinopsis del producto"><%= product.synopsis %></textarea>
+          <span class="inputStatus">Estado del campo</span>
         </div>
         <div>
           <div class="main__fieldDescription">Elegir director</div>
-          <select name="director" class="main__select" id="director" required>
+          <select name="director" class="main__select" id="director">
             <option value="" disabled selected></option>
             <% directors.forEach(element => { %>
             <option value="<%= element.id %>" <% if (product.director_id == element.id) { %><%= 'selected' %><% }; %>><%= element.full_name %> </option>
@@ -112,7 +112,7 @@
         </div>
         <div>
           <div class="main__fieldDescription">Elegir guionista</div>
-          <select name="screenwriter" class="main__select" id="screenwriter" required>
+          <select name="screenwriter" class="main__select" id="screenwriter">
             <option value="" disabled selected></option>
             <% screenwriter.forEach(element => { %>
             <option value="<%= element.id %>" <% if (product.screenwriter_id == element.id) { %><%= 'selected' %><% }; %>><%= element.full_name %> </option>
@@ -141,6 +141,11 @@
           <button type="sumbit" class="delete-button">Eliminar producto</button>
         </div>
       </form>
+      <div class="main__button" id="back-button">
+        <a href="/product/list">
+          <button class="back-button" id="main__last-button">Volver a lista de productos</button>
+        </a>
+      </div>
     </div>
   </main>
   <%- include("./partials/footer") %>

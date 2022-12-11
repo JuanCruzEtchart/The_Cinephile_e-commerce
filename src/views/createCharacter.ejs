@@ -3,7 +3,7 @@
 
 <head>
   <%- include("./partials/head") %>
-  <link rel="stylesheet" href="/css/products/productCast.css" />
+  <link rel="stylesheet" href="/css/products/productCrew.css" />
   <script src="/js/characterValidations.js"></script>
 </head>
 
@@ -25,7 +25,7 @@
       <form class="main__form" action="/product/create/character" method="POST">
         <div class="input">
           <input type="text" class="text-box" id="actorsName" name="name" value="<%= locals.old ? old.name : '' %>" placeholder="Nombre">
-          <span class="inputStatus"></span>
+          <span class="inputStatus">Estado del campo</span>
         </div>
         <div class="main__button">
           <button type="submit" class="send-button">Subir</button>
@@ -36,7 +36,7 @@
       </form>
       <div class="main__button">
         <a href="/product/list">
-          <button class="back-button">Volver atras</button>
+          <button class="back-button">Volver a lista de productos</button>
         </a>
       </div>
     </div>

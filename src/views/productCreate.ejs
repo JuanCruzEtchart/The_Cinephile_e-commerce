@@ -43,35 +43,35 @@
         </div>
         <div class="input">
           <input type="text" class="text-box" id="name" name="name" value="<%= locals.old ? old.name : '' %>" placeholder="Nombre">
-          <span class="inputStatus"></span>
+          <span class="inputStatus">Estado del campo</span>
         </div>
         <div class="input">
           <input type="number" class="text-box" id="year" name="release_year" value="<%= locals.old ? old.release_year : '' %>" placeholder="Año de salida">
-          <span class="inputStatus"></span>
+          <span class="inputStatus">Estado del campo</span>
         </div>
         <div class="input">
           <input type="text" class="text-box" id="rated" name="rating" value="<%= locals.old ? old.rating : '' %>" placeholder="Clasificación">
-          <span class="inputStatus"></span>
+          <span class="inputStatus">Estado del campo</span>
         </div>
         <div class="input">
           <input type="text" class="text-box" id="length" name="length" value="<%= locals.old ? old.length : '' %>" placeholder="Duración">
-          <span class="inputStatus"></span>
+          <span class="inputStatus">Estado del campo</span>
         </div>
         <div class="input">
           <input type="number" class="text-box" id="imdbScore" name="imdbScore" step="0.1" min="0" max="10" value="<%= locals.old ? old.imdb_score : '' %>" placeholder="Puntaje de IMDb">
-          <span class="inputStatus"></span>
+          <span class="inputStatus">Estado del campo</span>
         </div>
         <div class="input">
           <input type="text" class="text-box" id="imdbTotalReviews" name="imdbTotalReviews" value="<%= locals.old ? old.imdb_total_reviews : '' %>" placeholder="Reseñas totales de IMDb">
-          <span class="inputStatus"></span>
+          <span class="inputStatus">Estado del campo</span>
         </div>
         <div class="input">
           <input type="number" class="text-box" id="tomatoScore" name="tomatoScore" min="0" max="100" value="<%= locals.old ? old.tomato_score : '' %>" placeholder="Puntaje de Rotten Tomatoes">
-          <span class="inputStatus"></span>
+          <span class="inputStatus">Estado del campo</span>
         </div>
         <div class="input">
           <input type="text" class="text-box" id="trailerLink" name="trailerLink" value="<%= locals.old ? old.trailer_link: '' %>" placeholder="Link del trailer">
-          <span class="inputStatus"></span>
+          <span class="inputStatus">Estado del campo</span>
         </div>
         <div class="main__genreSelect">
           <div class="main__fieldDescription">Elegir género 1</div>
@@ -91,15 +91,15 @@
         </div>
         <div class="input">
           <input type="number" lang="es" class="text-box" id="purchasePrice" name="purchasePrice" step="0.01" value="<%= locals.old ? old.purchase_price : '' %>" placeholder="Precio de venta">
-          <span class="inputStatus"></span>
+          <span class="inputStatus">Estado del campo</span>
         </div>
         <div class="input">
           <input type="number" class="text-box" id="rentalPrice" name="rentalPrice" step="0.01" value="<%= locals.old ? old.rental_price : '' %>" placeholder="Precio de alquiler">
-          <span class="inputStatus"></span>
+          <span class="inputStatus">Estado del campo</span>
         </div>
         <div class="input">
           <textarea class="textarea" id="synopsis" name="synopsis" cols="30" rows="10" wrap="hard" placeholder="Sinopsis"><%= locals.old ? old.synopsis : '' %></textarea>
-          <span class="inputStatus"></span>
+          <span class="inputStatus">Estado del campo</span>
         </div>
         <div>
           <div class="main__fieldDescription">Elegir director</div>
@@ -141,6 +141,11 @@
           <button type="reset" class="reset-button">Reiniciar campos</button>
         </div>
       </form>
+      <div class="main__button" id="back-button">
+        <a href="/product/list">
+          <button class="back-button" id="main__last-button">Volver a lista de productos</button>
+        </a>
+      </div>
     </div>
   </main>
   <%- include("./partials/footer") %>

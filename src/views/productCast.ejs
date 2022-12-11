@@ -79,34 +79,22 @@
         </div>
         <div>
           <% for( let i = 1; i <= product.castLength; i++ ) { %>
-          <h2 class="main__fieldDescription">Actor n°<%= i %> </h2>
-          <select name="actor<%= i %>" class="main__select">
-            <option value="" disabled selected></option>
-            <% actors.forEach(element => { %>
-            <option value="<%= element.id %>"><%= element.full_name %> </option>
-            <% }) %>
-          </select>
-          <h3 class="main__fieldDescription">Personaje del actor :</h3>
-          <select name="character<%= i %>" class="main__select">
-            <option value="" disabled selected></option>
-            <% characters.forEach(element => { %>
-            <option value="<%= element.id %>"><%= element.name %> </option>
-            <% }) %>
-          </select>
-          <!--           <div>
-            <input type="text" class="text-box" id="actorsName" name="actorsName<%= i %>" placeholder="Nombre del actor" required>
+          <div class="main__actor">
+            <h2 class="main__fieldDescription">Actor n°<%= i %> </h2>
+            <select name="actor<%= i %>" class="main__select">
+              <option value="" disabled selected></option>
+              <% actors.forEach(element => { %>
+              <option value="<%= element.id %>"><%= element.full_name %> </option>
+              <% }) %>
+            </select>
+            <h3 class="main__fieldDescription">Personaje del actor :</h3>
+            <select name="character<%= i %>" class="main__select">
+              <option value="" disabled selected></option>
+              <% characters.forEach(element => { %>
+              <option value="<%= element.id %>"><%= element.name %> </option>
+              <% }) %>
+            </select>
           </div>
-          <div>
-            <input type="text" class="text-box" id="character" name="character<%= i %>" placeholder="Nombre del personaje" required>
-          </div>
-          <div>
-            <input type="url" class="text-box" id="actorsBiography" name="actorsBiography<%= i %>" placeholder="Link de biografía del actor" required>
-          </div>
-          <div class="main__file-wrap">
-            <div class="main__fieldDescription">Fotografía del actor</div>
-            <label for="actorsPhoto"></label>
-            <input type="file" id="actorsPhoto" name="actorsPhoto<%= i %>" accept="image/jpg, image/png, image/jpeg" required>
-          </div> -->
           <% } %>
         </div>
         <div class="main__button">

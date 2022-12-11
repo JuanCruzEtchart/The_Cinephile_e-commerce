@@ -12,12 +12,12 @@ window.addEventListener("load", function (e) {
     if (fullName.value.length == "") {
       fullName.nextElementSibling.innerHTML = "Completar campo!";
       fullName.nextElementSibling.classList.add("invalid");
-      fullName.nextElementSibling.classList.remove("valid");
+      fullName.nextElementSibling.classList.remove("valid-status");
       fullName.classList.remove("valid");
     } else {
       fullName.nextElementSibling.innerHTML = "👍";
       fullName.nextElementSibling.classList.remove("invalid");
-      fullName.nextElementSibling.classList.add("valid");
+      fullName.nextElementSibling.classList.add("valid-status");
       fullName.classList.add("valid");
     }
   });
@@ -26,17 +26,17 @@ window.addEventListener("load", function (e) {
     if (biography.value.length == "") {
       biography.nextElementSibling.innerHTML = "Completar campo!";
       biography.nextElementSibling.classList.add("invalid");
-      biography.nextElementSibling.classList.remove("valid");
+      biography.nextElementSibling.classList.remove("valid-status");
       biography.classList.remove("valid");
     } else if (!validator.isURL(biography.value)) {
-      biography.nextElementSibling.innerHTML = "Tiene que ser URL!";
+      biography.nextElementSibling.innerHTML = "Debe ser una URL!";
       biography.nextElementSibling.classList.add("invalid");
-      biography.nextElementSibling.classList.remove("valid");
+      biography.nextElementSibling.classList.remove("valid-status");
       trailerLink.classList.remove("valid");
     } else {
       biography.nextElementSibling.innerHTML = "👍";
       biography.nextElementSibling.classList.remove("invalid");
-      biography.nextElementSibling.classList.add("valid");
+      biography.nextElementSibling.classList.add("valid-status");
       biography.classList.add("valid");
     }
   });
