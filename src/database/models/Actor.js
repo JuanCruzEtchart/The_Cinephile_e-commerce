@@ -44,6 +44,27 @@ module.exports = (sequelize, dataTypes) => {
       otherKey: "character_id",
       timestamps: false,
     });
+
+   /*  Actor.hasMany(models.ProductActorCharacter, {
+      as: "productActor",
+      foreignKey: "actor_id",
+    }); */
+
+    Actor.belongsToMany(models.Product, {
+      as: "product",
+      through: "product_actor_character",
+      foreignKey: "actor_id",
+      otherKey: "product_id",
+      timestamps: false,
+    });
+
+    Actor.belongsToMany(models.Character, {
+      as: "character",
+      through: "product_actor_character",
+      foreignKey: "actor_id",
+      otherKey: "character_id",
+      timestamps: false,
+    });
   };
 
   return Actor;

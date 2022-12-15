@@ -59,7 +59,7 @@ module.exports = {
         const extension = path.extname(req.file.originalname);
         return validExtensions.includes(extension);
       })
-      .withMessage("Extensión de archivo inválida!"),
+      .withMessage("La extensión de archivo de fotografía es inválida!"),
   ],
   createCharacterValidations: [
     body("name")
@@ -150,7 +150,7 @@ module.exports = {
     body("screenwriter")
       .notEmpty()
       .withMessage("El selector de guionista está incompleto!"),
-    /*     body("productImage")
+    body("productImage")
       .custom((value, { req }) => {
         return req.files.productImage;
       })
@@ -158,8 +158,15 @@ module.exports = {
       .bail()
       .custom((value, { req }) => {
         const validExtensions = [".png", ".jpg", ".jpeg"];
-        const extension = path.extname(req.file.originalname);
-        return validExtensions.includes(extension);
+        console.log(req.files);
+        if (req.files.productImage) {
+          const extension = path.extname(
+            req.files.productImage[0].originalname
+          );
+          return validExtensions.includes(extension);
+        } else {
+          return true;
+        }
       })
       .withMessage("La extensión de archivo de imagen de producto es inválida"),
     body("backgroundImage")
@@ -170,22 +177,29 @@ module.exports = {
       .bail()
       .custom((value, { req }) => {
         const validExtensions = [".png", ".jpg", ".jpeg"];
-        const extension = path.extname(req.file.originalname);
-        return validExtensions.includes(extension);
+        console.log(req.files);
+        if (req.files.backgroundImage) {
+          const extension = path.extname(
+            req.files.backgroundImage[0].originalname
+          );
+          return validExtensions.includes(extension);
+        } else {
+          return true;
+        }
       })
-      .withMessage("La extensión de archivo de imagen de fondo es inválida"), */
+      .withMessage("La extensión de archivo de imagen de fondo es inválida"),
   ],
   createProductCast: [
-    body().custom((value, { req }) => {
-      console.log(value); //Los campos dinámicos directamente no llegan al value cuando están incompletos
+    /*     body().custom((value, { req }) => {
+      console.log(value); 
       console.log("hola");
       for (let i = 1; i <= req.body.castLength; i++) {
-        console.log(req.body["actor" + i]); //ESCRIBIR LÓGICA DE PARA MUESTRA DE ERRORES EN EL CONTROLLER, REENVIAR ACTORES Y PERSONAJES
+        console.log(req.body["actor" + i]);
         if (!req.body["actor" + i]) {
           throw new Error("Campo de actor " + i + " incompleto");
         }
       }
-    }),
+    }), */
     /*     (req, res) => {
       for (let i = 1; i <= req.body.castLength; i++) {
         body("actorsName"+i).notEmpty().withMessage("Campo de actor " + i + " incompleto"),
@@ -257,20 +271,14 @@ module.exports = {
     body("screenwriter")
       .notEmpty()
       .withMessage("El selector de guionista está incompleto!"),
-    /* body("productImage")
+    body("productImage")
       .custom((value, { req }) => {
         const validExtensions = [".png", ".jpg", ".jpeg"];
         console.log(req.files);
-        console.log("hola");
         if (req.files.productImage) {
-          const productImage = req.files.productImage.map(function (image) {
-            return image.originalname;
-          });
-          console.log("Nombre original " + productImage); //Muestro el nombre original del archivo
-          console.log("Extensión " + path.extname(productImage)); //Este log no se llega a hacer
-          const extension = path.extname(productImage); //Path rompe la ejecución del custom?
-          console.log(extension); //Todo lo que venga después del extname, ya no se ve en consola
-          console.log("hola");
+          const extension = path.extname(
+            req.files.productImage[0].originalname
+          );
           return validExtensions.includes(extension);
         } else {
           return true;
@@ -280,18 +288,16 @@ module.exports = {
     body("backgroundImage")
       .custom((value, { req }) => {
         const validExtensions = [".png", ".jpg", ".jpeg"];
+        console.log(req.files);
         if (req.files.backgroundImage) {
-          const backgroundImage = req.files.backgroundImage.map(function (
-            image
-          ) {
-            return image.originalname;
-          });
-          const extension = path.extname(backgroundImage);
+          const extension = path.extname(
+            req.files.backgroundImage[0].originalname
+          );
           return validExtensions.includes(extension);
         } else {
           return true;
         }
       })
-      .withMessage("La extensión de archivo de imagen de fondo es inválida"), */
+      .withMessage("La extensión de archivo de imagen de fondo es inválida"),
   ],
 };
