@@ -147,12 +147,11 @@ button.send-button {
 
 #contraseña {
   color: #ffc700;
-  padding-top: 5%;
-  
+  padding-top: 20%;
 }
 
 #olvidaste {
-  padding-bottom: 7%;
+  padding-bottom: 2%;
   display: flex;
   width: 75%;
   justify-content: center;

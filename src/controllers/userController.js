@@ -41,13 +41,26 @@ const userController = {
 
       let userFound = await User.findOne({ where: { email: req.body.email } });
       //bcrypt.compareSync(req.body.password, user.password
-      if (
-        !userFound &&
-        !bcrypt.compareSync(req.body.password, userFound.password)
-      ) {
-        console.log(userFound);
+  
+      if 
+        (
+        (!userFound) 
+        ) 
+      
+      {
         return res.render("login", { errorLogin: "Credenciales Invalidas" });
-      } else {
+      } 
+      
+      else if 
+        (
+        !bcrypt.compareSync(req.body.password, userFound.password)
+        )
+
+        {
+          return res.render("login", { errorLogin: "Credenciales Invalidas" });
+        }
+      
+      else {
         req.session.usuarioLogueado = {
           id: userFound.id,
           name: userFound.username,
@@ -60,6 +73,7 @@ const userController = {
 
         res.redirect("profile");
       }
+    
     } catch (err) {
       res.send(err);
     }

@@ -2,51 +2,56 @@ const { body } = require('express-validator');
 const fs = require("fs");
 const path = require("path");
 const userController = require('../controllers/userController');
+const db = require("../database/models");
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
+const { BADFAMILY } = require('dns');
 
-function findAll(){
-    const jsonData = fs.readFileSync(path.join(__dirname, "../data/users.json"))
-     const data = JSON.parse(jsonData);
-     return data
-   };
+
 
 module.exports = { 
 
-    registerValidation: [
-
+    registerValidation : [
         body("email")
-        .notEmpty().withMessage("Campo email incompleto")
+        .notEmpty()
+        .withMessage("Campo email incompleto")
+        .bail()
         .isEmail()
         .withMessage("Debe ingresar un email valido")
-        .custom(function(value, {req}){
-           const users = findAll();
-           const usuarioEncontrado = users.find(function(user){
-            return user.email == value;
-            });
+        .bail()
+        .custom((value, { req }) => {
+                    return db.User.findOne({
+                      where: {
+                        email: value,
+                      },
 
-            if (usuarioEncontrado){ 
-                return false;
-            }
-            else {
-                return true;
-            }
-         }).withMessage("El email que ingresó se encuentra tomado"),
+                    }).then((email) => {
+                        
+                      if (email) {
+                        return Promise.reject("El email que ingresó se encuentra tomado");
+                      }
+                    });
+
+                  }),
         
-        body("user").
-        notEmpty().withMessage("Campo de usuario incompleto")
-        .custom(function(value, {req}){
-            const users = findAll();
-            const usuarioEncontrado = users.find(function(user){
-             return user.name == value;
-             });
- 
-             if (usuarioEncontrado){ 
-                 return false;
-             }
-             else {
-                 return true;
-             }
-          }).withMessage("El usuario que ingresó se encuentra tomado"),
-        body("password").notEmpty().withMessage("Campo password incompleto")
+        body("user")
+        .notEmpty()
+        .withMessage("Campo de usuario incompleto")
+        .bail()
+        .custom((value, { req }) => {
+            return db.User.findOne({
+              where: {
+                username: value,
+              },
+            }).then((username) => {
+              if (username) {
+                return Promise.reject("El nombre de usuario ya se encuentra tomado");
+              }
+            });
+          }),
+        body("password")
+        .notEmpty()
+        .withMessage("Campo password incompleto"),
         ]
         ,
     loginValidation : [
