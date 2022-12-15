@@ -122,12 +122,12 @@
         <div class="main__file-wrap">
           <label class="main__fieldDescription" for="productImage">Imagen del producto</label>
           <img src="/images/products/productsCreated/<%= product.product_image %> " alt="Product image">
-          <input type="file" id="productImage" name="productImage">
+          <input type="file" id="productImage" name="productImage" accept="image/jpg, image/png, image/jpeg">
         </div>
         <div class="main__file-wrap">
           <label class="main__fieldDescription" for="backgroundImage">Imagen del fondo</label>
           <img id="background-image" src="/images/products/productsCreated/<%= product.background_image %> " alt="Background image">
-          <input type="file" id="backgroundImage" name="backgroundImage">
+          <input type="file" id="backgroundImage" name="backgroundImage" accept="image/jpg, image/png, image/jpeg">
         </div>
         <div class="main__button">
           <button type="submit" class="send-button">Actualizar</button>
