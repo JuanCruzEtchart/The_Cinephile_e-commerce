@@ -10,8 +10,9 @@
 <body>
   <%- include("./partials/header") %>
   <main class="main">
-    <div class="main__container">
-      <h1>Resultados encontrados de "<%= query %>" </h1>
+    <div class="main__container main__container-search">
+      <% if (products.length != 0) { %>
+      <h1 class="main__h1-search">Resultados encontrados de "<%= query %>" </h1>
       <section class="main__product-list">
         <% products.forEach(element => { %>
         <a href="/product/detail/<%= element.id %>">
@@ -32,6 +33,9 @@
         </a>
         <% }) %>
       </section>
+      <% }else{ %>
+      <h1 class="main__h1-search-empty">No se encontraron resultados de "<%= query %>" </h1>
+      <% } %>
     </div>
   </main>
   <%- include("./partials/footer") %>

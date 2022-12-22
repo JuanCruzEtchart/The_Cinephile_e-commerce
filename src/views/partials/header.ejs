@@ -1,15 +1,33 @@
 <header class="header">
   <div class="header__container">
     <div class="header__dropMenu-logo">
-      <form action="#" method="get" class="header__drop-logo-form">
+      <div class="header__drop-logo">
         <button type="submit" class="header__burger-menu">
           <i class="fas fa-bars"></i>
         </button>
         <a href="/" class="header__logo">
           <img src="/images/logo.png" alt="The Cinephile logo" />
         </a>
-      </form>
+      </div>
     </div>
+    <div class="header__sidebar">
+      <a href="/" class="header__home sidebar-item">
+        <div>Inicio</div>
+      </a>
+      <a href="/product/movies" class="header__movies sidebar-item">
+        <div>Películas</div>
+      </a>
+      <a href="/product/series" class="header__series sidebar-item ">
+        <div>Series</div>
+      </a>
+      <a href="#" class="header__categories sidebar-item">
+        <div>Categorías</div>
+      </a>
+      <a href="#" class="header__list sidebar-item">
+        <div>Mi lista</div>
+      </a>
+    </div>
+    <div id="overlay"></div>
     <div class="header__search-container">
       <form action="/product/search" method="GET" class="header__search-bar">
         <input type="search" name="product" id="search-box" />
@@ -20,7 +38,7 @@
     </div>
     <div class="header__nav">
       <div class="header__dropdown-buttons">
-        <a href="/" class="header__home">Inicio</a>
+        <a href="/" class="header__home ">Inicio</a>
         <a href="/product/movies" class="header__movies">Películas</a>
         <a href="/product/series" class="header__series">Series</a>
         <a href="#" class="header__categories">Categorías</a>

@@ -19,6 +19,16 @@ body {
   max-width: 1200px;
 }
 
+/*.main__container-search {
+  position: relative;
+}
+
+ .main__h1-search {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+} */
+
 h1 {
   margin-top: 0px;
   padding-top: 35px;

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-12-2022 a las 02:16:24
+-- Tiempo de generación: 22-12-2022 a las 08:17:17
 -- Versión del servidor: 10.4.25-MariaDB
 -- Versión de PHP: 8.1.10
 
@@ -116,7 +116,8 @@ INSERT INTO `actors` (`id`, `full_name`, `biography_link`, `actors_photo`) VALUE
 (82, 'Ed Helms', 'https://en.wikipedia.org/wiki/Ed_Helms', 'photo1669793445074-.jpg'),
 (83, 'Angela Kinsey', 'https://en.wikipedia.org/wiki/Angela_Kinsey', 'photo1669793457771-.jpg'),
 (84, 'Oscar Nuñez', 'https://es.wikipedia.org/wiki/Óscar_Núñez_(actor_cubano)', 'photo1669793469571-.jpg'),
-(85, 'Creed Bratton', 'https://en.wikipedia.org/wiki/Creed_Bratton', 'photo1669793481445-.jpg');
+(85, 'Creed Bratton', 'https://en.wikipedia.org/wiki/Creed_Bratton', 'photo1669793481445-.jpg'),
+(87, 'Borrar', 'https://www.npmjs.com/package/validator', 'photo1670658945923-.png');
 
 -- --------------------------------------------------------
 
@@ -219,7 +220,16 @@ INSERT INTO `actor_character` (`id`, `actor_id`, `character_id`) VALUES
 (91, 82, 79),
 (92, 83, 80),
 (93, 84, 81),
-(94, 85, 82);
+(94, 85, 82),
+(95, 54, 36),
+(96, 2, 17),
+(97, 2, 15),
+(98, 71, 34),
+(99, 58, 72),
+(100, 54, 17),
+(101, 81, 31),
+(102, 40, 7),
+(103, 2, 17);
 
 -- --------------------------------------------------------
 
@@ -340,83 +350,83 @@ CREATE TABLE `characters` (
 --
 
 INSERT INTO `characters` (`id`, `name`) VALUES
-(1, 'Vito Corleone'),
-(2, 'Mickael Corleone'),
-(3, 'Key Adams'),
-(4, 'Sony Corleone'),
-(5, 'Fredo Corleone'),
-(6, 'Tom Hagen'),
-(7, 'Clemenza'),
-(13, 'Tommy Shelby'),
-(14, 'Arthur Shelby'),
-(15, 'Alfie Solomons'),
-(16, 'Polly Gray'),
-(17, 'Ada Shelby'),
-(18, 'John Shelby'),
-(19, 'Michael Gray'),
-(20, 'Gina Gray'),
-(21, 'Lizzie Shelby'),
-(22, 'Colonel Walter E. Kurtz'),
-(23, 'Captain Benjamin L. Willard'),
-(24, 'Lieutenant Colonel Bill Kilgore'),
-(25, 'Photojournalist'),
-(26, 'Tyrone \'Clean\' Miller'),
-(27, 'Colonel Lucas'),
-(28, 'Jerry'),
-(29, 'Lance B. Johnson'),
-(30, 'Jay \'Chef\' Hicks'),
-(31, 'Connie Corleone'),
-(32, 'Frankie Pentangeli'),
-(33, 'Hyman Roth'),
-(34, 'Dracula'),
-(35, 'Mina Murray'),
 (36, 'Abraham Van Helsing'),
-(37, 'Jonathan Harker'),
-(38, 'Dr. Jack Seward'),
-(39, 'Novia de Dracula'),
-(40, 'Lucy Westenra'),
-(41, 'Arthur Holmwood'),
-(42, 'Renfield'),
-(43, 'Quincey Morris'),
-(44, 'Travis Bickle'),
-(45, 'Iris'),
-(46, 'Betsy'),
-(47, 'Tom'),
-(48, 'Matthew Higgins'),
-(49, 'Wizard'),
-(50, 'Walter White'),
-(51, 'Jesse Pinkman'),
-(52, 'Skyler White'),
-(53, 'Hank Schrader'),
-(54, 'Walter White Jr.'),
-(55, 'Saul Goodman'),
-(56, 'Mike Ehrmantraut'),
-(57, 'Gus Fring'),
-(58, 'Marie Schrader'),
-(59, 'Steven Gomez'),
-(60, 'Kim Wexler'),
-(61, 'Nacho Varga'),
-(62, 'Howard Hamlin'),
-(63, 'Lalo Salamanca'),
-(64, 'Chuck McGill'),
-(65, 'Huell Babineaux'),
-(66, 'Pablo Escobar'),
-(67, 'Javier Peña'),
-(68, 'Steve Murphy'),
-(69, 'Hélmer Herrera'),
-(70, 'María Salazar'),
-(71, 'Tata Escobar'),
-(72, 'Connie Murphy'),
-(73, 'Michael Scott'),
-(74, 'Jim Halpert'),
-(75, 'Pam Beasly'),
-(76, 'Dwight Schrute'),
-(77, 'Erin Hannon'),
-(78, 'Ryan Howard'),
+(17, 'Ada Shelby'),
+(15, 'Alfie Solomons'),
 (79, 'Andy Bernard'),
 (80, 'Angela Martin'),
+(41, 'Arthur Holmwood'),
+(14, 'Arthur Shelby'),
+(46, 'Betsy'),
+(23, 'Captain Benjamin L. Willard'),
+(64, 'Chuck McGill'),
+(7, 'Clemenza'),
+(27, 'Colonel Lucas'),
+(22, 'Colonel Walter E. Kurtz'),
+(31, 'Connie Corleone'),
+(72, 'Connie Murphy'),
+(82, 'Creed Bratton'),
+(38, 'Dr. Jack Seward'),
+(34, 'Dracula'),
+(76, 'Dwight Schrute'),
+(77, 'Erin Hannon'),
+(32, 'Frankie Pentangeli'),
+(5, 'Fredo Corleone'),
+(20, 'Gina Gray'),
+(57, 'Gus Fring'),
+(53, 'Hank Schrader'),
+(69, 'Hélmer Herrera'),
+(62, 'Howard Hamlin'),
+(65, 'Huell Babineaux'),
+(33, 'Hyman Roth'),
+(45, 'Iris'),
+(67, 'Javier Peña'),
+(30, 'Jay \'Chef\' Hicks'),
+(28, 'Jerry'),
+(51, 'Jesse Pinkman'),
+(74, 'Jim Halpert'),
+(18, 'John Shelby'),
+(37, 'Jonathan Harker'),
+(3, 'Key Adams'),
+(60, 'Kim Wexler'),
+(63, 'Lalo Salamanca'),
+(29, 'Lance B. Johnson'),
+(24, 'Lieutenant Colonel Bill Kilgore'),
+(21, 'Lizzie Shelby'),
+(40, 'Lucy Westenra'),
+(70, 'María Salazar'),
+(58, 'Marie Schrader'),
+(48, 'Matthew Higgins'),
+(19, 'Michael Gray'),
+(73, 'Michael Scott'),
+(2, 'Mickael Corleone'),
+(56, 'Mike Ehrmantraut'),
+(35, 'Mina Murray'),
+(61, 'Nacho Varga'),
+(39, 'Novia de Dracula'),
 (81, 'Oscar Martínez'),
-(82, 'Creed Bratton');
+(66, 'Pablo Escobar'),
+(75, 'Pam Beasly'),
+(25, 'Photojournalist'),
+(16, 'Polly Gray'),
+(43, 'Quincey Morris'),
+(42, 'Renfield'),
+(78, 'Ryan Howard'),
+(55, 'Saul Goodman'),
+(52, 'Skyler White'),
+(4, 'Sony Corleone'),
+(68, 'Steve Murphy'),
+(59, 'Steven Gomez'),
+(71, 'Tata Escobar'),
+(47, 'Tom'),
+(6, 'Tom Hagen'),
+(13, 'Tommy Shelby'),
+(44, 'Travis Bickle'),
+(26, 'Tyrone \'Clean\' Miller'),
+(1, 'Vito Corleone'),
+(50, 'Walter White'),
+(54, 'Walter White Jr.'),
+(49, 'Wizard');
 
 -- --------------------------------------------------------
 
@@ -517,8 +527,8 @@ INSERT INTO `products` (`id`, `type`, `name`, `release_year`, `rating`, `length`
 (51, 'Película', 'Taxi Driver', 1976, 'R', '1h 54min', '8.2', '822 mil', 96, 'https://www.youtube.com/watch?v=UUxD4-dEzn0', '1999.90', '499.90', 'Aquejado de insomnio, el solitario y perturbado Travis Bickle (Robert De Niro) \r\nacepta un trabajo como taxista en la ciudad de Nueva York, rondando las calles \r\ntodas las noches, alejándose cada vez más de la realidad mientras sueña con \r\nlimpiar la sucia ciudad. Cuando Travis conoce a la bella trabajadora de campaña \r\nBetsy (Cybill Shepherd), se \\r\\nobsesiona con la idea de salvar el mundo, primero \r\nplanea asesinar a un candidato presidencial y luego dirige su atención a rescatar a \r\nla prostituta de 12 años.', 9, 10, 'productImage1669791214629-.jpg', 'backgroundImage1669791214631-.jpg', 2, 3),
 (52, 'Serie de TV', 'Breaking Bad', 2008, '16', '49min', '9.5', '1,8 M', 96, 'https://www.youtube.com/watch?v=HhesaQXLuRY', '1999.90', '599.90', 'En Albuquerque, ciudad del estado de Nuevo México (Estados Unidos), un profesor \r\nde química de instituto llamado \r\nWalter White (Bryan Cranston) descubre que padece un cáncer incurable. A raíz de \r\nesta noticia, y temiendo por la \r\neconomía de su familia, decide aliarse con un antiguo alumno, Jesse Pinkman \r\n(Aaron Paul), para producir y vender \r\nmetanfetamina.', 10, 11, 'productImage1669792076634-.jpg', 'backgroundImage1669792076659-.jpg', 2, 3),
 (53, 'Serie de TV', 'Better Call Saul', 2015, '16', '46min', '8.9', '508 mil', 98, 'https://www.youtube.com/watch?v=HN4oydykJFc', '1999.90', '599.90', 'En 2002, Jimmy McGill aún no se había convertido en Saul Goodman, uno de los \r\nabogados criminalistas más solicitados en el mundo del hampa de Nuevo México. \r\nPor aquel entonces, McGill acababa de empezar una carrera que le acabó llevando a \r\ndefender al mismísimo Walter White.', 10, 11, 'productImage1669792463593-.jpg', 'backgroundImage1669792463613-.jpg', 2, 3),
-(54, 'Serie de TV', 'Narcos', 2015, '16', '49min', '8.8', '418 mil', 89, 'https://www.youtube.com/watch?v=RNWAKZzgbp4', '1999.90', '599.90', 'Una mirada a las hazañas criminales del narcotraficante colombiano Pablo Escobar, \r\nasí como a muchos otros capos que plagaron el país a través de los años.', 11, 12, 'productImage1669793147363-.jpg', 'backgroundImage1669793147373-.jpg', 2, 3),
-(55, 'Serie de TV', 'The Office', 2005, '13', '22min', '9.0', '583 mil', 81, 'https://www.youtube.com/watch?v=tNcDHWpselE', '1999.90', '599.90', 'Un falso documental sobre un grupo de trabajadores de oficina típicos, donde la \r\njornada laboral consiste en choques de ego, comportamiento inapropiado y tedio.', 12, 13, 'productImage1669793653911-.jpg', 'backgroundImage1669793653933-.png', 11, 13);
+(54, 'Serie de TV', 'Narcos', 2015, '16', '49min', '8.0', '418 mil', 89, 'https://www.youtube.com/watch?v=RNWAKZzgbp4', '1999.00', '599.00', 'Una mirada a las hazañas criminales del narcotraficante \r\ncolombiano Pablo Escobar, \r\nasí como a muchos otros capos que plagaron el país a \r\ntravés de los años.', 11, 12, 'productImage1671087631510-.jpg', 'backgroundImage1671087631534-.jpg', 2, 3),
+(55, 'Serie de TV', 'The Office', 2005, '13', '22min', '9.0', '583 mil', 81, 'https://www.youtube.com/watch?v=tNcDHWpselE', '1999.00', '599.00', 'Un falso documental sobre un grupo de trabajadores de \r\noficina típicos, donde la jornada laboral consiste en \r\nchoques de ego, comportamiento inapropiado y tedio.', 12, 13, 'productImage1671571846889-.jpg', 'backgroundImage1671087126732-.png', 11, 13);
 
 -- --------------------------------------------------------
 
@@ -808,7 +818,8 @@ CREATE TABLE `user_favorites` (
 -- Indices de la tabla `actors`
 --
 ALTER TABLE `actors`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `full_name` (`full_name`);
 
 --
 -- Indices de la tabla `actor_character`
@@ -830,13 +841,15 @@ ALTER TABLE `actor_product`
 -- Indices de la tabla `characters`
 --
 ALTER TABLE `characters`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `name` (`name`);
 
 --
 -- Indices de la tabla `directors`
 --
 ALTER TABLE `directors`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `full_name` (`full_name`);
 
 --
 -- Indices de la tabla `genres`
@@ -849,6 +862,7 @@ ALTER TABLE `genres`
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `name` (`name`),
   ADD KEY `genre1_id` (`genre1_id`),
   ADD KEY `genre2_id` (`genre2_id`),
   ADD KEY `director_id` (`director_id`),
@@ -875,7 +889,8 @@ ALTER TABLE `product_character`
 -- Indices de la tabla `screenwriters`
 --
 ALTER TABLE `screenwriters`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `full_name` (`full_name`);
 
 --
 -- Indices de la tabla `users`
@@ -907,31 +922,31 @@ ALTER TABLE `user_favorites`
 -- AUTO_INCREMENT de la tabla `actors`
 --
 ALTER TABLE `actors`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=86;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
 
 --
 -- AUTO_INCREMENT de la tabla `actor_character`
 --
 ALTER TABLE `actor_character`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=104;
 
 --
 -- AUTO_INCREMENT de la tabla `actor_product`
 --
 ALTER TABLE `actor_product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=168;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=177;
 
 --
 -- AUTO_INCREMENT de la tabla `characters`
 --
 ALTER TABLE `characters`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=99;
 
 --
 -- AUTO_INCREMENT de la tabla `directors`
 --
 ALTER TABLE `directors`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de la tabla `genres`
@@ -943,19 +958,19 @@ ALTER TABLE `genres`
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
 
 --
 -- AUTO_INCREMENT de la tabla `product_actor_character`
 --
 ALTER TABLE `product_actor_character`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=86;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
 
 --
 -- AUTO_INCREMENT de la tabla `product_character`
 --
 ALTER TABLE `product_character`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=150;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=159;
 
 --
 -- AUTO_INCREMENT de la tabla `screenwriters`

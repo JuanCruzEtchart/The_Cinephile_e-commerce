@@ -56,10 +56,13 @@ const productController = {
           "characters",
         ],
       });
+      
       let actor = await Actors.findByPk(id, {
         include: ["characters"],
       });
-      let allProducts = await Product.findAll({
+
+      let productsByGenre = await Product.findAll({
+        where: { genre1_id: product.genre1_id },
         include: [
           "director",
           "screenwriter",
@@ -68,15 +71,27 @@ const productController = {
           "actors",
           "characters",
         ],
+        limit: 10,
       });
 
-      /*   let prueba = await Product.findByPk(id, {
-        include: ["character", "actor"],
-      }); */
+      let productsByDirector = await Product.findAll({
+        where: { director_id: product.director_id },
+        include: [
+          "director",
+          "screenwriter",
+          "genre1",
+          "genre2",
+          "actors",
+          "characters",
+        ],
+        limit: 10,
+      });
+
       res.render("productDetail", {
         product,
         actor,
-        allProducts /* , prueba */,
+        productsByGenre,
+        productsByDirector,
       });
     } catch (err) {
       res.send(err);
@@ -362,7 +377,7 @@ const productController = {
             ),
             (error) => {
               if (error) throw error;
-              console.log("Imagen de product anterior borrada!");
+              console.log("Imagen de producto anterior borrada!");
             }
           );
         }

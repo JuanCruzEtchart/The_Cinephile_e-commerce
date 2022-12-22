@@ -114,6 +114,7 @@
           </div>
         </article>
         <section class="main__product_sliders">
+          <% if (productsByDirector.length > 1) { %>
           <article class="article__slider-2">
             <div class="main__slider-title">
               <h2>Dirigidas por <%= product.director.full_name %> </h2>
@@ -121,9 +122,9 @@
             </div>
             <div class="main__slider-wrap-directedBy">
               <div class="main__slider">
-                <div class="main__slider-inner" id="sliderMovies">
-                  <% allProducts.forEach(element => { %>
-                  <% if (product.name != element.name && product.director.full_name == element.director.full_name) { %>
+                <div class="main__slider-inner slider-director" id="sliderMovies">
+                  <% productsByDirector.forEach(element => { %>
+                  <% if (product.name != element.name) { %>
                   <div class="main__item-product">
                     <a href="/product/detail/<%= element.id %>">
                       <img src="/images/products/productsCreated/<%= element.product_image ? element.product_image : "Logo.png"%>" alt="Imágen de producto" />
@@ -144,16 +145,18 @@
               </div>
             </div>
           </article>
+          <% } %>
+          <% if (productsByGenre.length > 1) { %>
           <article class="article__slider-3">
             <div class="main__slider-title">
-              <h2>Películas similares</h2>
+              <h2>Productos similares</h2>
               <div><i class="fas fa-chevron-right"></i></div>
             </div>
             <article class="main__slider-wrap-directedBy">
               <div class="main__slider">
-                <div class="main__slider-inner" id="sliderMovies">
-                  <% allProducts.forEach(element => { %>
-                  <% if (product.name != element.name && product.genre1.name == element.genre1.name) { %>
+                <div class="main__slider-inner slider-genre" id="sliderMovies">
+                  <% productsByGenre.forEach(element => { %>
+                  <% if (product.name != element.name) { %>
                   <div class="main__item-product">
                     <a href="/product/detail/<%= element.id %>">
                       <img src="/images/products/productsCreated/<%= element.product_image ? element.product_image : "Logo.png"%>" alt="Imágen de producto" />
@@ -174,6 +177,7 @@
               </div>
             </article>
           </article>
+          <% } %>
         </section>
       </section>
     </div>
