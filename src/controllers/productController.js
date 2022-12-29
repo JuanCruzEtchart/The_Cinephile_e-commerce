@@ -33,6 +33,7 @@ const productController = {
   //Barra de búsqueda
   search: async (req, res) => {
     try {
+      console.log(req.query);
       const products = await Product.findAll({
         where: { name: { [Op.like]: "%" + req.query.product + "%" } },
       });
@@ -56,7 +57,7 @@ const productController = {
           "characters",
         ],
       });
-      
+
       let actor = await Actors.findByPk(id, {
         include: ["characters"],
       });
