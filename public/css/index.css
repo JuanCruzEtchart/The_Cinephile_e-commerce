@@ -1,11 +1,31 @@
 /*MAIN*/
 
+.conjunto {
+  position: relative;
+  text-align: center;
+}
+
+.img_main {
+  margin-bottom: 15px;
+}
+
+.main__last-realease {
+  font-size: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  color: #ffc700;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: #212121;
+  padding: 20px;
+  border-radius: 10px;
+}
+
 .img_main img {
   width: 100%;
   background-size: cover;
-  object-fit: cover;
-  display: flex;
-  position: relative;
+  height: 50vh;
 }
 
 .top1 img {
@@ -37,7 +57,6 @@ main section h3 {
 }
 
 main section div.movies img.movies_img {
-  
   width: 20%;
   padding: 0px 0px 0px 20px;
 }
@@ -60,7 +79,6 @@ main section.mas_alquilado h3 {
 }
 
 main section div.movies_alq img.movies_img {
-  
   width: 20%;
   padding: 0px 0px 0px 20px;
 }
@@ -75,7 +93,7 @@ main section div.movies_alq img.movies_img:hover {
   box-shadow: 5px 0px 0px 0px grey;
 }
 
-.movies_img_b{
+.movies_img_b {
   width: 100%;
   height: 100%;
   padding: 0px 0px 0px 20px;
