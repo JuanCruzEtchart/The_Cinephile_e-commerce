@@ -8,7 +8,48 @@
   </head>
   <body>
     <%- include("./partials/header") %>
-    <%- include("./partials/main") %>
+    <main>
+      <section class="img_main">
+        <div class="conjunto">
+          <a href="/product/detail/<%= lastProduct.id %>">
+            <img src="/images/products/productsCreated/<%= lastProduct.background_image %>" alt="imagenprincipal">
+          </a>
+          <h3 class="main__last-realease">Último lanzamiento</h3>
+        </div>
+      </section>
+      <section class="ultimos_lanzamientos">
+        <h3 class="text1">Películas</h3>
+        <section class="main__product-list">
+          <% movies.forEach(element => { %>
+          <a href="/product/detail/<%= element.id %>">
+            <article class="main__product-article">
+              <div class="main__img-container">
+                <img src="/images/products/productsCreated/<%= element.product_image ? element.product_image : "Logo.png"%>" alt="Imágen de producto">
+              </div>
+              <div class="main__product-name"><%= element.name %> </div>
+            </article>
+          </a>
+          <% }) %>
+        </section>
+      </section>
+      <section class="mas_alquilado">
+        <h3 class="text2">Series</h3>
+        <<section class="main__product-list">
+          <% series.forEach(element => { %>
+          <a href="/product/detail/<%= element.id %>">
+            <article class="main__product-article">
+              <div class="main__img-container">
+                <img src="/images/products/productsCreated/<%= element.product_image ? element.product_image : "Logo.png"%>" alt="Imágen de producto">
+              </div>
+              <div class="main__product-name"><%= element.name %> </div>
+            </article>
+          </a>
+          <% }) %>
+      </section>
+    </main>
     <%- include("./partials/footer") %>
   </body>
 </html>
+
+
+

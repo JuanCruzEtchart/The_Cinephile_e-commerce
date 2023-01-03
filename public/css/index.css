@@ -25,7 +25,6 @@
 .img_main img {
   width: 100%;
   background-size: cover;
-  height: 50vh;
 }
 
 .top1 img {
@@ -165,14 +164,8 @@ main section div.pelis_infantil img.movies_img:hover {
 
 @media (min-width: 1200px) {
   /*MAIN*/
-
-  .top1 img {
-    left: 0;
-    top: 10;
-    width: 100px;
-    height: 100px;
-    margin: 0;
-    z-index: 50;
+  .img_main img {
+    height: 50vh;
   }
 }
 
@@ -180,13 +173,4 @@ main section div.pelis_infantil img.movies_img:hover {
 
 @media (min-width: 1440px) {
   /*MAIN*/
-
-  .top1 img {
-    left: 0;
-    top: 10;
-    width: 100px;
-    height: 100px;
-    margin: 0;
-    z-index: 50;
-  }
 }
