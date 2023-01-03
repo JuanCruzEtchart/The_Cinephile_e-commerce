@@ -81,7 +81,6 @@ div.email-contraseña {
 #email, #password {
   font-size: 0.875rem;
   width: 70%;
-  max-width: 495.5px;
   padding: 10px;
   border-radius: 10px;
   background-color: #1b1b1b;
@@ -210,18 +209,9 @@ button.send-button {
     font-size: 18px;
   }
 
-
-  #emailbloque,
-  #passwordbloque {
-    width: 60%;
-    border-radius: 10px 10px 10px 10px;
+  #email, #password {
+    width: 80%;
   }
-
-  #email,
-  #password {
-    width: 100%;
-  }
-
   .div-edit {
     height: 50px;   
 }
@@ -256,5 +246,6 @@ button.send-button {
   .fa-lock:before {
     font-size: 23px;
   }
+
 
 }
