@@ -74,34 +74,31 @@ div.email-contraseña {
   padding-bottom: 3%;
 }
 
-#email {
-  background-color: #1b1b1b;
-}
-
 #password {
   display: flex;
 }
 
 #email, #password {
-  display: flex;
+  font-size: 0.875rem;
+  width: 70%;
+  max-width: 495.5px;
+  padding: 10px;
+  border-radius: 10px;
   background-color: #1b1b1b;
-  border-top: none;
-  border-right: none;
-  border-left: none;
-  border-bottom: 2px solid #f8efefd0;
-  width: 100%;
-  padding-left: 1%;
-  border-style: solid;
-  padding-top: 4%;
-  border-radius: 10px 10px 0px 0px;
+  border: solid 1px rgba(255, 255, 255, 0.3);
+  color: white;
 }
 #emailbloque{
   padding-bottom: 5%;
   width: 65%;
+  display: flex;
+  justify-content: center;
 }
 #passwordbloque{
   width: 65%;
   margin-bottom: 4%;
+  display: flex;
+  justify-content: center;
 }
 
 .fa-envelope:before {
