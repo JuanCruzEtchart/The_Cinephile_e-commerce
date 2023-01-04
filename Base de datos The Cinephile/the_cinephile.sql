@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-12-2022 a las 08:17:17
+-- Tiempo de generación: 04-01-2023 a las 07:38:01
 -- Versión del servidor: 10.4.25-MariaDB
 -- Versión de PHP: 8.1.10
 
@@ -117,7 +117,12 @@ INSERT INTO `actors` (`id`, `full_name`, `biography_link`, `actors_photo`) VALUE
 (83, 'Angela Kinsey', 'https://en.wikipedia.org/wiki/Angela_Kinsey', 'photo1669793457771-.jpg'),
 (84, 'Oscar Nuñez', 'https://es.wikipedia.org/wiki/Óscar_Núñez_(actor_cubano)', 'photo1669793469571-.jpg'),
 (85, 'Creed Bratton', 'https://en.wikipedia.org/wiki/Creed_Bratton', 'photo1669793481445-.jpg'),
-(87, 'Borrar', 'https://www.npmjs.com/package/validator', 'photo1670658945923-.png');
+(88, 'Robert Downey Jr.', 'https://es.wikipedia.org/wiki/Robert_Downey_Jr.', 'photo1672810420246-.jpg'),
+(89, 'Gwyneth Paltrow', 'https://es.wikipedia.org/wiki/Gwyneth_Paltrow', 'photo1672810461202-.jpg'),
+(90, 'Terrence Howard', 'https://en.wikipedia.org/wiki/Terrence_Howard', 'photo1672810509064-.jpg'),
+(91, 'Jeff Bridges', 'https://en.wikipedia.org/wiki/Jeff_Bridges', 'photo1672810587503-.jpg'),
+(92, 'Leslie Bibb', 'https://en.wikipedia.org/wiki/Leslie_Bibb', 'photo1672810633715-.jpg'),
+(93, 'Clark Gregg', 'https://en.wikipedia.org/wiki/Clark_Gregg', 'photo1672810750451-.jpg');
 
 -- --------------------------------------------------------
 
@@ -229,7 +234,13 @@ INSERT INTO `actor_character` (`id`, `actor_id`, `character_id`) VALUES
 (100, 54, 17),
 (101, 81, 31),
 (102, 40, 7),
-(103, 2, 17);
+(103, 2, 17),
+(104, 88, 99),
+(105, 89, 25),
+(106, 90, 101),
+(107, 91, 102),
+(108, 93, 104),
+(109, 92, 103);
 
 -- --------------------------------------------------------
 
@@ -352,6 +363,7 @@ CREATE TABLE `characters` (
 INSERT INTO `characters` (`id`, `name`) VALUES
 (36, 'Abraham Van Helsing'),
 (17, 'Ada Shelby'),
+(104, 'Agent Coulson'),
 (15, 'Alfie Solomons'),
 (79, 'Andy Bernard'),
 (80, 'Angela Martin'),
@@ -359,6 +371,7 @@ INSERT INTO `characters` (`id`, `name`) VALUES
 (14, 'Arthur Shelby'),
 (46, 'Betsy'),
 (23, 'Captain Benjamin L. Willard'),
+(103, 'Christine Everhart'),
 (64, 'Chuck McGill'),
 (7, 'Clemenza'),
 (27, 'Colonel Lucas'),
@@ -404,13 +417,16 @@ INSERT INTO `characters` (`id`, `name`) VALUES
 (35, 'Mina Murray'),
 (61, 'Nacho Varga'),
 (39, 'Novia de Dracula'),
+(102, 'Obadiah Stane'),
 (81, 'Oscar Martínez'),
 (66, 'Pablo Escobar'),
 (75, 'Pam Beasly'),
+(100, 'Pepper Potts'),
 (25, 'Photojournalist'),
 (16, 'Polly Gray'),
 (43, 'Quincey Morris'),
 (42, 'Renfield'),
+(101, 'Rhodey'),
 (78, 'Ryan Howard'),
 (55, 'Saul Goodman'),
 (52, 'Skyler White'),
@@ -421,6 +437,7 @@ INSERT INTO `characters` (`id`, `name`) VALUES
 (47, 'Tom'),
 (6, 'Tom Hagen'),
 (13, 'Tommy Shelby'),
+(99, 'Tony Stark'),
 (44, 'Travis Bickle'),
 (26, 'Tyrone \'Clean\' Miller'),
 (1, 'Vito Corleone'),
@@ -451,7 +468,8 @@ INSERT INTO `directors` (`id`, `full_name`, `biography_link`, `directors_photo`)
 (9, 'Martin Scorsese', 'https://en.wikipedia.org/wiki/Martin_Scorsese', 'photo1669790942524-.jpg'),
 (10, 'Vince Gilligan', 'https://en.wikipedia.org/wiki/Vince_Gilligan', 'photo1669791694648-.jpg'),
 (11, 'Carlo Bernard', 'https://en.wikipedia.org/wiki/Carlos_Bernard', 'photo1669792689217-.jpg'),
-(12, 'Greg Daniels', 'https://en.wikipedia.org/wiki/Greg_Daniels', 'photo1669793318934-.jpg');
+(12, 'Greg Daniels', 'https://en.wikipedia.org/wiki/Greg_Daniels', 'photo1669793318934-.jpg'),
+(19, 'Jon Favreau', 'https://es.wikipedia.org/wiki/Jon_Favreau', 'photo1672796618379-.jpg');
 
 -- --------------------------------------------------------
 
@@ -762,7 +780,8 @@ INSERT INTO `screenwriters` (`id`, `full_name`, `biography_link`, `screenwriter_
 (10, 'Paul Schrader', 'https://en.wikipedia.org/wiki/Paul_Schrader', 'photo1669790974385-.jpg'),
 (11, 'Vince Gilligan', 'https://en.wikipedia.org/wiki/Vince_Gilligan', 'photo1669791706303-.jpg'),
 (12, 'Carlo Bernard', 'https://en.wikipedia.org/wiki/Carlos_Bernard', 'photo1669792704098-.jpg'),
-(13, 'Greg Daniels', 'https://en.wikipedia.org/wiki/Greg_Daniels', 'photo1669793340067-.jpg');
+(13, 'Greg Daniels', 'https://en.wikipedia.org/wiki/Greg_Daniels', 'photo1669793340067-.jpg'),
+(14, 'Mark Fergus', 'https://en.wikipedia.org/wiki/Mark_Fergus_and_Hawk_Ostby', 'photo1672796825927-.jpg');
 
 -- --------------------------------------------------------
 
@@ -772,19 +791,22 @@ INSERT INTO `screenwriters` (`id`, `full_name`, `biography_link`, `screenwriter_
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
-  `username` varchar(15) NOT NULL,
+  `username` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `password` varchar(300) NOT NULL
+  `password` varchar(300) NOT NULL,
+  `admin_status` int(1) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
-(2, 'NuevaCuenta', 'NuevaCuenta@gmail.com', '1234'),
-(3, 'Prueba2', 'Prueba2@gmail.com', '$2a$10$QBI9InoR7bGvEdsAmC8sAeNwqbztkAdKTq39UIMhyWPSjxwXhetAi'),
-(4, 'Loguearme', 'Loguearme@gmail.com', '$2a$10$4JvQNZTZJh4fVaXrZHGqvuwO3yLoK2VK8UxXChQrKfaSGITQa7hsO');
+INSERT INTO `users` (`id`, `username`, `email`, `password`, `admin_status`) VALUES
+(5, 'Juan Cruz Etchart', 'etchart.juancruz@gmail.com', '$2a$10$HqWn5jUv4ctULBYb2YUNi.ssrTihXQiCoxMUG2mszUUGUfNRhEIpy', 0),
+(6, 'Elon Musk', 'admin@gmail.com', '$2a$10$L4PdINc.Ru0F47P2os653.paxPC5BIxuXOh8Q7wquZeHGc83ftUgy', 1),
+(7, 'Ahmed Kalim', 'ahmedandres20@gmail.com', '$2a$10$GwjjuGKhKazEW1Y.FEO.AOhWk1/KxHjbaWrxDlthHLpiStld.SAye', 0),
+(8, 'Alberto Roper V', 'albertoropervilar@gmail.com', '$2a$10$qS1LO0uz.QGc18PGItX2cuT7E6k1yHijPK.TEpxfw9XL/PxA.kJUa', 0),
+(9, 'Alan Diaz', 'alandiazyoel1@gmail.com', '$2a$10$TjR0FnbuofUxYwXxv9lKI.oZG1nRVg6RtgAMeYkeI/Asg.jmjGOaO', 0);
 
 -- --------------------------------------------------------
 
@@ -922,31 +944,31 @@ ALTER TABLE `user_favorites`
 -- AUTO_INCREMENT de la tabla `actors`
 --
 ALTER TABLE `actors`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;
 
 --
 -- AUTO_INCREMENT de la tabla `actor_character`
 --
 ALTER TABLE `actor_character`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=104;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
 
 --
 -- AUTO_INCREMENT de la tabla `actor_product`
 --
 ALTER TABLE `actor_product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=177;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=183;
 
 --
 -- AUTO_INCREMENT de la tabla `characters`
 --
 ALTER TABLE `characters`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=99;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
 
 --
 -- AUTO_INCREMENT de la tabla `directors`
 --
 ALTER TABLE `directors`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT de la tabla `genres`
@@ -958,31 +980,31 @@ ALTER TABLE `genres`
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=82;
 
 --
 -- AUTO_INCREMENT de la tabla `product_actor_character`
 --
 ALTER TABLE `product_actor_character`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
 
 --
 -- AUTO_INCREMENT de la tabla `product_character`
 --
 ALTER TABLE `product_character`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=159;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=165;
 
 --
 -- AUTO_INCREMENT de la tabla `screenwriters`
 --
 ALTER TABLE `screenwriters`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `user_cart`

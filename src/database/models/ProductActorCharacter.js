@@ -27,7 +27,7 @@ module.exports = (sequelize, dataTypes) => {
 
   const ProductActorCharacter = sequelize.define(alias, cols, config);
 
-/*   ProductActorCharacter.associate = (models) => {
+  /*   ProductActorCharacter.associate = (models) => {
     ProductActorCharacter.belongsTo(models.Product, {
       as: "product",
       foreignKey: "product_id",

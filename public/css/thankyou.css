@@ -1,40 +1,43 @@
 #main-container {
-    min-height: calc(100vh - 4rem - 4rem);
+  min-height: calc(100vh - 4rem - 4rem);
 }
 
 #titulo {
-    padding-top: 10%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 80%;
+  padding-top: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80%;
+  color: white;
 }
+
 main {
-    display: block;
-    height: 80vh;
+  display: block;
+  height: 80vh;
+  background-color: #212121;
 }
 
 h2 {
-    padding-top: 5%;
+  padding-top: 5%;
 }
 
 #logueate {
-    width: auto;
-    font-size: 15px;
-    text-align: center;
-    padding: 13px;
-    border-radius: 5px;
-    border: none;
-    color: white;
-    background-color: #1b1b1b;
-    text-decoration: none;
-    transition: all 120ms;
-    margin-top: 2%;
-  }
-  
- #logueate:hover {
-    background-color: #ffc700;
-    color: black;
-    font-weight: bold;
-    cursor: pointer;    
-  }
+  width: auto;
+  font-size: 15px;
+  text-align: center;
+  padding: 13px;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background-color: #1b1b1b;
+  text-decoration: none;
+  transition: all 120ms;
+  margin-top: 2%;
+}
+
+#logueate:hover {
+  background-color: #ffc700;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}

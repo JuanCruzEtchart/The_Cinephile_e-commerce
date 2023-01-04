@@ -45,7 +45,7 @@ module.exports = (sequelize, dataTypes) => {
       timestamps: false,
     });
 
-   /*  Actor.hasMany(models.ProductActorCharacter, {
+    /*  Actor.hasMany(models.ProductActorCharacter, {
       as: "productActor",
       foreignKey: "actor_id",
     }); */

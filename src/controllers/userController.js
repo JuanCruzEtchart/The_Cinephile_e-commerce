@@ -9,20 +9,6 @@ const { Op } = require("sequelize");
 //Modelos
 const User = db.User;
 
-/*
-function findAll() {
-  const jsonData = fs.readFileSync(path.join(__dirname, "../data/users.json"));
-  const data = JSON.parse(jsonData);
-  return data;
-}
-
-
-function stringAndCreate(data) {
-  const dataString = JSON.stringify(data, null, 4);
-  fs.writeFileSync(path.join(__dirname, "../data/users.json"), dataString);
-}
-*/
-
 const userController = {
   login: (req, res) => {
     const users = User.findAll();
@@ -41,30 +27,17 @@ const userController = {
 
       let userFound = await User.findOne({ where: { email: req.body.email } });
       //bcrypt.compareSync(req.body.password, user.password
-  
-      if 
-        (
-        (!userFound) 
-        ) 
-      
-      {
-        return res.render("login", { errorLogin: "Credenciales Invalidas" });
-      } 
-      
-      else if 
-        (
-        !bcrypt.compareSync(req.body.password, userFound.password)
-        )
 
-        {
-          return res.render("login", { errorLogin: "Credenciales Invalidas" });
-        }
-      
-      else {
+      if (!userFound) {
+        return res.render("login", { errorLogin: "Credenciales Invalidas" });
+      } else if (!bcrypt.compareSync(req.body.password, userFound.password)) {
+        return res.render("login", { errorLogin: "Credenciales Invalidas" });
+      } else {
         req.session.usuarioLogueado = {
           id: userFound.id,
           name: userFound.username,
           email: userFound.email,
+          admin_status: userFound.admin_status,
         };
 
         if (req.body.checkbox) {
@@ -73,7 +46,6 @@ const userController = {
 
         res.redirect("profile");
       }
-    
     } catch (err) {
       res.send(err);
     }

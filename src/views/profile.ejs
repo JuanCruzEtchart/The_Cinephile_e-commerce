@@ -1,127 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <%- include("./partials/head") %>
-    <link rel="stylesheet" href="/css/profile.css" />
-  </head>
-  <body>
-    <%- include("./partials/header") %>
-    <main class="main">
-      <div class="main__container">
-        <section class="main__profile">
-          <section class="main__profile-description">
-            <div class="main__profile-header">
-              <div>Perfil</div>
-              <% if (locals.usuario){ %>
-                <div class="cerrar-sesion">
-                  <form action="/user/logout" method="post">
-                    <button type="submit">Cerrar Sesion</button>
-                  </form>
-                </div>
-                <% } %>
+
+<head>
+  <%- include("./partials/head") %>
+  <link rel="stylesheet" href="/css/profile.css" />
+</head>
+
+<body>
+  <%- include("./partials/header") %>
+  <main class="main">
+    <div class="main__container">
+      <section class="main__profile">
+        <section class="main__profile-description">
+          <div class="main__profile-header">
+            <div>Perfil</div>
+            <% if (locals.usuario){ %>
+            <div class="cerrar-sesion">
+              <form action="/user/logout" method="post">
+                <button type="submit">Cerrar Sesion</button>
+              </form>
             </div>
-            <div class="datos">
-            
-              <div class="main__profile-datos-principales">
-                <img class="main__profile-avatar" src="/images/profile/avatar.png">
-                <section class="main__profile-nombre-edad-pais">
-                <h2 class="main__profile-nombre"><%= locals.usuario.name%></h2>               
-                </section>
-              </div>
-              <div class="main__profile-datos-secundarios">
-                <article class="main__profile-articles">
-                  <p id="items">E-mail:</p>
-                  <p id="items-respuestas"><%= locals.usuario.email%></p>
-                </article>
-                <article class="main__profile-articles">
-                  <p id="items">Nombre de usuario:</p>
-                  <p id="items-respuestas"><%= locals.usuario.name%></p>
-                </article>                
-              </div>
+            <% } %>
+          </div>
+          <div class="datos">
+
+            <div class="main__profile-datos-principales">
+              <img class="main__profile-avatar" src="/images/profile/avatar.png">
+              <section class="main__profile-nombre-edad-pais">
+                <h2 class="main__profile-nombre"><%= locals.usuario.name%></h2>
+              </section>
             </div>
-          </section>
-          <section class="main__profile-sliders">
-            <article class="main__profile-peliculas-alquiladas">
-              <div class="main__profile-sliders-title">
-                <h4>Peliculas alquiladas</h4>
-                <div>
-                  <i class="fas fa-chevron-right"></i>
-                </div>
-              </div>
-              <div class="main__profile-slider-peliculas-alquiladas">
-                <div class="main__slider">
-                  <div class="main__slider-inner">
-                    <div class="main__item-peliculas-alquiladas">                     
-                      <img src="/images/profile/ghost_in_the_shell.png" alt="Ghost in the Shell">
-                      <div class="peliculas-alquiladas-nombres">Ghost in the Shell</div>                     
-                    </div>
-                    <div class="main__item-peliculas-alquiladas">                     
-                      <img src="/images/profile/it.png" alt="It">
-                      <div class="peliculas-alquiladas-nombres">It</div>                     
-                    </div>
-                    <div class="main__item-peliculas-alquiladas">                     
-                      <img src="/images/profile/lord_of_the_rings.png" alt="Lord of the Rings">
-                      <div class="peliculas-alquiladas-nombres">Lord of the Rings</div>                     
-                    </div>
-                    <div class="main__item-peliculas-alquiladas">                     
-                      <img src="/images/profile/narnia.png" alt="Narnia">
-                      <div class="peliculas-alquiladas-nombres">Narnia</div>                     
-                    </div>
-                    <div class="main__item-peliculas-alquiladas">                     
-                      <img src="/images/profile/perfect_blue.png" alt="Perfect Blue">
-                      <div class="peliculas-alquiladas-nombres">Perfect Blue</div>                     
-                    </div>
-                    <div class="main__item-peliculas-alquiladas">                     
-                      <img src="/images/profile/poltergeist.png" alt="Poltergeist">
-                      <div class="peliculas-alquiladas-nombres">Poltergeist</div>                     
-                    </div>                                    
-                  </div>
-                </div>
-              </div>
-            </article>
-            <article class="main__profile-mi-lista">
-              <div class="main__profile-sliders-title">
-                <h4>Mi lista</h4>
-                <div>
-                  <i class="fas fa-chevron-right"></i>
-                </div>
-              </div>
-              <div class="main__profile-slider-mi-lista">
-                <div class="main__slider">
-                  <div class="main__slider-inner">
-                    <div class="main__item-mi-lista">                     
-                      <img src="/images/profile/back_to_the_future.png" alt="Back to the Future">
-                      <div class="peliculas-alquiladas-nombres">Back to the Future</div>                     
-                    </div>
-                    <div class="main__item-mi-lista">                     
-                      <img src="/images/profile/paprika.png" alt="Paprika">
-                      <div class="peliculas-alquiladas-nombres">Paprika</div>                     
-                    </div>
-                    <div class="main__item-mi-lista">                     
-                      <img src="/images/profile/jaws.png" alt="Jaws">
-                      <div class="peliculas-alquiladas-nombres">Jaws</div>                     
-                    </div>
-                    <div class="main__item-mi-lista">                     
-                      <img src="/images/profile/the_exorcist.png" alt="The exorcist">
-                      <div class="peliculas-alquiladas-nombres">The exorcist</div>                     
-                    </div>
-                    <div class="main__item-mi-lista">                     
-                      <img src="/images/profile/akira.png" alt="Akira">
-                      <div class="peliculas-alquiladas-nombres">Akira</div>                     
-                    </div>
-                    <div class="main__item-mi-lista">                     
-                      <img src="/images/profile/star_wars.png" alt="Star Wars">
-                      <div class="peliculas-alquiladas-nombres">Star Wars</div>                     
-                    </div>                                    
-                  </div>
-                </div>
-              </div>
-            </article>
-          </section>
+            <div class="main__profile-datos-secundarios">
+              <article class="main__profile-articles">
+                <p id="items">E-mail:</p>
+                <p id="items-respuestas"><%= locals.usuario.email%></p>
+              </article>
+              <article class="main__profile-articles">
+                <p id="items">Nombre de usuario:</p>
+                <p id="items-respuestas"><%= locals.usuario.name%></p>
+              </article>
+            </div>
           </div>
         </section>
-      </div>
-    </main>
-    <%- include("./partials/footer") %>
-  </body>
+        <section class="main__profile-sliders">
+          <article class="main__profile-peliculas-alquiladas">
+            <div class="main__profile-sliders-title">
+              <h4>Peliculas alquiladas</h4>
+              <div>
+                <i class="fas fa-chevron-right"></i>
+              </div>
+            </div>
+            <div class="main__profile-slider-peliculas-alquiladas">
+              <div class="main__slider">
+                <div class="main__slider-inner">
+                  <div class="main__item-peliculas-alquiladas">
+                    <img src="/images/profile/ghost_in_the_shell.png" alt="Ghost in the Shell">
+                    <div class="peliculas-alquiladas-nombres">Ghost in the Shell</div>
+                  </div>
+                  <div class="main__item-peliculas-alquiladas">
+                    <img src="/images/profile/it.png" alt="It">
+                    <div class="peliculas-alquiladas-nombres">It</div>
+                  </div>
+                  <div class="main__item-peliculas-alquiladas">
+                    <img src="/images/profile/lord_of_the_rings.png" alt="Lord of the Rings">
+                    <div class="peliculas-alquiladas-nombres">Lord of the Rings</div>
+                  </div>
+                  <div class="main__item-peliculas-alquiladas">
+                    <img src="/images/profile/narnia.png" alt="Narnia">
+                    <div class="peliculas-alquiladas-nombres">Narnia</div>
+                  </div>
+                  <div class="main__item-peliculas-alquiladas">
+                    <img src="/images/profile/perfect_blue.png" alt="Perfect Blue">
+                    <div class="peliculas-alquiladas-nombres">Perfect Blue</div>
+                  </div>
+                  <div class="main__item-peliculas-alquiladas">
+                    <img src="/images/profile/poltergeist.png" alt="Poltergeist">
+                    <div class="peliculas-alquiladas-nombres">Poltergeist</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article class="main__profile-mi-lista">
+            <div class="main__profile-sliders-title">
+              <h4>Mi lista</h4>
+              <div>
+                <i class="fas fa-chevron-right"></i>
+              </div>
+            </div>
+            <div class="main__profile-slider-mi-lista">
+              <div class="main__slider">
+                <div class="main__slider-inner">
+                  <div class="main__item-mi-lista">
+                    <img src="/images/profile/back_to_the_future.png" alt="Back to the Future">
+                    <div class="peliculas-alquiladas-nombres">Back to the Future</div>
+                  </div>
+                  <div class="main__item-mi-lista">
+                    <img src="/images/profile/paprika.png" alt="Paprika">
+                    <div class="peliculas-alquiladas-nombres">Paprika</div>
+                  </div>
+                  <div class="main__item-mi-lista">
+                    <img src="/images/profile/jaws.png" alt="Jaws">
+                    <div class="peliculas-alquiladas-nombres">Jaws</div>
+                  </div>
+                  <div class="main__item-mi-lista">
+                    <img src="/images/profile/the_exorcist.png" alt="The exorcist">
+                    <div class="peliculas-alquiladas-nombres">The exorcist</div>
+                  </div>
+                  <div class="main__item-mi-lista">
+                    <img src="/images/profile/akira.png" alt="Akira">
+                    <div class="peliculas-alquiladas-nombres">Akira</div>
+                  </div>
+                  <div class="main__item-mi-lista">
+                    <img src="/images/profile/star_wars.png" alt="Star Wars">
+                    <div class="peliculas-alquiladas-nombres">Star Wars</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+    </div>
+    </section>
+    </div>
+  </main>
+  <%- include("./partials/footer") %>
+</body>
+
 </html>

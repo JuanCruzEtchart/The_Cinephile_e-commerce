@@ -135,14 +135,13 @@ module.exports = (sequelize, dataTypes) => {
       timestamps: false,
     }); */
 
-  /*   Product.belongsToMany(models.User, {
+    /*   Product.belongsToMany(models.User, {
       as: "product_favorite",
       through: "user_favorites",
       foreingKey: "id_product",
       otherKey: "id_user",
       timestamps: false,
     }); */
-    
 
     //PRUEBA DE TABLA DE PRODUCTO COMPLETO
     Product.belongsToMany(models.Character, {

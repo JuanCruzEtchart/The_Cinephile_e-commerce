@@ -9,6 +9,7 @@ const {
   createProductionTeamValidations,
   createCharacterValidations,
 } = require("../validations/productValidation.js");
+const { normalLogin, adminLogin } = require("../middleware/loginMiddle.js");
 
 let storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -61,7 +62,11 @@ router.get("/search", productController.search);
 router.get("/detail/:id", productController.detailProduct);
 
 /*Render de la vista de carga de actores, directores y guionistas*/
-router.get("/create/productionTeam", productController.createProductionTeam);
+router.get(
+  "/create/productionTeam",
+  adminLogin,
+  productController.createProductionTeam
+);
 router.post(
   "/create/productionTeam",
   uploadPhoto,
@@ -70,7 +75,7 @@ router.post(
 );
 
 /*Render de la vista de carga de personajes*/
-router.get("/create/character", productController.createCharacter);
+router.get("/create/character", adminLogin, productController.createCharacter);
 router.post(
   "/create/character",
   createCharacterValidations,
@@ -78,7 +83,7 @@ router.post(
 );
 
 /*Render de la vista de creación de productos*/
-router.get("/create", productController.create);
+router.get("/create", adminLogin, productController.create);
 router.post(
   "/create",
   uploadDetailImages,
@@ -87,11 +92,11 @@ router.post(
 );
 
 /*Render de la vista de creación de repartos*/
-router.get("/create/cast", productController.castCreate);
+router.get("/create/cast", adminLogin, productController.castCreate);
 router.post("/create/cast", uploadActorsPhoto, productController.castUpload);
 
 /*Render de la vista de edición de productos*/
-router.get("/edit/:id", productController.edit);
+router.get("/edit/:id", adminLogin, productController.edit);
 router.put(
   "/edit/:id",
   uploadDetailImages,
@@ -101,11 +106,11 @@ router.put(
 router.delete("/delete/:id", productController.destroy);
 
 /*Render de la vista de lista de productos*/
-router.get("/list", productController.list);
+router.get("/list", adminLogin, productController.list);
 router.get("/movies", productController.movies);
 router.get("/series", productController.series);
 
 /*Render carrito de productos*/
-router.get("/cart", productController.cart);
+router.get("/cart", normalLogin, productController.cart);
 
 module.exports = router;
