@@ -2,7 +2,7 @@
 
 #main {
   margin: auto;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   padding: 20px 0px;
   background-color: rgba(27, 27, 27, 0.92);
@@ -74,34 +74,30 @@ div.email-contraseña {
   padding-bottom: 3%;
 }
 
-#email {
-  background-color: #1b1b1b;
-}
-
 #password {
   display: flex;
 }
 
 #email, #password {
-  display: flex;
+  font-size: 0.875rem;
+  width: 70%;
+  padding: 10px;
+  border-radius: 10px;
   background-color: #1b1b1b;
-  border-top: none;
-  border-right: none;
-  border-left: none;
-  border-bottom: 2px solid #f8efefd0;
-  width: 100%;
-  padding-left: 1%;
-  border-style: solid;
-  padding-top: 4%;
-  border-radius: 10px 10px 0px 0px;
+  border: solid 1px rgba(255, 255, 255, 0.3);
+  color: white;
 }
 #emailbloque{
   padding-bottom: 5%;
   width: 65%;
+  display: flex;
+  justify-content: center;
 }
 #passwordbloque{
   width: 65%;
   margin-bottom: 4%;
+  display: flex;
+  justify-content: center;
 }
 
 .fa-envelope:before {
@@ -213,18 +209,9 @@ button.send-button {
     font-size: 18px;
   }
 
-
-  #emailbloque,
-  #passwordbloque {
-    width: 60%;
-    border-radius: 10px 10px 10px 10px;
+  #email, #password {
+    width: 80%;
   }
-
-  #email,
-  #password {
-    width: 100%;
-  }
-
   .div-edit {
     height: 50px;   
 }
@@ -259,5 +246,6 @@ button.send-button {
   .fa-lock:before {
     font-size: 23px;
   }
+
 
 }
