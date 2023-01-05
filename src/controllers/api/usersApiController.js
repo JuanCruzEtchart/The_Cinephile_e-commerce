@@ -7,7 +7,7 @@ const User = db.User;
 
 const usersApiController = {
   list: (req, res) => {
-    User.findAll().then((users) => {
+    User.findAll({ attributes: { exclude: ["password"] } }).then((users) => {
       let response = {
         meta: {
           status: 200,

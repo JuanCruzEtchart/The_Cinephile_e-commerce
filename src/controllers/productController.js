@@ -88,11 +88,17 @@ const productController = {
         limit: 10,
       });
 
+      let completeProduct = await ProductActorCharacter.findAll({
+        where: { product_id: id },
+        include: ["product", "actor", "character"],
+      });
+
       res.render("productDetail", {
         product,
         actor,
         productsByGenre,
         productsByDirector,
+        completeProduct,
       });
     } catch (err) {
       res.send(err);

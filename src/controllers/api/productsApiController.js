@@ -6,18 +6,6 @@ const { Op } = require("sequelize");
 const Product = db.Product;
 
 const productsApiController = {
-  //Barra de búsqueda
-  /*   search: async (req, res) => {
-    try {
-      const products = await Product.findAll({
-        where: { name: { [Op.like]: "%" + req.query.product + "%" } },
-      });
-      res.render("searchResult", { products, query: req.query.product });
-    } catch (err) {
-      res.send(err);
-    }
-  }, */
-
   search: (req, res) => {
     Product.findAll({
       where: { name: { [Op.like]: "%" + req.query.product + "%" } },
