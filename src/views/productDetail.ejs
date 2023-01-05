@@ -55,7 +55,7 @@
               </article>
             </section>
             <div class="main__trailer">
-              <a href=<%= product.trailer_link %> target="”_blank”"><i class="fas fa-play"></i>Trailer</a>
+              <a href=<%= product.trailer_link %> target="_blank"><i class="fas fa-play"></i> Trailer</a>
             </div>
             <article class="main__genre">
               <div class="main__genre-1"><%= product.genre1.name %></div>
@@ -100,12 +100,12 @@
           <div class="main__slider-wrap-principal-cast">
             <div class="main__slider">
               <div class="main__slider-inner" id="main__slider-1-inner">
-                <% product.actors.forEach(element => { %>
+                <% completeProduct.forEach(element => { %>
                 <div class="main__item-actor">
-                  <a href="<%= element.biography_link%>" target="_blank">
-                    <img src="/images/products/productsCreated/<%=element.actors_photo ? element.actors_photo : "Logo.png"%>" alt="<%= element.actor%>" />
-                    <div class="main__actor-name"><%= element.full_name%></div>
-                    <!--<div class="main__character-name"><%= element.characters%></div> -->
+                  <a href="<%= element.actor.biography_link%>" target="_blank">
+                    <img src="/images/products/productsCreated/<%=element.actor.actors_photo ? element.actor.actors_photo : "Logo.png"%>" alt="<%= element.actor%>" />
+                    <div class="main__actor-name"><%= element.actor.full_name%></div>
+                    <div class="main__character-name"><%= element.character.name%></div>
                   </a>
                 </div>
                 <% }) %>

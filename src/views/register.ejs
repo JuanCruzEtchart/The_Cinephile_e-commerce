@@ -1,74 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <%- include("./partials/head") %>
-    <link rel="stylesheet" href="/css/register.css" />
-  </head>
-  <body>
-    <%- include("./partials/header") %>
-    <main id="main">
-      <div class="formulario">
-        <form action="/user/register" method="POST" class="form-login" id="form1">
-         <div class="cruzA"> 
+
+<head>
+  <%- include("./partials/head") %>
+  <link rel="stylesheet" href="/css/register.css" />
+</head>
+
+<body>
+  <%- include("./partials/header") %>
+  <main id="main">
+    <div class="formulario">
+      <form action="/user/register" method="POST" class="form-login" id="form1">
+        <div class="cruzA">
           <a href="http://localhost:3030/"> <i class="fas fa-window-close" class="cruzicono"></i> </a>
-          </div>
-            <div id="titulo-formulario">
-              <i class="fas fa-address-book"></i>   
-              <div class="flexCrearCuenta">
+        </div>
+        <div id="titulo-formulario">
+          <i class="fas fa-address-book"></i>
+          <div class="flexCrearCuenta">
             <h1 class="Crear Cuenta" style=color:white>Crear Cuenta</h1>
           </div>
-            </div>
-            <div id="usuario"><p style=color:white >Usuario</p></div>
-            <div id="usuariobloque" >
-              <input
-                type="text"
-                id="user"
-                name="user"
-                placeholder="Usuario_Pelis"
-                class="text">
-              </div>
-              <div class="errorDiv">
-              <% if (locals.errors && locals.errors.user) { %>
-                <p class="msg-error"> <%= errors.user.msg %> </p>
-              <% } %>
-            </div>
-        <div id="email-div"><p style=color:white>Email</p></div>
-        <div id="emailbloque" >
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="TuEmail@Cinephile.com"
-            class="mail">
+        </div>
+        <div id="usuario">
+          <p style=color:white>Usuario</p>
+        </div>
+        <div id="usuariobloque">
+          <input type="text" id="user" name="user" placeholder="Usuario_Pelis" class="text">
+        </div>
+        <div class="errorDiv">
+          <% if (locals.errors && locals.errors.user) { %>
+          <p class="msg-error"> <%= errors.user.msg %> </p>
+          <% } %>
+        </div>
+        <div id="email-div">
+          <p style=color:white>Email</p>
+        </div>
+        <div id="emailbloque">
+          <input type="email" id="email" name="email" placeholder="TuEmail@Cinephile.com" class="mail">
 
-          </div>
-          <div class="errorDiv">
-            <% if (locals.errors && locals.errors.email) { %>
-              <p class="msg-error"> <%= errors.email.msg %> </p>
-            <% } %>
-          </div>
-        <div id="password-div"><p style=color:white>Contraseña</p></div>
+        </div>
+        <div class="errorDiv">
+          <% if (locals.errors && locals.errors.email) { %>
+          <p class="msg-error"> <%= errors.email.msg %> </p>
+          <% } %>
+        </div>
+        <div id="password-div">
+          <p style=color:white>Contraseña</p>
+        </div>
         <div id="passwordbloque">
-          <input 
-            type="password"
-            id="password"
-            name="password"
-            placeholder="Contraseña"
-            class="text-box">
-          </div>
-          <div class="errorDiv">
-            <% if (locals.errors && locals.errors.password) { %>
-            <p class="msg-error"> <%= errors.password.msg %> </p>
-            <% } %>
-          </div>
+          <input type="password" id="password" name="password" placeholder="Contraseña" class="text-box">
+        </div>
+        <div class="errorDiv">
+          <% if (locals.errors && locals.errors.password) { %>
+          <p class="msg-error"> <%= errors.password.msg %> </p>
+          <% } %>
+        </div>
         <div id="registrar">
           <input type="submit" value="Registrarme" style="background-color: #ffc700; border: none;">
         </div>
-        
+
       </form>
-    </div>  
     </div>
-    </main>
-    <%- include("./partials/footer") %>
-  </body>
+    </div>
+  </main>
+  <%- include("./partials/footer") %>
+</body>
+
 </html>

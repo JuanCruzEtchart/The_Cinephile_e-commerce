@@ -7,8 +7,8 @@ module.exports = (sequelize, dataTypes) => {
       autoIncrement: true,
     },
     username: {
-      type: dataTypes.STRING(15),
-      allowNull: false, //puede no estar el dato
+      type: dataTypes.STRING(50),
+      allowNull: false, 
     },
     email: {
       type: dataTypes.STRING(50),
@@ -17,6 +17,10 @@ module.exports = (sequelize, dataTypes) => {
     password: {
       type: dataTypes.STRING(500),
       allowNull: false,
+    },
+    admin_status: {
+      type: dataTypes.INTEGER(1),
+      allowNull: true,
     },
   };
 

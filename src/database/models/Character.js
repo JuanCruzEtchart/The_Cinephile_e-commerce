@@ -29,7 +29,7 @@ module.exports = (sequelize, dataTypes) => {
       timestamps: false,
     });
 
- /*    Character.hasMany(models.ProductActorCharacter, {
+    /*    Character.hasMany(models.ProductActorCharacter, {
       as: "productCharacter",
       foreignKey: "character_id",
     }); */
@@ -49,7 +49,6 @@ module.exports = (sequelize, dataTypes) => {
       otherKey: "actor_id",
       timestamps: false,
     });
-
   };
 
   return Character;

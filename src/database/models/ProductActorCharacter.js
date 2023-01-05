@@ -27,22 +27,22 @@ module.exports = (sequelize, dataTypes) => {
 
   const ProductActorCharacter = sequelize.define(alias, cols, config);
 
-/*   ProductActorCharacter.associate = (models) => {
+  ProductActorCharacter.associate = (models) => {
     ProductActorCharacter.belongsTo(models.Product, {
       as: "product",
       foreignKey: "product_id",
     });
 
     ProductActorCharacter.belongsTo(models.Actor, {
-      as: "actors",
+      as: "actor",
       foreignKey: "actor_id",
     });
 
     ProductActorCharacter.belongsTo(models.Character, {
-      as: "characters",
+      as: "character",
       foreignKey: "character_id",
     });
-  }; */
+  };
 
   return ProductActorCharacter;
 };

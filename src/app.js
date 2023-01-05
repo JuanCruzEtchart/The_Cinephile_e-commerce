@@ -6,13 +6,15 @@ const methodOverride = require("method-override");
 const cookieParser = require("cookie-parser");
 const session = require("express-session");
 const cors = require("cors");
-
-const mainRoutes = require("./routes/mainRoutes");
-const productsRoutes = require("./routes/productsRoutes");
-const userRoutes = require("./routes/userRoutes");
 const localsMiddleware = require("./middleware/localsMiddle");
 const recordameMiddleware = require("./middleware/recordameMiddle");
 
+//MAIN ROUTES IMPORT
+const mainRoutes = require("./routes/mainRoutes");
+const productsRoutes = require("./routes/productsRoutes");
+const userRoutes = require("./routes/userRoutes");
+
+//API ROUTES IMPORT
 const apiProductsRouter = require("./routes/api/apiProductsRouter");
 const apiGenresRouter = require("./routes/api/apiGenresRouter");
 const apiUsersRouter = require("./routes/api/apiUsersRouter");
@@ -38,12 +40,12 @@ app.use(localsMiddleware);
 app.use(recordameMiddleware);
 app.use(methodOverride("_method"));
 
-//ROUTES PRINCIPALES
+//MAIN ROUTES
 app.use("/", mainRoutes);
 app.use("/product", productsRoutes);
 app.use("/user", userRoutes);
 
-//ROUTES DE APIS
+//API ROUTES
 app.use("/api/products", apiProductsRouter);
 app.use("/api/genres", apiGenresRouter);
 app.use("/api/users", apiUsersRouter);

@@ -1,73 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <%- include("./partials/head") %>
-    <link rel="stylesheet" href="/css/login.css" />
-  </head>
-  <body>
-    <%- include("./partials/header") %>
-    <main id="main">
-      <div class="formulario">
-        <form action="/user/login" method="POST" class="form-login" id="form1">
-          <div class="cruzA">
-           <a href="http://localhost:3030/"> <i class="fas fa-window-close" class="cruzicono"></i> </a>
-            
-          </div>
-          <h1 class="conectate" style="color: white">Conectate</h1>
-          <div class="email-contraseña">
-            <i class="fas fa-envelope"></i>
-            <p style="color: white" class="email-lerta">Email</p>
-          </div>
-          <div id="emailbloque">
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="TuEmail@Cinephile.com"
-              class="mail"
-            />
-            <div class="errorDiv">
-              <% if (locals.errors && locals.errors.email) { %>
-                <p class="msg-error"> <%= errors.email.msg %> </p>
-              <% } %>
-            </div>
-          </div>
-          <div class="email-contraseña">
-            <i class="fas fa-lock"></i>
-            <div class="email-box"><p style="color: white">Contraseña</p></div>
-          </div>
-          <div id="passwordbloque">
-            <input
-              type="password"
-              id="password"
-              name="password"
-              placeholder="Contraseña"
-              class="text-box"
-            />
-            <% if (locals.errors && locals.errors.password) { %>
-              <p class="msg-error"> <%= errors.password.msg %> </p>
+
+<head>
+  <%- include("./partials/head") %>
+  <link rel="stylesheet" href="/css/login.css" />
+</head>
+
+<body>
+  <%- include("./partials/header") %>
+  <main id="main">
+    <div class="formulario">
+      <form action="/user/login" method="POST" class="form-login" id="form1">
+        <div class="cruzA">
+          <a href="http://localhost:3030/"> <i class="fas fa-window-close" class="cruzicono"></i> </a>
+
+        </div>
+        <h1 class="conectate" style="color: white">Conectate</h1>
+        <div class="email-contraseña">
+          <i class="fas fa-envelope"></i>
+          <p style="color: white" class="email-lerta">Email</p>
+        </div>
+        <div id="emailbloque">
+          <input type="email" id="email" name="email" placeholder="TuEmail@Cinephile.com" class="mail" />
+          <div class="errorDiv">
+            <% if (locals.errors && locals.errors.email) { %>
+            <p class="msg-error"> <%= errors.email.msg %> </p>
             <% } %>
           </div>
-          <div class="div-edit">
-            <input type="submit" value="Conectarse" style="background-color: #ffc700; border: none;">
+        </div>
+        <div class="email-contraseña">
+          <i class="fas fa-lock"></i>
+          <div class="email-box">
+            <p style="color: white">Contraseña</p>
           </div>
-          <div class="errorlogin">
+        </div>
+        <div id="passwordbloque">
+          <input type="password" id="password" name="password" placeholder="Contraseña" class="text-box" />
+          <% if (locals.errors && locals.errors.password) { %>
+          <p class="msg-error"> <%= errors.password.msg %> </p>
+          <% } %>
+        </div>
+        <div class="div-edit">
+          <input type="submit" value="Conectarse" style="background-color: #ffc700; border: none;">
+        </div>
+        <div class="errorlogin">
           <% if(locals.errorLogin) { %>
-            <p> <%=errorLogin %> </p> 
+          <p> <%=errorLogin %> </p>
           <% } %>
         </div>
         <div id="olvidaste">
-          <a style="text-decoration: none" href="/user/register"> <p id="contraseña" >Crear cuenta nueva </p> </a>
-      </div>
-          <div id="checkboxBox">
-            <input type="checkbox" name="checkbox" id="checkbox" />
-            <p id="quedarseConectado" style="color: white">
-              Quedarme conectado.
-            </p>
-          </div>
-        </form>
-      </div>
-    </main>
-    <%- include("./partials/footer") %>
-  </body>
+          <a style="text-decoration: none" href="/user/register">
+            <p id="contraseña">Crear cuenta nueva </p>
+          </a>
+        </div>
+        <div id="checkboxBox">
+          <input type="checkbox" name="checkbox" id="checkbox" />
+          <p id="quedarseConectado" style="color: white">
+            Quedarme conectado.
+          </p>
+        </div>
+      </form>
+    </div>
+  </main>
+  <%- include("./partials/footer") %>
+</body>
+
 </html>
