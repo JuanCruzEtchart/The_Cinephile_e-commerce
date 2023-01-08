@@ -2,12 +2,23 @@
 
 .main {
   background-color: #212121;
+  display: block;
+  flex: 1 0 auto;
   position: relative;
 }
 
 .main__form {
   background-color: #212121;
 }
+
+body {
+  margin: 0;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: #212121;
+}
+
 
 /* .main::before {
   content: "";

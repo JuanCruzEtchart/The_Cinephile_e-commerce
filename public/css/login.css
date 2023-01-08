@@ -76,6 +76,10 @@ div.email-contraseña {
   padding-bottom: 3%;
 }
 
+#email {
+  background-color: #1b1b1b;
+}
+
 #password {
   display: flex;
 }
@@ -224,6 +228,12 @@ button.send-button {
   #email, #password {
     width: 80%;
   }
+
+  #email,
+  #password {
+    width: 100%;
+  }
+
   .div-edit {
     height: 50px;   
 }
