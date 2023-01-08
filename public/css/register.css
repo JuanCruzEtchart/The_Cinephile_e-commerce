@@ -3,16 +3,27 @@
 #main {
   margin-bottom: 0px;
   margin-top: 0px;
-  height: 100vh;
   width: 100%;
   padding: 20px 0px;
   background-color: rgba(27, 27, 27, 0.92);
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 8px;
+  font-size: 18px;
   flex-wrap: wrap;
+  flex: 1 0 auto;
+  justify-content: space-around;
+}
+
+body {
+    font-family: Roboto;
+    font-size: 12px;
+    background-color: white;
+    line-height: 0px;
+    text-decoration: none;
+    color: black;
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 input:focus { 
@@ -22,8 +33,8 @@ input:focus {
   flex-shrink: 0;
 }
 .formulario {
-  height: 80%;
-  width: 80%;
+  height: 40%;
+  width: 70%;
   background-color: rgba(27, 27, 27, 0.5);
   border-radius: 10px 10px 10px 10px;
 }
@@ -42,7 +53,7 @@ input:focus {
 }
 .fa-address-book:before {
   content: "\f2b9";
-  font-size: 10px;
+  font-size: 20px;
 }
 
 #form1 {
@@ -61,8 +72,8 @@ input:focus {
 
 
 h1.Crear.Cuenta {
-  font-size: 9px;
-  letter-spacing: 3px;
+  font-size: 18px;
+  letter-spacing: 5px;
   padding-bottom: 5%;
 }
 
@@ -71,15 +82,15 @@ h1.Crear.Cuenta {
   justify-content: flex-end;
   color: rgba(246, 233, 233, 0.78);
   padding-top: 1%;
-  padding-right: 4%;
+  padding-right: 8%;
 }
 
 
 #usuario, #email-div, #password-div {
-  padding-bottom: 4%;
+  padding-bottom: 8%;
   display: flex;
   width: 100%;
-  padding-top: 3%;
+  padding-top: 12%;
   margin: 0px auto;
   align-items: flex-start;
   padding-left: 25%;
@@ -91,15 +102,12 @@ h1.Crear.Cuenta {
 
 #registrar {
   background-color: #ffc700;
-  width: 28%;
-  max-width: 80px;
+  width: 35%;
   display: flex;
   justify-content: center;
-  border-radius: 5px 5px 5px 5px;
   text-decoration: none;
   border-radius: 10px 10px 10px 10px;
   margin-top: 5%;
-  margin-bottom: 5%;
 }
 
 .send-button {
@@ -117,7 +125,7 @@ h1.Crear.Cuenta {
 }
 
 #user, #email, #password {
-  font-size: 0.875rem;
+  font-size: 1.2rem;
   width: 50%;
   padding: 10px;
   border-radius: 10px;
@@ -125,8 +133,10 @@ h1.Crear.Cuenta {
   border: solid 1px rgba(255, 255, 255, 0.3);
   color: white;
 }
-.errorDiv{
-  padding-top: 2%
+.errorDiv {
+  padding-top: 6%;
+  font-size: 15px;
+  padding-bottom: 4%;
 }
 .msg-error {
   color:red;
@@ -146,8 +156,8 @@ h1.Crear.Cuenta {
   /*MAIN*/
 
   #main {
-    font-size: 17px;
-  }
+    font-size: 25px;
+}
 
   .cruzA {
     width: 82%;
@@ -161,9 +171,9 @@ h1.Crear.Cuenta {
   #titulo-formulario {
     padding-bottom: 2%;
 }
-  h1.Crear.Cuenta {
-    font-size: 20px;
-  }
+h1.Crear.Cuenta {
+  font-size: 30px;
+}
 
   
   .fa-address-book:before {
@@ -172,9 +182,11 @@ h1.Crear.Cuenta {
 }
 
 
-  .formulario {
-    height: 75%;
-  }
+.formulario {
+  height: 85%;
+}
+
+
 
   #registrar {
     width: 35%;
@@ -185,6 +197,11 @@ h1.Crear.Cuenta {
   max-width: 170px;
 }
 
+.errorDiv {
+  padding-top: 6%;
+  font-size: 20px;
+  padding-bottom: 4%;
+}
 
 }
 
@@ -220,7 +237,11 @@ h1.Crear.Cuenta {
 #usuario, #email-div, #password-div {
   padding-bottom: 3%;
 }
-
+.errorDiv {
+  padding-top: 4%;
+  font-size: 20px;
+  padding-bottom: 3%;
+}
 }
 
 /*LARGE-DESKTOP*/
@@ -228,8 +249,8 @@ h1.Crear.Cuenta {
 @media (min-width: 1440px) {
   /*MAIN*/
   #main {
-    font-size: 24px;
-  }
+    font-size: 32px;
+}
 
   h1.Crear.Cuenta {
     font-size: 25px;
@@ -254,4 +275,10 @@ h1.Crear.Cuenta {
 #registrar {
   max-width: 340px;
 }
+.errorDiv {
+  padding-top: 5%;
+  font-size: 22px;
+  padding-bottom: 3%;
+}
+
 }

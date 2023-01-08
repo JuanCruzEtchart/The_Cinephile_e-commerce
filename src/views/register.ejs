@@ -26,36 +26,36 @@
         <div id="usuariobloque">
           <input type="text" id="user" name="user" placeholder="Usuario_Pelis" class="text">
         </div>
-        <div class="errorDiv">
-          <% if (locals.errors && locals.errors.user) { %>
-          <p class="msg-error"> <%= errors.user.msg %> </p>
-          <% } %>
-        </div>
         <div id="email-div">
           <p style=color:white>Email</p>
         </div>
         <div id="emailbloque">
-          <input type="email" id="email" name="email" placeholder="TuEmail@Cinephile.com" class="mail">
+          <input id="email" name="email" placeholder="TuEmail@Cinephile.com" >
 
+        </div>
+        <div id="password-div">
+          <p style=color:white>Contraseña</p>
+        </div>
+        <div id="passwordbloque">
+          <input id="password" name="password" placeholder="Contraseña" >
+        </div>
+        <div id="registrar">
+          <input type="submit" value="Registrarme" style="background-color: #ffc700; border: none;">
+        </div>
+        <div class="errorDiv">
+          <% if (locals.errors && locals.errors.user) { %>
+          <p class="msg-error"> <%= errors.user.msg %> </p>
+          <% } %>
         </div>
         <div class="errorDiv">
           <% if (locals.errors && locals.errors.email) { %>
           <p class="msg-error"> <%= errors.email.msg %> </p>
           <% } %>
         </div>
-        <div id="password-div">
-          <p style=color:white>Contraseña</p>
-        </div>
-        <div id="passwordbloque">
-          <input type="password" id="password" name="password" placeholder="Contraseña" class="text-box">
-        </div>
         <div class="errorDiv">
           <% if (locals.errors && locals.errors.password) { %>
           <p class="msg-error"> <%= errors.password.msg %> </p>
           <% } %>
-        </div>
-        <div id="registrar">
-          <input type="submit" value="Registrarme" style="background-color: #ffc700; border: none;">
         </div>
 
       </form>

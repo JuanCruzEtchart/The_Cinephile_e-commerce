@@ -17,11 +17,11 @@ input:focus {
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 form.form-login {
-  height: 95%;
+  height: 60%;
   width: 80%;
   background-color: rgba(27, 27, 27, 0.5);
   display: flex;
@@ -29,6 +29,8 @@ form.form-login {
   align-items: center;
   border-radius: 10px 10px 10px 10px;
 }
+
+
 
 form.form-login i {
   color: white;
@@ -79,7 +81,7 @@ div.email-contraseña {
 }
 
 #email, #password {
-  font-size: 0.875rem;
+  font-size: 0.700rem;
   width: 70%;
   padding: 10px;
   border-radius: 10px;
@@ -159,7 +161,7 @@ button.send-button {
   color: red;
   display: flex;
   justify-content: center;
-  padding-top: 4%;
+  padding-top: 15%;
 }
 
 #password {
@@ -199,6 +201,16 @@ button.send-button {
   .fa-lock:before {
     font-size: 15px;
   }
+
+  form.form-login {
+    height: 70%;
+}
+
+#email, #password {
+  font-size: 0.9rem;
+ 
+}
+
 }
 
 /*DESKTOP*/
@@ -206,7 +218,7 @@ button.send-button {
 @media (min-width: 1200px) {
   /*MAIN*/
   #main {
-    font-size: 18px;
+    font-size: 25px;
   }
 
   #email, #password {
@@ -231,6 +243,15 @@ button.send-button {
 .fa-lock:before {
   font-size: 20px;
 }
+
+form.form-login {
+  height: 90%;
+}
+#email, #password {
+  font-size: 1.2rem;
+ 
+}
+
 }
 
 /*LARGE-DESKTOP*/
@@ -238,7 +259,7 @@ button.send-button {
 @media (min-width: 1440px) {
 /*MAIN*/
   #main {
-    font-size: 22px;
+    font-size: 28px;
   }
   .fa-envelope:before {
     font-size: 23px;
@@ -246,6 +267,13 @@ button.send-button {
   .fa-lock:before {
     font-size: 23px;
   }
+  form.form-login {
+    height: 100%;
+  }
 
+  #email, #password {
+    font-size: 1.5rem;
+   
+}
 
 }

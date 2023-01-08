@@ -22,11 +22,6 @@
         </div>
         <div id="emailbloque">
           <input type="email" id="email" name="email" placeholder="TuEmail@Cinephile.com" class="mail" />
-          <div class="errorDiv">
-            <% if (locals.errors && locals.errors.email) { %>
-            <p class="msg-error"> <%= errors.email.msg %> </p>
-            <% } %>
-          </div>
         </div>
         <div class="email-contraseña">
           <i class="fas fa-lock"></i>
@@ -36,18 +31,9 @@
         </div>
         <div id="passwordbloque">
           <input type="password" id="password" name="password" placeholder="Contraseña" class="text-box" />
-          <% if (locals.errors && locals.errors.password) { %>
-          <p class="msg-error"> <%= errors.password.msg %> </p>
-          <% } %>
         </div>
-        <div class="div-edit">
-          <input type="submit" value="Conectarse" style="background-color: #ffc700; border: none;">
-        </div>
-        <div class="errorlogin">
-          <% if(locals.errorLogin) { %>
-          <p> <%=errorLogin %> </p>
-          <% } %>
-        </div>
+          <input class= "div-edit" type="submit" value="Conectarse" style="background-color: #ffc700; border: none;">
+       
         <div id="olvidaste">
           <a style="text-decoration: none" href="/user/register">
             <p id="contraseña">Crear cuenta nueva </p>
@@ -59,6 +45,24 @@
             Quedarme conectado.
           </p>
         </div>
+        <div class="errorDiv">
+          <% if (locals.errors && locals.errors.email) { %>
+          <p class="msg-error"> <%= errors.email.msg %> </p>
+          <% } %>
+        </div>
+
+        <div class ="errorDiv">
+          <% if (locals.errors && locals.errors.password) { %>
+          <p class="msg-error"> <%= errors.password.msg %> </p>
+          <% } %>
+        </div>
+
+        <div class="errorlogin">
+          <% if(locals.errorLogin) { %>
+          <p> <%=errorLogin %> </p>
+          <% } %>
+        </div>
+
       </form>
     </div>
   </main>
