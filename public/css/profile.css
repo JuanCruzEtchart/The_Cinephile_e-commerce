@@ -162,89 +162,87 @@ body {
 
 /*MAIN*/
 
-.main{
-background-color: #212121;
-position: relative;
+.main {
+  background-color: #212121;
+  position: relative;
 }
 
 /*Main profile header*/
 
-.main__profile-header{
-display: flex;
-flex-wrap: wrap;
-padding: 30px 35px;
-border-bottom: solid 1px black;
-justify-content: space-between;
+.main__profile-header {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px 35px;
+  border-bottom: solid 1px black;
+  justify-content: space-between;
 }
 
-.main__profile-header div{
-font-size: 22px;
-color: white;
+.main__profile-header div {
+  font-size: 22px;
+  color: white;
 }
 
-.cerrar-sesion form{
-font-size: 10px;
-margin: -10px -4px;
+.cerrar-sesion form {
+  font-size: 10px;
+  margin: -10px -4px;
 }
 
-.cerrar-sesion form button{
-padding: 4px;
-border: rgba(255, 255, 255, 0.5) solid 1px;
-background-color: #ffc700;
-border-radius: 10px;
-transition: all 120ms;
+.cerrar-sesion form button {
+  padding: 4px;
+  border: rgba(255, 255, 255, 0.5) solid 1px;
+  background-color: #ffc700;
+  border-radius: 10px;
+  transition: all 120ms;
 }
 
-.cerrar-sesion form button:hover{
-opacity: 70%;
+.cerrar-sesion form button:hover {
+  opacity: 70%;
 }
 
 /*Main profile datos principales*/
 
-.main__profile-datos-principales{
-display: flex;
-padding: 10px;
-margin: 0px 15px;
-flex-wrap: wrap;
-align-items: center;
-flex-direction: row;
-justify-content: space-around;
+.main__profile-datos-principales {
+  display: flex;
+  padding: 10px;
+  margin: 0px 15px;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
-
-.main__profile-avatar{
-width: 110px;
-border: 5px solid black;
-border-radius: 68px;
-margin-right: 7px;
+.main__profile-avatar {
+  width: 110px;
+  border: 5px solid black;
+  border-radius: 68px;
+  margin-right: 7px;
 }
 
-.main__profile-nombre-edad-pais{
+.main__profile-nombre-edad-pais {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  align-items:center
+  align-items: center;
 }
 
-.main__profile-nombre{
-margin: 15px;
-color: #c0c0c0;
-padding: 12px;
-border: rgba(255, 255, 255, 0.5) solid 1px;
-background-color: #171717;
-border-radius: 20px;
+.main__profile-nombre {
+  margin: 15px;
+  color: #c0c0c0;
+  padding: 12px;
+  border: rgba(255, 255, 255, 0.5) solid 1px;
+  background-color: #171717;
+  border-radius: 20px;
 }
 
-.main__profile-edad-y-pais{
-display: flex;
-flex-wrap: wrap;
-justify-content: space-around;
-align-content: flex-start;
-flex-direction: row;
+.main__profile-edad-y-pais {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: flex-start;
+  flex-direction: row;
 }
 
-
-.main__profile-edad{
+.main__profile-edad {
   padding: 8px;
   border: rgba(255, 255, 255, 0.5) solid 1px;
   background-color: #ffc700;
@@ -253,62 +251,62 @@ flex-direction: row;
   margin-right: 4px;
 }
 
-.main__profile-pais{
-padding: 8px;
-border: rgba(255, 255, 255, 0.5) solid 1px;
-background-color: #ffc700;
-border-radius: 10px;
-font-size: 10px;
+.main__profile-pais {
+  padding: 8px;
+  border: rgba(255, 255, 255, 0.5) solid 1px;
+  background-color: #ffc700;
+  border-radius: 10px;
+  font-size: 10px;
 }
 
 /*Main profile datos secundarios*/
 
-.main__profile-datos-secundarios{
-padding: 10px;
-display: flex;
-flex-direction: column;
-margin: 0px 10px;
+.main__profile-datos-secundarios {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  margin: 0px 10px;
 }
 
-.main__profile-articles{
-display: flex;
-justify-content: flex-start;
-padding: 10px;
-flex-direction: row;
-flex-wrap: wrap;
+.main__profile-articles {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-#items{
-color: #ffc700;
-font-size: 11px;
-padding: 7px;
+#items {
+  color: #ffc700;
+  font-size: 11px;
+  padding: 7px;
 }
 
-#items-respuestas{
-color: #c0c0c0;
-font-size: 10px;
-padding: 7px 0px;
+#items-respuestas {
+  color: #c0c0c0;
+  font-size: 10px;
+  padding: 7px 0px;
 }
 
-.main__profile-article-generos{
-color: #c0c0c0;
-font-size: 8px;
-padding: 7px;
-border: rgba(255, 255, 255, 0.5) solid 1px;
-border-radius: 10px;
-margin: 0px 2px;
+.main__profile-article-generos {
+  color: #c0c0c0;
+  font-size: 8px;
+  padding: 7px;
+  border: rgba(255, 255, 255, 0.5) solid 1px;
+  border-radius: 10px;
+  margin: 0px 2px;
 }
 
 /*Main profile sliders*/
 
-.main__profile-sliders{
+.main__profile-sliders {
   padding: 15px;
   padding-top: 10px;
   height: 100%;
   z-index: 5;
 }
 
-.main__profile-sliders-title{
+.main__profile-sliders-title {
   display: flex;
   align-items: center;
   height: 18px;
@@ -321,13 +319,12 @@ margin: 0px 2px;
   text-overflow: ellipsis;
 }
 
-.main__profile-sliders-title i{
-color: #ffc700;
-padding-left: 4px;
+.main__profile-sliders-title i {
+  color: #ffc700;
+  padding-left: 4px;
 }
 
-
-.main__profile-slider-peliculas-alquiladas{
+.main__profile-slider-peliculas-alquiladas {
   width: 100%;
   height: auto;
   cursor: grab;
@@ -335,13 +332,19 @@ padding-left: 4px;
   margin-top: 20px;
 }
 
-.main__slider{
+.main__slider {
   height: 100%;
   width: 100%;
   overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-.main__slider-inner{
+.main__slider::-webkit-scrollbar {
+  display: none;
+}
+
+.main__slider-inner {
   display: flex;
   justify-content: space-between;
   width: auto;
@@ -350,7 +353,7 @@ padding-left: 4px;
   padding: 15px 0px;
 }
 
-.main__item-peliculas-alquiladas{
+.main__item-peliculas-alquiladas {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -363,14 +366,14 @@ padding-left: 4px;
   border-radius: 10px;
 }
 
-.main__item-peliculas-alquiladas img{
-border-radius: 10px;
-margin-bottom: 20px;
-width: 130px;
-height: 191px;
+.main__item-peliculas-alquiladas img {
+  border-radius: 10px;
+  margin-bottom: 20px;
+  width: 130px;
+  height: 191px;
 }
 
-.peliculas-alquiladas-nombres{
+.peliculas-alquiladas-nombres {
   line-height: 22px;
   font-size: 14px;
   font-weight: bold;
@@ -382,43 +385,40 @@ height: 191px;
   text-overflow: ellipsis;
 }
 
-
-.main__profile-slider-mi-lista{
-width: 100%;
-height: auto;
-cursor: grab;
-margin-bottom: 30px;
+.main__profile-slider-mi-lista {
+  width: 100%;
+  height: auto;
+  cursor: grab;
+  margin-bottom: 30px;
 }
 
-.main__item-mi-lista{
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: flex-start;
-width: auto;
-color: white;
-margin-right: 28px;
-padding-bottom: 17px;
-background-color: #171717;
-border-radius: 10px;
+.main__item-mi-lista {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: auto;
+  color: white;
+  margin-right: 28px;
+  padding-bottom: 17px;
+  background-color: #171717;
+  border-radius: 10px;
 }
 
-.main__item-mi-lista img{
-border-radius: 10px;
-margin-bottom: 20px;
-width: 130px;
-height: 191px;
+.main__item-mi-lista img {
+  border-radius: 10px;
+  margin-bottom: 20px;
+  width: 130px;
+  height: 191px;
 }
 
-.main__profile-slider-mi-lista{
-width: 100%;
-height: auto;
-cursor: grab;
-margin-bottom: 30px;
-margin-top: 20px;
+.main__profile-slider-mi-lista {
+  width: 100%;
+  height: auto;
+  cursor: grab;
+  margin-bottom: 30px;
+  margin-top: 20px;
 }
-
-
 
 /*FOOTER*/
 
@@ -591,28 +591,30 @@ margin-top: 20px;
 
   /*Main profile header*/
 
-  .main__profile-header{
-    border-bottom: solid 2px black
+  .main__profile-header {
+    border-bottom: solid 2px black;
   }
   .main__profile-header div {
     font-size: 25px;
-  } 
+  }
 
   /*Main profile datos principales*/
 
-  .main__profile-datos-principales{
+  .main__profile-datos-principales {
     flex-direction: column;
     margin: 10px 15px;
   }
 
-  .cerrar-sesion form{
+  .cerrar-sesion form {
     font-size: 12px;
     margin: -10px 15px;
   }
 
-  
-  .datos{
-    background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5));
+  .datos {
+    background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    );
     background-image: url(/images/profile/cortina.jpeg);
     background-attachment: fixed;
     background-color: #c0c0c0;
@@ -621,93 +623,89 @@ margin-top: 20px;
     margin: 20px;
   }
 
-  .main__profile-avatar{
+  .main__profile-avatar {
     width: 150px;
     border: 5px solid black;
     border-radius: 126px;
     margin-right: 7px;
   }
 
-  .main__profile-nombre{
+  .main__profile-nombre {
     font-size: 25px;
     padding: 18px;
   }
 
-  .main__profile-edad{
+  .main__profile-edad {
     padding: 10px;
     font-size: 12px;
   }
 
-  .main__profile-pais{
+  .main__profile-pais {
     padding: 10px;
     font-size: 12px;
   }
   /*Main profile datos secundarios*/
 
-  .main__profile-datos-secundarios{
+  .main__profile-datos-secundarios {
     margin-top: 30px;
-    
   }
 
-  #items{
+  #items {
     font-size: 18px;
     padding: 10px;
   }
 
-  #items-respuestas{
+  #items-respuestas {
     font-size: 18px;
   }
 
-  .main__profile-article-generos{
+  .main__profile-article-generos {
     font-size: 16px;
     padding: 10px;
-
   }
 
   /*Main profile sliders*/
 
-  .main__profile-sliders{
+  .main__profile-sliders {
     padding-top: 20px;
   }
-  
-  .main__profile-sliders-title{
+
+  .main__profile-sliders-title {
     border-left: #ffc700 solid 2px;
     height: 30px;
-
   }
 
-  .main__profile-sliders-title h4{
+  .main__profile-sliders-title h4 {
     font-size: 18px;
   }
 
-  .main__profile-sliders-title i{
+  .main__profile-sliders-title i {
     font-size: 18px;
   }
 
-  .main__item-peliculas-alquiladas img{
+  .main__item-peliculas-alquiladas img {
     width: 200px;
     height: 260px;
     transition: all 120ms;
   }
 
-  .main__item-peliculas-alquiladas img:hover{
+  .main__item-peliculas-alquiladas img:hover {
     opacity: 70%;
   }
 
-  .main__item-mi-lista img{
+  .main__item-mi-lista img {
     width: 200px;
     height: 260px;
     transition: all 120ms;
   }
 
-  .main__item-mi-lista img:hover{
+  .main__item-mi-lista img:hover {
     opacity: 70%;
   }
 
-  .peliculas-alquiladas-nombres{
+  .peliculas-alquiladas-nombres {
     font-size: 16px;
   }
-
 
   /*FOOTER*/
 
@@ -794,30 +792,32 @@ margin-top: 20px;
 
   /*Main profile header*/
 
-  .main__profile-header{
+  .main__profile-header {
     padding-top: 45px;
     border-bottom: none;
   }
   .main__profile-header div {
     font-size: 30px;
     padding-left: 10px;
-}
+  }
 
-.cerrar-sesion form{
-  font-size: 14px;
-  margin: -10px 58px;
-}
+  .cerrar-sesion form {
+    font-size: 14px;
+    margin: -10px 58px;
+  }
 
   /*Main profile datos principales*/
 
-  .main__profile-datos-principales{
+  .main__profile-datos-principales {
     flex-direction: column;
     margin: 0px 15px;
-  
   }
 
-  .datos{
-    background: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5));
+  .datos {
+    background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    );
     background-image: url(/images/profile/cortina.jpeg);
     background-attachment: fixed;
     background-color: #c0c0c0;
@@ -826,93 +826,92 @@ margin-top: 20px;
     margin: 20px;
   }
 
-  .main__profile-avatar{
+  .main__profile-avatar {
     width: 250px;
     border: 6px solid black;
     border-radius: 126px;
     transition: all 120ms;
   }
 
-  .main__profile-avatar:hover{
+  .main__profile-avatar:hover {
     opacity: 90%;
   }
 
-  .main__profile-nombre{
+  .main__profile-nombre {
     font-size: 30px;
   }
 
-  .main__profile-edad{
+  .main__profile-edad {
     padding: 16px;
     font-size: 18px;
     transition: all 120ms;
   }
 
-  .main__profile-edad:hover{
+  .main__profile-edad:hover {
     opacity: 70%;
   }
 
-  .main__profile-pais{
+  .main__profile-pais {
     padding: 16px;
     font-size: 18px;
     transition: all 120ms;
   }
 
-  .main__profile-pais:hover{
+  .main__profile-pais:hover {
     opacity: 70%;
   }
   /*Main profile datos secundarios*/
 
-  #items{
+  #items {
     font-size: 22px;
     padding: 14px;
   }
 
-  #items-respuestas{
+  #items-respuestas {
     font-size: 22px;
     padding: 14px;
   }
 
-  .main__profile-article-generos{
+  .main__profile-article-generos {
     font-size: 20px;
     padding: 14px;
     transition: all 120ms;
-
   }
 
-  .main__profile-article-generos:hover{
+  .main__profile-article-generos:hover {
     opacity: 70%;
   }
 
   /*Main profile sliders*/
 
-  .main__profile-sliders{
+  .main__profile-sliders {
     padding-top: 15px;
   }
-  
-  .main__profile-sliders-title{
+
+  .main__profile-sliders-title {
     border-left: #ffc700 solid 2px;
     height: 45px;
   }
 
-  .main__profile-sliders-title h4{
+  .main__profile-sliders-title h4 {
     font-size: 25px;
   }
 
-  .main__profile-sliders-title i{
+  .main__profile-sliders-title i {
     font-size: 18px;
   }
 
-  .main__item-peliculas-alquiladas img{
+  .main__item-peliculas-alquiladas img {
     width: 240px;
     height: 300px;
   }
 
-  .main__item-mi-lista img{
+  .main__item-mi-lista img {
     width: 240px;
     height: 300px;
   }
 
-  .peliculas-alquiladas-nombres{
+  .peliculas-alquiladas-nombres {
     font-size: 18px;
   }
 

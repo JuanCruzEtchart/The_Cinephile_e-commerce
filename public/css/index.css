@@ -56,12 +56,9 @@ h3 {
   justify-content: center;
 }
 
-
 .main__product-list a {
   text-decoration: none;
 }
-
-
 
 .main__img-container {
   display: flex;
@@ -78,7 +75,6 @@ h3 {
   height: 267.75px;
   margin-top: 10px;
   margin-bottom: 15px;
-  
 }
 
 .main__product-name {
@@ -95,13 +91,19 @@ h3 {
   margin: auto;
 }
 
-.main__slider{
+.main__slider {
   height: 100%;
   width: 100%;
   overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
-.main__slider-inner{
+.main__slider::-webkit-scrollbar {
+  display: none;
+}
+
+.main__slider-inner {
   display: flex;
   justify-content: space-between;
   width: auto;
@@ -109,7 +111,7 @@ h3 {
   padding: 15px 0px;
 }
 
-.main__product-list{
+.main__product-list {
   width: 95%;
   height: auto;
   cursor: grab;
@@ -117,7 +119,7 @@ h3 {
   margin-top: 20px;
 }
 
-.main__product-article{
+.main__product-article {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -131,7 +133,7 @@ h3 {
   transition: all 120ms;
 }
 
-.main__product-article a{
+.main__product-article a {
   text-decoration: none;
   color: white;
   width: auto;
@@ -145,13 +147,42 @@ h3 {
   box-shadow: 0px 0px 10px rgba(60, 64, 67, 0.9);
 }
 
+.main__boockmark {
+  display: flex;
+  color: #ffc700;
+  cursor: pointer;
+  transition: all 120ms;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.main__boockmark:hover {
+  color: #fce89f;
+}
+
+.main__boockmark-icon {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.main__boockmark-button {
+  color: #ffc700;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 120ms;
+}
+
+.main__boockmark-button:hover {
+  color: #fce89f;
+}
+
 /*MEDIA QUERIES*/
 
 /*MOBILE*/
 
 @media (max-width: 599px) {
   /*MAIN*/
-
 }
 
 /*TABLET*/
@@ -180,7 +211,7 @@ h3 {
   .img_main img {
     height: 50vh;
   }
-  .main__product-list{
+  .main__product-list {
     width: 90%;
   }
 }
@@ -190,6 +221,3 @@ h3 {
 @media (min-width: 1440px) {
   /*MAIN*/
 }
-
-
-
