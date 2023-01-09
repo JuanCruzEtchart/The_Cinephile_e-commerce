@@ -63,6 +63,16 @@
           <% } %>
         </div>
 
+        <% if (locals.errors) { %>
+          <ul class="errorDiv">
+            <% errors.forEach(element => { %>
+            <li class="msg-error">
+              <%= element.msg %>
+            </li>
+            <% }) %>
+          </ul>
+          <% } %>
+
       </form>
     </div>
   </main>
@@ -70,3 +80,4 @@
 </body>
 
 </html>
+
