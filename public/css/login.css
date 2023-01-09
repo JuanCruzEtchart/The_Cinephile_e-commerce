@@ -6,7 +6,7 @@
   width: 100%;
   padding: 20px 0px;
   background-color: rgba(27, 27, 27, 0.92);
-  font-size: 10px;
+  font-size: 17px;
 }
 
 input:focus { 
@@ -21,7 +21,7 @@ input:focus {
 }
 
 form.form-login {
-  height: 60%;
+  height: 100%;
   width: 80%;
   background-color: rgba(27, 27, 27, 0.5);
   display: flex;
@@ -76,6 +76,10 @@ div.email-contraseña {
   padding-bottom: 3%;
 }
 
+a {
+  background-color: transparent;
+  color: transparent;
+}
 #email {
   background-color: #1b1b1b;
 }
@@ -101,7 +105,7 @@ div.email-contraseña {
 }
 #passwordbloque{
   width: 65%;
-  margin-bottom: 4%;
+  margin-bottom: 10%;
   display: flex;
   justify-content: center;
 }
@@ -130,7 +134,7 @@ button.send-button {
   justify-content: center;
   border-radius: 10px 10px 10px 10px;
   text-decoration: none;
-
+  cursor: pointer;
 }
 
 #checkboxBox {
@@ -149,11 +153,11 @@ button.send-button {
 
 #contraseña {
   color: #ffc700;
-  padding-top: 20%;
+  padding-top: 40%;
 }
 
 #olvidaste {
-  padding-bottom: 2%;
+  padding-bottom: 15%;
   display: flex;
   width: 75%;
   justify-content: center;
@@ -179,6 +183,7 @@ button.send-button {
   padding-top: 4%;
 }
 
+
 /*MEDIA QUERIES*/
 
 /*MOBILE*/
@@ -192,7 +197,7 @@ button.send-button {
 @media (min-width: 600px) {
   /*MAIN*/
   #main {
-    font-size: 15px;
+    font-size: 20px;
   }
 
   #checkbox {
@@ -206,9 +211,6 @@ button.send-button {
     font-size: 15px;
   }
 
-  form.form-login {
-    height: 70%;
-}
 
 #email, #password {
   font-size: 0.9rem;
@@ -254,9 +256,7 @@ button.send-button {
   font-size: 20px;
 }
 
-form.form-login {
-  height: 90%;
-}
+
 #email, #password {
   font-size: 1.2rem;
  
@@ -276,9 +276,6 @@ form.form-login {
   }
   .fa-lock:before {
     font-size: 23px;
-  }
-  form.form-login {
-    height: 100%;
   }
 
   #email, #password {

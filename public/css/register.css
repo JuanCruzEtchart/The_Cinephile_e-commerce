@@ -33,7 +33,6 @@ input:focus {
   flex-shrink: 0;
 }
 .formulario {
-  height: 40%;
   width: 70%;
   background-color: rgba(27, 27, 27, 0.5);
   border-radius: 10px 10px 10px 10px;
@@ -58,7 +57,6 @@ input:focus {
 
 #form1 {
   display: flex;
-  width: 100%;
   flex-direction: column;
   align-items: center;
 }
@@ -75,6 +73,7 @@ h1.Crear.Cuenta {
   font-size: 18px;
   letter-spacing: 5px;
   padding-bottom: 5%;
+  padding-top: 19%;
 }
 
 .fa-address-book {
@@ -90,7 +89,7 @@ h1.Crear.Cuenta {
   padding-bottom: 8%;
   display: flex;
   width: 100%;
-  padding-top: 12%;
+  padding-top: 5%;
   margin: 0px auto;
   align-items: flex-start;
   padding-left: 25%;
@@ -182,10 +181,6 @@ h1.Crear.Cuenta {
 }
 
 
-.formulario {
-  height: 85%;
-}
-
 
 
   #registrar {
@@ -253,7 +248,7 @@ h1.Crear.Cuenta {
 }
 
   h1.Crear.Cuenta {
-    font-size: 25px;
+    font-size: 30px;
   }
 
   .fa-window-close:before {

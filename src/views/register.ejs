@@ -39,9 +39,9 @@
         <div id="passwordbloque">
           <input id="password" name="password" placeholder="Contraseña" >
         </div>
-        <div id="registrar">
-          <input type="submit" value="Registrarme" style="background-color: #ffc700; border: none;">
-        </div>
+       
+          <input id="registrar" type="submit" value="Registrarme" style="background-color: #ffc700; border: none;">
+
         <div class="errorDiv">
           <% if (locals.errors && locals.errors.user) { %>
           <p class="msg-error"> <%= errors.user.msg %> </p>
