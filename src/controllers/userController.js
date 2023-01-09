@@ -22,7 +22,7 @@ const userController = {
       if (!errors.isEmpty()) {
         console.log(errors.mapped());
 
-        return res.render("login", { errors: errors.mapped(), old: req.body });
+        return res.render("login", { errors: errors.array(), old: req.body });
       }
 
       let userFound = await User.findOne({ where: { email: req.body.email } });
