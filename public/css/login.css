@@ -2,7 +2,7 @@
 
 #main {
   margin: auto;
-  height: 100vh;
+  height: auto;
   width: 100%;
   padding: 20px 0px;
   background-color: rgba(27, 27, 27, 0.92);
