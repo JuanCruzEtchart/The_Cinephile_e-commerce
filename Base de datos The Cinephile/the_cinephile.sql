@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-01-2023 a las 07:38:01
+-- Tiempo de generación: 17-01-2023 a las 01:04:29
 -- Versión del servidor: 10.4.25-MariaDB
 -- Versión de PHP: 8.1.10
 
@@ -240,7 +240,25 @@ INSERT INTO `actor_character` (`id`, `actor_id`, `character_id`) VALUES
 (106, 90, 101),
 (107, 91, 102),
 (108, 93, 104),
-(109, 92, 103);
+(109, 92, 103),
+(110, 72, 79),
+(111, 61, 64),
+(112, 36, 27),
+(113, 36, 46),
+(114, 61, 22),
+(115, 55, 7),
+(116, 2, 41),
+(117, 36, 103),
+(118, 24, 41),
+(119, 24, 23),
+(120, 50, 17),
+(121, 50, 79),
+(122, 71, 27),
+(123, 71, 7),
+(124, 33, 99),
+(125, 89, 100),
+(126, 90, 101),
+(127, 33, 82);
 
 -- --------------------------------------------------------
 
@@ -803,10 +821,10 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `admin_status`) VALUES
 (5, 'Juan Cruz Etchart', 'etchart.juancruz@gmail.com', '$2a$10$HqWn5jUv4ctULBYb2YUNi.ssrTihXQiCoxMUG2mszUUGUfNRhEIpy', 0),
-(6, 'Elon Musk', 'admin@gmail.com', '$2a$10$L4PdINc.Ru0F47P2os653.paxPC5BIxuXOh8Q7wquZeHGc83ftUgy', 1),
 (7, 'Ahmed Kalim', 'ahmedandres20@gmail.com', '$2a$10$GwjjuGKhKazEW1Y.FEO.AOhWk1/KxHjbaWrxDlthHLpiStld.SAye', 0),
 (8, 'Alberto Roper V', 'albertoropervilar@gmail.com', '$2a$10$qS1LO0uz.QGc18PGItX2cuT7E6k1yHijPK.TEpxfw9XL/PxA.kJUa', 0),
-(9, 'Alan Diaz', 'alandiazyoel1@gmail.com', '$2a$10$TjR0FnbuofUxYwXxv9lKI.oZG1nRVg6RtgAMeYkeI/Asg.jmjGOaO', 0);
+(9, 'Alan Diaz', 'alandiazyoel1@gmail.com', '$2a$10$TjR0FnbuofUxYwXxv9lKI.oZG1nRVg6RtgAMeYkeI/Asg.jmjGOaO', 0),
+(15, 'Elon Musk', 'admin@gmail.com', '$2a$10$Jsa3aCCf9mP3SkkTSDKUY.iO7RVeQ0yKsOcC75DHbv3qU.bwaI.aa', 0);
 
 -- --------------------------------------------------------
 
@@ -950,13 +968,13 @@ ALTER TABLE `actors`
 -- AUTO_INCREMENT de la tabla `actor_character`
 --
 ALTER TABLE `actor_character`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=128;
 
 --
 -- AUTO_INCREMENT de la tabla `actor_product`
 --
 ALTER TABLE `actor_product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=183;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=201;
 
 --
 -- AUTO_INCREMENT de la tabla `characters`
@@ -980,19 +998,19 @@ ALTER TABLE `genres`
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=82;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
 
 --
 -- AUTO_INCREMENT de la tabla `product_actor_character`
 --
 ALTER TABLE `product_actor_character`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=119;
 
 --
 -- AUTO_INCREMENT de la tabla `product_character`
 --
 ALTER TABLE `product_character`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=165;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=183;
 
 --
 -- AUTO_INCREMENT de la tabla `screenwriters`
@@ -1004,7 +1022,7 @@ ALTER TABLE `screenwriters`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de la tabla `user_cart`

@@ -4,24 +4,26 @@
   "description": "*Temática y funcionalidad del e-commerce*\r ======",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon ./src/app.js",
+    "start": "node ./src/app.js",
+    "dev": "nodemon ./src/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JuanCruzEtchart/grupo_1_e-commerce_de_peliculas_y_series.git"
+    "url": "git+https://github.com/JuanCruzEtchart/The_Cinephile_e-commerce.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/JuanCruzEtchart/grupo_1_e-commerce_de_peliculas_y_series/issues"
+    "url": "https://github.com/JuanCruzEtchart/The_Cinephile_e-commerce/issues"
   },
-  "homepage": "https://github.com/JuanCruzEtchart/grupo_1_e-commerce_de_peliculas_y_series#readme",
+  "homepage": "https://github.com/JuanCruzEtchart/The_Cinephile_e-commerce#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
     "express": "^4.18.1",
     "express-session": "^1.17.3",

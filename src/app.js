@@ -21,6 +21,10 @@ const apiUsersRouter = require("./routes/api/apiUsersRouter");
 const apiActorsRouter = require("./routes/api/apiActorsRouter");
 const apiDirectorsRouter = require("./routes/api/apiDirectorsRouter");
 
+//RENDER DEPLOY CONFIG
+const port = process.env.PORT || 3030;
+require("dotenv").config();
+
 //CONFIG
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -52,7 +56,6 @@ app.use("/api/users", apiUsersRouter);
 app.use("/api/actors", apiActorsRouter);
 app.use("/api/directors", apiDirectorsRouter);
 
-app.listen(3030, () => {
-  console.log("Servidor corriendo en el puerto 3030");
-  console.log("http://localhost:3030");
+app.listen(port, () => {
+  console.log(`Servidor corriendo en el puerto ${port}`);
 });
