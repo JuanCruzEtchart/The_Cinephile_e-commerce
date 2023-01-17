@@ -2,6 +2,7 @@ const path = require("path");
 const fs = require("fs");
 const { validationResult } = require("express-validator");
 const db = require("../database/models");
+const { sequelize } = require("../database/models");
 const Op = db.Sequelize.Op;
 
 const Product = db.Product;
@@ -72,6 +73,7 @@ const productController = {
           "actors",
           "characters",
         ],
+        order: sequelize.random(),
         limit: 10,
       });
 
@@ -85,6 +87,7 @@ const productController = {
           "actors",
           "characters",
         ],
+        order: sequelize.random(),
         limit: 10,
       });
 
