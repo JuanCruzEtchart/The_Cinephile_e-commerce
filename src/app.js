@@ -43,7 +43,7 @@ app.use(
 app.use(localsMiddleware);
 app.use(recordameMiddleware);
 app.use(methodOverride("_method"));
-console.log();
+
 //MAIN ROUTES
 app.use("/", mainRoutes);
 app.use("/product", productsRoutes);
