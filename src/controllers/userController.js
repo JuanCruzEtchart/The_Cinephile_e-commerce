@@ -8,6 +8,7 @@ const { Op } = require("sequelize");
 
 //Modelos
 const User = db.User;
+const Genres = db.Genre;
 
 const userController = {
   login: (req, res) => {
@@ -53,8 +54,9 @@ const userController = {
 
   register: async function (req, res) {
     const users = await User.findAll();
+    const genres = await Genres.findAll();
 
-    res.render("register", { users });
+    res.render("register copy", { users, genres });
   },
 
   profile: async function (req, res) {
@@ -74,7 +76,10 @@ const userController = {
     if (!errors.isEmpty()) {
       console.log(errors.mapped());
 
-      return res.render("register", { errors: errors.mapped(), old: req.body });
+      return res.render("register copy", {
+        errors: errors.mapped(),
+        old: req.body,
+      });
     }
     try {
       await User.create({

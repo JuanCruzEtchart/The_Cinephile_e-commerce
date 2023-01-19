@@ -5,7 +5,7 @@ const db = require("../database/models");
 const { sequelize } = require("../database/models");
 const Op = db.Sequelize.Op;
 
-const Product = db.Product;
+const Products = db.Product;
 const Actors = db.Actor;
 const Directors = db.Director;
 const Screenwriters = db.Screenwriter;
@@ -35,7 +35,7 @@ const productController = {
   search: async (req, res) => {
     try {
       console.log(req.query);
-      const products = await Product.findAll({
+      const products = await Products.findAll({
         where: { name: { [Op.like]: "%" + req.query.product + "%" } },
       });
       res.render("searchResult", { products, query: req.query.product });
@@ -48,7 +48,7 @@ const productController = {
   detailProduct: async (req, res) => {
     const id = req.params.id;
     try {
-      let product = await Product.findByPk(id, {
+      let product = await Products.findByPk(id, {
         include: [
           "director",
           "screenwriter",
@@ -63,7 +63,7 @@ const productController = {
         include: ["characters"],
       });
 
-      let productsByGenre = await Product.findAll({
+      let productsByGenre = await Products.findAll({
         where: { genre1_id: product.genre1_id },
         include: [
           "director",
@@ -77,7 +77,7 @@ const productController = {
         limit: 10,
       });
 
-      let productsByDirector = await Product.findAll({
+      let productsByDirector = await Products.findAll({
         where: { director_id: product.director_id },
         include: [
           "director",
@@ -293,7 +293,7 @@ const productController = {
   edit: async (req, res) => {
     const id = req.params.id;
     try {
-      const product = await Product.findByPk(id, {
+      const product = await Products.findByPk(id, {
         include: [
           "director",
           "screenwriter",
@@ -328,7 +328,7 @@ const productController = {
     const productId = req.params.id;
     const validationErrors = validationResult(req);
     if (!validationErrors.isEmpty()) {
-      const product = await Product.findByPk(productId, {
+      const product = await Products.findByPk(productId, {
         include: [
           "director",
           "screenwriter",
@@ -359,7 +359,7 @@ const productController = {
       console.log(validationErrors);
     } else {
       try {
-        let product = await Product.findByPk(productId);
+        let product = await Products.findByPk(productId);
 
         const productImage = req.files.productImage
           ? req.files.productImage
@@ -406,7 +406,7 @@ const productController = {
             }
           );
         }
-        await Product.update(
+        await Products.update(
           {
             type: req.body.type,
             name: req.body.name,
@@ -443,13 +443,13 @@ const productController = {
   destroy: async (req, res) => {
     const productId = req.params.id;
     try {
-      let product = await Product.findByPk(productId);
+      let product = await Products.findByPk(productId);
       //Eliminación de relaciones de tablas de producto
       await product.setCharacters([]);
       await product.setActors([]);
       await product.setActor([]);
       await product.setCharacter([]);
-      await Product.destroy({ where: { id: productId } });
+      await Products.destroy({ where: { id: productId } });
       await ProductActorCharacter.destroy({ where: { product_id: productId } });
       //Eliminación de archivo de imagen de producto
       await fs.unlink(
@@ -504,7 +504,7 @@ const productController = {
     /* const validationErrors = validationResult(req); 
     if (!validationErrors.isEmpty()) {*/
     try {
-      const product = await Product.create({
+      const product = await Products.create({
         type: req.body.type,
         name: req.body.name,
         release_year: req.body.release_year,
@@ -553,7 +553,7 @@ const productController = {
   //Render de vista de lista general de productos
   list: async (req, res) => {
     try {
-      const products = await Product.findAll({
+      const products = await Products.findAll({
         include: [
           "director",
           "screenwriter",
@@ -572,7 +572,7 @@ const productController = {
   //Render de vista de lista de películas
   movies: async (req, res) => {
     try {
-      const movies = await Product.findAll({ where: { type: "Película" } });
+      const movies = await Products.findAll({ where: { type: "Película" } });
       res.render("moviesList", { movies });
     } catch (err) {
       res.send(err);
@@ -582,7 +582,7 @@ const productController = {
   //Render de vista de lista de series
   series: async (req, res) => {
     try {
-      const series = await Product.findAll({ where: { type: "Serie de TV" } });
+      const series = await Products.findAll({ where: { type: "Serie de TV" } });
       res.render("seriesList", { series });
     } catch (err) {
       res.send(err);

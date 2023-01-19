@@ -19,7 +19,6 @@ body {
   background-color: #212121;
 }
 
-
 /* .main::before {
   content: "";
   background-image: url("../images/productDetail/godfatherBackground.jpg");
@@ -489,6 +488,10 @@ ain__genre .main__trailer i {
   padding-bottom: 17px;
   background-color: #171717;
   border-radius: 10px;
+  transition: all 120ms;
+}
+.main__item-product:hover {
+  box-shadow: 0px 0px 10px rgba(60, 64, 67, 0.9);
 }
 
 .main__item-product:last-child {
