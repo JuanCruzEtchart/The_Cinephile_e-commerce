@@ -9,8 +9,11 @@
   line-height: 22px;
   font-size: 16px;
   font-weight: bold;
-  width: 125px;
+  width: 80%;
   padding-bottom: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .main__boockmark {
