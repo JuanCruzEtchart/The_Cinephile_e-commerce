@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-01-2023 a las 01:04:29
+-- Tiempo de generación: 24-01-2023 a las 09:10:07
 -- Versión del servidor: 10.4.25-MariaDB
 -- Versión de PHP: 8.1.10
 
@@ -122,7 +122,46 @@ INSERT INTO `actors` (`id`, `full_name`, `biography_link`, `actors_photo`) VALUE
 (90, 'Terrence Howard', 'https://en.wikipedia.org/wiki/Terrence_Howard', 'photo1672810509064-.jpg'),
 (91, 'Jeff Bridges', 'https://en.wikipedia.org/wiki/Jeff_Bridges', 'photo1672810587503-.jpg'),
 (92, 'Leslie Bibb', 'https://en.wikipedia.org/wiki/Leslie_Bibb', 'photo1672810633715-.jpg'),
-(93, 'Clark Gregg', 'https://en.wikipedia.org/wiki/Clark_Gregg', 'photo1672810750451-.jpg');
+(93, 'Clark Gregg', 'https://en.wikipedia.org/wiki/Clark_Gregg', 'photo1672810750451-.jpg'),
+(94, 'Matthew McConaughey', 'https://en.wikipedia.org/wiki/Matthew_McConaughey', 'photo1674426219509-.jpg'),
+(95, 'Anne Hathaway', 'https://en.wikipedia.org/wiki/Anne_Hathaway', 'photo1674426282010-.jpg'),
+(96, 'Jessica Chastain', 'https://en.wikipedia.org/wiki/Jessica_Chastain', 'photo1674426465606-.jpg'),
+(97, 'Michael Caine', 'https://en.wikipedia.org/wiki/Michael_Caine', 'photo1674426618415-.jpg'),
+(98, 'Timothée Chalamet', 'https://en.wikipedia.org/wiki/Timoth%C3%A9e_Chalamet', 'photo1674426688890-.jpg'),
+(99, 'Wes Bentley', 'https://en.wikipedia.org/wiki/Wes_Bentley', 'photo1674426912732-.jpg'),
+(100, 'Casey Affleck', 'https://en.wikipedia.org/wiki/Casey_Affleck', 'photo1674426961030-.jpg'),
+(101, 'John Lithgow', 'https://en.wikipedia.org/wiki/John_Lithgow', 'photo1674427107806-.jpg'),
+(102, 'Woody Harrelson', 'https://en.wikipedia.org/wiki/Woody_Harrelson', 'photo1674441288293-.jpg'),
+(103, 'Michelle Monaghan', 'https://en.wikipedia.org/wiki/Michelle_Monaghan', 'photo1674441416988-.jpeg'),
+(104, 'Mahershala Ali', 'https://en.wikipedia.org/wiki/Mahershala_Ali', 'photo1674441485539-.jpg'),
+(105, 'Rachel McAdams', 'https://en.wikipedia.org/wiki/Rachel_McAdams', 'photo1674441520865-.jpg'),
+(106, 'Colin Farrell', 'https://en.wikipedia.org/wiki/Colin_Farrell', 'photo1674441568230-.jpg'),
+(107, 'Vince Vaughn', 'https://en.wikipedia.org/wiki/Vince_Vaughn', 'photo1674441615703-.jpg'),
+(108, 'Jonathan Groff', 'https://en.wikipedia.org/wiki/Jonathan_Groff', 'photo1674448624831-.jpeg'),
+(109, 'Holt McCallany', 'https://en.wikipedia.org/wiki/Holt_McCallany', 'photo1674448694628-.jpg'),
+(110, 'Anna Torv', 'https://en.wikipedia.org/wiki/Anna_Torv', 'photo1674448793050-.jpg'),
+(111, 'Cameron Britton', 'https://en.wikipedia.org/wiki/Cameron_Britton', 'photo1674448862163-.jpg'),
+(112, 'Hannah Gross', 'https://en.wikipedia.org/wiki/Hannah_Gross', 'photo1674448940828-.jpg'),
+(113, 'Stacey Roca', 'https://en.wikipedia.org/wiki/Stacey_Roca', 'photo1674449101580-.jpg'),
+(114, 'Chloe Pirrie', 'https://en.wikipedia.org/wiki/Chloe_Pirrie', 'photo1674456176027-.jpg'),
+(115, 'Bill Camp', 'https://en.wikipedia.org/wiki/Bill_Camp', 'photo1674456226577-.jpg'),
+(116, 'Marcin Dorocinski', 'https://en.wikipedia.org/wiki/Marcin_Doroci%C5%84ski', 'photo1674456277001-.jpg'),
+(117, 'Marielle Heller', 'https://en.wikipedia.org/wiki/Marielle_Heller', 'photo1674456308128-.jpg'),
+(118, 'Thomas Brodie-Sangster', 'https://en.wikipedia.org/wiki/Thomas_Brodie-Sangster', 'photo1674456338301-.jpg'),
+(119, 'Moses Ingram', 'https://en.wikipedia.org/wiki/Moses_Ingram', 'photo1674456393327-.jpg'),
+(120, 'Leonardo DiCaprio', 'https://en.wikipedia.org/wiki/Leonardo_DiCaprio', 'photo1674458703997-.jpg'),
+(121, 'Joseph Gordon-Levitt', 'https://en.wikipedia.org/wiki/Joseph_Gordon-Levitt', 'photo1674458753915-.jpg'),
+(122, 'Elliot Page', 'https://en.wikipedia.org/wiki/Elliot_Page', 'photo1674458803159-.jpg'),
+(123, 'Ken Watanabe', 'https://en.wikipedia.org/wiki/Ken_Watanabe', 'photo1674458838938-.jpg'),
+(124, 'Dileep Rao', 'https://en.wikipedia.org/wiki/Dileep_Rao', 'photo1674458891976-.jpg'),
+(125, 'Christian Bale', 'https://en.wikipedia.org/wiki/Christian_Bale', 'photo1674459571408-.jpg'),
+(126, 'Hugh Jackman', 'https://en.wikipedia.org/wiki/Hugh_Jackman', 'photo1674459637645-.jpg'),
+(127, 'Scarlett Johansson', 'https://en.wikipedia.org/wiki/Scarlett_Johansson', 'photo1674459706708-.jpg'),
+(128, 'Piper Perabo', 'https://en.wikipedia.org/wiki/Piper_Perabo', 'photo1674459761307-.jpg'),
+(129, 'Rebecca Hall', 'https://en.wikipedia.org/wiki/Rebecca_Hall', 'photo1674459796867-.jpg'),
+(130, 'David Bowie', 'https://en.wikipedia.org/wiki/David_Bowie', 'photo1674459863694-.jpg'),
+(131, 'Andy Serkis', 'https://en.wikipedia.org/wiki/Andy_Serkis', 'photo1674459898856-.jpg'),
+(132, 'Samantha Mahurin', 'https://www.imdb.com/name/nm2195817/', 'photo1674459977818-.jpg');
 
 -- --------------------------------------------------------
 
@@ -258,7 +297,56 @@ INSERT INTO `actor_character` (`id`, `actor_id`, `character_id`) VALUES
 (124, 33, 99),
 (125, 89, 100),
 (126, 90, 101),
-(127, 33, 82);
+(127, 33, 82),
+(128, 88, 99),
+(129, 91, 102),
+(130, 89, 100),
+(131, 90, 101),
+(132, 92, 103),
+(133, 93, 104),
+(134, 94, 105),
+(135, 95, 106),
+(136, 96, 107),
+(137, 97, 109),
+(138, 98, 47),
+(139, 99, 110),
+(140, 101, 111),
+(141, 94, 112),
+(142, 102, 114),
+(143, 106, 117),
+(144, 105, 118),
+(145, 107, 116),
+(146, 104, 113),
+(147, 103, 115),
+(148, 108, 119),
+(149, 110, 121),
+(150, 109, 120),
+(151, 112, 122),
+(152, 111, 123),
+(153, 113, 124),
+(154, 24, 125),
+(155, 114, 126),
+(156, 115, 127),
+(157, 116, 128),
+(158, 118, 50),
+(159, 117, 129),
+(160, 119, 130),
+(161, 120, 132),
+(162, 121, 133),
+(163, 122, 134),
+(164, 123, 135),
+(165, 19, 136),
+(166, 124, 137),
+(167, 17, 138),
+(168, 125, 139),
+(169, 126, 140),
+(170, 127, 141),
+(171, 97, 142),
+(172, 128, 143),
+(173, 132, 145),
+(174, 129, 144),
+(175, 130, 146),
+(176, 131, 147);
 
 -- --------------------------------------------------------
 
@@ -361,7 +449,56 @@ INSERT INTO `actor_product` (`id`, `actor_id`, `product_id`) VALUES
 (164, 82, 55),
 (165, 83, 55),
 (166, 84, 55),
-(167, 85, 55);
+(167, 85, 55),
+(201, 88, 88),
+(202, 89, 88),
+(203, 91, 88),
+(204, 90, 88),
+(205, 92, 88),
+(206, 93, 88),
+(207, 94, 89),
+(208, 95, 89),
+(209, 96, 89),
+(210, 97, 89),
+(211, 98, 89),
+(212, 99, 89),
+(213, 101, 89),
+(214, 94, 90),
+(215, 102, 90),
+(216, 106, 90),
+(217, 105, 90),
+(218, 104, 90),
+(219, 107, 90),
+(220, 103, 90),
+(221, 108, 91),
+(222, 109, 91),
+(223, 110, 91),
+(224, 112, 91),
+(225, 111, 91),
+(226, 113, 91),
+(227, 24, 92),
+(228, 114, 92),
+(229, 115, 92),
+(230, 116, 92),
+(231, 117, 92),
+(232, 118, 92),
+(233, 119, 92),
+(234, 120, 93),
+(235, 121, 93),
+(236, 122, 93),
+(237, 123, 93),
+(238, 19, 93),
+(239, 124, 93),
+(240, 17, 93),
+(241, 125, 94),
+(242, 126, 94),
+(243, 127, 94),
+(244, 97, 94),
+(245, 128, 94),
+(246, 129, 94),
+(247, 132, 94),
+(248, 130, 94),
+(249, 131, 94);
 
 -- --------------------------------------------------------
 
@@ -383,30 +520,52 @@ INSERT INTO `characters` (`id`, `name`) VALUES
 (17, 'Ada Shelby'),
 (104, 'Agent Coulson'),
 (15, 'Alfie Solomons'),
+(139, 'Alfred Borden'),
+(126, 'Alice Harmon'),
+(147, 'Alley'),
+(129, 'Alma Wheatley'),
 (79, 'Andy Bernard'),
 (80, 'Angela Martin'),
+(118, 'Ani Bezzerides'),
+(134, 'Ariadne'),
+(133, 'Arthur'),
 (41, 'Arthur Holmwood'),
 (14, 'Arthur Shelby'),
+(131, 'Benny Watts'),
+(125, 'Beth Harmon'),
 (46, 'Betsy'),
+(120, 'Bill Tench'),
+(106, 'Brand'),
 (23, 'Captain Benjamin L. Willard'),
+(108, 'CASE'),
 (103, 'Christine Everhart'),
 (64, 'Chuck McGill'),
 (7, 'Clemenza'),
+(132, 'Cobb'),
 (27, 'Colonel Lucas'),
 (22, 'Colonel Walter E. Kurtz'),
 (31, 'Connie Corleone'),
 (72, 'Connie Murphy'),
+(105, 'Cooper'),
 (82, 'Creed Bratton'),
+(142, 'Cutter'),
+(122, 'Debbie Mitford'),
+(111, 'Donald'),
+(110, 'Doyle'),
 (38, 'Dr. Jack Seward'),
 (34, 'Dracula'),
 (76, 'Dwight Schrute'),
+(136, 'Eames'),
+(123, 'Edmund Kemper'),
 (77, 'Erin Hannon'),
+(116, 'Frank Semyon'),
 (32, 'Frankie Pentangeli'),
 (5, 'Fredo Corleone'),
 (20, 'Gina Gray'),
 (57, 'Gus Fring'),
 (53, 'Hank Schrader'),
 (69, 'Hélmer Herrera'),
+(119, 'Holden Ford'),
 (62, 'Howard Hamlin'),
 (65, 'Huell Babineaux'),
 (33, 'Hyman Roth'),
@@ -414,10 +573,13 @@ INSERT INTO `characters` (`id`, `name`) VALUES
 (67, 'Javier Peña'),
 (30, 'Jay \'Chef\' Hicks'),
 (28, 'Jerry'),
+(145, 'Jess'),
 (51, 'Jesse Pinkman'),
 (74, 'Jim Halpert'),
 (18, 'John Shelby'),
+(130, 'Jolene'),
 (37, 'Jonathan Harker'),
+(143, 'Julia McCullough'),
 (3, 'Key Adams'),
 (60, 'Kim Wexler'),
 (63, 'Lalo Salamanca'),
@@ -425,43 +587,61 @@ INSERT INTO `characters` (`id`, `name`) VALUES
 (24, 'Lieutenant Colonel Bill Kilgore'),
 (21, 'Lizzie Shelby'),
 (40, 'Lucy Westenra'),
+(115, 'Maggie Hart'),
 (70, 'María Salazar'),
 (58, 'Marie Schrader'),
+(114, 'Marty Hart'),
 (48, 'Matthew Higgins'),
 (19, 'Michael Gray'),
 (73, 'Michael Scott'),
 (2, 'Mickael Corleone'),
 (56, 'Mike Ehrmantraut'),
 (35, 'Mina Murray'),
+(127, 'Mr. Shaibel'),
+(107, 'Murph'),
 (61, 'Nacho Varga'),
+(124, 'Nancy Tench'),
 (39, 'Novia de Dracula'),
 (102, 'Obadiah Stane'),
+(141, 'Olivia Wenscombe'),
 (81, 'Oscar Martínez'),
 (66, 'Pablo Escobar'),
 (75, 'Pam Beasly'),
 (100, 'Pepper Potts'),
 (25, 'Photojournalist'),
 (16, 'Polly Gray'),
+(109, 'Professor Brand'),
 (43, 'Quincey Morris'),
+(117, 'Ray Velcoro'),
 (42, 'Renfield'),
 (101, 'Rhodey'),
+(140, 'Robert Angier'),
+(138, 'Robert Fischer'),
+(112, 'Rust Cohle'),
 (78, 'Ryan Howard'),
+(135, 'Saito'),
+(144, 'Sarah'),
 (55, 'Saul Goodman'),
 (52, 'Skyler White'),
 (4, 'Sony Corleone'),
 (68, 'Steve Murphy'),
 (59, 'Steven Gomez'),
 (71, 'Tata Escobar'),
+(146, 'Tesla'),
 (47, 'Tom'),
 (6, 'Tom Hagen'),
 (13, 'Tommy Shelby'),
 (99, 'Tony Stark'),
 (44, 'Travis Bickle'),
 (26, 'Tyrone \'Clean\' Miller'),
+(128, 'Vasily Borgov'),
 (1, 'Vito Corleone'),
 (50, 'Walter White'),
 (54, 'Walter White Jr.'),
-(49, 'Wizard');
+(113, 'Wayne Hays'),
+(121, 'Wendy Carr'),
+(49, 'Wizard'),
+(137, 'Yusuf');
 
 -- --------------------------------------------------------
 
@@ -487,7 +667,11 @@ INSERT INTO `directors` (`id`, `full_name`, `biography_link`, `directors_photo`)
 (10, 'Vince Gilligan', 'https://en.wikipedia.org/wiki/Vince_Gilligan', 'photo1669791694648-.jpg'),
 (11, 'Carlo Bernard', 'https://en.wikipedia.org/wiki/Carlos_Bernard', 'photo1669792689217-.jpg'),
 (12, 'Greg Daniels', 'https://en.wikipedia.org/wiki/Greg_Daniels', 'photo1669793318934-.jpg'),
-(19, 'Jon Favreau', 'https://es.wikipedia.org/wiki/Jon_Favreau', 'photo1672796618379-.jpg');
+(19, 'Jon Favreau', 'https://es.wikipedia.org/wiki/Jon_Favreau', 'photo1672796618379-.jpg'),
+(20, 'Christopher Nolan', 'https://en.wikipedia.org/wiki/Christopher_Nolan', 'photo1674427380251-.jpg'),
+(21, 'Nic Pizzolatto', 'https://en.wikipedia.org/wiki/Nic_Pizzolatto', 'photo1674441350037-.jpg'),
+(22, 'David Fincher', 'https://en.wikipedia.org/wiki/David_Fincher', 'photo1674449188418-.jpg'),
+(23, 'Scott Frank', 'https://en.wikipedia.org/wiki/Scott_Frank', 'photo1674456440003-.jpeg');
 
 -- --------------------------------------------------------
 
@@ -564,7 +748,14 @@ INSERT INTO `products` (`id`, `type`, `name`, `release_year`, `rating`, `length`
 (52, 'Serie de TV', 'Breaking Bad', 2008, '16', '49min', '9.5', '1,8 M', 96, 'https://www.youtube.com/watch?v=HhesaQXLuRY', '1999.90', '599.90', 'En Albuquerque, ciudad del estado de Nuevo México (Estados Unidos), un profesor \r\nde química de instituto llamado \r\nWalter White (Bryan Cranston) descubre que padece un cáncer incurable. A raíz de \r\nesta noticia, y temiendo por la \r\neconomía de su familia, decide aliarse con un antiguo alumno, Jesse Pinkman \r\n(Aaron Paul), para producir y vender \r\nmetanfetamina.', 10, 11, 'productImage1669792076634-.jpg', 'backgroundImage1669792076659-.jpg', 2, 3),
 (53, 'Serie de TV', 'Better Call Saul', 2015, '16', '46min', '8.9', '508 mil', 98, 'https://www.youtube.com/watch?v=HN4oydykJFc', '1999.90', '599.90', 'En 2002, Jimmy McGill aún no se había convertido en Saul Goodman, uno de los \r\nabogados criminalistas más solicitados en el mundo del hampa de Nuevo México. \r\nPor aquel entonces, McGill acababa de empezar una carrera que le acabó llevando a \r\ndefender al mismísimo Walter White.', 10, 11, 'productImage1669792463593-.jpg', 'backgroundImage1669792463613-.jpg', 2, 3),
 (54, 'Serie de TV', 'Narcos', 2015, '16', '49min', '8.0', '418 mil', 89, 'https://www.youtube.com/watch?v=RNWAKZzgbp4', '1999.00', '599.00', 'Una mirada a las hazañas criminales del narcotraficante \r\ncolombiano Pablo Escobar, \r\nasí como a muchos otros capos que plagaron el país a \r\ntravés de los años.', 11, 12, 'productImage1671087631510-.jpg', 'backgroundImage1671087631534-.jpg', 2, 3),
-(55, 'Serie de TV', 'The Office', 2005, '13', '22min', '9.0', '583 mil', 81, 'https://www.youtube.com/watch?v=tNcDHWpselE', '1999.00', '599.00', 'Un falso documental sobre un grupo de trabajadores de \r\noficina típicos, donde la jornada laboral consiste en \r\nchoques de ego, comportamiento inapropiado y tedio.', 12, 13, 'productImage1671571846889-.jpg', 'backgroundImage1671087126732-.png', 11, 13);
+(55, 'Serie de TV', 'The Office', 2005, '13', '22min', '9.0', '583 mil', 81, 'https://www.youtube.com/watch?v=tNcDHWpselE', '1999.00', '599.00', 'Un falso documental sobre un grupo de trabajadores de \r\noficina típicos, donde la jornada laboral consiste en \r\nchoques de ego, comportamiento inapropiado y tedio.', 12, 13, 'productImage1671571846889-.jpg', 'backgroundImage1671087126732-.png', 11, 13),
+(88, 'Película', 'Iron Man', 2008, '7', '2h 6m', '7.9', '1,1 M', 94, 'https://www.youtube.com/watch?v=8ugaeA-nMTc', '1999.90', '599.90', 'Anthony Edward \'Tony\' Stark es un personaje ficticio que \r\nda vida a este personaje, un multimillonario magnate \r\nempresarial y filántropo estadounidense, playboy e \r\ningenioso científico, que sufrió una grave lesión en el \r\npecho durante un secuestro en el Medio Oriente. Cuando \r\nsus captores intentan forzarlo a construir un arma de \r\ndestrucción masiva, pero en cambio, construyó una \r\narmadura para salvar su vida y escapar del cautiverio.', 19, 14, 'productImage1674425593568-.jpg', 'backgroundImage1674425593570-.jpg', 1, 6),
+(89, 'Película', 'Interstellar', 2014, '12', '2h 49min', '8.6', '1,8 M', 73, 'https://www.youtube.com/watch?v=zSWdZVtXT7E', '989.90', '299.90', 'Al ver que la vida en la Tierra está llegando a su fin, un \r\ngrupo de exploradores dirigidos por el piloto Cooper \r\n(McConaughey) y la científica Amelia (Hathaway) \r\nemprende una misión que puede ser la más importante \r\nde la historia de la humanidad: viajar más allá de nuestra \r\ngalaxia para descubrir algún planeta en otra que pueda \r\ngarantizar el futuro de la raza humana. ', 20, 15, 'productImage1674427700655-.jpg', 'backgroundImage1674427700655-.jpg', 7, 3),
+(90, 'Serie de TV', 'True Detective', 2014, '16', '55min', '8.9', '577 mil', 77, 'https://www.youtube.com/watch?v=fVQUcaO4AvE', '1562.20', '567.00', 'Dos detectives de Lousiana, Rust Cohle (Matthew \r\nMcConaughey) y Martin Hart (Woody Harrelson), vuelven \r\na investigar el difícil caso de un asesino en serie en el \r\nque ya habían trabajado. Obligados a regresar a un \r\nmundo tan siniestro, el avance de la investigación y el \r\nmayor conocimiento mutuo les enseñan que la \r\noscuridad reside a ambos lados de la ley.', 21, 16, 'productImage1674442304817-.jpg', 'backgroundImage1674442304819-.jpg', 2, 3),
+(91, 'Serie de TV', 'Mindhunter', 2017, '16', '1h', '8.0', '294 mil', 97, 'https://www.youtube.com/watch?v=oFlKiTwhd38', '1699.00', '650.00', 'A finales de los años 70, dos agentes de la FBI se reúnen \r\ncon asesinos y violadores encarcelados para desarrollar \r\nperfiles psicológicos de criminales, pero sus jefes temen \r\nque se están involucrando demasiado con sus \r\nentrevistados.', 22, 17, 'productImage1674449746108-.jpg', 'backgroundImage1674455732882-.jpg', 2, 3),
+(92, 'Serie de TV', 'Gambito de dama', 2020, '16', '1h', '8.6', '461 mil', 96, 'https://www.youtube.com/watch?v=kwrQzTz16w4', '1999.90', '599.90', 'Miniserie de 7 episodios. Kentucky, años 60. En plena \r\nGuerra Fría, la joven Beth Harmon (Anya Taylor-Joy) es \r\nuna huérfana con una aptitud prodigiosa para el ajedrez, \r\nque lucha contra sus adicciones mientras trata de \r\nconvertirse en la mejor jugadora del mundo ganando a \r\nlos grandes maestros, en especial a los rusos.', 23, 18, 'productImage1674456886649-.jpg', 'backgroundImage1674456886650-.jpg', 3, 14),
+(93, 'Película', 'Inception', 2010, '12', '2h 28min', '8.0', '2.4 M', 87, 'https://www.youtube.com/watch?v=YoHD9XEInc0', '1200.00', '330.00', 'Dom Cobb (DiCaprio) es un experto en el arte de \r\napropiarse, durante el sueño, de los secretos del \r\nsubconsciente ajeno. La extraña habilidad de Cobb le \r\nha convertido en un hombre muy cotizado en el \r\nmundo del espionaje, pero también lo ha condenado a \r\nser un fugitivo y, por consiguiente, a renunciar a llevar \r\nuna vida normal. Su única oportunidad para cambiar \r\nde vida será hacer exactamente lo contrario de lo que \r\nha hecho siempre: la incepción, que consiste en \r\nimplantar una idea en el subconsciente en lugar de \r\nsustraerla. Sin embargo, su plan se complica debido a \r\nla intervención de alguien que parece predecir cada \r\nuno de sus movimientos, alguien a quien sólo Cobb \r\npodrá descubrir.', 20, 19, 'productImage1674459256492-.jpg', 'backgroundImage1674459376068-.jpg', 7, 14),
+(94, 'Película', 'The Prestige', 2006, '18', '2h 10min', '8.0', '1.3 M', 76, 'https://www.youtube.com/watch?v=RLtaA9fFNXU', '1750.00', '462.00', 'En Londres, a finales del siglo XIX, cuando los magos \r\neran los ídolos más aclamados, dos jóvenes \r\nilusionistas se proponen alcanzar la fama. El \r\nsofisticado Robert Angier (Hugh Jackman) es un \r\nconsumado artista, mientras que el tosco y purista \r\nAlfred Borden (Christian Bale) es un genio creativo, \r\npero carece de la habilidad necesaria para ejecutar en \r\npúblico sus mágicas ideas. Al principio son \r\ncompañeros y amigos que se admiran mutuamente. \r\nSin embargo, cuando el mejor truco ideado por ambos \r\nfracasa, se convierten en enemigos irreconciliables: \r\ncada uno de ellos intentará por todos los medios \r\nsuperar al otro y acabar con él. Truco a truco, \r\nespectáculo a espectáculo, se va fraguando una feroz \r\ncompetición que no tiene límites.', 20, 15, 'productImage1674460329381-.jpg', 'backgroundImage1674460452905-.jpg', 3, 8);
 
 -- --------------------------------------------------------
 
@@ -668,7 +859,56 @@ INSERT INTO `product_actor_character` (`id`, `product_id`, `actor_id`, `characte
 (82, 55, 82, 79),
 (83, 55, 83, 80),
 (84, 55, 84, 81),
-(85, 55, 85, 82);
+(85, 55, 85, 82),
+(119, 88, 88, 99),
+(120, 88, 91, 102),
+(121, 88, 90, 101),
+(122, 88, 92, 103),
+(123, 88, 93, 104),
+(124, 88, 89, 100),
+(125, 89, 95, 106),
+(126, 89, 96, 107),
+(127, 89, 94, 105),
+(128, 89, 97, 109),
+(129, 89, 98, 47),
+(130, 89, 99, 110),
+(131, 89, 101, 111),
+(132, 90, 106, 117),
+(133, 90, 94, 112),
+(134, 90, 102, 114),
+(135, 90, 104, 113),
+(136, 90, 105, 118),
+(137, 90, 107, 116),
+(138, 90, 103, 115),
+(139, 91, 108, 119),
+(140, 91, 109, 120),
+(141, 91, 110, 121),
+(142, 91, 112, 122),
+(143, 91, 111, 123),
+(144, 91, 113, 124),
+(145, 92, 114, 126),
+(146, 92, 24, 125),
+(147, 92, 115, 127),
+(148, 92, 116, 128),
+(149, 92, 117, 129),
+(150, 92, 118, 131),
+(151, 92, 119, 130),
+(152, 93, 120, 132),
+(153, 93, 121, 133),
+(154, 93, 122, 134),
+(155, 93, 123, 135),
+(156, 93, 19, 136),
+(157, 93, 124, 137),
+(158, 93, 17, 138),
+(159, 94, 125, 139),
+(160, 94, 126, 140),
+(161, 94, 127, 141),
+(162, 94, 97, 142),
+(163, 94, 128, 143),
+(164, 94, 129, 144),
+(165, 94, 132, 145),
+(166, 94, 130, 146),
+(167, 94, 131, 147);
 
 -- --------------------------------------------------------
 
@@ -771,7 +1011,56 @@ INSERT INTO `product_character` (`id`, `product_id`, `character_id`) VALUES
 (146, 55, 79),
 (147, 55, 80),
 (148, 55, 81),
-(149, 55, 82);
+(149, 55, 82),
+(183, 88, 99),
+(184, 88, 100),
+(185, 88, 102),
+(186, 88, 101),
+(187, 88, 103),
+(188, 88, 104),
+(189, 89, 105),
+(190, 89, 106),
+(191, 89, 107),
+(192, 89, 109),
+(193, 89, 47),
+(194, 89, 110),
+(195, 89, 111),
+(196, 90, 112),
+(197, 90, 114),
+(198, 90, 117),
+(199, 90, 118),
+(200, 90, 113),
+(201, 90, 116),
+(202, 90, 115),
+(203, 91, 119),
+(204, 91, 120),
+(205, 91, 121),
+(206, 91, 122),
+(207, 91, 123),
+(208, 91, 124),
+(209, 92, 125),
+(210, 92, 126),
+(211, 92, 127),
+(212, 92, 128),
+(213, 92, 129),
+(214, 92, 50),
+(215, 92, 130),
+(216, 93, 132),
+(217, 93, 133),
+(218, 93, 134),
+(219, 93, 135),
+(220, 93, 136),
+(221, 93, 137),
+(222, 93, 138),
+(223, 94, 139),
+(224, 94, 140),
+(225, 94, 141),
+(226, 94, 142),
+(227, 94, 143),
+(228, 94, 144),
+(229, 94, 145),
+(230, 94, 146),
+(231, 94, 147);
 
 -- --------------------------------------------------------
 
@@ -799,7 +1088,12 @@ INSERT INTO `screenwriters` (`id`, `full_name`, `biography_link`, `screenwriter_
 (11, 'Vince Gilligan', 'https://en.wikipedia.org/wiki/Vince_Gilligan', 'photo1669791706303-.jpg'),
 (12, 'Carlo Bernard', 'https://en.wikipedia.org/wiki/Carlos_Bernard', 'photo1669792704098-.jpg'),
 (13, 'Greg Daniels', 'https://en.wikipedia.org/wiki/Greg_Daniels', 'photo1669793340067-.jpg'),
-(14, 'Mark Fergus', 'https://en.wikipedia.org/wiki/Mark_Fergus_and_Hawk_Ostby', 'photo1672796825927-.jpg');
+(14, 'Mark Fergus', 'https://en.wikipedia.org/wiki/Mark_Fergus_and_Hawk_Ostby', 'photo1672796825927-.jpg'),
+(15, 'Jonathan Nolan', 'https://en.wikipedia.org/wiki/Jonathan_Nolan', 'photo1674427433277-.jpg'),
+(16, 'Nic Pizzolatto', 'https://en.wikipedia.org/wiki/Nic_Pizzolatto', 'photo1674441360820-.jpg'),
+(17, 'Joe Penhall', 'https://en.wikipedia.org/wiki/Joe_Penhall', 'photo1674449281533-.jpg'),
+(18, 'Scott Frank', 'https://en.wikipedia.org/wiki/Scott_Frank', 'photo1674456452404-.jpeg'),
+(19, 'Christopher Nolan', 'https://en.wikipedia.org/wiki/Christopher_Nolan', 'photo1674459464476-.jpg');
 
 -- --------------------------------------------------------
 
@@ -809,9 +1103,15 @@ INSERT INTO `screenwriters` (`id`, `full_name`, `biography_link`, `screenwriter_
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
-  `username` varchar(50) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `password` varchar(300) NOT NULL,
+  `name` varchar(50) DEFAULT NULL,
+  `surname` varchar(50) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `password` varchar(400) DEFAULT NULL,
+  `phone_number` varchar(30) DEFAULT NULL,
+  `birthdate` date DEFAULT NULL,
+  `genre1_id` int(10) DEFAULT NULL,
+  `genre2_id` int(10) DEFAULT NULL,
+  `user_photo` varchar(100) DEFAULT NULL,
   `admin_status` int(1) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -819,12 +1119,14 @@ CREATE TABLE `users` (
 -- Volcado de datos para la tabla `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `email`, `password`, `admin_status`) VALUES
-(5, 'Juan Cruz Etchart', 'etchart.juancruz@gmail.com', '$2a$10$HqWn5jUv4ctULBYb2YUNi.ssrTihXQiCoxMUG2mszUUGUfNRhEIpy', 0),
-(7, 'Ahmed Kalim', 'ahmedandres20@gmail.com', '$2a$10$GwjjuGKhKazEW1Y.FEO.AOhWk1/KxHjbaWrxDlthHLpiStld.SAye', 0),
-(8, 'Alberto Roper V', 'albertoropervilar@gmail.com', '$2a$10$qS1LO0uz.QGc18PGItX2cuT7E6k1yHijPK.TEpxfw9XL/PxA.kJUa', 0),
-(9, 'Alan Diaz', 'alandiazyoel1@gmail.com', '$2a$10$TjR0FnbuofUxYwXxv9lKI.oZG1nRVg6RtgAMeYkeI/Asg.jmjGOaO', 0),
-(15, 'Elon Musk', 'admin@gmail.com', '$2a$10$Jsa3aCCf9mP3SkkTSDKUY.iO7RVeQ0yKsOcC75DHbv3qU.bwaI.aa', 0);
+INSERT INTO `users` (`id`, `name`, `surname`, `email`, `password`, `phone_number`, `birthdate`, `genre1_id`, `genre2_id`, `user_photo`, `admin_status`) VALUES
+(5, 'Juan Cruz Etchart', '0', 'etchart.juancruz@gmail.com', '$2a$10$HqWn5jUv4ctULBYb2YUNi.ssrTihXQiCoxMUG2mszUUGUfNRhEIpy', '', '0000-00-00', NULL, NULL, NULL, 0),
+(7, 'Ahmed Kalim', '0', 'ahmedandres20@gmail.com', '$2a$10$GwjjuGKhKazEW1Y.FEO.AOhWk1/KxHjbaWrxDlthHLpiStld.SAye', '', '0000-00-00', NULL, NULL, NULL, 0),
+(8, 'Alberto Roper V', '0', 'albertoropervilar@gmail.com', '$2a$10$qS1LO0uz.QGc18PGItX2cuT7E6k1yHijPK.TEpxfw9XL/PxA.kJUa', '', '0000-00-00', NULL, NULL, NULL, 0),
+(9, 'Alan Diaz', '0', 'alandiazyoel1@gmail.com', '$2a$10$TjR0FnbuofUxYwXxv9lKI.oZG1nRVg6RtgAMeYkeI/Asg.jmjGOaO', '', '0000-00-00', NULL, NULL, NULL, 0),
+(15, 'Elon Musk', '0', 'admin@gmail.com', '$2a$10$Jsa3aCCf9mP3SkkTSDKUY.iO7RVeQ0yKsOcC75DHbv3qU.bwaI.aa', '', '0000-00-00', NULL, NULL, NULL, 1),
+(16, 'Prueba', 'aaaa', 'prueba@gmail.com', '$2a$10$sziNJdaysEyuHqMznJDYb.WYophh8fgCI.c3Kq/9TEhVT9G3hYdEW', '45456465', '2023-02-01', 11, 10, 'photo1674547205500-.jpg', 0),
+(17, 'prueba2', 'prueba3', 'prueba2@gmail.com', '$2a$10$bBqem8Ca2.uYmCzMhj3SY.KfDQ1pb7qN5wCdpx0F.wcXbYeVRPVgG', '544564', '2023-01-19', 2, 1, 'photo1674547426441-.jpg', 0);
 
 -- --------------------------------------------------------
 
@@ -936,7 +1238,9 @@ ALTER TABLE `screenwriters`
 -- Indices de la tabla `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `genre1_id` (`genre1_id`),
+  ADD KEY `genre2_id` (`genre2_id`);
 
 --
 -- Indices de la tabla `user_cart`
@@ -962,31 +1266,31 @@ ALTER TABLE `user_favorites`
 -- AUTO_INCREMENT de la tabla `actors`
 --
 ALTER TABLE `actors`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=133;
 
 --
 -- AUTO_INCREMENT de la tabla `actor_character`
 --
 ALTER TABLE `actor_character`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=128;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=177;
 
 --
 -- AUTO_INCREMENT de la tabla `actor_product`
 --
 ALTER TABLE `actor_product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=201;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=250;
 
 --
 -- AUTO_INCREMENT de la tabla `characters`
 --
 ALTER TABLE `characters`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=148;
 
 --
 -- AUTO_INCREMENT de la tabla `directors`
 --
 ALTER TABLE `directors`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT de la tabla `genres`
@@ -998,31 +1302,31 @@ ALTER TABLE `genres`
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
 
 --
 -- AUTO_INCREMENT de la tabla `product_actor_character`
 --
 ALTER TABLE `product_actor_character`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=119;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=168;
 
 --
 -- AUTO_INCREMENT de la tabla `product_character`
 --
 ALTER TABLE `product_character`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=183;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=232;
 
 --
 -- AUTO_INCREMENT de la tabla `screenwriters`
 --
 ALTER TABLE `screenwriters`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de la tabla `user_cart`
@@ -1077,6 +1381,13 @@ ALTER TABLE `product_actor_character`
 ALTER TABLE `product_character`
   ADD CONSTRAINT `product_character_ibfk_1` FOREIGN KEY (`character_id`) REFERENCES `characters` (`id`),
   ADD CONSTRAINT `product_character_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`);
+
+--
+-- Filtros para la tabla `users`
+--
+ALTER TABLE `users`
+  ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`genre1_id`) REFERENCES `genres` (`id`),
+  ADD CONSTRAINT `users_ibfk_2` FOREIGN KEY (`genre2_id`) REFERENCES `genres` (`id`);
 
 --
 -- Filtros para la tabla `user_cart`
