@@ -8,59 +8,84 @@
 
 <body>
   <%- include("./partials/header") %>
-  <main id="main">
-    <div class="formulario">
-      <form action="/user/register" method="POST" class="form-login" id="form1">
-        <div class="cruzA">
-          <a href="http://localhost:3030/"> <i class="fas fa-window-close" class="cruzicono"></i> </a>
-        </div>
-        <div id="titulo-formulario">
-          <i class="fas fa-address-book"></i>
-          <div class="flexCrearCuenta">
-            <h1 class="Crear Cuenta" style=color:white>Crear Cuenta</h1>
+  <main class="main">
+    <div class="main__container">
+      <div class="main__nav-menu">
+        <ul class="main__nav-list">
+          <li>
+            <a href="/user/login" class="main__login"> Iniciar sesión </a>
+          </li>
+          <li>
+            <a href="/user/register" class="main__register"> Registrarse </a>
+          </li>
+        </ul>
+      </div>
+      <form action="/user/register" method="POST" enctype="multipart/form-data" class="main__form">
+        <div class="main__form-container">
+          <div class="main__account-form">
+            <div class="main__form-input">
+              <input type="text" class="main__text-box" id="email" name="email" required>
+              <label class="main__input-label" for="email">Email</label>
+            </div>
+            <div class="main__form-input">
+              <input type="password" class="main__text-box" id="password" name="password" required>
+              <label class="main__input-label" for="password">Contraseña</label>
+            </div>
+            <div class="main__form-input">
+              <input type="password" class="main__text-box" id="confirmedPassword" name="confirmedPassword" required>
+              <label class="main__input-label" for="confirmedPassword">Confirmar contraseña</label>
+            </div>
+
+            <div class="main__form-input">
+              <input type="text" class="main__text-box" id="name" name="name" required>
+              <label class="main__input-label" for="name">Nombre</label>
+            </div>
+            <div class="main__form-input">
+              <input type="text" class="main__text-box" id="surname" name="surname" required>
+              <label class="main__input-label" for="surname">Apellido</label>
+            </div>
+          </div>
+          <div class="main__personal-form">
+            <div class="main__form-input">
+              <input type="tel" class="main__text-box" id="phone" name="phone" required>
+              <label class="main__input-label" for="phone">Número de télefono</label>
+            </div>
+            <div class="main__form-input">
+              <div class="main__input-description">Fecha de nacimiento</div>
+              <input type="date" name="birthdate" class="main__birthdate-input">
+            </div>
+            <div class="main__input-description">Elegí tus géneros favoritos</div>
+            <div class="main__genre-select">
+              <select name="genre1" class="main__select" id="genres">
+                <option value="" disabled selected></option>
+                <% genres.forEach(element => { %>
+                <option value="<%= element.id %>"><%= element.name %></option>
+                <% }) %>
+              </select>
+              <select name="genre2" class="main__select" id="genres">
+                <option value="" disabled selected></option>
+                <% genres.forEach(element => { %>
+                <option value="<%= element.id %>"><%= element.name %></option>
+                <% }) %>
+              </select>
+            </div>
+            <div class="main__form-input">
+              <label class="main__input-description main__input-photo-description" for="photo">Foto de perfil</label>
+              <input type="file" id="photo" name="userPhoto" id="photo" accept="image/jpg, image/png, image/jpeg">
+            </div>
           </div>
         </div>
-        <div id="usuario">
-          <p style=color:white>Usuario</p>
+        <div class="main__buttons-container">
+          <div class="main__button">
+            <button type="submit" class="send-button">Crear cuenta</button>
+          </div>
+          <div class="main__button">
+            <button type="reset" class="reset-button">Reiniciar campos</button>
+          </div>
         </div>
-        <div id="usuariobloque">
-          <input type="text" id="user" name="user" placeholder="Usuario_Pelis" class="text">
-        </div>
-        <div id="email-div">
-          <p style=color:white>Email</p>
-        </div>
-        <div id="emailbloque">
-          <input id="email" name="email" placeholder="TuEmail@Cinephile.com" >
-
-        </div>
-        <div id="password-div">
-          <p style=color:white>Contraseña</p>
-        </div>
-        <div id="passwordbloque">
-          <input id="password" type="password" name="password" placeholder="Contraseña" >
-        </div>
-       
-          <input id="registrar" type="submit" value="Registrarme" style="background-color: #ffc700; border: none;">
-
-        <div class="errorDiv">
-          <% if (locals.errors && locals.errors.user) { %>
-          <p class="msg-error"> <%= errors.user.msg %> </p>
-          <% } %>
-        </div>
-        <div class="errorDiv">
-          <% if (locals.errors && locals.errors.email) { %>
-          <p class="msg-error"> <%= errors.email.msg %> </p>
-          <% } %>
-        </div>
-        <div class="errorDiv">
-          <% if (locals.errors && locals.errors.password) { %>
-          <p class="msg-error"> <%= errors.password.msg %> </p>
-          <% } %>
-        </div>
-
       </form>
     </div>
-    </div>
+
   </main>
   <%- include("./partials/footer") %>
 </body>

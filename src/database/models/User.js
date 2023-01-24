@@ -6,17 +6,44 @@ module.exports = (sequelize, dataTypes) => {
       primaryKey: true,
       autoIncrement: true,
     },
-    username: {
+    name: {
       type: dataTypes.STRING(50),
-      allowNull: false, 
+      allowNull: true,
+    },
+    surname: {
+      type: dataTypes.STRING(50),
+      allowNull: true,
     },
     email: {
       type: dataTypes.STRING(50),
-      allowNull: false,
+      allowNull: true,
     },
     password: {
-      type: dataTypes.STRING(500),
-      allowNull: false,
+      type: dataTypes.STRING(400),
+      allowNull: true,
+    },
+    phone_number: {
+      type: dataTypes.STRING(30),
+      allowNull: true,
+    },
+    birthdate: {
+      type: dataTypes.DATEONLY,
+      allowNull: true,
+    },
+    genre1_id: {
+      type: dataTypes.INTEGER(10),
+      allowNull: true,
+      foreignKey: true,
+    },
+    genre2_id: {
+      type: dataTypes.INTEGER(10),
+      allowNull: true,
+      foreignKey: true,
+    },
+    user_photo: {
+      type: dataTypes.STRING(100),
+      allowNull: true,
+      foreignKey: true,
     },
     admin_status: {
       type: dataTypes.INTEGER(1),
@@ -32,6 +59,17 @@ module.exports = (sequelize, dataTypes) => {
   const User = sequelize.define(alias, cols, config);
 
   User.associate = (models) => {
+
+    User.belongsTo(models.Genre, {
+      as: "genre1",
+      foreignKey: "genre1_id",
+    });
+
+    User.belongsTo(models.Genre, {
+      as: "genre2",
+      foreignKey: "genre2_id",
+    });
+
     User.belongsToMany(models.Product, {
       as: "cart",
       through: "user_cart",

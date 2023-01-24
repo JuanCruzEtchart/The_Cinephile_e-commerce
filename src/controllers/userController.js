@@ -7,12 +7,12 @@ const sequelize = db.sequelize;
 const { Op } = require("sequelize");
 
 //Modelos
-const User = db.User;
+const Users = db.User;
 const Genres = db.Genre;
 
 const userController = {
   login: (req, res) => {
-    const users = User.findAll();
+    const users = Users.findAll();
     res.render("login", { users: users });
   },
 
@@ -26,7 +26,7 @@ const userController = {
         return res.render("login", { errors: errors.array(), old: req.body });
       }
 
-      let userFound = await User.findOne({ where: { email: req.body.email } });
+      let userFound = await Users.findOne({ where: { email: req.body.email } });
       //bcrypt.compareSync(req.body.password, user.password
 
       if (!userFound) {
@@ -53,14 +53,14 @@ const userController = {
   },
 
   register: async function (req, res) {
-    const users = await User.findAll();
+    const users = await Users.findAll();
     const genres = await Genres.findAll();
 
-    res.render("register copy", { users, genres });
+    res.render("register", { users, genres });
   },
 
   profile: async function (req, res) {
-    const users = await User.findAll();
+    const users = await Users.findAll();
 
     res.render("profile", { users });
   },
@@ -69,8 +69,8 @@ const userController = {
     res.render("thankyou");
   },
 
-  store: async (req, res) => {
-    const errors = validationResult(req);
+  registerUpload: async (req, res) => {
+    /*     const errors = validationResult(req);
     console.log(errors);
 
     if (!errors.isEmpty()) {
@@ -80,12 +80,19 @@ const userController = {
         errors: errors.mapped(),
         old: req.body,
       });
-    }
+    } */
+    console.log(req.body);
     try {
-      await User.create({
-        username: req.body.user,
+      await Users.create({
+        name: req.body.name,
+        surname: req.body.surname,
         email: req.body.email,
         password: bcrypt.hashSync(req.body.password, 10),
+        phone_number: req.body.phone,
+        birthdate: req.body.birthdate,
+        genre1_id: req.body.genre1,
+        genre2_id: req.body.genre2,
+        user_photo: req.file.filename,
       });
       res.redirect("/user/thankyou");
     } catch (err) {

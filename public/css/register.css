@@ -1,144 +1,215 @@
 /*MAIN*/
 
-#main {
-  margin-bottom: 0px;
-  margin-top: 0px;
-  width: 100%;
-  padding: 20px 0px;
-  background-color: rgba(27, 27, 27, 0.92);
+body {
+  margin: 0;
   display: flex;
-  font-size: 18px;
-  flex-wrap: wrap;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: #212121;
+}
+
+.main {
+  background-color: #212121;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   flex: 1 0 auto;
+  position: relative;
+}
+
+.main__container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 30px auto;
+  background-color: #292929;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 10px rgba(60, 64, 67, 0.9);
+}
+
+.main__nav-menu {
+  width: 90%;
+}
+
+.main__nav-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  font-size: 1.4rem;
+  padding: 1rem 0 2rem 0;
+  margin-top: 30px;
+}
+
+.main__nav-list a {
+  text-decoration: none;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+.main__register {
+  border-bottom: 3px solid #ffc700;
+}
+
+.main__form {
+  width: 100%;
+}
+
+.main__form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  column-gap: 3rem;
+  /* margin-bottom: 50px; */
+}
+
+.main__account-form,
+.main__personal-form {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 450px;
+  margin-top: 50px;
+  padding: 16px;
+  color: #ffffff;
+  border-radius: 4px;
+}
+
+.main__account-form {
+  padding-bottom: 0px;
+}
+
+.main__personal-form {
+  padding-top: 0;
+  margin-top: 0px;
+}
+
+.main__form-input {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  padding-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.main__text-box {
+  box-sizing: border-box;
+  width: 100%;
+  font-family: inherit;
+  padding: 16px 20px 0 20px;
+  height: 50px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: #1b1b1b;
+  color: white;
+}
+
+.main__input-label {
+  box-sizing: border-box;
+  width: 100%;
+  position: absolute;
+  top: 38.5%;
+  left: 20px;
+  font-size: 18px;
+  cursor: text;
+  color: #8c8c8c;
+  transition: font 0.1s ease, top 0.1s ease, transform 0.1s ease;
+  transition: font 0.1s ease, top 0.1s ease, transform 0.1s ease,
+    -webkit-transform 0.1s ease, -moz-transform 0.1s ease,
+    -o-transform 0.1s ease;
+}
+
+input:focus ~ .main__input-label,
+input:valid ~ .main__input-label {
+  font-size: 11px;
+  top: 15px;
+}
+
+.main__input-description {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.main__input-photo-description {
+  margin-top: 25px;
+}
+
+.main__genre-select {
+  display: flex;
   justify-content: space-around;
 }
 
-body {
-    font-family: Roboto;
-    font-size: 12px;
-    background-color: white;
-    line-height: 0px;
-    text-decoration: none;
-    color: black;
-    margin: 0;
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
+.main__select {
+  width: 40%;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 5px;
+  border: none;
+  background-color: #1b1b1b;
+  color: white;
 }
 
-input:focus { 
-  color: white; 
-} 
-.footer {
-  flex-shrink: 0;
-}
-.formulario {
-  width: 70%;
-  background-color: rgba(27, 27, 27, 0.5);
-  border-radius: 10px 10px 10px 10px;
-}
-
-.cruzA {
-  display: flex;
-  justify-content: flex-end;
+.main__birthdate-input {
+  height: 50px;
+  box-sizing: border-box;
   width: 100%;
-  padding-top: 10px;
-  padding-right: 25px;
+  font-family: inherit;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: #1b1b1b;
+  color-scheme: dark;
 }
 
-.fa-window-close:before {
-  color: #ffc700;
-  font-size: 12px;
-}
-.fa-address-book:before {
-  content: "\f2b9";
-  font-size: 20px;
-}
-
-#form1 {
+.main__button {
+  font-size: 1rem;
+  width: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
-}
-
-#titulo-formulario {
-  display: flex;
-  width: 100%;
   justify-content: center;
-  align-items: baseline;
-}
-
-
-h1.Crear.Cuenta {
-  font-size: 18px;
-  letter-spacing: 5px;
-  padding-bottom: 5%;
-  padding-top: 19%;
-}
-
-.fa-address-book {
-  display: flex;
-  justify-content: flex-end;
-  color: rgba(246, 233, 233, 0.78);
-  padding-top: 1%;
-  padding-right: 8%;
-}
-
-
-#usuario, #email-div, #password-div {
-  padding-bottom: 8%;
-  display: flex;
-  width: 100%;
-  padding-top: 5%;
-  margin: 0px auto;
-  align-items: flex-start;
-  padding-left: 25%;
-}
-
-#email-div, #password-div{
-  padding-top: 5%;
-}
-
-#registrar {
-  background-color: #ffc700;
-  width: 35%;
-  display: flex;
-  justify-content: center;
-  text-decoration: none;
-  border-radius: 10px 10px 10px 10px;
-  margin-top: 5%;
 }
 
 .send-button {
   background-color: #ffc700;
-  font-weight: bold;
   border: none;
-}
-
-#usuariobloque,
-#emailbloque,
-#passwordbloque {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-#user, #email, #password {
-  font-size: 1.2rem;
-  width: 50%;
   padding: 10px;
   border-radius: 10px;
-  background-color: #1b1b1b;
-  border: solid 1px rgba(255, 255, 255, 0.3);
-  color: white;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 70%;
+  max-width: 250px;
+  cursor: pointer;
+  transition: all 120ms;
 }
-.errorDiv {
-  padding-top: 6%;
-  font-size: 15px;
-  padding-bottom: 4%;
+
+.send-button:hover {
+  background-color: #fce89f;
 }
-.msg-error {
-  color:red;
+
+.reset-button {
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  width: 70%;
+  max-width: 250px;
+  cursor: pointer;
+  transition: all 120ms;
+}
+
+.reset-button:hover {
+  background-color: #b4b4b4;
 }
 
 /*MEDIA QUERIES*/
@@ -147,133 +218,40 @@ h1.Crear.Cuenta {
 
 @media (max-width: 599px) {
   /*MAIN*/
+  .main__nav-list a {
+    text-decoration: none;
+    color: white;
+    padding: 1rem 0rem;
+  }
 }
 
 /*TABLET*/
 
 @media (min-width: 600px) {
   /*MAIN*/
-
-  #main {
-    font-size: 25px;
-}
-
-  .cruzA {
-    width: 82%;
-    padding-top: 6%;
-  }
-
-  .fa-window-close:before {
-    font-size: 20px;
-  }
-
-  #titulo-formulario {
-    padding-bottom: 2%;
-}
-h1.Crear.Cuenta {
-  font-size: 30px;
-}
-
-  
-  .fa-address-book:before {
-    content: "\f2b9";
-    font-size: 20px;
-}
-
-
-
-
-  #registrar {
-    width: 35%;
-    max-width: 360px;
-}
-
-#registrar {
-  max-width: 170px;
-}
-
-.errorDiv {
-  padding-top: 6%;
-  font-size: 20px;
-  padding-bottom: 4%;
-}
-
 }
 
 /*DESKTOP*/
 
 @media (min-width: 1200px) {
   /*MAIN*/
-
-  #main {
-    font-size: 23px;
+  .main__form-container {
+    flex-direction: row;
   }
 
-  h1.Crear.Cuenta {
-    font-size: 21px;
+  .main__account-form {
+    padding-bottom: 16px;
   }
 
-  .fa-window-close:before {
-    font-size: 25px;
-}
-
-  .cruzA {
-    width: 85%;
-    padding-top: 4%;
+  .main__personal-form {
+    padding-top: 16px;
+    margin-top: 50px;
+    height: 362px;
   }
-
-  .fa-address-book:before {
-    font-size: 23px;
-}
-#registrar {
-  max-width: 270px;
-}
-
-#usuario, #email-div, #password-div {
-  padding-bottom: 3%;
-}
-.errorDiv {
-  padding-top: 4%;
-  font-size: 20px;
-  padding-bottom: 3%;
-}
 }
 
 /*LARGE-DESKTOP*/
 
 @media (min-width: 1440px) {
   /*MAIN*/
-  #main {
-    font-size: 32px;
-}
-
-  h1.Crear.Cuenta {
-    font-size: 30px;
-  }
-
-  .fa-window-close:before {
-    font-size: 28px;
-}
-
-  .cruzA {
-    width: 85%;
-    padding-top: 4%;
-  }
-
-  .fa-address-book {
-    padding-top: 3%;
-  }
-
-  .fa-address-book:before {
-    font-size: 25px;
-}
-#registrar {
-  max-width: 340px;
-}
-.errorDiv {
-  padding-top: 5%;
-  font-size: 22px;
-  padding-bottom: 3%;
-}
-
 }

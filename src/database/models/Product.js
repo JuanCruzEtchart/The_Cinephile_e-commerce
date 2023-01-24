@@ -143,7 +143,6 @@ module.exports = (sequelize, dataTypes) => {
       timestamps: false,
     }); */
 
-    //PRUEBA DE TABLA DE PRODUCTO COMPLETO
     Product.belongsToMany(models.Character, {
       as: "character",
       through: "product_actor_character",
