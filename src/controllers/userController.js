@@ -70,33 +70,32 @@ const userController = {
   },
 
   registerUpload: async (req, res) => {
-    /*     const errors = validationResult(req);
-    console.log(errors);
-
-    if (!errors.isEmpty()) {
-      console.log(errors.mapped());
-
-      return res.render("register copy", {
-        errors: errors.mapped(),
+    const validationErrors = validationResult(req);
+    if (!validationErrors.isEmpty()) {
+      const genres = await Genres.findAll();
+      res.render("register", {
+        errors: validationErrors.mapped(),
+        errors2: validationErrors.array(),
         old: req.body,
+        genres,
       });
-    } */
-    console.log(req.body);
-    try {
-      await Users.create({
-        name: req.body.name,
-        surname: req.body.surname,
-        email: req.body.email,
-        password: bcrypt.hashSync(req.body.password, 10),
-        phone_number: req.body.phone,
-        birthdate: req.body.birthdate,
-        genre1_id: req.body.genre1,
-        genre2_id: req.body.genre2,
-        user_photo: req.file.filename,
-      });
-      res.redirect("/user/thankyou");
-    } catch (err) {
-      res.send(err);
+    } else {
+      try {
+        await Users.create({
+          name: req.body.name,
+          surname: req.body.surname,
+          email: req.body.email,
+          password: bcrypt.hashSync(req.body.password, 10),
+          phone_number: req.body.phone,
+          birthdate: req.body.birthdate,
+          genre1_id: req.body.genre1,
+          genre2_id: req.body.genre2,
+          user_photo: req.file.filename,
+        });
+        res.redirect("/user/thankyou");
+      } catch (err) {
+        res.send(err);
+      }
     }
   },
 

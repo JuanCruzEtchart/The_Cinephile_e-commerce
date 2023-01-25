@@ -195,6 +195,12 @@ h3 {
 
 @media (max-width: 599px) {
   /*MAIN*/
+  .main__last-product-blur {
+    background: linear-gradient(to right, #212121 0, rgba(0, 0, 0, 0) 10%),
+      linear-gradient(to top, #212121 0, rgba(0, 0, 0, 0) 10%),
+      linear-gradient(to left, #212121 0, rgba(0, 0, 0, 0) 10%),
+      linear-gradient(to bottom, #212121 0, rgba(0, 0, 0, 0) 10%);
+  }
 }
 
 /*TABLET*/

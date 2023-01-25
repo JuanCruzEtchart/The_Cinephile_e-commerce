@@ -2,7 +2,10 @@ const express = require("express");
 const router = express.Router();
 const multer = require("multer");
 const userController = require("../controllers/userController.js");
-const validation = require("../validations/userValidations");
+const {
+  registerValidations,
+  loginValidations,
+} = require("../validations/userValidations");
 const { normalLogin } = require("../middleware/loginMiddle.js");
 const path = require("path");
 
@@ -32,12 +35,12 @@ let upload = multer({
   },
 });
 
-let uploadPhoto = upload.single("photo");
+let uploadPhoto = upload.single("userPhoto");
 
 /*Render del login*/
 
 router.get("/login", userController.login);
-router.post("/login", validation.loginValidation, userController.processLogin);
+router.post("/login", loginValidations, userController.processLogin);
 router.post("/logout", userController.logout);
 
 /*Render del register*/
@@ -46,7 +49,7 @@ router.get("/register", userController.register);
 router.post(
   "/register",
   uploadPhoto,
-  /* validation.registerValidation, */
+  registerValidations,
   userController.registerUpload
 );
 

@@ -78,14 +78,14 @@
           <select name="genre1" class="main__select" id="genre1">
             <option value="" disabled selected></option>
             <% genres.forEach(element => { %>
-            <option value="<%= element.id %>" <% if (old.genre1_id == element.id) { %><%= 'selected' %><% }; %>><%= element.name %></option>
+            <option value="<%= element.id %>" <% if (locals.old && old.genre1_id == element.id) { %><%= 'selected' %><% }; %>><%= element.name %></option>
             <% }) %>
           </select>
           <div class="main__fieldDescription">Elegir género 2</div>
           <select name="genre2" class="main__select" id="genre2">
             <option value="" disabled selected></option>
             <% genres.forEach(element => { %>
-            <option value="<%= element.id %>" <% if (old.genre2_id == element.id) { %><%= 'selected' %><% }; %>><%= element.name %></option>
+            <option value="<%= element.id %>" <% if ( locals.old && old.genre2_id == element.id) { %><%= 'selected' %><% }; %>><%= element.name %></option>
             <% }) %>
           </select>
         </div>

@@ -1,20 +1,15 @@
 const { body } = require("express-validator");
-const fs = require("fs");
 const path = require("path");
-const userController = require("../controllers/userController");
 const db = require("../database/models");
-const sequelize = db.sequelize;
-const { Op } = require("sequelize");
-const { BADFAMILY } = require("dns");
 
 module.exports = {
-  registerValidation: [
+  registerValidations: [
     body("email")
       .notEmpty()
-      .withMessage("Campo email incompleto")
+      .withMessage("Debe ingresar un email válido")
       .bail()
       .isEmail()
-      .withMessage("Debe ingresar un email valido")
+      .withMessage("Debe ingresar un email válido")
       .bail()
       .custom((value, { req }) => {
         return db.User.findOne({
@@ -23,31 +18,68 @@ module.exports = {
           },
         }).then((email) => {
           if (email) {
-            return Promise.reject("El email que ingresó se encuentra tomado");
-          }
-        });
-      }),
-
-    body("user")
-      .notEmpty()
-      .withMessage("Campo de usuario incompleto")
-      .bail()
-      .custom((value, { req }) => {
-        return db.User.findOne({
-          where: {
-            username: value,
-          },
-        }).then((username) => {
-          if (username) {
             return Promise.reject(
-              "El nombre de usuario ya se encuentra tomado"
+              "El email que ingresó ya se encuentra tomado"
             );
           }
         });
       }),
-    body("password").notEmpty().withMessage("Campo password incompleto"),
+    body("password")
+      .notEmpty()
+      .withMessage("La contraseña debe tener entre 4 y 50 caracteres")
+      .bail()
+      .isLength({ min: 4, max: 50 })
+      .withMessage("La contraseña debe tener entre 4 y 50 caracteres"),
+    body("confirmPassword")
+      .notEmpty()
+      .withMessage("Debe ser igual a la contraseña")
+      .bail()
+      .custom((value, { req }) => {
+        return req.body.password == value;
+      })
+      .withMessage("Las contraseñas no coinciden"),
+    body("name")
+      .notEmpty()
+      .withMessage("Debe ingresar un nombre")
+      .bail()
+      .isLength({ max: 25 })
+      .withMessage("El nombre puede tener máximo 25 caracteres"),
+    body("surname")
+      .notEmpty()
+      .withMessage("Debe ingresar un apellido")
+      .bail()
+      .isLength({ max: 25 })
+      .withMessage("El apellido puede tener máximo 25 caracteres"),
+    body("phone")
+      .notEmpty()
+      .withMessage("Debe ingresar un número de teléfono")
+      .bail()
+      .isLength({ max: 30 })
+      .withMessage("El número puede tener máximo 30 caracteres"),
+    body("birthdate")
+      .notEmpty()
+      .withMessage("Debe ingresar una fecha de nacimiento"),
+    body("genre1" && "genre2")
+      .notEmpty()
+      .withMessage("Debe elegír 2 géneros favoritos")
+      .bail()
+      .custom((value, { req }) => {
+        return req.body.genre1 != req.body.genre2;
+      })
+      .withMessage("Los géneros favoritos deben ser diferentes"),
+    body("userPhoto")
+      .custom((value, { req }) => {
+        const validExtensions = [".png", ".jpg", ".jpeg"];
+        if (req.file) {
+          const extension = path.extname(req.file.originalname);
+          return validExtensions.includes(extension);
+        } else {
+          return true;
+        }
+      })
+      .withMessage("La extensión de archivo de imagen de perfil es inválida"),
   ],
-  loginValidation: [
+  loginValidations: [
     body("email")
       .notEmpty()
       .withMessage("Campo email incompleto")
