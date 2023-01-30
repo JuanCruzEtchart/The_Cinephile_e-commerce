@@ -73,6 +73,7 @@ const userController = {
     const validationErrors = validationResult(req);
     if (!validationErrors.isEmpty()) {
       const genres = await Genres.findAll();
+      /* console.log(validationErrors.mapped()); */
       res.render("register", {
         errors: validationErrors.mapped(),
         errors2: validationErrors.array(),
@@ -81,6 +82,7 @@ const userController = {
       });
     } else {
       try {
+        const userPhoto = req.file ? req.file.filename : "defaultUserImage.png";
         await Users.create({
           name: req.body.name,
           surname: req.body.surname,
@@ -90,7 +92,7 @@ const userController = {
           birthdate: req.body.birthdate,
           genre1_id: req.body.genre1,
           genre2_id: req.body.genre2,
-          user_photo: req.file.filename,
+          user_photo: userPhoto,
         });
         res.redirect("/user/thankyou");
       } catch (err) {

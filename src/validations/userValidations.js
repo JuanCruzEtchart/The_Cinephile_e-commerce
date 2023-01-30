@@ -77,7 +77,7 @@ module.exports = {
           return true;
         }
       })
-      .withMessage("La extensión de archivo de imagen de perfil es inválida"),
+      .withMessage("Solo se aceptan archivos con extensión png, jpg y jpeg"),
   ],
   loginValidations: [
     body("email")

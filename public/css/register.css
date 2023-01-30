@@ -84,7 +84,7 @@ body {
 }
 
 .main__personal-form {
-  padding-top: 0;
+  padding-top: 0px;
   margin-top: 0px;
 }
 
@@ -172,6 +172,10 @@ input:valid ~ .main__input-label {
 .main__genre-select {
   display: flex;
   justify-content: space-around;
+}
+
+.main__genre-error{
+  margin-top: 16px;
 }
 
 .main__select {
@@ -263,6 +267,7 @@ input:valid ~ .main__input-label {
   /*MAIN*/
   .main__form-container {
     flex-direction: row;
+    align-items: flex-start;
   }
 
   .main__account-form {

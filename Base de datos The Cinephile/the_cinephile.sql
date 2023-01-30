@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-01-2023 a las 09:10:07
+-- Tiempo de generación: 30-01-2023 a las 09:41:14
 -- Versión del servidor: 10.4.25-MariaDB
 -- Versión de PHP: 8.1.10
 
@@ -1126,7 +1126,10 @@ INSERT INTO `users` (`id`, `name`, `surname`, `email`, `password`, `phone_number
 (9, 'Alan Diaz', '0', 'alandiazyoel1@gmail.com', '$2a$10$TjR0FnbuofUxYwXxv9lKI.oZG1nRVg6RtgAMeYkeI/Asg.jmjGOaO', '', '0000-00-00', NULL, NULL, NULL, 0),
 (15, 'Elon Musk', '0', 'admin@gmail.com', '$2a$10$Jsa3aCCf9mP3SkkTSDKUY.iO7RVeQ0yKsOcC75DHbv3qU.bwaI.aa', '', '0000-00-00', NULL, NULL, NULL, 1),
 (16, 'Prueba', 'aaaa', 'prueba@gmail.com', '$2a$10$sziNJdaysEyuHqMznJDYb.WYophh8fgCI.c3Kq/9TEhVT9G3hYdEW', '45456465', '2023-02-01', 11, 10, 'photo1674547205500-.jpg', 0),
-(17, 'prueba2', 'prueba3', 'prueba2@gmail.com', '$2a$10$bBqem8Ca2.uYmCzMhj3SY.KfDQ1pb7qN5wCdpx0F.wcXbYeVRPVgG', '544564', '2023-01-19', 2, 1, 'photo1674547426441-.jpg', 0);
+(17, 'prueba2', 'prueba3', 'prueba2@gmail.com', '$2a$10$bBqem8Ca2.uYmCzMhj3SY.KfDQ1pb7qN5wCdpx0F.wcXbYeVRPVgG', '544564', '2023-01-19', 2, 1, 'photo1674547426441-.jpg', 0),
+(18, 'Prueba2', 'Prueba444', 'Hola@gmail.com', '$2a$10$y5wsah0JKeikC3zprx6f6.Vsm06p575uxxAKjvhVXaBwTcTK5wQba', '45477757845', '2023-01-24', 10, 6, 'userPhoto1675057810223-.png', 0),
+(19, 'Hola', 'Holaa', 'hola@gmai.com', '$2a$10$.Y4BWJ68HEPG.o1EHZM6vuAz61gXOWh7RU3rkT6t41h9xL92UfSxm', '123456', '2023-01-18', 9, 6, 'defaultUserImage', 0),
+(20, 'Hola', 'Holaa', 'holaaaaa@gmai.com', '$2a$10$wSeErZ9/5Qiv2i25yeWcu.xUQXf3F6FJVMl8.gRMolgCEsJJ2Y1UC', '123456', '2023-01-18', 9, 6, 'userPhoto1675061102305-.jpg', 0);
 
 -- --------------------------------------------------------
 
@@ -1326,7 +1329,7 @@ ALTER TABLE `screenwriters`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT de la tabla `user_cart`
