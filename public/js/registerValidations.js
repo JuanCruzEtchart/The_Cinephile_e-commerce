@@ -1,239 +1,324 @@
 window.addEventListener("load", function (e) {
   let form = document.querySelector(".main__form");
-  let email = document.querySelectorAll("#email");
+  let email = document.querySelector("#email");
   let password = document.querySelector("#password");
   let confirmPassword = document.querySelector("#confirmPassword");
   let name = document.querySelector("#name");
   let surname = document.querySelector("#surname");
   let phone = document.querySelector("#phone");
   let birthdate = document.querySelector("#birthdate");
-  let genres = document.querySelectorAll("#genre1, #genre2");
+  let genres = document.querySelectorAll("#genres");
+  let genre1 = document.querySelector(".genre1");
+  let genre2 = document.querySelector(".genre2");
   let userPhoto = document.querySelector("#photo");
+  let emailContainer = document.querySelector(".main__form-input");
+  let passwordContainer = document.querySelector(".main__form-input-password");
+  let confirmPasswordContainer = document.querySelector(
+    ".main__form-input-confirmPassword"
+  );
+  let nameContainer = document.querySelector(".main__form-input-name");
+  let surnameContainer = document.querySelector(".main__form-input-surname");
+  let phoneContainer = document.querySelector(".main__form-input-phone");
+  let birthdateContainer = document.querySelector(
+    ".main__form-input-birthdate"
+  );
+  let genresContainer = document.querySelector(".main__genre-select");
 
-  email.focus();
+  email.addEventListener("blur", function (e) {
+    if (email.value == "") {
+      emailContainer.nextElementSibling.style.display = "block";
+      emailContainer.nextElementSibling.innerHTML =
+        "Debe ingresar un email válido.";
+      emailContainer.classList.add("error-indicator");
+    } else if (!validator.isURL(email.value)) {
+      emailContainer.nextElementSibling.style.display = "block";
+      emailContainer.nextElementSibling.innerHTML =
+        "Debe ingresar un email válido.";
+      emailContainer.classList.add("error-indicator");
+    } else {
+      emailContainer.nextElementSibling.style.display = "none";
+      emailContainer.nextElementSibling.innerHTML = "";
+      emailContainer.classList.remove("error-indicator");
+    }
+  });
+
+  email.addEventListener("keyup", function (e) {
+    if (email.value == "") {
+      emailContainer.nextElementSibling.style.display = "block";
+      emailContainer.nextElementSibling.innerHTML =
+        "Debe ingresar un email válido.";
+      emailContainer.classList.add("error-indicator");
+    } else if (!validator.isURL(email.value)) {
+      emailContainer.nextElementSibling.style.display = "block";
+      emailContainer.nextElementSibling.innerHTML =
+        "Debe ingresar un email válido.";
+      emailContainer.classList.add("error-indicator");
+    } else {
+      emailContainer.nextElementSibling.style.display = "none";
+      emailContainer.nextElementSibling.innerHTML = "";
+      emailContainer.classList.remove("error-indicator");
+    }
+  });
+
+  password.addEventListener("blur", function (e) {
+    if (password.value == "") {
+      passwordContainer.nextElementSibling.style.display = "block";
+      passwordContainer.nextElementSibling.innerHTML =
+        "La contraseña debe tener entre 4 y 50 caracteres.";
+      passwordContainer.classList.add("error-indicator");
+    } else if (password.value.length < 4 || password.value.length > 50) {
+      passwordContainer.nextElementSibling.style.display = "block";
+      passwordContainer.nextElementSibling.innerHTML =
+        "La contraseña debe tener entre 4 y 50 caracteres.";
+      passwordContainer.classList.add("error-indicator");
+    } else if (
+      password.value !== "" &&
+      confirmPassword.value != password.value
+    ) {
+      confirmPasswordContainer.nextElementSibling.style.display = "block";
+      confirmPasswordContainer.nextElementSibling.innerHTML =
+        "Las contraseñas no coinciden.";
+      confirmPasswordContainer.classList.add("error-indicator");
+    } else if (
+      password.value !== "" &&
+      confirmPassword.value == password.value
+    ) {
+      confirmPasswordContainer.nextElementSibling.style.display = "none";
+      confirmPasswordContainer.nextElementSibling.innerHTML = "";
+      confirmPasswordContainer.classList.remove("error-indicator");
+    } else {
+      passwordContainer.nextElementSibling.style.display = "none";
+      passwordContainer.nextElementSibling.innerHTML = "";
+      passwordContainer.classList.remove("error-indicator");
+    }
+  });
+
+  password.addEventListener("keyup", function (e) {
+    if (password.value == "") {
+      passwordContainer.nextElementSibling.style.display = "block";
+      passwordContainer.nextElementSibling.innerHTML =
+        "La contraseña debe tener entre 4 y 50 caracteres.";
+      passwordContainer.classList.add("error-indicator");
+    } else if (password.value.length < 4 || password.value.length > 50) {
+      passwordContainer.nextElementSibling.style.display = "block";
+      passwordContainer.nextElementSibling.innerHTML =
+        "La contraseña debe tener entre 4 y 50 caracteres.";
+      passwordContainer.classList.add("error-indicator");
+    } else if (
+      password.value !== "" &&
+      confirmPassword.value == password.value
+    ) {
+      confirmPasswordContainer.nextElementSibling.style.display = "none";
+      confirmPasswordContainer.nextElementSibling.innerHTML = "";
+      confirmPasswordContainer.classList.remove("error-indicator");
+    } else {
+      passwordContainer.nextElementSibling.style.display = "none";
+      passwordContainer.nextElementSibling.innerHTML = "";
+      passwordContainer.classList.remove("error-indicator");
+    }
+  });
+
+  confirmPassword.addEventListener("blur", function (e) {
+    if (confirmPassword.value == "") {
+      confirmPasswordContainer.nextElementSibling.style.display = "block";
+      confirmPasswordContainer.nextElementSibling.innerHTML =
+        "Debe coincidir con la contraseña.";
+      confirmPasswordContainer.classList.add("error-indicator");
+    } else if (confirmPassword.value != password.value) {
+      confirmPasswordContainer.nextElementSibling.style.display = "block";
+      confirmPasswordContainer.nextElementSibling.innerHTML =
+        "Las contraseñas no coinciden.";
+      confirmPasswordContainer.classList.add("error-indicator");
+    } else {
+      confirmPasswordContainer.nextElementSibling.style.display = "none";
+      confirmPasswordContainer.nextElementSibling.innerHTML = "";
+      confirmPasswordContainer.classList.remove("error-indicator");
+    }
+  });
+
+  confirmPassword.addEventListener("keyup", function (e) {
+    if (confirmPassword.value == "") {
+      confirmPasswordContainer.nextElementSibling.style.display = "block";
+      confirmPasswordContainer.nextElementSibling.innerHTML =
+        "Debe coincidir con la contraseña.";
+      confirmPasswordContainer.classList.add("error-indicator");
+    } else if (confirmPassword.value != password.value) {
+      confirmPasswordContainer.nextElementSibling.style.display = "block";
+      confirmPasswordContainer.nextElementSibling.innerHTML =
+        "Las contraseñas no coinciden.";
+      confirmPasswordContainer.classList.add("error-indicator");
+    } else {
+      confirmPasswordContainer.nextElementSibling.style.display = "none";
+      confirmPasswordContainer.nextElementSibling.innerHTML = "";
+      confirmPasswordContainer.classList.remove("error-indicator");
+    }
+  });
 
   name.addEventListener("blur", function (e) {
     if (name.value == "") {
-      name.nextElementSibling.innerHTML = "Completar campo!";
-      name.nextElementSibling.classList.add("invalid");
-      name.nextElementSibling.classList.remove("valid-status");
-      name.classList.remove("valid");
+      nameContainer.nextElementSibling.style.display = "block";
+      nameContainer.nextElementSibling.innerHTML = "Debe ingresar un nombre.";
+      nameContainer.classList.add("error-indicator");
+    } else if (name.value.length > 25) {
+      nameContainer.nextElementSibling.style.display = "block";
+      nameContainer.nextElementSibling.innerHTML =
+        "El nombre puede tener máximo 25 caracteres.";
+      nameContainer.classList.add("error-indicator");
     } else {
-      name.nextElementSibling.innerHTML = "👍";
-      name.nextElementSibling.classList.remove("invalid");
-      name.nextElementSibling.classList.add("valid-status");
-      name.classList.add("valid");
+      nameContainer.nextElementSibling.style.display = "none";
+      nameContainer.nextElementSibling.innerHTML = "";
+      nameContainer.classList.remove("error-indicator");
     }
   });
 
-  release_year.addEventListener("blur", function (e) {
-    if (release_year.value == "") {
-      release_year.nextElementSibling.innerHTML = "Completar campo!";
-      release_year.nextElementSibling.classList.add("invalid");
-      release_year.nextElementSibling.classList.remove("valid-status");
-      release_year.classList.remove("valid");
-    } else if (
-      !validator.isNumeric(release_year.value) ||
-      !validator.isInt(release_year.value)
-    ) {
-      release_year.nextElementSibling.innerHTML =
-        "Debe ser un número entero de 4 dígitos";
-      release_year.nextElementSibling.classList.add("invalid");
-      release_year.nextElementSibling.classList.remove("valid-status");
-      release_year.classList.remove("valid");
-    } else if (release_year.value.length !== 4) {
-      release_year.nextElementSibling.innerHTML = "Debe tener 4 dígitos!";
-      release_year.nextElementSibling.classList.add("invalid");
-      release_year.nextElementSibling.classList.remove("valid-status");
-      release_year.classList.remove("valid");
+  name.addEventListener("keyup", function (e) {
+    if (name.value == "") {
+      nameContainer.nextElementSibling.style.display = "block";
+      nameContainer.nextElementSibling.innerHTML = "Debe ingresar un nombre.";
+      nameContainer.classList.add("error-indicator");
+    } else if (name.value.length > 25) {
+      nameContainer.nextElementSibling.style.display = "block";
+      nameContainer.nextElementSibling.innerHTML =
+        "El nombre puede tener máximo 25 caracteres.";
+      nameContainer.classList.add("error-indicator");
     } else {
-      release_year.nextElementSibling.innerHTML = "👍";
-      release_year.nextElementSibling.classList.remove("invalid");
-      release_year.nextElementSibling.classList.add("valid-status");
-      release_year.classList.add("valid");
+      nameContainer.nextElementSibling.style.display = "none";
+      nameContainer.nextElementSibling.innerHTML = "";
+      nameContainer.classList.remove("error-indicator");
     }
   });
 
-  rating.addEventListener("blur", function (e) {
-    if (rating.value == "") {
-      rating.nextElementSibling.innerHTML = "Completar campo!";
-      rating.nextElementSibling.classList.add("invalid");
-      rating.nextElementSibling.classList.remove("valid-status");
-      rating.classList.remove("valid");
+  surname.addEventListener("blur", function (e) {
+    if (surname.value == "") {
+      surnameContainer.nextElementSibling.style.display = "block";
+      surnameContainer.nextElementSibling.innerHTML =
+        "Debe ingresar un apellido.";
+      surnameContainer.classList.add("error-indicator");
+    } else if (surname.value.length > 25) {
+      surnameContainer.nextElementSibling.style.display = "block";
+      surnameContainer.nextElementSibling.innerHTML =
+        "El apellido puede tener máximo 25 caracteres.";
+      surnameContainer.classList.add("error-indicator");
     } else {
-      rating.nextElementSibling.innerHTML = "👍";
-      rating.nextElementSibling.classList.remove("invalid");
-      rating.nextElementSibling.classList.add("valid-status");
-      rating.classList.add("valid");
+      surnameContainer.nextElementSibling.style.display = "none";
+      surnameContainer.nextElementSibling.innerHTML = "";
+      surnameContainer.classList.remove("error-indicator");
     }
   });
 
-  length.addEventListener("blur", function (e) {
-    if (length.value == "") {
-      length.nextElementSibling.innerHTML = "Completar campo!";
-      length.nextElementSibling.classList.add("invalid");
-      length.nextElementSibling.classList.remove("valid-status");
-      length.classList.remove("valid");
+  surname.addEventListener("keyup", function (e) {
+    if (surname.value == "") {
+      surnameContainer.nextElementSibling.style.display = "block";
+      surnameContainer.nextElementSibling.innerHTML =
+        "Debe ingresar un apellido.";
+      surnameContainer.classList.add("error-indicator");
+    } else if (surname.value.length > 25) {
+      surnameContainer.nextElementSibling.style.display = "block";
+      surnameContainer.nextElementSibling.innerHTML =
+        "El apellido puede tener máximo 25 caracteres.";
+      surnameContainer.classList.add("error-indicator");
     } else {
-      length.nextElementSibling.innerHTML = "👍";
-      length.nextElementSibling.classList.remove("invalid");
-      length.nextElementSibling.classList.add("valid-status");
-      length.classList.add("valid");
+      surnameContainer.nextElementSibling.style.display = "none";
+      surnameContainer.nextElementSibling.innerHTML = "";
+      surnameContainer.classList.remove("error-indicator");
     }
   });
 
-  imdbScore.addEventListener("blur", function (e) {
-    if (imdbScore.value == "") {
-      imdbScore.nextElementSibling.innerHTML = "Completar campo!";
-      imdbScore.nextElementSibling.classList.add("invalid");
-      imdbScore.nextElementSibling.classList.remove("valid-status");
-      imdbScore.classList.remove("valid");
-    } else if (
-      !validator.isNumeric(imdbScore.value) ||
-      validator.isInt(imdbScore.value) ||
-      imdbScore.value > 10
-    ) {
-      imdbScore.nextElementSibling.innerHTML =
-        "Debe ser un número decimal entre 0 y 10!";
-      imdbScore.nextElementSibling.classList.add("invalid");
-      imdbScore.nextElementSibling.classList.remove("valid-status");
-      imdbScore.classList.remove("valid");
-    } else if (imdbScore.value.length !== 3) {
-      imdbScore.nextElementSibling.innerHTML = "Debe tener 2 dígitos!";
-      imdbScore.nextElementSibling.classList.add("invalid");
-      imdbScore.nextElementSibling.classList.remove("valid-status");
-      imdbScore.classList.remove("valid");
+  phone.addEventListener("blur", function (e) {
+    if (phone.value == "") {
+      phoneContainer.nextElementSibling.style.display = "block";
+      phoneContainer.nextElementSibling.innerHTML =
+        "Debe ingresar un número de teléfono.";
+      phoneContainer.classList.add("error-indicator");
+    } else if (!validator.isInt(phone.value)) {
+      phoneContainer.nextElementSibling.style.display = "block";
+      phoneContainer.nextElementSibling.innerHTML =
+        "El número de teléfono solo puede contener números.";
+      phoneContainer.classList.add("error-indicator");
+    } else if (phone.value.length > 30) {
+      phoneContainer.nextElementSibling.style.display = "block";
+      phoneContainer.nextElementSibling.innerHTML =
+        "El número puede tener máximo 30 caracteres.";
+      phoneContainer.classList.add("error-indicator");
     } else {
-      imdbScore.nextElementSibling.innerHTML = "👍";
-      imdbScore.nextElementSibling.classList.remove("invalid");
-      imdbScore.nextElementSibling.classList.add("valid-status");
-      imdbScore.classList.add("valid");
+      phoneContainer.nextElementSibling.style.display = "none";
+      phoneContainer.nextElementSibling.innerHTML = "";
+      phoneContainer.classList.remove("error-indicator");
     }
   });
 
-  imdbTotalReviews.addEventListener("blur", function (e) {
-    if (imdbTotalReviews.value == "") {
-      imdbTotalReviews.nextElementSibling.innerHTML = "Completar campo!";
-      imdbTotalReviews.nextElementSibling.classList.add("invalid");
-      imdbTotalReviews.nextElementSibling.classList.remove("valid-status");
-      imdbTotalReviews.classList.remove("valid");
+  phone.addEventListener("keyup", function (e) {
+    if (phone.value == "") {
+      phoneContainer.nextElementSibling.style.display = "block";
+      phoneContainer.nextElementSibling.innerHTML =
+        "Debe ingresar un número de teléfono.";
+      phoneContainer.classList.add("error-indicator");
+    } else if (!validator.isInt(phone.value)) {
+      phoneContainer.nextElementSibling.style.display = "block";
+      phoneContainer.nextElementSibling.innerHTML =
+        "El número de teléfono solo puede contener números.";
+      phoneContainer.classList.add("error-indicator");
+    } else if (phone.value.length > 30) {
+      phoneContainer.nextElementSibling.style.display = "block";
+      phoneContainer.nextElementSibling.innerHTML =
+        "El número puede tener máximo 30 caracteres.";
+      phoneContainer.classList.add("error-indicator");
     } else {
-      imdbTotalReviews.nextElementSibling.innerHTML = "👍";
-      imdbTotalReviews.nextElementSibling.classList.remove("invalid");
-      imdbTotalReviews.nextElementSibling.classList.add("valid-status");
-      imdbTotalReviews.classList.add("valid");
+      phoneContainer.nextElementSibling.style.display = "none";
+      phoneContainer.nextElementSibling.innerHTML = "";
+      phoneContainer.classList.remove("error-indicator");
     }
   });
 
-  tomatoScore.addEventListener("blur", function (e) {
-    if (tomatoScore.value == "") {
-      tomatoScore.nextElementSibling.innerHTML = "Completar campo!";
-      tomatoScore.nextElementSibling.classList.add("invalid");
-      tomatoScore.nextElementSibling.classList.remove("valid-status");
-      tomatoScore.classList.remove("valid");
-    } else if (!validator.isInt(tomatoScore.value) || tomatoScore.value > 100) {
-      tomatoScore.nextElementSibling.innerHTML =
-        "Debe ser un número entero entre 0 y 100!";
-      tomatoScore.nextElementSibling.classList.add("invalid");
-      tomatoScore.nextElementSibling.classList.remove("valid-status");
-      tomatoScore.classList.remove("valid");
-    } else if (tomatoScore.value.length > 3) {
-      tomatoScore.nextElementSibling.innerHTML =
-        "Puede tener máximo 3 dígitos!";
-      tomatoScore.nextElementSibling.classList.add("invalid");
-      tomatoScore.nextElementSibling.classList.remove("valid-status");
-      tomatoScore.classList.remove("valid");
+  birthdate.addEventListener("blur", function (e) {
+    if (birthdate.value == "") {
+      birthdateContainer.nextElementSibling.style.display = "block";
+      birthdateContainer.nextElementSibling.innerHTML =
+        "Debe ingresar una fecha de nacimiento.";
+      birthdateContainer.classList.add("error-indicator");
     } else {
-      tomatoScore.nextElementSibling.innerHTML = "👍";
-      tomatoScore.nextElementSibling.classList.remove("invalid");
-      tomatoScore.nextElementSibling.classList.add("valid-status");
-      tomatoScore.classList.add("valid");
+      birthdateContainer.nextElementSibling.style.display = "none";
+      birthdateContainer.nextElementSibling.innerHTML = "";
+      birthdateContainer.classList.remove("error-indicator");
     }
   });
 
-  trailerLink.addEventListener("blur", function (e) {
-    if (trailerLink.value.length == "") {
-      trailerLink.nextElementSibling.innerHTML = "Completar campo!";
-      trailerLink.nextElementSibling.classList.add("invalid");
-      trailerLink.nextElementSibling.classList.remove("valid-status");
-      trailerLink.classList.remove("valid");
-    } else if (!validator.isURL(trailerLink.value)) {
-      trailerLink.nextElementSibling.innerHTML = "Debe ser una URL!";
-      trailerLink.nextElementSibling.classList.add("invalid");
-      trailerLink.nextElementSibling.classList.remove("valid-status");
-      trailerLink.classList.remove("valid");
+  birthdate.addEventListener("keyup", function (e) {
+    if (birthdate.value == "") {
+      birthdateContainer.nextElementSibling.style.display = "block";
+      birthdateContainer.nextElementSibling.innerHTML =
+        "Debe ingresar una fecha de nacimiento.";
+      birthdateContainer.classList.add("error-indicator");
     } else {
-      trailerLink.nextElementSibling.innerHTML = "👍";
-      trailerLink.nextElementSibling.classList.remove("invalid");
-      trailerLink.nextElementSibling.classList.add("valid-status");
-      trailerLink.classList.add("valid");
+      birthdateContainer.nextElementSibling.style.display = "none";
+      birthdateContainer.nextElementSibling.innerHTML = "";
+      birthdateContainer.classList.remove("error-indicator");
     }
   });
 
-  purchasePrice.addEventListener("blur", function (e) {
-    if (purchasePrice.value == "") {
-      purchasePrice.nextElementSibling.innerHTML = "Completar campo!";
-      purchasePrice.nextElementSibling.classList.add("invalid");
-      purchasePrice.nextElementSibling.classList.remove("valid-status");
-      purchasePrice.classList.remove("valid");
-    } else if (
-      !validator.isNumeric(purchasePrice.value) ||
-      validator.isInt(purchasePrice.value)
-    ) {
-      purchasePrice.nextElementSibling.innerHTML =
-        "Debe ser un número decimal!";
-      purchasePrice.nextElementSibling.classList.add("invalid");
-      purchasePrice.nextElementSibling.classList.remove("valid-status");
-      purchasePrice.classList.remove("valid");
-    } else {
-      purchasePrice.nextElementSibling.innerHTML = "👍";
-      purchasePrice.nextElementSibling.classList.remove("invalid");
-      purchasePrice.nextElementSibling.classList.add("valid-status");
-      purchasePrice.classList.add("valid");
-    }
+  genres.forEach(function (genre) {
+    genre.addEventListener("blur", function (e) {
+      if (genre1.value == "" || genre2.value == "") {
+        genresContainer.nextElementSibling.style.display = "block";
+        genresContainer.nextElementSibling.innerHTML =
+          "Debe elegír 2 géneros favoritos.";
+      } else if (genre1.value == genre2.value) {
+        genresContainer.nextElementSibling.style.display = "block";
+        genresContainer.nextElementSibling.innerHTML =
+          "Los géneros favoritos deben ser diferentes.";
+      } else {
+        genresContainer.nextElementSibling.style.display = "none";
+        genresContainer.nextElementSibling.innerHTML = "";
+        genresContainer.classList.remove("error-indicator");
+      }
+    });
   });
 
-  rentalPrice.addEventListener("blur", function (e) {
-    if (rentalPrice.value == "") {
-      rentalPrice.nextElementSibling.innerHTML = "Completar campo!";
-      rentalPrice.nextElementSibling.classList.add("invalid");
-      rentalPrice.nextElementSibling.classList.remove("valid-status");
-      rentalPrice.classList.remove("valid");
-    } else if (
-      !validator.isNumeric(rentalPrice.value) ||
-      validator.isInt(rentalPrice.value)
-    ) {
-      rentalPrice.nextElementSibling.innerHTML = "Debe ser un número decimal!";
-      rentalPrice.nextElementSibling.classList.add("invalid");
-      rentalPrice.nextElementSibling.classList.remove("valid-status");
-      rentalPrice.classList.remove("valid");
-    } else {
-      rentalPrice.nextElementSibling.innerHTML = "👍";
-      rentalPrice.nextElementSibling.classList.remove("invalid");
-      rentalPrice.nextElementSibling.classList.add("valid-status");
-      rentalPrice.classList.add("valid");
-    }
-  });
-
-  synopsis.addEventListener("blur", function (e) {
-    if (synopsis.value == "") {
-      synopsis.nextElementSibling.innerHTML = "Completar campo!";
-      synopsis.nextElementSibling.classList.add("invalid");
-      synopsis.nextElementSibling.classList.remove("valid-status");
-      synopsis.classList.remove("valid");
-    } else {
-      synopsis.nextElementSibling.innerHTML = "👍";
-      synopsis.nextElementSibling.classList.remove("invalid");
-      synopsis.nextElementSibling.classList.add("valid-status");
-      synopsis.classList.add("valid");
-    }
-  });
-
-  form.addEventListener("submit", function (e) {
-    let errors = [];//Probar de crear objeto tipo Express Validator para mostrar errores abajo de cada campo
+/*   form.addEventListener("submit", function (e) {
+    let errors = []; //Probar de crear objeto tipo Express Validator para mostrar errores abajo de cada campo
     let productImageValue = productImage.value;
     let backgroundImageValue = backgroundImage.value;
-    let validExtensions = /(.jpg|.jpeg|.png)$/i;//Revisar el código que use para multer
+    let validExtensions = /(.jpg|.jpeg|.png)$/i; //Revisar el código que use para multer
 
     if (types[0].checked == false && types[1].checked == false) {
       errors.push("El selector de tipo no puede estar vacio!");
@@ -382,5 +467,5 @@ window.addEventListener("load", function (e) {
     } else {
       alert("La carga se realizó exitosamente");
     }
-  });
+  }); */
 });

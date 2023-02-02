@@ -104,7 +104,7 @@ body {
   justify-content: flex-start;
 }
 
-/* .main__form-input::after {
+.error-indicator::after {
   border-bottom: 2px solid #ffc700;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
@@ -116,12 +116,23 @@ body {
   pointer-events: none;
   position: absolute;
   width: 100%;
-} */
+}
 
 .main__form-error {
   padding-left: 10px;
   margin-bottom: 20px;
   color: #ffc700;
+}
+
+.main__form-error-front {
+  display: none;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  color: #ffc700;
+}
+
+.main__form-error-front-genres {
+  margin-top: 16px;
 }
 
 .main__text-box {
@@ -174,7 +185,7 @@ input:valid ~ .main__input-label {
   justify-content: space-around;
 }
 
-.main__genre-error{
+.main__genre-error {
   margin-top: 16px;
 }
 
