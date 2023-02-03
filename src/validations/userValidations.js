@@ -19,7 +19,7 @@ module.exports = {
         }).then((email) => {
           if (email) {
             return Promise.reject(
-              "El email que ingresó ya se encuentra tomado."
+              "El email que ingresó ya se encuentra en uso."
             );
           }
         });
@@ -77,7 +77,7 @@ module.exports = {
           return true;
         }
       })
-      .withMessage("Solo se aceptan archivos con extensión png, jpg y jpeg."),
+      .withMessage("Solo se aceptan archivos con extensión png, jpg o jpeg."),
   ],
   loginValidations: [
     body("email")

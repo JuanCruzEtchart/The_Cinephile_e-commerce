@@ -120,7 +120,7 @@
             <div class="main__form-input-error">
               <div class="main__form-input main__form-input-photo">
                 <label class="main__input-description main__input-photo-description" for="photo">Foto de perfil</label>
-                <input type="file" name="userPhoto" id="photo" accept="image/jpg, image/png, image/jpeg" required>
+                <input type="file" name="userPhoto" id="photo" accept="image/jpg, image/png, image/jpeg" >
               </div>
               <% if (locals.errors && errors.userPhoto) { %>
               <div class="main__form-error"><%= errors.userPhoto.msg %> </div>

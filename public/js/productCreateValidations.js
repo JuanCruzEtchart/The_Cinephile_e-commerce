@@ -281,7 +281,6 @@ window.addEventListener("load", function (e) {
       validator.isInt(imdbScore.value) ||
       imdbScore.value > 10
     ) {
-      console.log(validator.isInt(imdbScore.value));
       errors.push(
         "El campo de puntaje de IMDb debe ser un número decimal entre 0 y 10!"
       );

@@ -240,8 +240,6 @@ window.addEventListener("load", function (e) {
 
   form.addEventListener("submit", function (e) {
     let errors = [];
-    let productImageValue = productImage.value;
-    let backgroundImageValue = backgroundImage.value;
     let validExtensions = /(.jpg|.jpeg|.png)$/i;
 
     if (types[0].checked == false && types[1].checked == false) {
@@ -280,7 +278,6 @@ window.addEventListener("load", function (e) {
       validator.isInt(imdbScore.value) ||
       imdbScore.value > 10
     ) {
-      console.log(validator.isInt(imdbScore.value));
       errors.push(
         "El campo de puntaje de IMDb debe ser un número decimal entre 0 y 10!"
       );

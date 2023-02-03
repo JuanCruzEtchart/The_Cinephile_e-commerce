@@ -21,7 +21,7 @@ const userController = {
       const errors = validationResult(req);
 
       if (!errors.isEmpty()) {
-        console.log(errors.mapped());
+        /* console.log(errors.mapped()); */
 
         return res.render("login", { errors: errors.array(), old: req.body });
       }
@@ -73,11 +73,10 @@ const userController = {
     const validationErrors = validationResult(req);
     if (!validationErrors.isEmpty()) {
       const genres = await Genres.findAll();
-      /* console.log(validationErrors.mapped()); */
       res.render("register", {
         errors: validationErrors.mapped(),
         errors2: validationErrors.array(),
-        old: req.body,
+        /*  old: req.body, */
         genres,
       });
     } else {
