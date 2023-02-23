@@ -395,6 +395,7 @@ window.addEventListener("load", function (e) {
 
   form.addEventListener("submit", function (e) {
     let validExtensions = /(.jpg|.jpeg|.png)$/i;
+    e.preventDefault();
 
     fetch("http://localhost:3030/api/users")
       .then((response) => {
@@ -416,48 +417,47 @@ window.addEventListener("load", function (e) {
           emailContainer.classList.remove("error-indicator");
           emailError = false;
         }
+
+        if (!userPhoto.value == "" && !validExtensions.exec(userPhoto.value)) {
+          photoContainer.nextElementSibling.style.display = "block";
+          photoContainer.nextElementSibling.innerHTML =
+            "Solo se aceptan archivos con extensión png, jpg o jpeg.";
+          photoError = true;
+        } else {
+          photoContainer.nextElementSibling.style.display = "none";
+          photoContainer.nextElementSibling.innerHTML = "";
+          photoError = false;
+        }
+
+        if (
+          email.value == "" ||
+          password.value == "" ||
+          confirmPassword.value == "" ||
+          name.value == "" ||
+          surname.value == "" ||
+          phone.value == "" ||
+          birthdate.value == "" ||
+          genre1.value == "" ||
+          genre2.value == ""
+        ) {
+          alert("El formulario está incompleto.");
+        } else if (
+          emailError == true ||
+          passwordError == true ||
+          confirmPasswordError == true ||
+          nameError == true ||
+          surnameError == true ||
+          phoneError == true ||
+          birthdateError == true ||
+          genresError == true ||
+          photoError == true
+        ) {
+          alert("El formulario tiene errores.");
+        } else {
+          alert("El usuario se creo exitosamente!");
+          this.submit();
+        }
       })
       .catch((error) => console.log(error));
-
-    if (!userPhoto.value == "" && !validExtensions.exec(userPhoto.value)) {
-      photoContainer.nextElementSibling.style.display = "block";
-      photoContainer.nextElementSibling.innerHTML =
-        "Solo se aceptan archivos con extensión png, jpg o jpeg.";
-      photoError = true;
-    } else {
-      photoContainer.nextElementSibling.style.display = "none";
-      photoContainer.nextElementSibling.innerHTML = "";
-      photoError = false;
-    }
-
-    if (
-      email.value == "" ||
-      password.value == "" ||
-      confirmPassword.value == "" ||
-      name.value == "" ||
-      surname.value == "" ||
-      phone.value == "" ||
-      birthdate.value == "" ||
-      genre1.value == "" ||
-      genre2.value == ""
-    ) {
-      e.preventDefault();
-      alert("El formulario está incompleto.");
-    } else if (
-      emailError == true ||
-      passwordError == true ||
-      confirmPasswordError == true ||
-      nameError == true ||
-      surnameError == true ||
-      phoneError == true ||
-      birthdateError == true ||
-      genresError == true ||
-      photoError == true
-    ) {
-      e.preventDefault();
-      alert("El formulario tiene errores.");
-    } else {
-      alert("El usuario se creo exitosamente!");
-    }
   });
 });

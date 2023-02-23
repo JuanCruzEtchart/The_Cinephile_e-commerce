@@ -11,28 +11,48 @@ const Users = db.User;
 const Genres = db.Genre;
 
 const userController = {
-  login: (req, res) => {
-    const users = Users.findAll();
-    res.render("login", { users: users });
+  login: async (req, res) => {
+    const users = await Users.findAll();
+    res.render("register copy", { users: users });
   },
 
   processLogin: async (req, res) => {
+    const validationErrors = validationResult(req);
     try {
-      const errors = validationResult(req);
-
-      if (!errors.isEmpty()) {
-        /* console.log(errors.mapped()); */
-
-        return res.render("login", { errors: errors.array(), old: req.body });
+      console.log(validationErrors);
+      if (!validationErrors.isEmpty()) {
+        return res.render("register copy", {
+          errors: validationErrors.mapped(),
+          errors2: validationErrors.array()
+        });
       }
 
       let userFound = await Users.findOne({ where: { email: req.body.email } });
+
+      req.session.usuarioLogueado = {
+        id: userFound.id,
+        name: userFound.name,
+        email: userFound.email,
+        photo: userFound.user_photo,
+        admin_status: userFound.admin_status,
+      };
+
+      if (req.body.remember) {
+        res.cookie("recordame", userFound.id, { maxAge: 9999999 * 100 });
+      }
+
+      res.redirect("/");
+
       //bcrypt.compareSync(req.body.password, user.password
 
-      if (!userFound) {
-        return res.render("login", { errorLogin: "Credenciales Invalidas" });
+      /*       if (!userFound) {
+        return res.render("register copy", {
+          errorLogin: "Credenciales Invalidas",
+        });
       } else if (!bcrypt.compareSync(req.body.password, userFound.password)) {
-        return res.render("login", { errorLogin: "Credenciales Invalidas" });
+        return res.render("register copy", {
+          errorLogin: "Credenciales Invalidas",
+        });
       } else {
         req.session.usuarioLogueado = {
           id: userFound.id,
@@ -46,17 +66,15 @@ const userController = {
         }
 
         res.redirect("/");
-      }
+      } */
     } catch (err) {
       res.send(err);
     }
   },
 
   register: async function (req, res) {
-    const users = await Users.findAll();
     const genres = await Genres.findAll();
-
-    res.render("register", { users, genres });
+    res.render("register", { genres });
   },
 
   profile: async function (req, res) {
@@ -76,7 +94,6 @@ const userController = {
       res.render("register", {
         errors: validationErrors.mapped(),
         errors2: validationErrors.array(),
-        /*  old: req.body, */
         genres,
       });
     } else {

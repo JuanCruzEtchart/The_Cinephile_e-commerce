@@ -5,7 +5,7 @@ const userController = require("../controllers/userController.js");
 const {
   registerValidations,
   loginValidations,
-} = require("../validations/userValidations");
+} = require("../validations/userValidations.js");
 const { normalLogin } = require("../middleware/loginMiddle.js");
 const path = require("path");
 

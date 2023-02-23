@@ -3,7 +3,7 @@ function localsMiddleware(req, res, next) {
 
   if (req.session.usuarioLogueado) {
     res.locals.usuario = req.session.usuarioLogueado;
-    console.log("Locals: ", res.locals.usuario);
+    /* console.log("Locals: ", res.locals.usuario); */
   }
   next();
 }

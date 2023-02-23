@@ -1,7 +1,6 @@
 const fs = require("fs");
-const path = require("path");
-const db = require("../database/models");
-const User = db.User;
+/* const path = require("path"); */
+const { User } = require("../database/models");
 
 let recordame = async (req, res, next) => {
   try {

@@ -1,6 +1,7 @@
 const { body } = require("express-validator");
 const path = require("path");
 const db = require("../database/models");
+const bcrypt = require("bcryptjs");
 
 module.exports = {
   registerValidations: [
@@ -82,9 +83,25 @@ module.exports = {
   loginValidations: [
     body("email")
       .notEmpty()
-      .withMessage("Campo email incompleto")
+      .withMessage("Debe ingresar un email válido.")
+      .bail()
       .isEmail()
-      .withMessage("Debe ingresar un email valido"),
-    body("password").notEmpty().withMessage("Campo password incompleto."),
+      .withMessage("Debe ingresar un email válido.")
+      .bail()
+      .custom((value, { req }) => {
+        return db.User.findOne({
+          where: {
+            email: value,
+          },
+        }).then((email) => {
+          if (!email) {
+            return Promise.reject("El email que ingresó no existe.");
+          }
+          if (!bcrypt.compareSync(req.body.password, email.password)) {
+            return Promise.reject("Usuario o contraseña inválidos.");
+          }
+        });
+      }),
+    body("password").notEmpty().withMessage("Debe ingresar una contraseña."),
   ],
 };
