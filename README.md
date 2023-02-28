@@ -20,8 +20,11 @@
 ## Tecnologías utilizadas
 
 > :point_right: **Backend:** JavaScript, Node.js, Express, REST API, Cookies, Session, Sequelize y patrón MVC.
+
 > :point_right: **Frontend:** JavaScript, EJS, CSS y Fetch API.
+
 > :point_right: **Database:** MySQL(Sequelize) y JSON.
+
 > :point_right: **Validaciones:** Express Validator, JavaScript y Validator.js.
 
 ### 🎬 [Deploy](https://thecinephile.onrender.com/)
