@@ -6,6 +6,13 @@ module.exports = {
       res.redirect("/user/login");
     }
   },
+  loggedIn: (req, res, next) => {
+    if (req.session.usuarioLogueado) {
+      res.redirect("/");
+    } else {
+      next();
+    }
+  },
   adminLogin: (req, res, next) => {
     if (
       req.session.usuarioLogueado &&

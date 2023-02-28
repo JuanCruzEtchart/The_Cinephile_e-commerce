@@ -64,7 +64,6 @@ body {
   align-items: center;
   flex-direction: column;
   column-gap: 3rem;
-  /* margin-bottom: 50px; */
 }
 
 .main__account-form,
@@ -89,7 +88,6 @@ body {
 }
 
 .main__form-input-error {
-  /* margin-bottom: 20px; */
   display: flex;
   flex-direction: column;
 }
@@ -288,7 +286,6 @@ input:valid ~ .main__input-label {
   .main__personal-form {
     padding-top: 16px;
     margin-top: 50px;
-    /* height: 362px; */
     height: auto;
   }
 }

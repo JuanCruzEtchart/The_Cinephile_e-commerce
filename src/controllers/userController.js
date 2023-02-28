@@ -1,10 +1,6 @@
-const fs = require("fs");
-const path = require("path");
 const bcrypt = require("bcryptjs");
 const { validationResult } = require("express-validator");
 const db = require("../database/models");
-const sequelize = db.sequelize;
-const { Op } = require("sequelize");
 
 //Modelos
 const Users = db.User;
@@ -13,7 +9,7 @@ const Genres = db.Genre;
 const userController = {
   login: async (req, res) => {
     const users = await Users.findAll();
-    res.render("register copy", { users: users });
+    res.render("login", { users: users });
   },
 
   processLogin: async (req, res) => {
@@ -21,14 +17,12 @@ const userController = {
     try {
       console.log(validationErrors);
       if (!validationErrors.isEmpty()) {
-        return res.render("register copy", {
+        return res.render("login", {
           errors: validationErrors.mapped(),
-          errors2: validationErrors.array()
+          errors2: validationErrors.array(),
         });
       }
-
       let userFound = await Users.findOne({ where: { email: req.body.email } });
-
       req.session.usuarioLogueado = {
         id: userFound.id,
         name: userFound.name,
@@ -36,37 +30,10 @@ const userController = {
         photo: userFound.user_photo,
         admin_status: userFound.admin_status,
       };
-
       if (req.body.remember) {
         res.cookie("recordame", userFound.id, { maxAge: 9999999 * 100 });
       }
-
       res.redirect("/");
-
-      //bcrypt.compareSync(req.body.password, user.password
-
-      /*       if (!userFound) {
-        return res.render("register copy", {
-          errorLogin: "Credenciales Invalidas",
-        });
-      } else if (!bcrypt.compareSync(req.body.password, userFound.password)) {
-        return res.render("register copy", {
-          errorLogin: "Credenciales Invalidas",
-        });
-      } else {
-        req.session.usuarioLogueado = {
-          id: userFound.id,
-          name: userFound.username,
-          email: userFound.email,
-          admin_status: userFound.admin_status,
-        };
-
-        if (req.body.checkbox) {
-          res.cookie("recordame", userFound.id, { maxAge: 9999999 * 100 });
-        }
-
-        res.redirect("/");
-      } */
     } catch (err) {
       res.send(err);
     }
@@ -79,7 +46,6 @@ const userController = {
 
   profile: async function (req, res) {
     const users = await Users.findAll();
-
     res.render("profile", { users });
   },
 

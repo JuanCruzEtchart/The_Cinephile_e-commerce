@@ -6,7 +6,7 @@ const {
   registerValidations,
   loginValidations,
 } = require("../validations/userValidations.js");
-const { normalLogin } = require("../middleware/loginMiddle.js");
+const { normalLogin, loggedIn } = require("../middleware/loginMiddle.js");
 const path = require("path");
 
 let storage = multer.diskStorage({
@@ -39,13 +39,13 @@ let uploadPhoto = upload.single("userPhoto");
 
 /*Render del login*/
 
-router.get("/login", userController.login);
+router.get("/login", loggedIn, userController.login);
 router.post("/login", loginValidations, userController.processLogin);
 router.post("/logout", userController.logout);
 
 /*Render del register*/
 
-router.get("/register", userController.register);
+router.get("/register", loggedIn, userController.register);
 router.post(
   "/register",
   uploadPhoto,

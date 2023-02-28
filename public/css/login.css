@@ -1,188 +1,227 @@
 /*MAIN*/
 
-#main {
-  margin: auto;
-  height: auto;
-  width: 100%;
-  padding: 20px 0px;
-  background-color: rgba(27, 27, 27, 0.92);
-  font-size: 17px;
-}
-
-input:focus { 
-  color: white; 
-} 
-.formulario {
-  width: 100%;
-  height: 100%;
+body {
+  margin: 0;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: #212121;
 }
 
-form.form-login {
-  height: 100%;
-  width: 80%;
-  background-color: rgba(27, 27, 27, 0.5);
+.main {
+  background-color: #212121;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  flex: 1 0 auto;
+  position: relative;
+}
+
+.main__container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 30px auto;
+  background-color: #292929;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  border-radius: 10px 10px 10px 10px;
+  box-shadow: 0px 0px 10px rgba(60, 64, 67, 0.9);
 }
 
-
-
-form.form-login i {
-  color: white;
-  font-size: 66%;
-  width: 23%;
-  display: flex;
-  justify-content: flex-end;
+.main__nav-menu {
+  width: 90%;
 }
 
-.cruzA {
-  display: flex;
-  flex-direction: row-reverse;
-  padding: 15px;
-  height: 8%;
+.main__nav-list {
   width: 100%;
-  max-height: 32px;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  font-size: 1.4rem;
+  padding: 1rem 0 2rem 0;
+  margin-top: 30px;
 }
 
-.fa-window-close:before {
-  background-color: rgba(27, 27, 27, 0.5);
-  color: #ffc700;
-  padding: 2%;
-  padding-right: 13%;
-  border-radius: 1px 1px 1px 1px;
-  font-size: 200%;
+.main__nav-list a {
+  text-decoration: none;
+  color: white;
+  padding: 1rem 2rem;
 }
 
-h1.conectate {
-  font-size: 100%;
+.main__login {
+  border-bottom: 3px solid #ffc700;
+}
+
+.main__form {
+  width: 100%;
+}
+
+.main__form-container {
   display: flex;
   justify-content: center;
-  letter-spacing: 4px;
-  padding-bottom: 5%;
-}
-
-div.email-contraseña {
-  height: 10%;
-  display: flex;
-  justify-content: flex-start;
   align-items: center;
+  flex-direction: column;
+  column-gap: 3rem;
+}
+
+.main__account-form {
+  position: relative;
+  display: block;
   width: 100%;
-  padding-left: 4%;
-  padding-bottom: 3%;
+  max-width: 450px;
+  margin-top: 50px;
+  padding: 16px;
+  color: #ffffff;
+  border-radius: 4px;
 }
 
-a {
-  background-color: transparent;
-  color: transparent;
-}
-#email {
-  background-color: #1b1b1b;
+.main__account-form {
+  padding-bottom: 0px;
 }
 
-#password {
+.main__form-input-error {
   display: flex;
+  flex-direction: column;
 }
 
-#email, #password {
-  font-size: 0.700rem;
-  width: 70%;
+.main__form-input {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  padding-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.error-indicator::after {
+  border-bottom: 2px solid #ffc700;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  bottom: 16px;
+  content: "";
+  display: block;
+  height: 6px;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+}
+
+.main__form-error {
+  padding-left: 10px;
+  margin-bottom: 20px;
+  color: #ffc700;
+}
+
+.main__form-error-front {
+  display: none;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  color: #ffc700;
+}
+
+.main__form-error-front-genres {
+  margin-top: 16px;
+}
+
+.main__text-box {
+  box-sizing: border-box;
+  width: 100%;
+  font-family: inherit;
+  padding: 16px 20px 0 20px;
+  height: 50px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: #1b1b1b;
+  color: white;
+}
+
+.main__input-label {
+  box-sizing: border-box;
+  width: 100%;
+  position: absolute;
+  top: 38.5%;
+  left: 20px;
+  font-size: 18px;
+  cursor: text;
+  color: #8c8c8c;
+  transition: font 0.1s ease, top 0.1s ease, transform 0.1s ease;
+  transition: font 0.1s ease, top 0.1s ease, transform 0.1s ease,
+    -webkit-transform 0.1s ease, -moz-transform 0.1s ease,
+    -o-transform 0.1s ease;
+}
+
+input:focus ~ .main__input-label,
+input:valid ~ .main__input-label {
+  font-size: 11px;
+  top: 15px;
+}
+
+.main__input-description {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+
+.main__remember-container {
+  font-size: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+#remember {
+  accent-color: #ffc700;
+  margin-right: 10px;
+  transform: scale(1.2);
+}
+
+.main__button {
+  font-size: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.send-button {
+  background-color: #ffc700;
+  border: none;
   padding: 10px;
   border-radius: 10px;
-  background-color: #1b1b1b;
-  border: solid 1px rgba(255, 255, 255, 0.3);
-  color: white;
-}
-#emailbloque{
-  padding-bottom: 5%;
-  width: 65%;
-  display: flex;
-  justify-content: center;
-}
-#passwordbloque{
-  width: 65%;
-  margin-bottom: 10%;
-  display: flex;
-  justify-content: center;
-}
-
-.fa-envelope:before {
-  padding-right: 10%;
-}
-
-.fa-lock:before {
-  padding-right: 10%;
-}
-
-button.send-button {
-  background-color: #ffc700;
-  margin-bottom: 5%;
-  font-weight: bold;
-  border: none;
-  text-decoration: none;
-  padding-top: 14%;
-}
-
-.div-edit {
-  background-color: #ffc700;
-  width: 45%;
-  display: flex;
-  justify-content: center;
-  border-radius: 10px 10px 10px 10px;
-  text-decoration: none;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 70%;
+  max-width: 250px;
   cursor: pointer;
+  transition: all 120ms;
 }
 
-#checkboxBox {
-    padding: 10px 0;
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    padding-bottom: 3%;
+.send-button:hover {
+  background-color: #fce89f;
 }
 
-#checkbox {
-  margin-right: 3%;
+.reset-button {
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  width: 70%;
+  max-width: 250px;
+  cursor: pointer;
+  transition: all 120ms;
 }
 
-#contraseña {
-  color: #ffc700;
-  padding-top: 40%;
+.reset-button:hover {
+  background-color: #b4b4b4;
 }
-
-#olvidaste {
-  padding-bottom: 15%;
-  display: flex;
-  width: 75%;
-  justify-content: center;
-  margin: 0 auto;
-}
-
-
-.msg-error {
-  color: red;
-  display: flex;
-  justify-content: center;
-  padding-top: 15%;
-}
-
-#password {
-  display: flex;
-}
-
-.errorlogin {
-  color: red;
-  display: flex;
-  justify-content: center;
-  padding-top: 4%;
-}
-
 
 /*MEDIA QUERIES*/
 
@@ -190,97 +229,35 @@ button.send-button {
 
 @media (max-width: 599px) {
   /*MAIN*/
+  .main__nav-list a {
+    text-decoration: none;
+    color: white;
+    padding: 1rem 0rem;
+  }
 }
 
 /*TABLET*/
 
 @media (min-width: 600px) {
   /*MAIN*/
-  #main {
-    font-size: 20px;
-  }
-
-  #checkbox {
-    height: 20px;
-    width: 16px;
-  }
-  .fa-envelope:before {
-    font-size: 15px;
-  }
-  .fa-lock:before {
-    font-size: 15px;
-  }
-
-
-#email, #password {
-  font-size: 0.9rem;
- 
-}
-
 }
 
 /*DESKTOP*/
 
 @media (min-width: 1200px) {
   /*MAIN*/
-  #main {
-    font-size: 25px;
+  .main__form-container {
+    flex-direction: row;
+    align-items: flex-start;
   }
 
-  #email, #password {
-    width: 80%;
+  .main__account-form {
+    padding-bottom: 16px;
   }
-
-  #email,
-  #password {
-    width: 100%;
-  }
-
-  .div-edit {
-    height: 50px;   
-}
-
-#checkbox {
-  height: 30px;
-  width: 24px;
-}
-
-#olvidaste {
-  padding-bottom: 5%;
-}
-
-.fa-envelope:before {
-  font-size: 20px;
-}
-.fa-lock:before {
-  font-size: 20px;
-}
-
-
-#email, #password {
-  font-size: 1.2rem;
- 
-}
-
 }
 
 /*LARGE-DESKTOP*/
 
 @media (min-width: 1440px) {
-/*MAIN*/
-  #main {
-    font-size: 28px;
-  }
-  .fa-envelope:before {
-    font-size: 23px;
-  }
-  .fa-lock:before {
-    font-size: 23px;
-  }
-
-  #email, #password {
-    font-size: 1.5rem;
-   
-}
-
+  /*MAIN*/
 }

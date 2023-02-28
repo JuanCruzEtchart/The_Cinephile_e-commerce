@@ -188,7 +188,7 @@ window.addEventListener("load", function (e) {
       nameContainer.nextElementSibling.innerHTML = "Debe ingresar un nombre.";
       nameContainer.classList.add("error-indicator");
       nameError = true;
-    } else if (!validator.isAlpha(name.value)) {
+    } else if (!validator.isAlpha(name.value, ["es-ES"], { ignore: " " })) {
       nameContainer.nextElementSibling.style.display = "block";
       nameContainer.nextElementSibling.innerHTML =
         "El nombre no debe contener números.";
@@ -214,7 +214,7 @@ window.addEventListener("load", function (e) {
       nameContainer.nextElementSibling.innerHTML = "Debe ingresar un nombre.";
       nameContainer.classList.add("error-indicator");
       nameError = true;
-    } else if (!validator.isAlpha(name.value)) {
+    } else if (!validator.isAlpha(name.value, ["es-ES"], { ignore: " " })) {
       nameContainer.nextElementSibling.style.display = "block";
       nameContainer.nextElementSibling.innerHTML =
         "El nombre no debe contener números.";
@@ -241,7 +241,7 @@ window.addEventListener("load", function (e) {
         "Debe ingresar un apellido.";
       surnameContainer.classList.add("error-indicator");
       surnameError = true;
-    } else if (!validator.isAlpha(surname.value)) {
+    } else if (!validator.isAlpha(surname.value, ["es-ES"], { ignore: " " })) {
       surnameContainer.nextElementSibling.style.display = "block";
       surnameContainer.nextElementSibling.innerHTML =
         "El apellido no debe contener números.";
@@ -268,7 +268,7 @@ window.addEventListener("load", function (e) {
         "Debe ingresar un apellido.";
       surnameContainer.classList.add("error-indicator");
       surnameError = true;
-    } else if (!validator.isAlpha(surname.value)) {
+    } else if (!validator.isAlpha(surname.value, ["es-ES"], { ignore: " " })) {
       surnameContainer.nextElementSibling.style.display = "block";
       surnameContainer.nextElementSibling.innerHTML =
         "El apellido no debe contener números.";

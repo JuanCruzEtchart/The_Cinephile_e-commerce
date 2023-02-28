@@ -97,11 +97,22 @@ module.exports = {
           if (!email) {
             return Promise.reject("El email que ingresó no existe.");
           }
-          if (!bcrypt.compareSync(req.body.password, email.password)) {
-            return Promise.reject("Usuario o contraseña inválidos.");
+        });
+      }),
+    body("password")
+      .notEmpty()
+      .withMessage("Debe ingresar una contraseña.")
+      .bail()
+      .custom((value, { req }) => {
+        return db.User.findOne({
+          where: {
+            email: req.body.email,
+          },
+        }).then((user) => {
+          if (!bcrypt.compareSync(req.body.password, user.password)) {
+            return Promise.reject("Contraseña incorrecta.");
           }
         });
       }),
-    body("password").notEmpty().withMessage("Debe ingresar una contraseña."),
   ],
 };

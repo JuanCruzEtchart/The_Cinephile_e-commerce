@@ -1,14 +1,11 @@
 window.addEventListener("load", function (e) {
   let form = document.querySelector(".main__form");
-  let error = document.querySelector(".main__errors-front");
   //INPUTS
   let email = document.querySelector("#email");
   let password = document.querySelector("#password");
-
   //INPUTS CONTAINERS
   let emailContainer = document.querySelector(".main__form-input");
   let passwordContainer = document.querySelector(".main__form-input-password");
-
   //ERRORS
   let emailError = true;
   let passwordError = true;
@@ -100,78 +97,32 @@ window.addEventListener("load", function (e) {
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    if (email.value == "" || emailError == true) {
-      emailContainer.nextElementSibling.style.display = "block";
-      emailContainer.nextElementSibling.innerHTML =
-        "Debe ingresar un email válido.";
-      emailContainer.classList.add("error-indicator");
-      emailError = true;
+    if (!email.value == "" && emailError == false) {
+      fetch("http://localhost:3030/api/users")
+        .then((response) => {
+          return response.json();
+        })
+        .then((users) => {
+          let dbEmails = users.data.map((user) => {
+            return user.email.toLowerCase();
+          });
+          if (!dbEmails.includes(email.value.toLowerCase())) {
+            emailContainer.nextElementSibling.style.display = "block";
+            emailContainer.nextElementSibling.innerHTML =
+              "No se pudo encontrar este email.";
+            emailContainer.classList.add("error-indicator");
+            emailError = true;
+          }
+          if (
+            !email.value == "" &&
+            !password.value == "" &&
+            emailError == false &&
+            passwordError == false
+          ) {
+            this.submit();
+          }
+        })
+        .catch((error) => console.log(error));
     }
-
-    if (password.value == "" || passwordError == true) {
-      passwordContainer.nextElementSibling.style.display = "block";
-      passwordContainer.nextElementSibling.innerHTML =
-        "La contraseña debe tener entre 4 y 50 caracteres.";
-      passwordContainer.classList.add("error-indicator");
-      passwordError = true;
-    }
-
-    /*     if (
-      !(email.value == "" || password.value == "") &&
-      !(emailError == true || passwordError == true)
-    ) {
-      this.submit();
-    } */
-
-    fetch("http://localhost:3030/api/users")
-      .then((response) => {
-        return response.json();
-      })
-      .then((users) => {
-        let dbEmails = users.data.map((user) => {
-          return user.email;
-        });
-        if (
-          !email.value == "" &&
-          !emailError == true &&
-          !dbEmails.includes(email.value)
-        ) {
-          error.style.display = "block";
-          error.innerHTML =
-            "No pudimos encontrar una cuenta con esta dirección de email. Por favor intentá de nuevo o creá una cuenta nueva.";
-          emailError = true;
-        } else {
-          error.style.display = "hidden";
-          error.innerHTML = "";
-          emailError = false;
-        }
-
-        if (
-          !(email.value == "" || password.value == "") &&
-          !(emailError == true || passwordError == true)
-        ) {
-          this.submit();
-        }
-
-        /*         if (!userPhoto.value == "" && !validExtensions.exec(userPhoto.value)) {
-          photoContainer.nextElementSibling.style.display = "block";
-          photoContainer.nextElementSibling.innerHTML =
-            "Solo se aceptan archivos con extensión png, jpg o jpeg.";
-          photoError = true;
-        } else {
-          photoContainer.nextElementSibling.style.display = "none";
-          photoContainer.nextElementSibling.innerHTML = "";
-          photoError = false;
-        }
-
-        if (email.value == "" || password.value == "") {
-          alert("El formulario está incompleto.");
-        } else if (emailError == true || passwordError == true) {
-          alert("El formulario tiene errores.");
-        } else {
-          this.submit();
-        } */
-      })
-      .catch((error) => console.log(error));
   });
 });
