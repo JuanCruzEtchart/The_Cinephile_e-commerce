@@ -1,7 +1,7 @@
 <p align="center">
-<img alt="Logo" src="/public/images/Logo socialmedia.png" />
+<a href="https://thecinephile.onrender.com" target="_blank"><img alt="Logo" src="/public/images/Logo socialmedia.png" /></a>
 </p>
-<h1 align="center"><a href="https://thecinephile.onrender.com "style="color:black">Bienvenido a The Cinephile 🎬</a></h1>
+<h1 align="center"><a href="https://thecinephile.onrender.com"target="_blank"style="color:black">Bienvenido a The Cinephile 🎬</a></h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/JuanCruzEtchart/The_Cinephile_e-commerce#readme" target="_blank">
@@ -20,8 +20,11 @@
 ## Tecnologías utilizadas
 
 > :point_right: **Backend:** JavaScript, Node.js, Express, REST API, Cookies, Session, Sequelize y patrón MVC.
+
 > :point_right: **Frontend:** JavaScript, EJS, CSS y Fetch API.
+
 > :point_right: **Database:** MySQL(Sequelize) y JSON.
+
 > :point_right: **Validaciones:** Express Validator, JavaScript y Validator.js.
 
 ### 🎬 [Deploy](https://thecinephile.onrender.com/)
