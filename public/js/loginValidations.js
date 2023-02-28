@@ -98,7 +98,7 @@ window.addEventListener("load", function (e) {
     e.preventDefault();
 
     if (!email.value == "" && emailError == false) {
-      fetch("http://localhost:3030/api/users")
+      fetch("/api/users")
         .then((response) => {
           return response.json();
         })

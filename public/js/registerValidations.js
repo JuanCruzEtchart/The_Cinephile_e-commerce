@@ -397,15 +397,15 @@ window.addEventListener("load", function (e) {
     let validExtensions = /(.jpg|.jpeg|.png)$/i;
     e.preventDefault();
 
-    fetch("http://localhost:3030/api/users")
+    fetch("/api/users")
       .then((response) => {
         return response.json();
       })
       .then((users) => {
         let dbEmails = users.data.map((user) => {
-          return user.email;
+          return user.email.toLowerCase();
         });
-        if (dbEmails.includes(email.value)) {
+        if (dbEmails.includes(email.value.toLowerCase())) {
           emailContainer.nextElementSibling.style.display = "block";
           emailContainer.nextElementSibling.innerHTML =
             "El email que ingresó ya se encuentra en uso.";

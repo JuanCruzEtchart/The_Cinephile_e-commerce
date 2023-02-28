@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-02-2023 a las 08:29:26
--- Versión del servidor: 10.4.25-MariaDB
--- Versión de PHP: 8.1.10
+-- Tiempo de generación: 28-02-2023 a las 05:16:29
+-- Versión del servidor: 10.4.27-MariaDB
+-- Versión de PHP: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -29,12 +29,13 @@ USE `the_cinephile`;
 -- Estructura de tabla para la tabla `actors`
 --
 
+DROP TABLE IF EXISTS `actors`;
 CREATE TABLE `actors` (
   `id` int(11) NOT NULL,
   `full_name` varchar(100) DEFAULT NULL,
   `biography_link` varchar(500) DEFAULT NULL,
   `actors_photo` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `actors`
@@ -169,11 +170,12 @@ INSERT INTO `actors` (`id`, `full_name`, `biography_link`, `actors_photo`) VALUE
 -- Estructura de tabla para la tabla `actor_character`
 --
 
+DROP TABLE IF EXISTS `actor_character`;
 CREATE TABLE `actor_character` (
   `id` int(11) NOT NULL,
   `actor_id` int(11) DEFAULT NULL,
   `character_id` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `actor_character`
@@ -354,11 +356,12 @@ INSERT INTO `actor_character` (`id`, `actor_id`, `character_id`) VALUES
 -- Estructura de tabla para la tabla `actor_product`
 --
 
+DROP TABLE IF EXISTS `actor_product`;
 CREATE TABLE `actor_product` (
   `id` int(11) NOT NULL,
   `actor_id` int(10) DEFAULT NULL,
   `product_id` int(10) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `actor_product`
@@ -506,10 +509,11 @@ INSERT INTO `actor_product` (`id`, `actor_id`, `product_id`) VALUES
 -- Estructura de tabla para la tabla `characters`
 --
 
+DROP TABLE IF EXISTS `characters`;
 CREATE TABLE `characters` (
   `id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `characters`
@@ -649,12 +653,13 @@ INSERT INTO `characters` (`id`, `name`) VALUES
 -- Estructura de tabla para la tabla `directors`
 --
 
+DROP TABLE IF EXISTS `directors`;
 CREATE TABLE `directors` (
   `id` int(10) NOT NULL,
   `full_name` varchar(100) DEFAULT NULL,
   `biography_link` varchar(500) DEFAULT NULL,
   `directors_photo` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `directors`
@@ -679,10 +684,11 @@ INSERT INTO `directors` (`id`, `full_name`, `biography_link`, `directors_photo`)
 -- Estructura de tabla para la tabla `genres`
 --
 
+DROP TABLE IF EXISTS `genres`;
 CREATE TABLE `genres` (
   `id` int(10) NOT NULL,
   `name` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `genres`
@@ -712,6 +718,7 @@ INSERT INTO `genres` (`id`, `name`) VALUES
 -- Estructura de tabla para la tabla `products`
 --
 
+DROP TABLE IF EXISTS `products`;
 CREATE TABLE `products` (
   `id` int(10) NOT NULL,
   `type` varchar(100) DEFAULT NULL,
@@ -732,7 +739,7 @@ CREATE TABLE `products` (
   `background_image` varchar(100) DEFAULT NULL,
   `genre1_id` int(10) DEFAULT NULL,
   `genre2_id` int(10) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `products`
@@ -763,12 +770,13 @@ INSERT INTO `products` (`id`, `type`, `name`, `release_year`, `rating`, `length`
 -- Estructura de tabla para la tabla `product_actor_character`
 --
 
+DROP TABLE IF EXISTS `product_actor_character`;
 CREATE TABLE `product_actor_character` (
   `id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
   `actor_id` int(11) NOT NULL,
   `character_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `product_actor_character`
@@ -916,11 +924,12 @@ INSERT INTO `product_actor_character` (`id`, `product_id`, `actor_id`, `characte
 -- Estructura de tabla para la tabla `product_character`
 --
 
+DROP TABLE IF EXISTS `product_character`;
 CREATE TABLE `product_character` (
   `id` int(11) NOT NULL,
   `product_id` int(10) DEFAULT NULL,
   `character_id` int(10) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `product_character`
@@ -1068,12 +1077,13 @@ INSERT INTO `product_character` (`id`, `product_id`, `character_id`) VALUES
 -- Estructura de tabla para la tabla `screenwriters`
 --
 
+DROP TABLE IF EXISTS `screenwriters`;
 CREATE TABLE `screenwriters` (
   `id` int(11) NOT NULL,
   `full_name` varchar(100) DEFAULT NULL,
   `biography_link` varchar(500) DEFAULT NULL,
   `screenwriter_photo` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `screenwriters`
@@ -1101,6 +1111,7 @@ INSERT INTO `screenwriters` (`id`, `full_name`, `biography_link`, `screenwriter_
 -- Estructura de tabla para la tabla `users`
 --
 
+DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `name` varchar(50) DEFAULT NULL,
@@ -1113,7 +1124,7 @@ CREATE TABLE `users` (
   `genre2_id` int(10) DEFAULT NULL,
   `user_photo` varchar(100) DEFAULT NULL,
   `admin_status` int(1) DEFAULT 0
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Volcado de datos para la tabla `users`
@@ -1124,7 +1135,7 @@ INSERT INTO `users` (`id`, `name`, `surname`, `email`, `password`, `phone_number
 (7, 'Ahmed Kalim', '0', 'ahmedandres20@gmail.com', '$2a$10$GwjjuGKhKazEW1Y.FEO.AOhWk1/KxHjbaWrxDlthHLpiStld.SAye', '', '0000-00-00', NULL, NULL, NULL, 0),
 (8, 'Alberto Roper V', '0', 'albertoropervilar@gmail.com', '$2a$10$qS1LO0uz.QGc18PGItX2cuT7E6k1yHijPK.TEpxfw9XL/PxA.kJUa', '', '0000-00-00', NULL, NULL, NULL, 0),
 (9, 'Alan Diaz', '0', 'alandiazyoel1@gmail.com', '$2a$10$TjR0FnbuofUxYwXxv9lKI.oZG1nRVg6RtgAMeYkeI/Asg.jmjGOaO', '', '0000-00-00', NULL, NULL, NULL, 0),
-(15, 'Elon Musk', '0', 'admin@gmail.com', '$2a$10$Jsa3aCCf9mP3SkkTSDKUY.iO7RVeQ0yKsOcC75DHbv3qU.bwaI.aa', '', '0000-00-00', NULL, NULL, NULL, 1);
+(29, 'Juan Cruz', 'Etchart', 'Admin@gmail.com', '$2a$10$lqvX7kMmdAOZPBILywzeT.Od9Mk.VWSQwJ8CylYCgMTwk8vahKfk2', '123456', '2023-01-31', 1, 8, 'userPhoto1677541407574-.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -1132,11 +1143,12 @@ INSERT INTO `users` (`id`, `name`, `surname`, `email`, `password`, `phone_number
 -- Estructura de tabla para la tabla `user_cart`
 --
 
+DROP TABLE IF EXISTS `user_cart`;
 CREATE TABLE `user_cart` (
   `id` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
   `id_product` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -1144,11 +1156,12 @@ CREATE TABLE `user_cart` (
 -- Estructura de tabla para la tabla `user_favorites`
 --
 
+DROP TABLE IF EXISTS `user_favorites`;
 CREATE TABLE `user_favorites` (
   `id` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
   `id_product` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Índices para tablas volcadas
@@ -1324,7 +1337,7 @@ ALTER TABLE `screenwriters`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT de la tabla `user_cart`
