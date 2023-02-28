@@ -1,5 +1,5 @@
 <p align="center">
-<img alt="Logo" src="https://github.com/JuanCruzEtchart/The_Cinephile_e-commerce/blob/main/public/images/Logo socialmedia.png?raw=true" />
+<img alt="Logo" src="/public/images/Logo socialmedia.png" />
 </p>
 <h1 align="center"><a href="https://thecinephile.onrender.com "style="color:black">Bienvenido a The Cinephile 🎬</a></h1>
 <p>
@@ -19,10 +19,10 @@
 
 ## Tecnologías utilizadas
 
-> 👉 **Backend:** JavaScript, Node.js, Express, REST API, Cookies, Session, Sequelize y patrón MVC.
-> 👉 **Frontend:** JavaScript, EJS, CSS y Fetch API.
-> 👉 **Database:** MySQL(Sequelize) y JSON.
-> 👉 **Validaciones:** Express Validator, JavaScript y Validator.js.
+> :point_right: **Backend:** JavaScript, Node.js, Express, REST API, Cookies, Session, Sequelize y patrón MVC.
+> :point_right: **Frontend:** JavaScript, EJS, CSS y Fetch API.
+> :point_right: **Database:** MySQL(Sequelize) y JSON.
+> :point_right: **Validaciones:** Express Validator, JavaScript y Validator.js.
 
 ### 🎬 [Deploy](https://thecinephile.onrender.com/)
 
