@@ -1,22 +1,64 @@
-*Temática y funcionalidad del e-commerce*
-======
+<p align="center">
+<img alt="Logo" src="https://github.com/JuanCruzEtchart/The_Cinephile_e-commerce/blob/main/public/images/Logo socialmedia.png?raw=true" />
+</p>
+<h1 align="center"><a href="https://thecinephile.onrender.com "style="color:black">Bienvenido a The Cinephile 🎬</a></h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <a href="https://github.com/JuanCruzEtchart/The_Cinephile_e-commerce#readme" target="_blank">
+    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
+  </a>
+  <a href="https://github.com/JuanCruzEtchart/The_Cinephile_e-commerce/graphs/commit-activity" target="_blank">
+    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
+  </a>
+  <a href="https://github.com/JuanCruzEtchart/The_Cinephile_e-commerce/blob/master/LICENSE" target="_blank">
+    <img alt="License: ISC" src="https://img.shields.io/github/license/JuanCruzEtchart/the_cinephile" />
+  </a>
+</p>
 
-- Alquiler y compra de películas/series en formato digital con alta calidad y gran variedad de géneros y épocas.
-- La página estará a dividir en segmentos que filtraran las películas por géneros y características específicas.
-- Nuestra página apunta a todo público.
+> Proyecto Integrador e-commerce de venta y alquiler de películas y series en formato digital, realizado en el marco del curso de programación full stack de [Digital House](https://www.digitalhouse.com/ar/productos/programacion/programacion-web-full-stack) con metodologías ágiles (Scrum).
 
-*Páginas de inspiración*
-======
+## Tecnologías utilizadas
 
-1. [Apple TV](https://tv.apple.com/): animaciones y estética general
-2. [Netflix](https://www.netflix.com/ar-en/): formato carrusel y categorías
-3. [IMDb](https://www.imdb.com/): opciones de búsqueda y características de películas
-4. [Google Play](https://play.google.com/store/movies): formato de compra por película y diseño de características
-5. [Cuevana](https://ww3.cuevana.pro/): filtro por año y animaciones de header
-6. [Mercado Libre](https://mercadolibre.com/): formato de carrito de compras
+> 👉 **Backend:** JavaScript, Node.js, Express, REST API, Cookies, Session, Sequelize y patrón MVC.
+> 👉 **Frontend:** JavaScript, EJS, CSS y Fetch API.
+> 👉 **Database:** MySQL(Sequelize) y JSON.
+> 👉 **Validaciones:** Express Validator, JavaScript y Validator.js.
 
-*Links de interes*
-======
+### 🎬 [Deploy](https://thecinephile.onrender.com/)
 
-- [Repositorio de GitHub](https://github.com/JuanCruzEtchart/grupo_1_e-commerce_de_peliculas_y_series.git)
-- [Tablero de Trello](https://trello.com/invite/b/bhRyOQQI/7667fce7e85d88dd6577f1064ae5f651/planilla-scrum)
+### 🏠 [Repositorio](https://github.com/JuanCruzEtchart/The_Cinephile_e-commerce#readme)
+
+## Instalación
+
+```sh
+npm install
+```
+
+## Ejecución
+
+```sh
+npm run start
+```
+
+## Pruebas
+
+```sh
+npm run dev
+```
+
+## Autor
+
+- LinkedIn: https://www.linkedin.com/in/juan-cruz-etchart-963826246/
+- Github: [@JuanCruzEtchart](https://github.com/JuanCruzEtchart)
+
+## Apoyá el proyecto
+
+Dale una ⭐️ si el proyecto te gustó!
+
+## 📝 Licencia
+
+Este proyecto tiene licencia [ISC](https://github.com/JuanCruzEtchart/The_Cinephile_e-commerce/blob/master/LICENSE).
+
+---
+
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
