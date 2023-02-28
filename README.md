@@ -1,5 +1,5 @@
 <p align="center">
-<img alt="Logo" src="/public/images/Logo socialmedia.png" />
+<a href="https://thecinephile.onrender.com "style="color:black"><img alt="Logo" src="/public/images/Logo socialmedia.png" /></a>
 </p>
 <h1 align="center"><a href="https://thecinephile.onrender.com "style="color:black">Bienvenido a The Cinephile 🎬</a></h1>
 <p>
